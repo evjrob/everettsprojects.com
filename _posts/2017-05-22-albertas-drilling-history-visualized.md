@@ -1,6 +1,6 @@
 ---
 id: 1317
-title: 'Alberta&#8217;s Drilling History Visualized'
+title: "Alberta's Drilling History Visualized"
 date: 2017-05-22T16:39:31+00:00
 author: Everett
 layout: post
@@ -31,7 +31,7 @@ enclosure:
     https://everettsprojects.com/wp/wp-content/uploads/2017/05/wells_animation.mp4
     645343
     video/mp4
-    
+
 dsq_thread_id:
   - "6141306913"
 categories:
@@ -50,7 +50,7 @@ The following animation is a map of all the Alberta Energy Regulator (AER) recor
 
 <div style="width: 640px;" class="wp-video">
   <!--[if lt IE 9]><![endif]--><video class="wp-video-shortcode" id="video-1317-1" width="640" height="360" preload="metadata" controls="controls"><source type="video/mp4" src="https://everettsprojects.com/wp/wp-content/uploads/2017/05/wells_animation.mp4?_=1" />
-  
+
   <a href="https://everettsprojects.com/wp/wp-content/uploads/2017/05/wells_animation.mp4">https://everettsprojects.com/wp/wp-content/uploads/2017/05/wells_animation.mp4</a></video>
 </div>
 

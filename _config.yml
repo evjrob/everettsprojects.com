@@ -20,10 +20,13 @@ github_username:  evjrob
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 theme: minima
 plugins:
   - jekyll-feed
-pygments: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
