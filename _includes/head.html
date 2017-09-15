@@ -14,7 +14,9 @@
   {% include google-analytics.html %}
   {% endif %}
 
-  <!-- Slider CSS -->
-  <link rel="stylesheet" href="{{ "/bower_components/ideal-image-slider/ideal-image-slider.css" | relative_url }}">
-  <link rel="stylesheet" href="{{ "/bower_components/ideal-image-slider/themes/default/default.css" | relative_url }}">
+  {% if page.iis_slider_active %}
+    <!-- Slider CSS -->
+    <link rel="stylesheet" href="{{ "/bower_components/ideal-image-slider/ideal-image-slider.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/bower_components/ideal-image-slider/themes/default/default.css" | relative_url }}">
+  {% endif %}
 </head>
