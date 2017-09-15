@@ -29,7 +29,7 @@ tags:
 Despite the sheer nuttiness of it, everyone keeps going on about the end of the world as &#8220;predicted&#8221; by the Mayan calendar. National Geographic even had and entire day devoted to it. Building on that theme, I decided to make a very convenient (and pretty much useless) [webpage](http://everett.x10.mx/end-of-the-world.php) that helps you figure out if the world has in fact ended: <http://everett.x10.mx/end-of-the-world.php>. This project was really simple, didn&#8217;t involve a lot of code or design, and was basically thrown together over the course of an hour and a half. It turns out PHP is extremely easy if your host is already configured for it, and I&#8217;m looking forward to doing some more web development related stuff both with PHP and other languages or tools. The HTML side of the page was also relatively straightforward. I&#8217;m impressed by what&#8217;s possible design wise using modern HTML and CSS3. My inspiration on that front was this amazing site: <http://www.tubalr.com/>
 
 <p style="text-align:center;">
-  <a href="http://everett.x10.mx/end-of-the-world.php" rel="attachment wp-att-651"><img class="size-medium wp-image-651 aligncenter" alt="screenshot" src="http://everett.x10.mx/wp/wp-content/uploads/2014/07/screenshot.png?w=300" width="300" height="180" /></a>
+  <a href="http://everett.x10.mx/end-of-the-world.php" rel="attachment wp-att-651"><img class="size-medium wp-image-651 aligncenter" alt="screenshot" src="/wp-content/uploads/2014/07/screenshot.png?w=300" width="600" height="360" /></a>
 </p>
 
 <p style="text-align:left;">
@@ -40,204 +40,111 @@ Despite the sheer nuttiness of it, everyone keeps going on about the end of the 
   And because I see no reason not to release it, here is the entire source code for the page:
 </p>
 
-[sourcecode language=&#8221;php&#8221;]
-   
+```php
 <?php
-     
-function Visit($url){
-       
-$agent = "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)";$ch=curl_init();
-       
-curl\_setopt ($ch, CURLOPT\_URL,$url );
-       
-curl\_setopt($ch, CURLOPT\_USERAGENT, $agent);
-       
-curl\_setopt ($ch, CURLOPT\_RETURNTRANSFER, 1);
-       
-curl\_setopt ($ch,CURLOPT\_VERBOSE,false);
-       
-curl\_setopt($ch, CURLOPT\_TIMEOUT, 5);
-       
-curl\_setopt($ch,CURLOPT\_SSL_VERIFYPEER, FALSE);
-       
-curl\_setopt($ch,CURLOPT\_SSLVERSION,3);
-       
-curl\_setopt($ch,CURLOPT\_SSL_VERIFYHOST, FALSE);
-       
-$page=curl_exec($ch);
-       
-//echo curl_error($ch);
-       
-$httpcode = curl\_getinfo($ch, CURLINFO\_HTTP_CODE);
-       
-curl_close($ch);
-       
-if($httpcode>=200 && $httpcode<300) return true;
-       
-else return false;
-     
-}
-     
-if (Visit("http://www.google.com")){
-       
-$answer = "No.";
-       
-$colour = "green";
-     
-}
-     
-else{
-       
-$answer = "Yes.";
-       
-$colour = "red";
-     
-}
-  
+   function Visit($url){
+     $agent = "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)";$ch=curl_init();
+     curl_setopt ($ch, CURLOPT_URL,$url );
+     curl_setopt($ch, CURLOPT_USERAGENT, $agent);
+     curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+     curl_setopt ($ch,CURLOPT_VERBOSE,false);
+     curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+     curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, FALSE);
+     curl_setopt($ch,CURLOPT_SSLVERSION,3);
+     curl_setopt($ch,CURLOPT_SSL_VERIFYHOST, FALSE);
+     $page=curl_exec($ch);
+     //echo curl_error($ch);
+     $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+     curl_close($ch);
+     if($httpcode>=200 && $httpcode<300) return true;
+     else return false;
+   }
+   if (Visit("http://www.google.com")){
+     $answer = "No.";
+     $colour = "green";
+   }
+   else{
+     $answer = "Yes.";
+     $colour = "red";
+   }
 ?>
 
 <!DOCTYPE html>
-  
 <html>
-    
-<head>
-      
-<title>Has the World Ended Yet?</title>
-  
+  <head>
+    <title>Has the World Ended Yet?</title>
 <style>
-    
-a:link {color:#FFFFFF;}
-    
-a:visited {color:#FFFFFF;}
+  a:link {color:#FFFFFF;}
+  a:visited {color:#FFFFFF;}
 
 html {
-    
-overflow-y: scroll;
-    
-background: url(/backgrounds/eow.jpg) no-repeat center center fixed;
-    
--webkit-background-size: cover;
-    
--moz-background-size: cover;
-    
--o-background-size: cover;
-    
-background-size: cover;
+  overflow-y: scroll;
+  background: url(/backgrounds/eow.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 }
 
 body {
-    
-font-family: &#8216;Open Sans&#8217;, sans-serif;
-    
-font-size: 24px;
-    
-color: #fff;
-    
-padding-bottom: 20px;
-  
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  padding-bottom: 20px;
 }
 
 #main
-  
 {
-    
-text-align: center;
-    
-margin-top: 50px;
-    
-margin-bottom: 20px;
-    
-background: #000;
-    
-background: rgba(0, 0, 0, 0.85);
-    
--webkit-border-radius: 5px;
-    
--moz-border-radius: 5px;
-    
--ms-border-radius: 5px;
-    
--o-border-radius: 5px;
-    
-border-radius: 5px;
-    
--webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    
--moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    
-border: solid 1px #000;
-    
-width:800px;
-    
-margin-left:auto;
-    
-margin-right:auto;
-  
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.85);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border: solid 1px #000;
+  width:800px;
+  margin-left:auto;
+  margin-right:auto;
 }
-  
 #result
-  
 {
-    
-font-family: &#8216;Open Sans&#8217;, sans-serif;
-    
-font-size: 112px;
-    
-color: <?=$colour?>;
-  
+  font-family: 'Open Sans', sans-serif;
+  font-size: 112px;
+  color: <?=$colour?>;
 }
 
 #disclaimer
-  
 {
-    
-font-family: &#8216;Open Sans&#8217;, sans-serif;
-    
-font-size: 12px;
-    
-color: #fff;
-    
-margin-top: 80px;
-    
-margin-left: 100px;
-    
-margin-right: 100px;
-    
-margin-bottom: 50px;
-  
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #fff;
+  margin-top: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
 }
-  
 </style>
 
-</head>
-    
-<body>
-      
-<div id="main">
-          
-<H1>Has the world ended yet? <sup>*</sup></H1>
-          
-<br>
-          
-<div id="result">
-              
-<b> <?=$answer?></b>
-          
-</div>
-          
-<div id="disclaimer">
-              
-<sup>*</sup> Does not actually check if the world has ended. Result is based on the assumption that if Google.com is not responding, the world has probably ended. <br><br> <a href="http://everettsprojects.com">http://everettsprojects.com/</a>
-          
-</div>
-      
-</div>
-  
+  </head>
+  <body>
+    <div id="main">
+        <H1>Has the world ended yet? <sup>*</sup></H1>
+        <br>
+        <div id="result">
+            <b> <?=$answer?></b>
+        </div>
+        <div id="disclaimer">
+            <sup>*</sup> Does not actually check if the world has ended. Result is based on the assumption that if Google.com is not responding, the world has probably ended. <br><br> <a href="http://everettsprojects.com">http://everettsprojects.com/</a>
+        </div>
+    </div>
 </body>
-  
 </html>
-  
-[/sourcecode]
+```
