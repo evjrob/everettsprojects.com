@@ -8,7 +8,7 @@ guid: http://ejrob.wordpress.com/?p=165
 permalink: /2012/01/21/vetinaris-clock-a-clock-that-ticks-irregularly/
 dsq_thread_id:
   - "6140711590"
-image: https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2871-672x372.jpg
+image: /wp-content/uploads/2012/01/dscf2871-672x372.jpg
 categories:
   - Clocks
   - Electronics
@@ -22,8 +22,8 @@ tags:
 </p>
 
 <div id="attachment_169" style="width: 310px" class="wp-caption alignleft">
-  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2825.jpg"><img class="size-medium wp-image-169" title="DSCF2825" src="http://ejrob.files.wordpress.com/2012/01/dscf2825.jpg?w=300" alt="" width="300" height="225" srcset="https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2825.jpg 3664w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2825-300x225.jpg 300w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2825-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-  
+  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2825.jpg"><img class="size-medium wp-image-169" title="DSCF2825" src="http://ejrob.files.wordpress.com/2012/01/dscf2825.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/01/dscf2825.jpg 3664w, /wp-content/uploads/2012/01/dscf2825-300x225.jpg 300w, /wp-content/uploads/2012/01/dscf2825-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+
   <p class="wp-caption-text">
     The components necessary to make it work
   </p>
@@ -34,8 +34,8 @@ tags:
 </p>
 
 <div style="width: 310px" class="wp-caption alignright">
-  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2833.jpg"><img class="wp-image-171 " title="DSCF2833" src="http://ejrob.files.wordpress.com/2012/01/dscf2833.jpg?w=300" alt="" width="300" height="225" srcset="https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2833.jpg 3664w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2833-300x225.jpg 300w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2833-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-  
+  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2833.jpg"><img class="wp-image-171 " title="DSCF2833" src="http://ejrob.files.wordpress.com/2012/01/dscf2833.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/01/dscf2833.jpg 3664w, /wp-content/uploads/2012/01/dscf2833-300x225.jpg 300w, /wp-content/uploads/2012/01/dscf2833-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+
   <p class="wp-caption-text">
     The PCB with components soldered in plac
   </p>
@@ -50,26 +50,24 @@ tags:
 </p>
 
 <div id="attachment_178" style="width: 280px" class="wp-caption alignright">
-  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2857.jpg"><img class=" wp-image-178 " title="DSCF2857" src="http://ejrob.files.wordpress.com/2012/01/dscf2857.jpg?w=300" alt="" width="270" height="203" srcset="https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2857.jpg 3664w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2857-300x225.jpg 300w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2857-1024x768.jpg 1024w" sizes="(max-width: 270px) 100vw, 270px" /></a>
-  
+  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2857.jpg"><img class=" wp-image-178 " title="DSCF2857" src="http://ejrob.files.wordpress.com/2012/01/dscf2857.jpg?w=300" alt="" width="270" height="203" srcset="/wp-content/uploads/2012/01/dscf2857.jpg 3664w, /wp-content/uploads/2012/01/dscf2857-300x225.jpg 300w, /wp-content/uploads/2012/01/dscf2857-1024x768.jpg 1024w" sizes="(max-width: 270px) 100vw, 270px" /></a>
+
   <p class="wp-caption-text">
     The left copper pad has delaminated from the board
   </p>
 </div>
 
 <div id="attachment_176" style="width: 280px" class="wp-caption alignleft">
-  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2843.jpg"><img class=" wp-image-176  " title="DSCF2843" src="http://ejrob.files.wordpress.com/2012/01/dscf2843.jpg?w=300" alt="" width="270" height="203" srcset="https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2843.jpg 3664w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2843-300x225.jpg 300w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2843-1024x768.jpg 1024w" sizes="(max-width: 270px) 100vw, 270px" /></a>
-  
+  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2843.jpg"><img class=" wp-image-176  " title="DSCF2843" src="http://ejrob.files.wordpress.com/2012/01/dscf2843.jpg?w=300" alt="" width="270" height="203" srcset="/wp-content/uploads/2012/01/dscf2843.jpg 3664w, /wp-content/uploads/2012/01/dscf2843-300x225.jpg 300w, /wp-content/uploads/2012/01/dscf2843-1024x768.jpg 1024w" sizes="(max-width: 270px) 100vw, 270px" /></a>
+
   <p class="wp-caption-text">
     The guts of the clock mechanism
   </p>
 </div>
 
-<span style="color: #ffffff;">.</span> <span style="color: #ffffff;">.</span> <span style="color: #ffffff;">.</span> <span style="color: #ffffff;">.</span> <span style="color: #ffffff;">.</span> <span style="color: #ffffff;">.</span> <span style="color: #ffffff;">.</span> <span style="color: #ffffff;">.</span>
-
 <div style="width: 310px" class="wp-caption alignleft">
-  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2858.jpg"><img class=" wp-image-179 " title="DSCF2858" src="http://ejrob.files.wordpress.com/2012/01/dscf2858.jpg?w=300" alt="" width="300" height="225" srcset="https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2858.jpg 3664w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2858-300x225.jpg 300w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2858-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-  
+  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2858.jpg"><img class=" wp-image-179 " title="DSCF2858" src="http://ejrob.files.wordpress.com/2012/01/dscf2858.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/01/dscf2858.jpg 3664w, /wp-content/uploads/2012/01/dscf2858-300x225.jpg 300w, /wp-content/uploads/2012/01/dscf2858-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+
   <p class="wp-caption-text">
     Everything rewired to the battery contacts, and hot glued
   </p>
@@ -78,44 +76,32 @@ tags:
 Not to be defeated, I simply rerouted the thin wires of the solenoid to the large copper pads that were formerly the contact points for the battery, and made all of my connections there. I followed that with plenty of hot glue to keep everything firmly in place, and then went about putting the clock mechanism back together. Unfortunately for me I neglected to double check that everything was functioning before I glued it, which caused some issues later. Lesson learned: check your solder joints BEFORE you smother them in glue.
 
 <div id="attachment_181" style="width: 310px" class="wp-caption alignright">
-  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2864.jpg"><img class="size-medium wp-image-181" title="DSCF2864" src="http://ejrob.files.wordpress.com/2012/01/dscf2864.jpg?w=300" alt="" width="300" height="225" srcset="https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2864.jpg 3664w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2864-300x225.jpg 300w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2864-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-  
+  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2864.jpg"><img class="size-medium wp-image-181" title="DSCF2864" src="http://ejrob.files.wordpress.com/2012/01/dscf2864.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/01/dscf2864.jpg 3664w, /wp-content/uploads/2012/01/dscf2864-300x225.jpg 300w, /wp-content/uploads/2012/01/dscf2864-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+
   <p class="wp-caption-text">
     All of the clockwork put back in place.
   </p>
 </div>
 
 <p style="text-align: left;">
-  <span style="color: #ffffff;">.</span>
-</p>
-
-<p style="text-align: left;">
   In order to reassemble the clock, I had to cut a notch in the housing to make space for the leads I had just soldered on, and I also trimmed off most of the plastic that formed the original battery holder, since it was no longer necessary. After replacing the back plate and soldering the battery leads (make sure the polarity is correct!) and the clock leads in place on the PCB, I then hot glued everything to the back of the clock and stuck in a couple of batteries.
 </p>
 
-<p style="text-align: left;">
-  <span style="color: #ffffff;">.</span>
-</p>
-
 <div id="attachment_174" style="width: 310px" class="wp-caption alignleft">
-  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2840.jpg"><img class="size-medium wp-image-174" title="DSCF2840" src="http://ejrob.files.wordpress.com/2012/01/dscf2840.jpg?w=300" alt="" width="300" height="225" srcset="https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2840.jpg 3664w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2840-300x225.jpg 300w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2840-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-  
+  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2840.jpg"><img class="size-medium wp-image-174" title="DSCF2840" src="http://ejrob.files.wordpress.com/2012/01/dscf2840.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/01/dscf2840.jpg 3664w, /wp-content/uploads/2012/01/dscf2840-300x225.jpg 300w, /wp-content/uploads/2012/01/dscf2840-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+
   <p class="wp-caption-text">
     The original clock used with the arduino, now being run by the same circuit on a breadboard
   </p>
 </div>
 
 <p style="text-align: left;">
-  <span style="color: #ffffff;">.</span>
-</p>
-
-<p style="text-align: left;">
   This was the point at which I realized something had gone wrong, since the clock was not ticking like the one I had already assembled using a breadboard. At first I was worried that one of the components on the PCB had been fried, but my trusty multimeter assured me otherwise when I saw pulses of voltage at the point where the clock leads had been soldered onto the PCB. This was were I realized that the problem must exist at the solder joints in the clock, which I had already hot glued. Oops! Luckily I already had a functioning clock mechanism from back when I assembled my power hungry Arduino version, which I had already hooked up to the breadboard version seen left. I cut the leads between the clock and the PCB, and swapped out the broken clock mechanism for the functioning one. Since both clocks were the same, this was a trivial task (thankfully).
 </p>
 
 <div id="attachment_183" style="width: 310px" class="wp-caption alignright">
-  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2870.jpg"><img class="size-medium wp-image-183" title="DSCF2870" src="http://ejrob.files.wordpress.com/2012/01/dscf2870.jpg?w=300" alt="" width="300" height="225" srcset="https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2870.jpg 3664w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2870-300x225.jpg 300w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2870-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-  
+  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2870.jpg"><img class="size-medium wp-image-183" title="DSCF2870" src="http://ejrob.files.wordpress.com/2012/01/dscf2870.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/01/dscf2870.jpg 3664w, /wp-content/uploads/2012/01/dscf2870-300x225.jpg 300w, /wp-content/uploads/2012/01/dscf2870-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+
   <p class="wp-caption-text">
     The functioning clock, with swapped clock mechanism
   </p>
@@ -126,8 +112,8 @@ Not to be defeated, I simply rerouted the thin wires of the solenoid to the larg
 </p>
 
 <div id="attachment_184" style="width: 310px" class="wp-caption alignleft">
-  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2871.jpg"><img class="wp-image-184 size-medium" title="DSCF2871" src="http://everett.x10.mx/wp/wp-content/uploads/2012/01/dscf2871-300x225.jpg" alt="" width="300" height="225" srcset="https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2871-300x225.jpg 300w, https://everettsprojects.com/wp/wp-content/uploads/2012/01/dscf2871-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
-  
+  <a href="http://ejrob.files.wordpress.com/2012/01/dscf2871.jpg"><img class="wp-image-184 size-medium" title="DSCF2871" src="/wp-content/uploads/2012/01/dscf2871-300x225.jpg" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/01/dscf2871-300x225.jpg 300w, /wp-content/uploads/2012/01/dscf2871-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+
   <p class="wp-caption-text">
     Re-branded and fully functioning!
   </p>

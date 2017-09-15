@@ -8,7 +8,7 @@ guid: http://everettsprojects.com/?p=272
 permalink: /2012/03/17/terrarium/
 dsq_thread_id:
   - "6140711706"
-image: https://everettsprojects.com/wp/wp-content/uploads/2012/03/march16a-672x372.jpg
+image: /wp-content/uploads/2012/03/march16a-672x372.jpg
 categories:
   - 'Plants &amp; Stuff'
 tags:
