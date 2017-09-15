@@ -45,6 +45,7 @@ tags:
   - mapping
   - Oil and Gas
   - R
+comments: true
 ---
 The following animation is a map of all the Alberta Energy Regulator (AER) recorded wells drilled in Alberta between January 2010 and April of 2017:
 

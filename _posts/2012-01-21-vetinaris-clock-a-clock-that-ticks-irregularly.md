@@ -16,6 +16,7 @@ tags:
   - PIC Microcontrollers
   - Terry Pratchett
   - Vetinari
+comments: true
 ---
 <p style="text-align: left;">
   I saw this sort of project posted on Hackaday a few months ago, <a href="http://hackaday.com/2011/10/06/vetinari-clock-will-drive-you-insane/">originally using an Arduino</a>, and quickly went to work building my own. It worked well when plugged into the USB port of my computer, and I was excited to hook it up to some batteries and see how long it would run (knowing full well that the Arduino was probably going to run them dry fairly quickly). It made it about 36 hours before the clip of 5 AA batteries was drained, and so I decided to try and rig it up with a 9V wall adapter power supply. Unfortunately, for reasons I am still unsure of, the whole thing would stop ticking after exactly 38 seconds and I quickly gave up in frustration. Luckily for me, Simon Inns came up with <a href="http://www.waitingforfriday.com/index.php/Vetinari's_Clock">a version using a PIC microcontroller</a> that runs much longer on only 2 AA batteries. Having never used PIC microcontrollers, I decided this was a good opportunity to learn something about them and used some money received at Christmas to order the parts and tools necessary for my own version of this clock.

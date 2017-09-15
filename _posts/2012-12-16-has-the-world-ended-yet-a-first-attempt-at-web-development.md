@@ -25,6 +25,7 @@ tags:
   - web
   - Web Design
   - Web DevelopmentS
+comments: true
 ---
 Despite the sheer nuttiness of it, everyone keeps going on about the end of the world as &#8220;predicted&#8221; by the Mayan calendar. National Geographic even had and entire day devoted to it. Building on that theme, I decided to make a very convenient (and pretty much useless) [webpage](http://everett.x10.mx/end-of-the-world.php) that helps you figure out if the world has in fact ended: <http://everett.x10.mx/end-of-the-world.php>. This project was really simple, didn&#8217;t involve a lot of code or design, and was basically thrown together over the course of an hour and a half. It turns out PHP is extremely easy if your host is already configured for it, and I&#8217;m looking forward to doing some more web development related stuff both with PHP and other languages or tools. The HTML side of the page was also relatively straightforward. I&#8217;m impressed by what&#8217;s possible design wise using modern HTML and CSS3. My inspiration on that front was this amazing site: <http://www.tubalr.com/>
 

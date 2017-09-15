@@ -25,6 +25,7 @@ tags:
   - EL wire
   - Halloween
   - Soldering
+comments: true
 ---
 [<img class="aligncenter size-full wp-image-877" alt="IMG_2396" src="/wp-content/uploads/2013/10/img_2396.jpg" width="594" height="445" srcset="/wp-content/uploads/2013/10/img_2396.jpg 4608w, /wp-content/uploads/2013/10/img_2396-300x225.jpg 300w, /wp-content/uploads/2013/10/img_2396-1024x768.jpg 1024w" sizes="(max-width: 594px) 100vw, 594px" />](/wp-content/uploads/2013/10/img_2396.jpg)
 

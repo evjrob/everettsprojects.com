@@ -22,6 +22,7 @@ tags:
   - web
   - Web Design
   - Web Development
+comments: true
 ---
 [<img class="aligncenter size-full wp-image-844" src="wp-content/uploads/2013/09/travelmap.png" alt="travelMap" width="594" height="408" srcset="/wp-content/uploads/2013/09/travelmap.png 1148w, /wp-content/uploads/2013/09/travelmap-300x206.png 300w, /wp-content/uploads/2013/09/travelmap-1024x703.png 1024w" sizes="(max-width: 594px) 100vw, 594px" />](http://everett.x10.mx/maps/)
 

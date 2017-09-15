@@ -41,6 +41,7 @@ tags:
   - solver
   - Sudoku
   - SudokuBot
+comments: true
 ---
 My path to publishing my first app on the Google Play store has been a long one with odd beginnings. It all started when I first learned of simulated annealing algorithms from a post on [hacker news](https://news.ycombinator.com/) months ago.  In that post someone was showing off their algorithm and how it could solve the Traveling Salesman Problem or some other tough NP-Complete problem. I can't remember the specifics, but for whatever reason it inspired me to apply the technique to another NP-Complete problem: [Sudoku puzzles!](https://github.com/evjrob/sudokuAnnealing)
 

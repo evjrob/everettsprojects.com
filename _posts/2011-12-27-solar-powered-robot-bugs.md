@@ -15,6 +15,7 @@ categories:
   - Robotics
 tags:
   - Solarbotics
+comments: true
 ---
 <div id="attachment_92" style="width: 600px" class="wp-caption aligncenter">
   <a href="http://ejrob.files.wordpress.com/2011/12/dscf2781.jpg"><img class="wp-image-92 " title="DSCF2781" src="http://ejrob.files.wordpress.com/2011/12/dscf2781.jpg" alt="" width="590" height="445" /></a>

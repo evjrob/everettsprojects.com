@@ -26,6 +26,7 @@ tags:
   - Photosensor
   - technology
   - web
+comments: true
 ---
 <p style="text-align:left;">
   <a href="http://everettsprojects.com/2012/12/31/arduino-super-graphing-data-logger/zoomeddaylight/" rel="attachment wp-att-714"><img class="size-large wp-image-714 aligncenter" alt="The intensity of natural light in my basement." src="wp-content/uploads/2012/12/zoomeddaylight.png?w=594" width="594" height="210" srcset="/wp-content/uploads/2012/12/zoomeddaylight.png 1374w, /wp-content/uploads/2012/12/zoomeddaylight-300x106.png 300w, /wp-content/uploads/2012/12/zoomeddaylight-1024x362.png 1024w" sizes="(max-width: 594px) 100vw, 594px" /></a><br /> <strong>Sections:</strong>

@@ -20,6 +20,7 @@ tags:
   - LCD
   - web
   - Web Server
+comments: true
 ---
 The original source code for this project can be found <a href="https://github.com/evjrob/html-to-lcd">Here.</a>
 

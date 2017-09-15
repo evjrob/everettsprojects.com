@@ -21,6 +21,7 @@ tags:
   - Motorized skateboard
   - Pure Awesomeness
   - Skateboard
+comments: true
 ---
   1. [Why pursue this madness?](#why)
   2. [The parts](#parts)

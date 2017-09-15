@@ -25,6 +25,7 @@ tags:
   - Oil and Gas Incidents
   - Oil Spills
   - PHP
+comments: true
 ---
 ### [<img class="aligncenter wp-image-989 size-full" src="/wp-content/uploads/2014/06/spills.png" alt="spills" width="594" height="324" srcset="/wp-content/uploads/2014/06/spills.png 1440w, /wp-content/uploads/2014/06/spills-300x163.png 300w, /wp-content/uploads/2014/06/spills-1024x558.png 1024w" sizes="(max-width: 594px) 100vw, 594px" />](/spills/#)
 

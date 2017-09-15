@@ -22,6 +22,7 @@ tags:
   - quantitative analyst
   - Stock Trading
   - web
+comments: true
 ---
 _This program definitely violates the Neopets Terms of Use. Use at your own risk._
 

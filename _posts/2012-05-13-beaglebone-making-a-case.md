@@ -18,6 +18,7 @@ tags:
   - case
   - DIY
   - Recyling
+comments: true
 ---
 [<img class="aligncenter size-full wp-image-400" title="DSCF3155" src="http://ejrob.files.wordpress.com/2012/05/dscf3155.jpg" alt="" width="594" height="445" srcset="/wp-content/uploads/2012/05/dscf3155.jpg 2000w, /wp-content/uploads/2012/05/dscf3155-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3155-1024x768.jpg 1024w" sizes="(max-width: 594px) 100vw, 594px" />](http://ejrob.files.wordpress.com/2012/05/dscf3155.jpg)
 

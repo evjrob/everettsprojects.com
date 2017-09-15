@@ -21,6 +21,7 @@ tags:
   - rutorrent
   - samba
   - Ubuntu
+comments: true
 ---
 There are plenty of products available to the person who wants a functioning NAS out of the box, though I&#8217;ve never really been that type. By using a versatile board like the BeagleBone as a home media server, I can make a project that is more than a simple networked storage solution. It also affords me the opportunity to learn about administration of a Linux server. While I could teach myself these skills by implementing a home media server using an old desktop, the amount of electricity consumed would be at least an order of magnitude higher and in any case my old desktop recently gave up the ghost. The information contained here is specifically intended for use on a BeagleBone, though I wouldn&#8217;t be the least bit surprised if it was useful to someone trying to achieve the same effect with a different platform. It is also important to not that I accept no liability for damages or issues that occur as a result of following my directions either on a BeagleBone or other hardware. I am very sorry if such an event should take place however, and would appreciate knowing about it so that I could correct this guide asap.
 

@@ -27,6 +27,7 @@ tags:
   - Oil and Gas Incidents
   - Oil Spills
   - PHP
+comments: true
 ---
 **This post is a continuation of the original [Mapping Oil and Gas Incidents in Alberta with Google Maps, JQuery, and PHP](http://everettsprojects.com/2014/06/07/mapping-oil-and-gas-incidents-in-alberta-with-google-maps-jquery-and-php/) post. If you wish to know more about this project or find the code for version 1, it is suggested you start there.**
 
