@@ -1,6 +1,6 @@
 ---
 id: 165
-title: 'Vetinari&#8217;s Clock &#8211; A Clock that Ticks Irregularly'
+title: "Vetinari's Clock: A Clock that Ticks Irregularly"
 date: 2012-01-21T19:32:54+00:00
 author: Everett
 layout: post
