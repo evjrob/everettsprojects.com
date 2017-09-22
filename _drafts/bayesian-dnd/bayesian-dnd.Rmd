@@ -1,7 +1,7 @@
 ---
 title: "A Bayesian Analysis of My D&D Dice"
 author: "Everett Robinson"
-date: "September 6, 2017"
+date: "September 22, 2017"
 output: html_document
 ---
 
@@ -31,7 +31,7 @@ Instead, I think a Bayesian approach will be much more informative. We will stil
 
 We are in luck, because there is a very versatile prior distribution available to us that has a simple analytical solution for calculating posterior probabilities when working with a binomial likelihood: The beta function! The beta function is something called a conjugate prior for the binomial distribution, which is really just a fancy way of saying that if we pick a beta prior, the posterior for our values of **p** is simply another beta distribution with simple rules for updating it based and the observed number of successes and failures. In this case it will be:
 
-$Beta(\alpha 0 + successes,\beta 0 + failures)$
+$$Beta(\alpha 0 + successes,\beta 0 + failures)$$
 
 Where $\alpha 0$ and $\beta 0$ are parameters of our prior beta distribution. Before we get started we will need to determine a reasonable beta prior to use. For the sake of simplifying my explanation, let's consider the analysis of a twenty sided dice for the rest of this section. If we honestly knew nothing about dice, we might decide that any value of **p** is just as likely as the rest, and assign a uniform prior distribution. This can be achieved with $Beta(1,1)$:
 
@@ -112,10 +112,14 @@ Rather than duplicating a bunch of code for each dice, I will just start by writ
 bayesian_dice_analysis <- function(roll_data, faces = 20, beta_prior_a = 1, beta_prior_b = 1) {
   
   # Check that no rolls fall outside 1:faces
-  ###
+  if ((sum(roll_data > faces) + sum(roll_data < 0)) > 0) {
+    stop(sprintf("Values outside the range 0 to %i were found in the data. Please ensure the faces parameter is correct and check that the data is valid.", faces))
+  } 
   
   # Check that alpha and beta are non-negative
-  ###
+  if (beta_prior_a < 0 || beta_prior_b < 0) {
+    stop("The alpha and beta priors must both be non-negtive. Please ensure the values specified are correct.") 
+  }
   
   results_table <- tibble(face = c(1:faces))
   
