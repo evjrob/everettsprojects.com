@@ -1,7 +1,7 @@
 ---
 title: "A Bayesian Analysis of My D&D Dice"
 author: "Everett Robinson"
-date: "September 22, 2017"
+date: "October 3, 2017"
 output: html_document
 ---
 
@@ -9,6 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
+library(dirichlet)
 ```
 
 # Introduction
@@ -20,20 +21,31 @@ Normally I don't care too much about such superstitions and just take the rolls 
 
 # Methodology
 
-There are a couple different ways I can think of to approach the problem of assessing if my dice are correctly balanced. I could always use a simple frequentist hypothesis test and set a null hypothesis of **p** being equal to the fair probability for each face. I could then roll the dice many times and see if the observed data provides enough evidence to reject that hypothesis for any of the faces. This is a nice and simple approach, which would be straight forward to test using the binomial distribution. I would run one hypothesis test for each face, and adjust the data for each test to be a success if the face comes up, and a failure if it is any other face. All that remains to be done after that is to check the probability of seeing our observed number of successes or a more extreme result, and deciding if that falls below our chosen significance level. There are a couple of drawbacks to this approach that I can immediately think of:
+There are a couple different ways I can think of to assess if my dice are correctly balanced. I could always use a simple frequentist hypothesis test and set a null hypothesis of **p** being equal to the fair probability for each face. I could then roll the dice many times and see if the observed data provides enough evidence to reject that hypothesis that the dice is fair. This is a nice and simple approach, which would be straight forward to test using the multinomial or binomial distribution. But there are a couple of drawbacks to this approach that I can immediately think of:
 
 <ol> 
   <li>It tells us nothing about what a better estimate of the probability for each face is; and</li>
   <li>We will likely need a lot more data to achieve significance using this frequentist approach.</li>
 </ol>
 
-Instead, I think a Bayesian approach will be much more informative. We will still each treat roll as a Bernoulli random variable for each face (either a one for that face showing up, or a zero for any other face), and we will treat the sequence of these as a binomial distribution. This time, instead of picking a single value of **p** for the probability of a face, we will define a prior distribution across all the possibilities of **p** from 0 to 1. This prior distribution represents the probability density function (pdf) of our belief in the probabilities for each of the values of **p** across the range. We then compute the probability density for each value of **p** in our prior *given* the binomial distribution we have observed as evidence in favour for or against it. This resulting pdf for **p** is called the posterior distribution, and it represents our updated belief in the probability that any of the possible values of **p** is true. The question now is how will we define this prior distribution for **p**?
+Instead, I think a Bayesian approach will be much more informative. We have a couple options available to us: We can use a numerical approach like MCMC, and compute the posterior distributions for each face that way. Or we can try to find an analytically tractable way of computing the posterior given a specific type of prior, called a conjugate prior. Luckily for us, there are two useful conjugate priors we will want to consider. They are the beta-binomial distribution, and the more general dirichlet-multinomial distribution. Ultimately I will end up using both of these in this analysis.
 
-We are in luck, because there is a very versatile prior distribution available to us that has a simple analytical solution for calculating posterior probabilities when working with a binomial likelihood: The beta function! The beta function is something called a conjugate prior for the binomial distribution, which is really just a fancy way of saying that if we pick a beta prior, the posterior for our values of **p** is simply another beta distribution with simple rules for updating it based and the observed number of successes and failures. In this case it will be:
+The dirichlet-multinomial model allows us to model an n-dimensional system of discrete events with varying probabilites that all sum to one. Essentially a dice. The beta-binomal model is a special case of the dirichlet-multinomial model in which n = 2, and it basically describes a coin. I feel that it is best to cover the simpler Beta distribution and the beta-binomial model before going into the more general Dirichlet distribution and dirichlet-multinomial model.
 
-$$Beta(\alpha 0 + successes,\beta 0 + failures)$$
+In our bayesian approach we get to start with a prior belief of what the probability of rolling a specific face of the die is, and then using a set of data from real rolls, we can update the distribution of probabilities for that face. The beta-binomial model is a special conjugate prior model in bayesian statistics, which is just a fancy way of saying that if we start with a beta distribution for the probability **p** of rolling a certain face of the dice, and then gather data that fits a binomial distribution, we can find a new beta distribution that describes the posterior probability of rolling that face. 
 
-Where $\alpha 0$ and $\beta 0$ are parameters of our prior beta distribution. Before we get started we will need to determine a reasonable beta prior to use. For the sake of simplifying my explanation, let's consider the analysis of a twenty sided dice for the rest of this section. If we honestly knew nothing about dice, we might decide that any value of **p** is just as likely as the rest, and assign a uniform prior distribution. This can be achieved with $Beta(1,1)$:
+The probability mass function of the binomial distribution is simply:
+
+$$ \frac{n!}{k!(n-k)!} p^k(1-p)^{n-k}$$
+
+Where n is the total number of trials, k is the number of successes, and p is the probability of a success.
+
+As for the beta-binomial model, I will skip the math and just assert that this rule for updating the probability distribution is simply:  
+
+$$Prior = Beta(\alpha 0,\beta 0)$$
+$$Posterior = Beta(\alpha 0 + successes,\beta 0 + failures)$$
+
+Where $\alpha 0$ and $\beta 0$ are parameters of our prior beta distribution, successes is the number of times we rolled our chosen face, and failures is the number of times we rolled any other face. This means that before we get started we need to determine a reasonable beta prior to use. Let's consider the analysis of a twenty sided dice for the rest of this section. If we honestly knew nothing about dice, we might decide that any value of **p** is just as likely as the rest, and assign a uniform prior distribution. This can be achieved with $Beta(1,1)$:
 
 ```{r, Beta(1,1)}
 ggplot(data.frame(x = c(0:1))) + 
@@ -67,7 +79,7 @@ ggplot(data.frame(x = c(0:1))) +
   theme(legend.position="none")
 ```
 
-Notice that this isn't a very confident prior distribution. We can see a decently likelihood for values of **p** anywhere between 0 and 0.25. If we want a stronger prior we can use larger values of $\alpha$ and $\beta$ where $\alpha / (\alpha + \beta) = 0.05$. Let's look at $Beta(5,95)$:
+Notice that this isn't a very confident prior distribution. We can see a decent likelihood for values of **p** anywhere between 0 and 0.25. If we want a stronger prior we can use larger values of $\alpha$ and $\beta$ where $\alpha / (\alpha + \beta) = 0.05$. Let's look at $Beta(5,95)$:
 
 ```{r, Beta(5,95)}
 ggplot(data.frame(x = c(0:1))) + 
@@ -84,7 +96,7 @@ ggplot(data.frame(x = c(0:1))) +
   theme(legend.position="none")
 ```
 
-That's a bit better. There is a definite peak around **p = 0.05** with a much tighter spread. The power of Bayesian statistics is that we can continually work with uncertainty in our estimates, and that we treat **p** as a probability density function rather than a point estimate. If we wanted to find some common summary statistics for **p** however, we could do it with the following formulas and functions:
+That's a bit better. There is a definite peak around **p = 0.05** with a much tighter spread. You may find it strange that we are going through all this effort just to maintain uncertainty about the value of p. Isn't our goal to get more confident in the true probability of rolling a certain face? It seems counter intuitive, but the power of Bayesian statistics is that we can continually work with uncertainty in our estimates, and that we treat **p** as a probability density function rather than a point estimate. This is true in both the prior and the posterior. Think of it as a means of not just finding a new most likely value for p, but also finding our uncertainty in this estimate of p, so that we know what we aren't sure of. If we wanted to find some common summary statistics for **p** from a beta distribution (either the prior or the posterior), we can do it with the following formulas and functions:
 
 $$Mean = \frac{\alpha}{\alpha + \beta}$$
 
@@ -94,7 +106,135 @@ $$Mode = \frac{\alpha - 1}{\alpha + \beta -2}$$
 
 More important than these summary statistics, however, is our ability to calculate a credible interval for the beta distribution. This gives us something similar to a frequentist confidence interval, except that we can say that we believe there is a certain probability that the interval contains the true parameter (in this case, p) given our assumptions (our prior). Much like the median, the credible interval can be found by passing the appropriate quantiles to the qbeta function for our posterior. For a 95% credible interval, these would be 0.025 for the lower bound an 0.975 for the upper bound.
 
-I think that's enough background for now. Let's start analyzing!
+As an example, let's consider our d20 dice. We believe that the dice is fair, and we are interested in determining the posterior probability of rolling a one on it to verify that it is actually fair. We start with a beta(5,95) distribution as our prior and we roll the dice 100 times. In these hundred rolls, we observe a one twenty times, and faces other than a one for the remaining 80 times. Using the beta-binomial updaing rule from earlier, our posterior is simply:
+
+$$Posterior = Beta(5 + 20,95 + 80) = Beta(25,175)$$
+
+And the mean of this posterior distribution is:
+
+$$Mean = \frac{\alpha}{\alpha + \beta} = \frac{25}{25 + 175} = 0.125$$
+
+Notice that because we had a prior equivalent to 100 points of data, and collect another 100 points of data to update it, that the new posterior is right in the middle of our prior of *p = 0.05* and our observed proportion of *0.20*.
+
+Plotting the prior and posterior distributions together, we can see this shift:
+
+```{r, beta-binomial-updating-example}
+ggplot(data.frame(x = c(0:1))) + 
+  stat_function(fun = dbeta, 
+                args = list(shape1 = 5, shape2 = 95),
+                color = "blue") +
+  stat_function(fun = dbeta, 
+                args = list(shape1 = 5, shape2 = 95),
+                xlim = c(0,1),
+                geom = "area",
+                aes(x, alpha = 0.5),
+                fill = "blue") +
+  stat_function(fun = dbeta, 
+                args = list(shape1 = 25, shape2 = 175),
+                color = "red") +
+  stat_function(fun = dbeta, 
+                args = list(shape1 = 25, shape2 = 175),
+                xlim = c(0,1),
+                geom = "area",
+                aes(x, alpha = 0.5),
+                fill = "red") +
+  labs(title = "Beta(5,95) Prior Distribution and Beta(25,175) Posterior Distribution",
+       x = "Binomial probability, p",
+       y = "Probability density of p") +
+  theme(legend.position="none")
+```
+
+Notice that the high observed frequency of rolled ones has really shifted the distribution for the probability upwards from **p = 0.05**. It has also widened our posterior distribution compared to our prior, because we are now more uncertain about the probability of rolling a one after such an unexpected result from 100 rolls. A nice feature of bayesian statisticsis is that we can take a posterior distribution and use it as our new prior while we continue testing the dice. Let's pretend that after seeing this result we are not satisfied, so we decide to roll the dice 1000 more times and observe 203 ones:
+
+$$Posterior = Beta(25 + 203,175 + 797) = Beta(228,972)$$
+
+$$Mean = \frac{228}{228 + 972} = 0.190$$
+
+```{r, beta-binomial-updating-example-two}
+ggplot(data.frame(x = c(0:1))) + 
+  stat_function(fun = dbeta, 
+                args = list(shape1 = 25, shape2 = 175),
+                color = "blue") +
+  stat_function(fun = dbeta, 
+                args = list(shape1 = 25, shape2 = 175),
+                xlim = c(0,1),
+                geom = "area",
+                aes(x, alpha = 0.5),
+                fill = "blue") +
+  stat_function(fun = dbeta, 
+                args = list(shape1 = 228, shape2 = 972),
+                color = "red") +
+  stat_function(fun = dbeta, 
+                args = list(shape1 = 228, shape2 = 972),
+                xlim = c(0,1),
+                geom = "area",
+                aes(x, alpha = 0.5),
+                fill = "red") +
+  labs(title = "Beta(25,792) Prior Distribution and Beta(228,972) Posterior Distribution",
+       x = "Binomial probability, p",
+       y = "Probability density of p") +
+  theme(legend.position="none")
+```
+
+We can see that the posterior distribution has narrowed, and the mean has moved further towards the right to *p = 0.190*. This illustrates a useful feature of bayesian statistics: As we collect more data, our chosen prior has less influence and becomes less important.
+
+This is how the beta-binomial model works when we only care about one face, but what about if we are interested in every face of the dice? To answer that, let's look at the dirichlet distribution and the dirichlet-multinomial model. We will consider a made up dice that only has three faces, because it will be very difficult to visualize anything higher.
+
+The multinomial distribution is just a higher dimension version of the binomial distribution. In a binomial distribution the probabilty of a failure can be inferred from the probability of a success since there is a constraint that both outcomes must sum to a total probability of 1. In the multinomial we no longer have success and failure, but outcomes 1,2,...,k each with their own probabilities, $p_i$:
+
+$$ f(x_1,...,x_k, p1,...,pk) = \frac{n!}{x_1! x_2! ... x_k!}p_1^{x_1}p_2^{x_2} ... p_k^{x_k}$$
+Subject to the constaints:
+
+$$ \sum_{i=1}^{n} x_i = n $$
+and
+
+$$ \sum_{j=1}^{k} p_j = 1 $$
+
+Hopefully the similarity of the multinomial model to the binomial model is evident. A dirichlet distribution is a higher dimensional generalization of the beta distribution we saw earlier, and so the updating rules for it should also look familiar:
+
+$$Prior = Dir(\theta_1,\theta_2, ..., \theta_k)$$
+$$Posterior = Dir(\theta_1 + x_1,\theta_2 + x_2, ..., \theta_k + x_k)$$
+
+But what does a Dirichlet distribution look like? To figure this out we will need to resort to some fancy three dimensional plots. For a three dimensional dirichlet distribution, our probability densities exist on the triangualr surface formed by the equation:
+
+$$ p_1 + p_2 + p_3 = 1 $$
+
+<img src="200px-2D-simplex.svg.png"/>
+
+A probability density function defined by the dirichlet distribution exists on this surface:
+
+```{r}
+pdf <- function(v) ddirichlet(v, c(5, 5, 5))
+mesh <- simplex_mesh(.0025) %>% as.data.frame %>% tbl_df
+mesh$pdf <- mesh %>% apply(1, function(v) pdf(bary2simp(v)))
+  
+ggplot(mesh, aes(x, y)) +
+  geom_raster(aes(fill = pdf)) +
+  coord_equal(xlim = c(0,1), ylim = c(0, .85))
+```
+
+And as we update our dirichlet distribution using the rules above, it can shift the probability just like we saw for the beta distribution:
+
+```{r}
+pdf <- function(v) ddirichlet(v, c(5, 5, 15))
+mesh <- simplex_mesh(.0025) %>% as.data.frame %>% tbl_df
+mesh$pdf <- mesh %>% apply(1, function(v) pdf(bary2simp(v)))
+  
+ggplot(mesh, aes(x, y)) +
+  geom_raster(aes(fill = pdf)) +
+  coord_equal(xlim = c(0,1), ylim = c(0, .85))
+```
+
+Unfortunately these visualizations don't work so well for dice with more than three faces since it is hard to visualize four or more dimensions.
+
+The dirichlet distribution has a very similar form for the mean as the beta distribution for each of it's dimensions p_i:
+
+$$E[p_i] = \frac{\theta_i}{\sum_{i=1}^{k} \theta_i} $$
+In fact, if we were to just define $\beta$ as the sum of all the $\theta$s except $\theta_i$, and rename $\theta_i$ to $\alpha$, then the mean posterior probability for $\theta_i$ becomes indistinguishable from a beta distribution defined for $\theta_i$ and $\neg  \theta_i$.
+
+If we want the know a 95% credible interval for each face, then we can use this same trick to reduce each face of the dice to it's own beta distribution and find the confidence interval for that. The only caveat to this is that we need to remember that the distributions for each **p** originally came from a dirichlet distribution, and so the condition that the sum of all p equal one still remains. This just means that if the true value for one of the **p** is actually lower than our posterior mean probability, then it is necessary that one or more of the other faces has a **p** higher than it's posterior mean in an amount that cumulatively offsets the difference in the first **p**.
+
+I think that's more than enough background. Let's start analyzing!
 
 
 # Analysis
@@ -149,21 +289,37 @@ bayesian_dice_analysis <- function(roll_data, faces = 20, beta_prior_a = 1, beta
 }
 ```
 
-```{r, d20}
-d20_data <- read_csv("d20.csv")
-d20_result <- bayesian_dice_analysis(d20_data$Rolls, faces = 20, beta_prior_a = 5, beta_prior_b = 95)
+The d10 dice is the one that I am really concerned about, so let's start with it:
+
+```{r, d10, message = FALSE}
+d10_data <- read_csv("d10.csv")
+d10_result <- bayesian_dice_analysis(d10_data$Rolls, faces = 10, beta_prior_a = 10, beta_prior_b = 90)
+
+ggplot(d10_result, aes(x = face, y = posterior_mean)) + 
+  geom_point() +
+  geom_errorbar(aes(ymin = ci_95_lower, ymax = ci_95_upper), colour = "black", width = 0.1) +
+  geom_hline(aes(yintercept = 0.10, color = "red")) +
+  theme(legend.position = "none") +
+  coord_flip() +
+  ggtitle("Posterior Probablities for Each Face of My d10 Dice")
 ```
 
-```{r}
+It definitely looks like my d10 is a little unbalanced, and in a favourable way for me.
+
+```{r, d20, message = FALSE}
+d20_data <- read_csv("d20.csv")
+d20_result <- bayesian_dice_analysis(d20_data$Rolls, faces = 20, beta_prior_a = 5, beta_prior_b = 95)
+
 ggplot(d20_result, aes(x = face, y = posterior_mean)) + 
   geom_point() +
   geom_errorbar(aes(ymin = ci_95_lower, ymax = ci_95_upper), colour = "black", width = 0.1) +
   geom_hline(aes(yintercept = 0.05, color = "red")) +
   theme(legend.position = "none") +
-  coord_flip()
+  coord_flip() +
+  ggtitle("Posterior Probablities for Each Face of My d20 Dice")
 ```
 
-```{r, d10}
+```{r, d102}
 d10_data <- read_csv("d10.csv")
 d10_result <- bayesian_dice_analysis(d10_data$Rolls, faces = 10, beta_prior_a = 10, beta_prior_b = 90)
 
