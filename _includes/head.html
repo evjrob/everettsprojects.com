@@ -10,7 +10,23 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			  crossorigin="anonymous">
+  </script>
+  <script>
+    $(document).ready(function(){
+      $(".inlinecode").map(function(){
+        match = /^\$(.*)\$$/.exec($(this).html());
+        if (match){
+          $(this).replaceWith("\\(" + match[1] + "\\)");
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub,$(this).get(0)]);
+        }
+      });
+    });
+  </script>
+
 
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}

@@ -59,9 +59,9 @@ I will skip the math that goes into the beta-binomial model and just assert that
 $$Prior = Beta(\alpha 0,\beta 0)$$
 $$Posterior = Beta(\alpha 0 + successes,\beta 0 + failures)$$
 
-Where $\alpha 0$ and $\beta 0$ are parameters of our prior beta distribution, successes is the number of times we saw our chosen face, and failures is the number of times we saw any other face. 
+Where <span class="inlinecode">$\alpha 0$</span> and <span class="inlinecode">$\beta 0$</span> are parameters of our prior beta distribution, successes is the number of times we saw our chosen face, and failures is the number of times we saw any other face. 
 
-Before we get started we need to determine a reasonable beta prior to use. Let's consider the analysis of a twenty sided dice for the rest of this section, where were are interested in only the probability of rolling a given face, say twenty. All other faces will be lumped together as not twenty so we can still work with the beta distribution. If we honestly knew nothing about dice, we might decide that any value of **p** is just as likely as the rest, and assign a uniform prior distribution. This can be achieved with $Beta(1,1)$:
+Before we get started we need to determine a reasonable beta prior to use. Let's consider the analysis of a twenty sided dice for the rest of this section, where were are interested in only the probability of rolling a given face, say twenty. All other faces will be lumped together as not twenty so we can still work with the beta distribution. If we honestly knew nothing about dice, we might decide that any value of **p** is just as likely as the rest, and assign a uniform prior distribution. This can be achieved with <span class="inlinecode">$Beta(1,1)$</span>:
 
 
 {% highlight r %}
@@ -81,7 +81,7 @@ ggplot(data.frame(x = c(0:1))) +
 
 ![center](/../figs/2017-10-20-bayesian-dnd/Beta(1,1)-1.png)
 
-But we do know a little bit about how dice work, and usually our prior belief in the likelihood of any given face is based on the dice being fair. For our d20, this means we expect **p = 0.05**. To model this as a prior we could simply say that we expect 1 roll out of twenty to be our face, and model it with $Beta(1,19)$:
+But we do know a little bit about how dice work, and usually our prior belief in the likelihood of any given face is based on the dice being fair. For our d20, this means we expect **p = 0.05**. To model this as a prior we could simply say that we expect 1 roll out of twenty to be our face, and model it with <span class="inlinecode">$Beta(1,19)$</span>:
 
 
 {% highlight r %}
@@ -101,7 +101,7 @@ ggplot(data.frame(x = c(0:1))) +
 
 ![center](/../figs/2017-10-20-bayesian-dnd/Beta(1,19)-1.png)
 
-Notice that this isn't a very confident prior distribution. We can see a decent likelihood for values of **p** anywhere between 0 and 0.25. If we want a stronger prior we can use larger values of $\alpha$ and $\beta$ where $\alpha / (\alpha + \beta) = 0.05$. Let's look at $Beta(5,95)$:
+Notice that this isn't a very confident prior distribution. We can see a decent likelihood for values of **p** anywhere between 0 and 0.25. If we want a stronger prior we can use larger values of <span class="inlinecode">$\alpha$</span> and <span class="inlinecode">$\beta$</span> where <span class="inlinecode">$\frac{\alpha}{(\alpha + \beta)} = 0.05$</span>. Let's look at <span class="inlinecode">$Beta(5,95)$</span>:
 
 
 {% highlight r %}
@@ -211,7 +211,7 @@ We can see that the posterior distribution has narrowed, and the mean has moved 
 
 This is how the beta-binomial model works when we only care about one face, but what about if we are interested in every face of the dice? To answer that, let's look at the dirichlet distribution and the dirichlet-multinomial model. We will consider a made up dice that only has three faces, because it will be very difficult to visualize anything higher.
 
-The multinomial distribution is just a higher dimension version of the binomial distribution. In a binomial distribution the probabilty of a failure can be inferred from the probability of a success since there is a constraint that both outcomes must sum to a total probability of 1. In the multinomial we no longer have success and failure, but outcomes 1,2,...,k each with their own probabilities, $p_i$:
+The multinomial distribution is just a higher dimension version of the binomial distribution. In a binomial distribution the probabilty of a failure can be inferred from the probability of a success since there is a constraint that both outcomes must sum to a total probability of 1. In the multinomial we no longer have success and failure, but outcomes 1,2,...,k each with their own probabilities, <span class="inlinecode">$p_i$</span>:
 
 $$ f(x_1,...,x_k, p1,...,pk) = \frac{n!}{x_1! x_2! ... x_k!}p_1^{x_1}p_2^{x_2} ... p_k^{x_k}$$
 Subject to the constaints:
@@ -264,10 +264,10 @@ ggplot(mesh, aes(x, y)) +
 
 Unfortunately these visualizations don't work so well for dice with more than three faces since it is hard to visualize probabilty densities in n-1 dimensions for an n-dimensional dice.
 
-The dirichlet distribution has a very similar form for the mean as the beta distribution for each of it's dimensions p_i:
+The dirichlet distribution has a very similar form for the mean as the beta distribution for each of it's dimensions <span class="inlinecode">$p_i$</span>:
 
 $$E[p_i] = \frac{\theta_i}{\sum_{i=1}^{k} \theta_i} $$
-In fact, if we were to just define $\beta$ as the sum of all the $\theta$s except $\theta_i$, and rename $\theta_i$ to $\alpha$, then the mean posterior probability for $\theta_i$ becomes indistinguishable from a beta distribution defined for $\theta_i$ and $\neg  \theta_i$.
+In fact, if we were to just define <span class="inlinecode">$\beta$</span> as the sum of all the <span class="inlinecode">$\theta$</span>s except <span class="inlinecode">$\theta_i$</span>, and rename <span class="inlinecode">$\theta_i$</span> to <span class="inlinecode">$\alpha$</span>, then the mean posterior probability for <span class="inlinecode">$\theta_i$</span> becomes indistinguishable from a beta distribution defined for <span class="inlinecode">$\theta_i$</span> and <span class="inlinecode">$\neg  \theta_i$</span>.
 
 If we want the know a 95% credible interval for each face, then we can use this same trick to reduce each face of the dice to it's own beta distribution and find the confidence interval for that. The only caveat to this is that we need to remember that the distributions for each **p** originally came from a dirichlet distribution. This means that the condition that the sum of all **p** equal one still remains, and that if the true value for one of the **p** is actually lower than our posterior mean probability, then it is necessary that one or more of the other faces has a **p** higher than it's posterior mean in an amount that cumulatively offsets the difference in the first **p**.
 
@@ -279,10 +279,10 @@ That's enough theory. Let's start analyzing!
 Rather than duplicating a bunch of code for each dice, I will just start by writing a function that can be reused. The parameters passed to the function are:
 
 <ol>
-  <li><b>roll_data:</b> An integer vector containing the sequence of roll results.</b></li>
-  <li><b>faces:<b> The number of faces on the dice being analyzed</b></li>
-  <li><b>beta_prior_a:<b> The value of the alpha parameter to be used in the beta prior distribution</b></li>
-  <li><b>beta_prior_b:<b> The value of the beta parameter to be used in the beta prior distribution</b></li>
+  <li><b>roll_data:</b> An integer vector containing the sequence of roll results.</li>
+  <li><b>faces:</b> The number of faces on the dice being analyzed</li>
+  <li><b>beta_prior_a:</b> The value of the alpha parameter to be used in the beta prior distribution</li>
+  <li><b>beta_prior_b:</b> The value of the beta parameter to be used in the beta prior distribution</li>
 </ol>
 
 
