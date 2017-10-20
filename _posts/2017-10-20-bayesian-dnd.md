@@ -10,7 +10,7 @@ layout: post
 
 # Shiny App
 
-Test your own dice using this shiny app: https://evjrob.shinyapps.io/bayesian-dnd/
+Test your own dice using this shiny app: [https://evjrob.shinyapps.io/bayesian-dnd/](https://evjrob.shinyapps.io/bayesian-dnd/)
 
 # Introduction
 
