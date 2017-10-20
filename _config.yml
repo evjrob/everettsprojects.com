@@ -36,6 +36,9 @@ iis_slider_array: []
 disqus:
   shortname: everettsprojects
 
+# Google Analytics
+google_analytics: UA-51737914-1
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
