@@ -1,21 +1,32 @@
 # Site settings
-title: *folio
-email: you@example.com
+title: Everett's Projects
+email: evjrob@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A simple, whitespace, helvetica based portfolio theme.
-baseurl:  # the subpath of your site, e.g. /blog/
-url:  # the base hostname & protocol for your site
-twitter_username: twitter_username
-github_username:  github_username
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://everettsprojects.com" # the base hostname & protocol for your site
+github_username:  evjrob
 
 # Build settings
 markdown: kramdown
 
 highlighter: rouge
 
+# Ideal image slider
+iis_slider_array: []
+
+# Leave shortname blank to disable comments site-wide.
+# Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+disqus:
+  shortname: everettsprojects
+
+# Google Analytics
+google_analytics: UA-51737914-1
+
+
 # Pagination
-paginate: 15
-paginate_path: "/blog/page:num/"
+#paginate: 15
+#paginate_path: "/blog/page:num/"
 
 
 collections:
@@ -25,5 +36,3 @@ collections:
   poetry:
     output: true
     permalink: /poetry/:path/
-
-

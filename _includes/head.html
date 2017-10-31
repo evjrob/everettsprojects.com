@@ -8,6 +8,35 @@
 
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  			  crossorigin="anonymous">
+    </script>
+    <script>
+      $(document).ready(function(){
+        $(".inlinecode").map(function(){
+          match = /^\$(.*)\$$/.exec($(this).html());
+          if (match){
+            $(this).replaceWith("\\(" + match[1] + "\\)");
+            MathJax.Hub.Queue(["Typeset",MathJax.Hub,$(this).get(0)]);
+          }
+        });
+      });
+    </script>
+
+
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include google-analytics.html %}
+    {% endif %}
+
+    {% if page.iis_slider_active %}
+      <!-- Slider CSS -->
+      <link rel="stylesheet" href="{{ "/bower_components/ideal-image-slider/ideal-image-slider.css" | relative_url }}">
+      <link rel="stylesheet" href="{{ "/bower_components/ideal-image-slider/themes/default/default.css" | relative_url }}">
+    {% endif %}
 </head>
