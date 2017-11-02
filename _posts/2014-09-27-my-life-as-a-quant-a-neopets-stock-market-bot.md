@@ -519,15 +519,11 @@ But lets just go ahead and look at the process for setting up anacron:
 
 To schedule a task with anacron, we use anacrontab:
 
-`<br />
-sudo nano /etc/anacrontab<br />
-`
+`sudo nano /etc/anacrontab<br />`
 
 There will be a few lines in there already. At the bottom you simply want to add the following one:
 
-`<br />
-1 6 cron.daily nice python /<PATH TO FILE>/stockbot.py >/dev/null<br />
-`
+`1 6 cron.daily nice python /<PATH TO FILE>/stockbot.py >/dev/null`
 
 What this does is tells the system to run the task daily, with a delay of 6 minutes after start up. It assigns the task to cron.daily label (you can change this), and then executes the command &#8220;python /<directories>/stockbot.py&#8221; and sends any CLI output to null (basically computer oblivion).
 
