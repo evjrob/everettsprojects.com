@@ -53,14 +53,15 @@ In addition to these issues identified for the original write-up, it also came t
 
 Lets take a closer look at the most major change; fixing the overlapping markers issue started with identifying the ATS location for each map marker as the preferred identifier over the Incident Number. Since we are now selecting database entries using the Location column in the database, it makes sense to add an index to this column:
 
-```sql
+{% highlight sql %}
 ALTER TABLE `Spills` ADD INDEX( `Location` );
-```
+{% endhighlight %}
 
 The getSpillInfo.php file also needs to be updated to reflect these changes. It now no longer just fetches the info for a specific unique Incident Number, it needs to fetch all the results for a given ATS location and the filter parameters set:
 
-**getSpillInfo.php**
-```php
+#### getSpillInfo.php
+
+{% highlight php %}
 <?php
 require('config.inc.php');
 
@@ -123,12 +124,13 @@ echo header('Content-type: application/json');
 echo json_encode($result);
 
 ?>
-```
+{% endhighlight %}
 
 With the ATS location being the primary selection parameter, we&#8217;ll also need to update the getSpillLocations.php file to reflect this. Namely line 25, where the \`Location\` column has been added to the SELECT statement, and required to be distinct as well. This will ensure we are provided up to 100 unique legal subdivisions containing the largest single (non-cumulative) incidents for the current map view port:
 
-**getSpillLocations.php**
-```php
+#### getSpillLocations.php
+
+{% highlight php %}
 <?php
 require('config.inc.php');
 
@@ -197,12 +199,13 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 echo header('Content-type: application/json');
 echo json_encode($result);
 ?>
-```
+{% endhighlight %}
 
 Now the index.html file needs to be updated to reflect these changes. This starts with the spillID attributes of the map marker objects being replaced with ATS Location, the plotSpills() function being modified to not duplicate markers when one already exists for that LSD, the loadSpillInfo() function being modified to use the ATS location, then finally populate the Incident Details panel with a &#8220;Number of incidents selected&#8221; count and a table for each of these incidents.
 
-**index.html**
-```html
+#### index.html
+
+{% highlight html %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -766,7 +769,7 @@ THE SOFTWARE.
         </div>
     </body>
 </html>
-```
+{% endhighlight %}
 
 My map still lacks one neat feature of the Global News map; the ability to see the cumulative spill volume for a particular legal subdivision. Since my map does not narrow the substances down to crude oil and its related products, it&#8217;s a non-trivial problem to effectively add up the cumulative volumes released without without blindly adding different substances together. Of course, blindly adding these values together will produce confusing and potentially meaningless results. In light of these concerns, cumulative volumes for each LSD is a feature I don&#8217;t care to reproduce at the time being.
 

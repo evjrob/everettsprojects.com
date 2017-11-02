@@ -41,7 +41,7 @@ Despite the sheer nuttiness of it, everyone keeps going on about the end of the 
   And because I see no reason not to release it, here is the entire source code for the page:
 </p>
 
-```php
+{% highlight php %}
 <?php
    function Visit($url){
      $agent = "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)";$ch=curl_init();
@@ -148,4 +148,4 @@ body {
     </div>
 </body>
 </html>
-```
+{% endhighlight %}

@@ -34,9 +34,9 @@ To start, I began with the Google Maps API v3 [Simple Polylines example code](ht
 
 With all of the main features of the map coded, and a few hours spent finding the geospatial coordinates of my route, I had a decent looking finished product. I spent just a little more time on the layout and design of the page so that some information about the map was presented in a permanent box in the top left hand corner. I&#8217;ve also decided to post the final draft of the code below for easy viewing by all interested parties:
 
-**index.html**
+#### index.html
 
-```html
+{% highlight html %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -517,4 +517,4 @@ html, body {
   border-radius: 5px;
   border: outset 1px #a1b5cf;
 }
-```
+{% endhighlight %}

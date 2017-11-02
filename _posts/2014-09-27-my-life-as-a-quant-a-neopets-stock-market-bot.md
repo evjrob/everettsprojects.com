@@ -32,7 +32,7 @@ Some 12 years later (in 2012), something jogged my memory and drew my attention 
 
 Lets start with the code:
 
-```python
+{% highlight python %}
 #
 # stockbot.py - A webcrawling bot that can automatically play the Neopets stock market game.
 #
@@ -475,7 +475,7 @@ def sellStocks(salesList, browser):
 
 
 main()
-```
+{% endhighlight %}
 
 The script is broken down into a pretty logical sequence as it's very procedural. It starts with the main function which deals with logging in, collecting bank interest and withdrawing neopoints for the stock market purchase if necessary, and then finally playing the stock market. Finally, it goes to deposit the neopoints gained from the stock market if any sales were made, then logs out. Pretty simple on the face of it, but the real interesting parts are the actual interactions with the webpages. In order for our bot to be able to do anything meaningful we need to first extract the information we care about from the page, then have the script make the right decisions using that information, and finally put the calculated input values into the right fields and submit the data. For the login, and bank portions of this bot, that's fairly simple; it's just a matter of going to the correct url selecting the right forms, and submitting a static or otherwise easy to calculate value that is pulled out of the HTML by finding some substrings that encapsulate the data we're after.
 

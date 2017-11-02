@@ -115,11 +115,11 @@ I encountered perl locale errors when I tried doing various things later on, whi
 
 You should find the following lines within, though they do not necessarily need to be US english:
 
-```plaintext
+{% highlight plaintext %}
 LANG=en_US.UTF-8
 LANGUAGE=en_US.UTF-8:en
 LC_ALL=en_US.UTF-8
-```
+{% endhighlight %}
 
 If any of these lines are not present, then you should add them (substituting in another language pack such as en_GB if you&#8217;re so inclined.)
 
@@ -168,28 +168,28 @@ Next, it is a good idea to disable password authentication and limit the users w
 
 First things first, it&#8217;s never a bad idea to disable root login. This isn&#8217;t really necessary on an Ubuntu system since there is no functioning root password and everything is done using sudo, but we&#8217;re better safe than sorry. Find the line beginning with <strong>PermitRootLogin</strong> and change it to <strong>no</strong>:
 
-```plaintext
+{% highlight plaintext %}
   PermitRootLogin no
-  ```
+{% endhighlight %}
 
 We also want to disable password authentication by finding the line <strong>#PasswordAuthentication yes</strong>, changing it to <strong>no</strong>, and uncommenting it by removing the <strong>#</strong>:
 
-```plaintext
+{% highlight plaintext %}
   PasswordAuthentication no
-```
+{% endhighlight %}
 
 Because we do not need X11-forwarding for our purposes you may also wish to change that line to:
 
-```plaintext
+{% highlight plaintext %}
   X11Forwarding no
-```
+{% endhighlight %}
 
 And to limit the users allowed to SSH into the BeagleBone we want to add the following line to the end of the file, using the username we created earlier in the place of _username_:
 
 
-```plaintext
+{% highlight plaintext %}
   AllowUsers _username_
-  ```
+{% endhighlight %}
 
 
 Finally, to finish our lockdown of SSH, we need to restart it so that the changes can take effect:
@@ -240,10 +240,10 @@ We need to make sure that apache has SCGI support enabled so that the rutorrent 
 You then need to paste the following at the end of the file:
 
 
-```plaintext
+{% highlight plaintext %}
   SCGIMount /RPC2 127.0.0.1:5000
   servername localhost
-  ```
+{% endhighlight %}
 
 
 To make sure everything we&#8217;ve done takes effect it is a good idea to restart the server:
@@ -298,7 +298,7 @@ We also need to configure apache using the <strong>/etc/apache2/sites-available/
 You want to replace the contents of this file with the following, where the two instances of _Local IP address_ are replaced by the address of your BeagleBone on the local network:
 
 
-```xml
+{% highlight xml %}
   <VirtualHost *:80>
     ServerAdmin webmaster@localhost
 
@@ -405,7 +405,7 @@ You want to replace the contents of this file with the following, where the two 
         SetEnv R_ENV "/var/www/rutorrent"
     </Location>
 </VirtualHost>
-```
+{% endhighlight %}
 
 We then want to run the following to get apache running https:
 
@@ -479,7 +479,7 @@ Next we need an rtorrent configuration file, which we will save as ~/.rtorrent.r
 and replace any contents with the following:
 
 
-```plaintext
+{% highlight plaintext %}
 # This is an example resource file for rTorrent. Copy to
 # ~/.rtorrent.rc and enable/modify the options as needed. Remember to
 # uncomment the options you wish to enable.
@@ -620,7 +620,7 @@ peer_exchange = no
 
 # Remove a scheduled event.
 #schedule_remove = "ip_tick1"
-```
+{% endhighlight %}
 
 There are a couple of lines you must replace with your own specific information. The first is <strong>directory = _directory torrents will download to by default_</strong> and the second is <strong>session = /home/_username_/.session</strong> . I also encourage you to do a little research so that you can change other settings to suit your purposes.
 
@@ -660,9 +660,9 @@ One of the lines should have something like <strong>../../sda1</strong> listed i
 We want to add a specific line to the end:
 
 
-```plaintext
+{% highlight plaintext %}
   UUID=_uuid_ /media/_mount directory name_ auto defaults 0 0
-  ```
+{% endhighlight %}
 
 
 where <strong>\_uuid\_</strong> is the value we copied earlier, and <strong>/media/_mount directory name_</strong> is where we decided to mount the drive. If you happen to know the file system in use on your usb drive you may wish to change the <strong>auto</strong> in the above line to the proper filesystem. For ext4 this is just &#8220;<strong>ext4</strong>&#8221; and for ntfs (<em>oh god, why?</em>) it would be &#8220;<strong>ntfs-3g</strong>&#8220;, each without quotes. If using ntfs it may be necessary to install the ntfs-3g package.
@@ -707,7 +707,7 @@ Paste the follwing into that file. The only change necessary is to replace <stro
 
 
 
-```bash
+{% highlight bash %}
 #!/bin/sh
 #############
 ###<Notes>###
@@ -845,7 +845,7 @@ restart|force-reload)
 esac
 
 exit 0
-```
+{% endhighlight %}
 
 Finally we will make the owner of the file the root, make it executable, and have it startup at boot.
 
@@ -893,9 +893,9 @@ The diskspace plugin watches the root directory by default, and that is no good 
 We need to find the line that begins <strong>$topDirectory</strong> and change it to the following:
 
 
-```plaintext
+{% highlight plaintext %}
   $topDirectory = "/media/_mount directory name_";
-  ```
+{% endhighlight %}
 
 Finally, we have to change the ownership of these files and folders so that the web server can make use of them:
 
@@ -949,19 +949,19 @@ The next step in setting samba up is to change some things in the configuration 
 The first thing to ensure is that the following line is present and uncommented (it should be below ####### Authentication #######):
 
 
-```plaintext
+{% highlight plaintext %}
   security = user
-  ```
+{% endhighlight %}
 
 
 This will ensure that the only people who can access samba shares are those with a valid ubuntu account on the BeagleBone. The next step is to ensure that only people on the local network can access the samba shares which we achieve by adding the following lines under #### Networking ####:
 
 
-```plaintext
+{% highlight plaintext %}
   # Added for extra security, only addresses on the local network can connect.
   hosts allow = 127.0.0.1 192.168.1.0/24
   hosts deny = 0.0.0.0/0
-  ```
+{% endhighlight %}
 
 
 You may need to change 192.168.1.0/24 to something else depending on your router and local area network addresses (192.168.0.0/24 is another common one).
@@ -970,7 +970,7 @@ You may need to change 192.168.1.0/24 to something else depending on your router
 The last things we need to do in this config file are to setup the shares themselves. We will comment out any of the lines pertaining to printers because the BeagleBone is not attached to any. The end result is that those lines should appear as follows:
 
 
-```plaintext
+{% highlight plaintext %}
 ;[printers]
 ;   comment = All Printers
 ;   browseable = no
@@ -988,11 +988,12 @@ The last things we need to do in this config file are to setup the shares themse
 ;   browseable = yes
 ;   read only = yes
 ;   guest ok = no
-```
+{% endhighlight %}
+
 We also want to enable a share for our attached usb drive by adding the following lines to the end of the file with _mount directory name_ and _username_ are replaced by the appropriate values we used earlier:
 
 
-```plaintext
+{% highlight plaintext %}
 # Share for the external media hard drive
 [media]
       comment = External Drive connected to BeagleBone.
@@ -1000,7 +1001,7 @@ We also want to enable a share for our attached usb drive by adding the followin
       read only = no
       browseable = yes
       valid users = <username>
-```
+{% endhighlight %}
 
 This makes the entire usb hard drive available to the user we created earlier and no one else.
 
@@ -1040,7 +1041,7 @@ The kernel is a slightly more difficult matter because the one that works with t
 You then want to paste the following into this file:
 
 
-```bash
+{% highlight bash %}
 ############################################################################
 ## This is a script obtained from http://elinux.org/BeagleBoardUbuntu     ##
 ## It updates the kernel on the BeagleBone using Robert C Nelsons Sources ##
@@ -1059,7 +1060,7 @@ export BOARD=omap-psp
 wget http://rcn-ee.net/deb/${DIST}-${ARCH}/LATEST-${BOARD}
 wget $(cat ./LATEST-${BOARD} | grep STABLE | awk '{print $3}')
 /bin/bash install-me.sh
-```
+{% endhighlight %}
 
 Using this script is a simple as moving into the scripts directory and running it:
 
@@ -1111,11 +1112,7 @@ The amount of time this takes will depend on the amount of data that is present 
 *****
 </p>
 
-**
-
 And with all that we should be done. I&#8217;ve tried my very best to keep this guide free of any errors, but some are sure to have snuck through. If you notice any, then I will be very grateful if you point them out so I can get them fixed. Once again, I accept no liability for damages or issues that occur as a result of following my directions either on a BeagleBone or other hardware.
-
-**
 
 <p style="text-align:center;">
 *****

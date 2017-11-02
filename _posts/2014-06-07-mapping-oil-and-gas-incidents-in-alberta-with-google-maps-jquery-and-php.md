@@ -54,7 +54,7 @@ I am assuming you have created a database already and have a database user that 
 
 First lets create the table structure:
 
-```sql
+{% highlight sql %}
 CREATE TABLE `Spills` (
   `IncidentNumber` int DEFAULT NULL,
   `IncidentType` varchar(255) DEFAULT NULL,
@@ -116,49 +116,49 @@ CREATE TABLE `Spills` (
    UNIQUE KEY `IncidentNumber` (`IncidentNumber`),
    KEY `IncidentNumber_2` (`IncidentNumber`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8
-```
+{% endhighlight %}
 
 With the table made, we will load the Global News .CSV file into the table. Be sure to point it to the right file location for your server:
 
-```sql
+{% highlight sql %}
 LOAD DATA LOCAL INFILE '<PATH TO THE FILE>/OPENDATA_spills.csv' INTO TABLE Spills
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
-```
+{% endhighlight %}
 
 Now we want to reformat all of the date fields so that they can be real dates within the database:
 
-```sql
+{% highlight sql %}
 UPDATE Spills
 SET IncidentDate = DATE(STR_TO_DATE(IncidentDate, '%m/%d/%Y'))
-WHERE DATE(STR_TO_DATE(IncidentDate, '%m/%d/%Y')) &lt;&gt; '0000-00-00';
+WHERE DATE(STR_TO_DATE(IncidentDate, '%m/%d/%Y')) <> '0000-00-00';
 
 ALTER TABLE `Spills` CHANGE `IncidentDate` `IncidentDate` DATE NULL DEFAULT NULL;
 
 UPDATE Spills
 SET IncidentNotificationDate = DATE(STR_TO_DATE(IncidentNotificationDate, '%m/%d/%Y'))
-WHERE DATE(STR_TO_DATE(IncidentNotificationDate, '%m/%d/%Y')) &lt;&gt; '0000-00-00';
+WHERE DATE(STR_TO_DATE(IncidentNotificationDate, '%m/%d/%Y')) <> '0000-00-00';
 
 ALTER TABLE `Spills` CHANGE `IncidentNotificationDate` `IncidentNotificationDate` DATE NULL DEFAULT NULL;
 
 UPDATE Spills
 SET IncidentCompleteDate = DATE(STR_TO_DATE(IncidentCompleteDate, '%m/%d/%Y'))
-WHERE DATE(STR_TO_DATE(IncidentCompleteDate, '%m/%d/%Y')) &lt;&gt; '0000-00-00';
+WHERE DATE(STR_TO_DATE(IncidentCompleteDate, '%m/%d/%Y')) <> '0000-00-00';
 
 ALTER TABLE `Spills` CHANGE `IncidentCompleteDate` `IncidentCompleteDate` DATE NULL DEFAULT NULL;
 
 UPDATE Spills
 SET ReleaseCleanupDate = DATE(STR_TO_DATE(ReleaseCleanupDate, '%m/%d/%Y'))
-WHERE DATE(STR_TO_DATE(ReleaseCleanupDate, '%m/%d/%Y')) &lt;&gt; '0000-00-00';
+WHERE DATE(STR_TO_DATE(ReleaseCleanupDate, '%m/%d/%Y')) <> '0000-00-00';
 
 ALTER TABLE `Spills` CHANGE `ReleaseCleanupDate` `ReleaseCleanupDate` DATE NULL DEFAULT NULL;
-```
+{% endhighlight %}
 
 There is also an issue with inconsistent units. Some entries have units of &#8220;m3&#8221;, and others are in units of &#8220;103m3&#8221;. Now it&#8217;s obviously not the case that the units are multiples of 103 in m<sup>3</sup>, but rather in 10<sup>3</sup> m<sup>3</sup>. In order for the volume filter to be implemented correctly, we&#8217;ll want consistent units:
 
-```sql
+{% highlight sql %}
 UPDATE Spills SET  `Volume Released` = `Volume Released`*1000 WHERE `Volume Units`="103m3";
 UPDATE Spills SET  `Volume Recovered` = `Volume Recovered`*1000 WHERE `Volume Units`="103m3";
 
@@ -170,23 +170,23 @@ UPDATE Spills SET `Volume Recovered 3` = `Volume Recovered 3`*1000 WHERE `Volume
 
 UPDATE Spills SET `Volume Released 4` = `Volume Released 4`*1000 WHERE `Volume Units 4`="103m3";
 UPDATE Spills SET `Volume Recovered 4` = `Volume Recovered 4`*1000 WHERE `Volume Units 4`="103m3";
-```
+{% endhighlight %}
 
 That takes care of differing units, so now we don&#8217;t really need those units columns, since everything is in m<sup>3</sup> now.
 
-```sql
+{% highlight sql %}
 ALTER TABLE `Spills`
 DROP `Volume Units`,
 DROP `Volume Units 2`,
 DROP `Volume Units 3`,
 DROP `Volume Units 4`;
-```
+{% endhighlight %}
 
 As this table isn&#8217;t going to be updated often (if at all), we&#8217;ll want to index anything that will be used as a search parameter.
 
-```sql
+{% highlight sql %}
 ALTER TABLE `Spills` ADD INDEX( `Latitude`, `Longitude`, `IncidentDate`, `LicenseeName`, `Source`, `Substance Released`, `Volume Released`);
-```
+{% endhighlight %}
 
 And there we have it, a database that should be ready for the web application that will sit on top of it.
 
@@ -199,8 +199,9 @@ If you just want a copy of all the files necessary (for version 1), then I have 
 For everyone else, lets take a closer look at the code that makes it all work, starting with the JavaScript laden index.html file:
 
 <div id="index"></div>
-**index.html**
-```html
+#### index.html
+
+{% highlight html %}
   <!DOCTYPE html>
   <html>
       <head>
@@ -735,7 +736,7 @@ For everyone else, lets take a closer look at the code that makes it all work, s
           </div>
       </body>
   </html>
-```
+{% endhighlight %}
 
 So that&#8217;s a bit of a long file, but I&#8217;ve tried to describe each function&#8217;s purpose, and have laid out the JavaScript as best as possible to provide a rational flow. Overall, the JavaScript is broken into 4 parts:
 
@@ -757,8 +758,9 @@ So that&#8217;s a bit of a long file, but I&#8217;ve tried to describe each func
 There is then the HTML necessary for rendering the webpage, which relies on the following CSS file (default.css):
 
 <div id="css"></div>
-**default.css**
-```css
+#### default.css
+
+{% highlight css %}
 html, body {
   background-color:#b0c4de;
   height: 100%;
@@ -868,13 +870,14 @@ ul.ui-autocomplete {
 .ui-autocomplete-loading {
     background: white url('images/ui-anim_basic_16x16.gif') right center no-repeat;
 }
-```
+{% endhighlight %}
 
 And Finally, six PHP files necessary for interfacing our web page to the database:
 
 <div id="getSpillLocations"></div>
-**getSpillLocations.php**
-```php
+#### getSpillLocations.php
+
+{% highlight php %}
 <?php
 require('config.inc.php');
 
@@ -943,11 +946,12 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 echo header('Content-type: application/json');
 echo json_encode($result);
 ?>
-```
+{% endhighlight %}
 
 <div id="getSpillInfo"></div>
-**getSpillInfo.php**
-```php
+#### getSpillInfo.php
+
+{% highlight php %}
 <?php
 
 $incidentNumber = $_POST['incidentnumber'];
@@ -965,11 +969,11 @@ echo header('Content-type: application/json');
 echo json_encode($result);
 
 ?>
-```
+{% endhighlight %}
 
 <div id="getLicensees"></div>
-**getLicensees.php**
-```php
+#### getLicensees.php
+{% highlight php %}
 <?php
 require('config.inc.php');
 
@@ -983,11 +987,11 @@ echo header('Content-type: application/json');
 echo json_encode($result);
 
 ?>
-```
+{% endhighlight %}
 
 <div id="getSubstances"></div>
-**getSubstances.php**
-```php
+#### getSubstances.php
+{% highlight php %}
 <?php
 require('config.inc.php');
 
@@ -1001,11 +1005,11 @@ echo header('Content-type: application/json');
 echo json_encode($result);
 
 ?>
-```
+{% endhighlight %}
 
 <div id="getSources"></div>
-**getSources.php**
-```php
+#### getSources.php
+{% highlight php %}
 <?php
 require('config.inc.php');
 
@@ -1019,11 +1023,11 @@ echo header('Content-type: application/json');
 echo json_encode($result);
 
 ?>
-```
+{% endhighlight %}
 
 <div id="config"></div>
-**config.inc.php**
-```php
+#### config.inc.php
+{% highlight php %}
 <?php
 // These are the login credentials for your MySQL database,
 // don't forget to set them.
@@ -1032,7 +1036,7 @@ $dbname = change me;
 $dbuser = change me;
 $dbpass = change me;
 ?>
-```
+{% endhighlight %}
 
 The first file, getSpillLocations.php, does what it sounds like. It takes all of the filter parameters along with the map boundaries, and then returns a JSON encoded list of coordinates and spill ID numbers to be plotted. The SQL statement is built based on the parameters passed, and then fulfilled using PHP Data Objects (PDO). The second, getSpillInfo.php, takes a spill ID number, and uses it to return all of the data for that spill as JSON object.<br /> The third, fourth, and fifth scripts are used to fetch lists from the database that are used to populate the menu widgets in the filter panel. They do not require any parameters to be passed, since they just return a list containing all of the existing values for each field. Finally, config.inc.php is simply a file containing the database access credentials, meant to be included in the five other scripts.
 

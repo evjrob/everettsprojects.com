@@ -82,35 +82,22 @@ Once you have all of the files, it is necessary to set up the MySQL database. I 
 To create the users table, enter the following query using phpMyAdmin or an equivalent tool:
 
 > CREATE TABLE \`users\` (
-
 > \`id\` int(11) NOT NULL AUTO_INCREMENT,
-
 > \`username\` varchar(32) NOT NULL,
-
 > \`email\` varchar(254) NOT NULL,
-
 > \`password_hash\` varchar(64) NOT NULL,
-
 > PRIMARY KEY (\`id\`),
-
 > UNIQUE KEY \`username\` (\`username\`),
-
 > UNIQUE KEY \`email\` (\`email\`)
-
 > ) ENGINE=MyISAM DEFAULT CHARSET=latin1
 
 To create the passwordReset table, we simply enter this query the same way we did for the users table:
 
 > CREATE TABLE \`passwordReset\` (
-
 > \`userid\` int(11) NOT NULL,
-
 > \`UUID\` varchar(32) NOT NULL,
-
 > \`created\` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-
 > PRIMARY KEY (\`userid\`)
-
 > ) ENGINE=MyISAM DEFAULT CHARSET=latin1
 
 And that&#8217;s all there is too it. If you have those PHP files in a public directory of your web server and the tables created in MySQL,then you should be good to go.
