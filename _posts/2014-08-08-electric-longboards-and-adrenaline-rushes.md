@@ -38,9 +38,8 @@ comments: true
 
 &nbsp;
 
-<div id="why">
-  <strong>Why pursue this madness?</strong>
-</div>
+<div id="why"></div>
+### Why pursue this madness?
 
 <div>
   Like many of my projects, it all started when I stumbled upon something interesting on the internet. In this case it was a <a href="https://www.youtube.com/watch?v=2KtMCX7FfZ0">video of the Board of Imagination</a>. Now, a mind controlled skateboard is pretty cool, and arguably the main point of interest in that project. But it was the motorization of the board that really captivated me. Motorizing skateboards is really nothing new, in fact the use of a normal DC motor and gears in the Board of Imagination is pretty old school. It's essentially all Brushless DC motors (BLDC) and timing belts now. There are also <a href="http://endless-sphere.com/forums/">entire communities built around achieving and refining the goal of motorized anything</a>. And it was that little bit of research that did me in. I no longer just wanted one; I <em>needed</em> one.
@@ -66,10 +65,8 @@ comments: true
 
 &nbsp;
 
-<div id="parts">
-  <strong>The parts:</strong>
-</div>
-
+<div id="parts"></div>
+### The parts:
 
 
   1.  A longboard deck. _I used the [Earthwing Big Hoopty](http://www.earthwingboards.com/#!store/c2fv). It's a super solid and awesome board at an easy $107 from a local board shop._
@@ -85,11 +82,8 @@ comments: true
 
 &nbsp;
 
-<div id="assembly">
-  <strong>Putting it all together:</strong>
-</div>
-
-
+<div id="assembly"></div>
+### Putting it all together:
 
 <div>
   The process of putting together isn't all that difficult. With the step requiring the welding of a motor mount to a truck eliminated, the most difficult part was definitely the construction of the battery shield. But we get ahead of ourselves. Lets start with the deck and trucks.
@@ -279,9 +273,8 @@ With the box complete, I drilled some holes in the base flanges, and then drille
   </tr>
 </table>
 
-<div id="results">
-  <strong>The results:</strong>
-</div>
+<div id="results"></div>
+### The results:
 
 The final product of all this labour is an adrenaline rush. I've never taken a longboard downhill, so I really don't have a taste for the high speed longboarding some people are accustomed to. But that's okay because it means that I get a nice pleasant adrenaline rush when I manage to get this board above 30km/h .
 

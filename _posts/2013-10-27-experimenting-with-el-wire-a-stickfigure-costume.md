@@ -35,9 +35,8 @@ Like most people on the internet, I saw [this video](http://www.youtube.com/watc
   . . . . .
 </p>
 
-<p style="text-align:left;">
-  <strong>The Parts: </strong>
-</p>
+<p style="text-align:left;"></p>
+### The Parts:
 
   * 2 x  [2.5m of High Brightness White Electroluminescent (EL) Wire](http://www.adafruit.com/products/410)
   * 1 x [12V EL wire/tape inverter](http://www.adafruit.com/products/448)
@@ -56,7 +55,7 @@ Like most people on the internet, I saw [this video](http://www.youtube.com/watc
   . . . . .
 </p>
 
-**The Basic Design:**
+### The Basic Design:
 
 [<img class="aligncenter size-full wp-image-869" alt="SuitLayout" src="/wp-content/uploads/2013/10/suitlayout.jpg" width="594" height="655" srcset="/wp-content/uploads/2013/10/suitlayout.jpg 2338w, /wp-content/uploads/2013/10/suitlayout-271x300.jpg 271w, /wp-content/uploads/2013/10/suitlayout-928x1024.jpg 928w" sizes="(max-width: 594px) 100vw, 594px" />](/wp-content/uploads/2013/10/suitlayout.jpg)
 
@@ -68,9 +67,8 @@ The suit consists of five separate strands of EL wire of varying lengths all con
   . . . . .
 </p>
 
-<p style="text-align:left;">
-  <strong>Preparing the Electronics:</strong>
-</p>
+<p style="text-align:left;"></p>
+### Preparing the Electronics:
 
 The strands of EL wire that I purchased both come with jumpers preinstalled, but since I needed five separate strands it was necessary to cut off the extra strands from the ends and manually solder new connections to them. There were three of these new strands to be soldered using the male in-line connectors. A few images of my soldering efforts are included, but the [adafruit guide to soldering EL wire](http://learn.adafruit.com/el-wire/soldering-to-el-wire) is far superior to anything I could reproduce here.
 
@@ -138,9 +136,8 @@ The strands of EL wire that I purchased both come with jumpers preinstalled, but
   . . . . .
 </p>
 
-<p style="text-align:left;">
-  <strong>Attaching it to the Clothes:</strong>
-</p>
+<p style="text-align:left;"></p>
+### Attaching it to the Clothes:
 
 <p style="text-align:left;">
   Okay so the electronics are done, and everything glows nicely. Now we jut need to sew it to the clothing. But before that, I decided I wanted a nice round stick person head. To achieve this I went and pulled a nice firm aluminium  ring from an old tomato cage then stuck it through the drawstring part of the hood.

@@ -39,7 +39,7 @@ This guide is broken into major steps for the convenience of anyone wishing to f
 </p>
 
 
-## Installing Ubuntu and some basic configuration
+### Installing Ubuntu and some basic configuration
 
 To start it&#8217;s necessary to get your preferred Linux distribution running on the BeagleBone. I chose Ubuntu mainly because I found an easy and ready to install image, though the fact that it is compiled to take advantage of the hard float capabilities in this arm processor was also a factor. The following instructions were up to date when I utilized them, though it&#8217;s entirely possible that a newer image has been created in the meantime and you should use that one if possible. You will also need a microSD card to write the image to (I used a 4GB card, though a 2GB card or greater should work).
 
@@ -138,7 +138,7 @@ Before proceeding, it is also a good idea to make sure all of the packages on yo
   *****
 </p>
 
-## Locking down SSH
+### Locking down SSH
 
 Credit goes to <a href="http://www.debian-administration.org/articles/530">http://www.debian-administration.org/articles/530</a> as the basis for this portion of my guide.<br /> We need to generate a set of public and private keys on the computer you wish to SSH into the BeagleBone from. It is important to make sure you are running this locally on the client computer, not through SSH on the BeagleBone:
 
@@ -205,7 +205,7 @@ Finally, to finish our lockdown of SSH, we need to restart it so that the change
   *****
 </p>
 
-## Getting rtorrent and rutorrent running
+### Getting rtorrent and rutorrent running
 
 This portion of my guide has been mainly adapted from <a href="http://forums.rutorrent.org/index.php?topic=256.0">http://forums.rutorrent.org/index.php?topic=256.0</a>.
 
@@ -920,7 +920,7 @@ At this point we&#8217;re essentially finished with this part of the guide unles
 </p>
 
 
-## Installing and configuring Samba
+### Installing and configuring Samba
 
 Samba is a very convenient application to have running for a home media server as it allows us to have very easy access to the files from other computers on the local network. To install samba:
 
@@ -1019,7 +1019,7 @@ That&#8217;s it for samba, and we can enable the changes by restarting the samba
 </p>
 
 
-## Updating and maintaining the system
+### Updating and maintaining the system
 
 There are a few basic things we need to do to keep our new home media server functioning in tiptop shape, and the first is keeping it up to date. For the most part, this can be done through the ubuntu repositories:
 

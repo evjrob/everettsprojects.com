@@ -4,7 +4,7 @@
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
-    margin: 0;
+    margin: 1;
     padding: 0;
 }
 
@@ -18,7 +18,7 @@ $vertical-spacing-unit:         40px;
 $nav-height:                    56px;
 
 /* portfolio tinkering */
-$img_spacing: 5px; 
+$img_spacing: 5px;
 $img_height: 275px;
 $caption_font_size: 12px;
 $caption_color: #aaa;
@@ -126,7 +126,7 @@ a {
     text-decoration: none;
     /*
     &:visited {
-        color: darken($brand-color, 15%); 
+        color: darken($brand-color, 15%);
     }
     */
     &:hover {
@@ -192,7 +192,7 @@ pre {
 
 /**
  * Wrapper
- */ 
+ */
 
 .wrapper {
     max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
@@ -223,6 +223,3 @@ pre {
         clear: both;
     }
 }
-
-
-

@@ -39,7 +39,7 @@ comments: true
   4. [Considerations and Caveats](#considerations)
 
 <div id="motivation"></div>
-## Motivation:
+### Motivation:
 
 This is a project I conceived of back in university as an environmental science student, but never could make because the spill data on which it relies was not freely available. Later, while I was preoccupied with travel, Global News, a Canadian News broadcaster managed to get a copy of the database using a freedom of information request. They released  a <a href="http://globalnews.ca/news/571494/introduction-37-years-of-oil-spills-in-alberta/">news story including an interactive map of their own</a>, which does some cool things this one does not. It plots the spills in such a way that the marker size reflects the cumulative volume spilled at that location, and it even breaks this cumulative spill up into multiple incidents by date if applicable. On the other hand, it only displays spills for Crude Oil and a few other related substances, offers a very limited view-port that cannot show the entire province, and does not provide any real filtering capabilities. Thankfully, Global News released <a href="http://globalnews.ca/news/622513/open-data-alberta-oil-spills-1975-2013/">their copy of the database</a>, so I can build my own map that includes some of the features I think are cool (even if I&#8217;m a year late to the party). The database is in a .csv format, which I have since converted back to a SQL (mySQL) database. Unfortunately this back and forth conversion poses certain problems like truncated values in certain fields. Luckily these issues are fairly minimal.
 
@@ -48,7 +48,7 @@ So without further delay, lets move on to the process of converting the database
 
 
 <div id="database"></div>
-## The Database:
+### The Database:
 
 I am assuming you have created a database already and have a database user that can access it. Making this user read only will also not be such a bad idea, since the web application will never need to modify values. All of this can be easily accomplished with phpMyAdmin, or a similar tool.
 
@@ -191,7 +191,7 @@ ALTER TABLE `Spills` ADD INDEX( `Latitude`, `Longitude`, `IncidentDate`, `Licens
 And there we have it, a database that should be ready for the web application that will sit on top of it.
 
 <div id="code"></div>
-## The Code:
+### The Code:
 <a href="http://everettsprojects.com/2014/06/25/mapping-oil-and-gas-incidents-in-alberta-improvements/"><em>There is an updated version of this project with a number of improvements.</em></a>
 
 If you just want a copy of all the files necessary (for version 1), then I have them <a href="/spillsv1/spills.zip">all in a zipped archive</a>. Don&#8217;t forget to go in and change the values of config.inc.php to reflect your own MySQL database.
@@ -1038,7 +1038,7 @@ The first file, getSpillLocations.php, does what it sounds like. It takes all of
 
 <div id="considerations"></div>
 
-## Considerations and Caveats:
+### Considerations and Caveats:
 
 The ERCB/AER uses the Alberta Township System (ATS) for reporting locations, which means the latitudes and longitudes in the database are converted values that represent the centre of the smallest unit in the ATS scheme; a Legal Sub-Division (LSD). Since a LSD is 400m along each side, it can be said that any plotted location is accurate to +/- 200m in each axis. This poses another problem however; certain legal subdivisions will have had multiple incidents on them in the 37 year period displayed. A great example is the region near Turner Valley:
 

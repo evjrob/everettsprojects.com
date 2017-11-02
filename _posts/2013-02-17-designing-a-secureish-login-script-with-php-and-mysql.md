@@ -41,7 +41,7 @@ comments: true
 
 This project has taken me much longer to complete than I originally expected it would. I guess I just wanted to make sure that it functioned in a sane and relatively secure manner. I usually don&#8217;t feel compelled to reinvent the wheel, but I wanted a good project that I could use to learn PHP and MySQL, and a login script turns out to be a solid project which incorporates all of that. I set out to make sure my login script wasn&#8217;t a piece of junk by design, which means that I did a little research to make sure I wasn&#8217;t doing anything inherently insecure. This doesn&#8217;t mean that it is secure, and I really wouldn&#8217;t recommend using my scripts in an actual project, since they are not rigorously tested. Furthermore, because I am too cheap to pay for a proper webhost, my site has no SSL certificate and hence no HTTPS, which is a major security hole. If someone happened to eavesdrop on your connection they could easily steal your session or your password. For this reason, it is a good idea to not register on my example page using credentials that you&#8217;ve used in other places. This is also why I decided to call my project secureish in the title. Regardless of these potential issues, I am pleased with the final result, which incorporates all of the following:
 
-**Principles:**
+### Principles:
 
   * <span style="line-height:13px;">Never store passwords in plaintext</span>
   * Store DB login credentials in a config file to be required when needed
@@ -60,12 +60,12 @@ This project has taken me much longer to complete than I originally expected it 
   * Make the forms and pages look vaguely modern: not something that passed off as okay in 1996.
       * Placeholders.js is used to make the placeholder attributes work in older or useless browsers like Internet Explorer.
 
-**Features it could have, but I didn&#8217;t bother implementing:**
+### Features it could have, but I didn&#8217;t bother implementing:
 
   * <span style="line-height:13px;">Email verification of account to prevent lots of spam accounts from cluttering up the users table in the database</span>
   * JavaScript mechanism to tell the user in real time if their username or email is already taken right on the registration form
 
-**The code and how it works:**
+### The code and how it works:
 
 If you just want the source code, [I have them all zipped up and ready to go](https://everettsprojects.com/phplogin/phpLogin.zip). The config.inc.php and request_reset.php files will need to be updated with your own site specific information, such as base URLs and database login credentials.
 

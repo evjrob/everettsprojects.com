@@ -24,7 +24,7 @@ comments: true
 ---
 The original source code for this project can be found <a href="https://github.com/evjrob/html-to-lcd">Here.</a>
 
-**WHAT YOU NEED:**
+### WHAT YOU NEED:
 
   1. [Arduino](http://www.sparkfun.com/products/9950) (I use the UNO, but I think the older revisions should also work)
   2. [An Ethernet Shield](http://www.sparkfun.com/products/9026)
@@ -32,11 +32,11 @@ The original source code for this project can be found <a href="https://github.
   4. An Ethernet cable (I just used an old one lying around)
   5. A Breadboard  or some other means to connect the LCD to the Arduino and one 2.2 kΩ resistor
 
-**WHAT IT DOES:**
+### WHAT IT DOES:
 
 This project combines the above to turn the Arduino into web server which is hooked up to the LCD. It produces a simple HTML web page, from which the user may see what text is currently displayed on the LCD, and provides them the opportunity to change the text using simple input forms. The hardware side of this project is fairly simple, and there were no physical hacks or modifications that needed to be made. The real challenge to this project were working within the limitations of the Arduino as a computing device.
 
-**SETUP AND OPERATION:**
+### SETUP AND OPERATION:
 
 [<img class="size-medium wp-image-28 alignleft" title="DSCF2311" src="http://ejrob.files.wordpress.com/2011/05/dscf23111.jpg?w=300" alt="" width="270" height="203" srcset="/wp-content/uploads/2011/05/dscf23111.jpg 1000w, /wp-content/uploads/2011/05/dscf23111-300x225.jpg 300w" sizes="(max-width: 270px) 100vw, 270px" />](http://ejrob.files.wordpress.com/2011/05/dscf23111.jpg)
 
