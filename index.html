@@ -4,20 +4,18 @@ layout: default
 
 <div class="header-bar">
   <h1>{{ site.title }}</h1>
-  <h2>{{ site.description }}</h2>
+  <h4>{{ site.description }}</h4>
   <br/>
-  <hr>
-  <br/>
+  <hr/>
 </div>
 
 
 <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <h4><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
         <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
         <p>{{ post.description }}</p>
-        <br/>
         <hr/>
       </li>
     {% endfor %}
