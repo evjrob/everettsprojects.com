@@ -23,11 +23,9 @@ disqus:
 # Google Analytics
 google_analytics: UA-51737914-1
 
-
 # Pagination
 #paginate: 15
 #paginate_path: "/page:num/"
-
 
 collections:
   portfolio:
