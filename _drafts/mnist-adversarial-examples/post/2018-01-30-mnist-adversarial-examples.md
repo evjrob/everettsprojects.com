@@ -36,6 +36,14 @@ backend.set_learning_phase(False)
 keras_model = load_model('models/Jan-13-2018.hdf5')
 {% endhighlight %}
 
+    /home/everett/.local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+      from ._conv import register_converters as _register_converters
+    Using TensorFlow backend.
+    /usr/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+      return f(*args, **kwds)
+
+
+
 {% highlight python %}
 '''
 Split the provided training data to create a new training
@@ -154,7 +162,7 @@ plt.show()
 {% endhighlight %}
 
 
-![png](/../figs/2018-01-30-mnist-adversarial-examples/output_10_0.png)
+![png](/../figs/2018-01-30-mnist-adversarial-examples/output_9_0.png)
 
 
 
@@ -193,7 +201,7 @@ plt.show()
 {% endhighlight %}
 
 
-![png](/../figs/2018-01-30-mnist-adversarial-examples/output_13_0.png)
+![png](/../figs/2018-01-30-mnist-adversarial-examples/output_12_0.png)
 
 
 
@@ -248,7 +256,7 @@ print("The adversarial classification accuracy is: {}".format(adv_acc))
 {% endhighlight %}
 
 
-![png](/../figs/2018-01-30-mnist-adversarial-examples/output_16_0.png)
+![png](/../figs/2018-01-30-mnist-adversarial-examples/output_15_0.png)
 
 
     The adversarial classifications are: [9 2 8 8 8 3 8 8 3 8]
@@ -281,6 +289,9 @@ def add_border(digit_img, border_color = 'black', margin = 1):
         base[:,:,0] = 1
     elif border_color == 'green':
         base[:,:,1] = 1
+    elif border_color == 'yellow':
+        base[:,:,0] = 1
+        base[:,:,1] = 1
     
     border_digit = base
     border_digit[margin:(digit_shape[0] + 1), margin:(digit_shape[1] + 1), :] = rgb_digit
@@ -309,6 +320,8 @@ def target_attacks(input_digit, input_digit_img, target_digits):
             border_color = 'green'
         elif adv_pred[0] == target_digit:
             border_color = 'red'
+        else:
+            border_color = 'yellow'
 
         adv_digit_img = add_border(adv_digit.reshape(28,28), border_color)
 
@@ -327,20 +340,37 @@ for i in range(10):
     results = [add_border(new_inputs[i])] + results
     results_img = stitch_images(results, 1, 11, margin = 0)
     rows.append(results_img)
-    
-final_img = stitch_images(rows, 10, 1, margin = 0)
+{% endhighlight %}
 
+
+{% highlight python %}
+# Add a final row for the target digits
+last_row = [np.zeros((28,28))] + new_digits
+last_row = [add_border(digit) for digit in last_row]
+last_row_img = stitch_images(last_row, 1, 11, margin = 0)
+
+rows.append(last_row_img)
+    
+final_img = stitch_images(rows, 11, 1, margin = 0)
+{% endhighlight %}
+
+
+{% highlight python %}
+# Plot the resulting grid
 plt.imshow(final_img)
-plt.axis('off')
+plt.xticks([])
+plt.xlabel("Target Digits")
+plt.yticks([])
+plt.ylabel("Input Digits")
 plt.show()
 {% endhighlight %}
 
 
-![png](/../figs/2018-01-30-mnist-adversarial-examples/output_19_0.png)
+![png](/../figs/2018-01-30-mnist-adversarial-examples/output_20_0.png)
 
 
-The first column in the above image represents the input digit, and the next ten digits on each row are attempts to perturb it into the digits zero through nine. A green border around a digit indicates that my convnet correctly classified the adversarial example as the original input digit, while a red border means the digit was misclassified as the target digit. The diagonals are all correctly classified since they represent attempts to perturb a digit towards itself. We will not consider these diagonal entries when determining the accuracy of the model.
+The first column in the above image represents the input digit, and the next ten digits on each row are attempts to perturb it into the digits zero through nine. The bottom row represents the target digit of the perturbation. A green border around a digit indicates that my convnet correctly classified the adversarial example as the original input digit, a red border means the digit was misclassified as the target digit, and a yellow border means the digit was misclassified, but not as the target. The diagonals are all correctly classified since they represent attempts to perturb a digit towards itself. We will not consider these diagonal entries when determining the accuracy of the model.
 
-Counting only the green digits off the diagonal, we can see that five of the ninety attacks were correctly classified. Four of these five failed attacks are on the digit eight, suggesting that eights are not as easy as the other digits. Regardless, with 85 out of 90 attacks succeeding, we achieved a 94.4% success rate in forcing specific misclassications. It is no wonder adversarial examples have been such a topic of interest in machine learning circles over the past few years.
+Counting the green digits off the diagonal, we can see that only five of the ninety attacks were correctly classified, and four more were misclassified as an unintended digit. Four of these five failed attacks are on the digit eight, suggesting that eights are not as easy as the other digits. Regardless, with 80 out of 90 attacks succeeding, we achieved a 88.9% success rate in forcing specific misclassications. It is no wonder adversarial examples have been such a topic of interest in machine learning circles over the past few years.
 
 Now that I know my MNIST convnet is susceptible to adversarial attacks it might be interesting to try a similar technique while treating my network like a black box. To do this I would need to construct a parallel model which is used to find adversarial attacks that are likely to work on the original black box model. Such attacks are [known to work in practice](https://arxiv.org/abs/1605.07277), and there is even a [CleverHans tutorial that implements one](https://github.com/tensorflow/cleverhans/blob/master/cleverhans_tutorials/mnist_blackbox.py). I might also try to improve this model by [incorporating adversarial examples during training](https://arxiv.org/abs/1412.6572). Or I could instead switch to using the new [Capsule Networks](https://www.youtube.com/watch?v=rTawFwUvnLE) introduced only a few months ago by Geoffrey Hinton. Capsule Networks purport to be more resistant to adversarial examples due to the way in which they encode certain features like position, size, orientation, and stroke thickness. It will be interesting to see just how resilient they are against targeted attacks as time passes.
