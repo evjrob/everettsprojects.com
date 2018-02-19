@@ -1,0 +1,71 @@
+---
+title: "Is Home Ice Advantage in the NHL Real?"
+author: "Everett Robinson"
+date: "February 19, 2018"
+output: html_document
+---
+
+Many people have attempted to answer the question of whether or not home ice advantage exists. A [2013 paper](http://people.stat.sfu.ca/~tim/papers/hca.pdf) by Tim Swartz and Adriano Arce came to the conclusion that home ice advantage in the NHL is real, accounting for about 5% of goals in 2012. Furthermore, they observed that when total goals per game are accoutned for, there is no appreciable change in the home ice advantage over time. Lastly, they performed a one way ANOVA and a pairwise Tukey's HSD test on 16 NHL teams that have played in 30 seasons to determine if there is a significant difference between teams' home ice advantages. The result from their analysis was that there is not sufficient evidence to conclude that home ice advantage varies between teams.
+
+Later in 2017, a [fivethirtyeight blog post](https://fivethirtyeight.com/features/a-home-playoff-game-is-a-big-advantage-unless-you-play-hockey/) also tried to tackle this problem coming to the conclusion that home ice in the regular season amounts to a win percentage of 55.1%, 5.1% better than even odds. In the playoffs this advantage declines slightly to a boost in win percentage that is only 4.8% better on home ice than at a theoretical neutral rink.
+
+The above two results appear fairly consistent with each other, and one might be satisfied that home ice advantage is a real phenomenon. This is probably a safe bet, but I'm all for reproducible research so I'm going to try my hand at answering this question myself and corroborating the previus findings.
+
+There are two questions that I want to attempt to answer:
+
+1. Is there evidence for home ice being advantageous in general? 
+2. Is there evidence that this advantage varies from team to team?
+
+I would also like to quantify the extent of home ice advantage in the above analysis, mainly in terms of the expected goal differential it causes. To do all of this I am going to a few different strategies. The first will be a frequentist statistical approach using a paired sample t-test on the home and away teams goals if the assumptions for this test are met. If the assumptions of normality or no outliers are not met, then I will use the  Wilcoxon signed-rank test.
+
+Next, I will investigate the first problem again using a Bayesian approach. To accomplish this, I will use a model based on John Kruschke's [Bayesian estimation supercedes the t-test](http://www.indiana.edu/~kruschke/BEST/BEST.pdf). To do this I will simply use Kruschke's own R package.
+
+To answer the second question, I will implement a one way ANOVA on the collected data to test for sigificant differences in home ice advantage by team.
+
+To start, we will need to get the data for NHL games that have already been played. I will do this using the undocumented NHL statistics API, which returns json files with a mostly self evident structure. These files will be retrieved and parsed using Python and the very easy requests and json libraries. 
+
+```{python, engine = python3}
+import requests
+import json
+import pandas as pd
+
+response = requests.get("https://statsapi.web.nhl.com/api/v1/schedule?startDate=2017-09-18&endDate=2017-09-18")
+schedule_json = response.json()
+
+# A function to extract the relevant data from the schedule
+# and return it as a pandas dataframe
+def extract_game_data(schedule):
+    """Given full JSON records for games from the NHL API,
+    returns a simplified list of just the data we need.
+    """
+    games = pd.DataFrame(columns=['date', 
+                                  'home_team', 
+                                  'home_team_score', 
+                                  'away_team', 
+                                  'away_team_score'])
+    
+    for date_obj in schedule_json['dates']:
+        date = date_obj['date'];
+        for game_obj in date_obj['games']:
+            home_team_obj = game_obj['teams']['home']
+            away_team_obj = game_obj['teams']['away']
+            
+            home_team = home_team_obj['team']['name']
+            home_team_score = home_team_obj['score']
+            
+            away_team = away_team_obj['team']['name']
+            away_team_score = away_team_obj['score']
+            
+            games = games.append({'date': date,
+                                  'home_team': home_team,
+                                  'home_team_score': home_team_score,
+                                  'away_team': away_team,
+                                  'away_team_score': away_team_score
+                                  }, ignore_index=True)
+    
+    return games
+    
+games = extract_game_data(schedule_json)
+games.to_csv('games.csv', index = False)
+```
+
