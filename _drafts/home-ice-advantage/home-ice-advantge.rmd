@@ -7,7 +7,7 @@ output: html_document
 
 Many people have attempted to answer the question of whether or not home ice advantage exists. A [2013 paper](http://people.stat.sfu.ca/~tim/papers/hca.pdf) by Tim Swartz and Adriano Arce came to the conclusion that home ice advantage in the NHL is real, accounting for about 5% of goals in 2012. Furthermore, they observed that when total goals per game are accoutned for, there is no appreciable change in the home ice advantage over time. Lastly, they performed a one way ANOVA and a pairwise Tukey's HSD test on 16 NHL teams that have played in 30 seasons to determine if there is a significant difference between teams' home ice advantages. The result from their analysis was that there is not sufficient evidence to conclude that home ice advantage varies between teams.
 
-Later in 2017, a [fivethirtyeight blog post](https://fivethirtyeight.com/features/a-home-playoff-game-is-a-big-advantage-unless-you-play-hockey/) also tried to tackle this problem coming to the conclusion that home ice in the regular season amounts to a win percentage of 55.1%, 5.1% better than even odds. In the playoffs this advantage declines slightly to a boost in win percentage that is only 4.8% better on home ice than at a theoretical neutral rink.
+Later in 2017, a [fivethirtyeight blog post](https://fivethirtyeight.com/features/a-home-playoff-game-is-a-big-advantage-unless-you-p lay-hockey/) also tried to tackle this problem, coming to the conclusion that home ice in the regular season amounts to a win percentage of 55.1%, 5.1% better than even odds. In the playoffs this advantage declines slightly to a boost in win percentage that is only 4.8% better on home ice than at a theoretical neutral rink.
 
 The above two results appear fairly consistent with each other, and one might be satisfied that home ice advantage is a real phenomenon. This is probably a safe bet, but I'm all for reproducible research so I'm going to try my hand at answering this question myself and corroborating the previus findings.
 
@@ -29,7 +29,7 @@ import requests
 import json
 import pandas as pd
 
-response = requests.get("https://statsapi.web.nhl.com/api/v1/schedule?startDate=2017-09-18&endDate=2017-09-18")
+response = requests.get("https://statsapi.web.nhl.com/api/v1/schedule?startDate=2013-09-18&endDate=2017-08-1")
 schedule_json = response.json()
 
 # A function to extract the relevant data from the schedule
@@ -47,6 +47,8 @@ def extract_game_data(schedule):
     for date_obj in schedule_json['dates']:
         date = date_obj['date'];
         for game_obj in date_obj['games']:
+            game_type = game_obj['gameType']
+            season = game_obj['season']
             home_team_obj = game_obj['teams']['home']
             away_team_obj = game_obj['teams']['away']
             
@@ -57,6 +59,8 @@ def extract_game_data(schedule):
             away_team_score = away_team_obj['score']
             
             games = games.append({'date': date,
+                                  'season': season,
+                                  'game_type': game_type,
                                   'home_team': home_team,
                                   'home_team_score': home_team_score,
                                   'away_team': away_team,
@@ -69,3 +73,95 @@ games = extract_game_data(schedule_json)
 games.to_csv('games.csv', index = False)
 ```
 
+
+```{r}
+library(tidyverse)
+games <- read_csv("games.csv")
+```
+
+We will consider theregula r season games that have occured since the last NHL season that experienced a lock-out, the 2012-2013 season, to the end of the last complete season, the 2016-2017 season. This will avoid the current partial solution, which may effect the balance of home vs away games. It will also avoid any disruption and complications that are caused by the introduction of the Vegas Golden Knights, which acquired players from many other teams.
+
+```{r}
+reg_season_games <- games %>% 
+  filter(game_type == "R")
+dim(reg_season_games)
+```
+
+Filtering for the above conditions, 4920 regular season games were played across that time span. All teams should have played exactly 164 home games and exactly 164 away games one exception, the Arizona/Phoenix Coyotes. This team underwent a name change to become the Arizona Coyotes between the 2013-2014 and 2014-2015 seasons. To fix this I will simply rename all occurances of the Phoenix Coyotes to the Arizona Coyotes in the data.
+
+```{r}
+home_games_by_team <- reg_season_games %>% 
+  group_by(home_team) %>% 
+  count() %>% 
+  rename(home_game_count = n, team = home_team)
+
+away_games_by_team <- reg_season_games %>% 
+  group_by(away_team) %>% 
+  count() %>% 
+  rename(away_game_count = n, team  = away_team)
+
+game_counts_by_team <- home_games_by_team %>% 
+  left_join(away_games_by_team) 
+
+game_counts_by_team %>% 
+  arrange(home_game_count) %>% 
+  head()
+
+game_counts_by_team %>% 
+  arrange(home_game_count) %>% 
+  tail()
+```
+```{r}
+games$home_team[games$home_team == "Phoenix Coyotes"] = "Arizona Coyotes"
+games$away_team[games$away_team == "Phoenix Coyotes"] = "Arizona Coyotes"
+
+reg_season_games <- games %>% 
+  filter(game_type == "R")
+
+home_games_by_team <- reg_season_games %>% 
+  group_by(home_team) %>% 
+  count() %>% 
+  rename(home_game_count = n, team = home_team)
+
+away_games_by_team <- reg_season_games %>% 
+  group_by(away_team) %>% 
+  count() %>% 
+  rename(away_game_count = n, team  = away_team)
+
+game_counts_by_team <- home_games_by_team %>% 
+  left_join(away_games_by_team) 
+game_counts_by_team
+```
+
+Some teams are likely inherently stronger than other teams, so we will also want to be sure that the ratio of home to away games between any pair of teams is also close to 1:1. This will ensure that the confounding effect of relative strength is properly controlled for.
+
+```{r, fig.width=8, fig.height=6}
+# Get the count of each home_team away_team pair
+game_balance_by_pairs <- reg_season_games %>% 
+  select(home_team, away_team) %>%
+  group_by(home_team, away_team) %>%
+  count() %>%
+  rename(home_game_count = n)
+
+# Add the total for each matchup, regardless of which team was home or away
+game_balance_by_pairs <- game_balance_by_pairs %>%
+  mutate(matchup_count = home_game_count + 
+                         game_balance_by_pairs[(game_balance_by_pairs$home_team == away_team &
+                                                game_balance_by_pairs$away_team == home_team),
+                                               'home_game_count'][[1]])
+
+game_balance_by_pairs <- game_balance_by_pairs %>%
+  mutate(home_game_proportion = home_game_count / matchup_count)
+
+game_balance_by_pairs %>% ggplot(aes(x = home_team, y = away_team)) + 
+  geom_tile(aes(fill = home_game_proportion)) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
+  ggtitle("Proportion of Games Played at Home for All\nPairs of NHL Teams (2012 - 2017)")
+```
+
+```{r}
+min(game_balance_by_pairs$home_game_proportion)
+max(game_balance_by_pairs$home_game_proportion)
+```
+
+With a minimum proportion of home games foe each team matchup at 0.4706, and a maximum proportion at 0.5294, it would appear to me that the relative difference in strength between teams is adequately controlled for.
