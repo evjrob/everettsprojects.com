@@ -176,9 +176,9 @@ With a minimum proportion of home games foe each team matchup at 0.4706, and a m
 Satisfied that the home and away games are distributed evenly across the 30 NHL teams in our data, we now need to verify two key assumptions before we can proceed with a paired t-test:
 
 1. The distribution of (home_team_score - away_team_score) needs to be normal
-2. The score difference in each game of our sampled games are independent
+2. The score differences for the games in our sample are independent of each other
 
-If these assumptions are violated we may need to consider switching to another test that does not depend on the same assumptions, such as a Wilcoxon signed-rank test
+If these assumptions are thoroughly violated, we may need to consider switching to another test that does not depend on the same assumptions, such as a Wilcoxon signed-rank test.
 
 To test the first assumption, we will need to compute the difference in home team and away team goals:
 
@@ -194,11 +194,11 @@ reg_season_games %>%
   geom_col()
 ```
 
-Ignoring the gaping hole around score differences of zero, the above plot does look approximately normally distributed around a value slightly above zero. The reason that there are no score differences of zero is because NHL games that are tied at the end of regulation go into a five minute sudden death overtime, and then finally to a shootout if no team wins during that time. This necessarily forces one team to ultimately win the game, making tied final scores impossible.
+Ignoring the gaping hole around score differences of zero, the above plot does look approximately normally distributed around a value slightly above zero. The reason that there are no score differences of zero is because NHL games that are tied at the end of regulation go into a five minute sudden death overtime, and then finally to a shootout if no team wins during that time. This necessarily forces one team to ultimately win the game, making tied final scores impossible. In addition to the hole in the plot, a normal distribution also assumes that the values are continuous, which is obviously not the case. Home team and away team scores are always whole numbers, which means the difference between the home team score and away team score is going to be an integer value. Because NHL rules preclude ties, it will obviously be a non-zero integer. The normal distribution is defined for continuous values, meaning the discrete distribution we have above is not technically normal. Once again, we will side step this minor problem by only claiming that our distribution is approximately normal. 
 
-Given the number of games in our data set, and the fact that the plot does look mostly normal, I am satisfied with claiming the data passes the first assumption for a t-test.
+Given the number of games in our data set, I am satisfied with claiming the data passes the first assumption for a t-test. Having lots of data points affords some leeway when it comes to how strictly we need to enfore the assumption of normal data.
 
-To test whether or not the sampled games are independent, I will look at the score differences over time. We hope to see no obvious trends in time, especiay not anything that looks cyclical or time dependent on a narrow timespan:
+Testing for independence is not an easy task. For the paired t-test we hope to perform, we only need to show that the difference of scores (home_team_score - away_team_score) are independent across games. Dependence in this context is defined as the probability distribution of the score differential in one game being affected by the score differential of any previous games. To test whether or not the sampled games are independent, I will start by looking at the score differences over time. We hope to see no obvious trends in time, especiay not anything that looks cyclical or time dependent over a narrow timespan. If there are no apparent trends, I will be satisfied that independence holds:
 
 ```{r}
 reg_season_games %>%
@@ -206,7 +206,7 @@ reg_season_games %>%
   geom_point(alpha = 0.2)
 ```
 
-Considering all games played by all teams, the score differentals appear to be reasonably normal and stationary over time. At this high level view of the entire league, it does appear as though scores are independent between games. Let's see if this assumption holds up when we examine each team individually however:
+Considering all games played by all teams, the score differentals appear to be reasonably normal and stationary over time. At this high level view of the entire league, it does appear as though scores are independent between games. Let's see if this assumption holds up when we examine each team individually:
 
 ```{r}
 teams <- reg_season_games$home_team %>% unique() %>% sort()
@@ -241,112 +241,73 @@ reg_season_games %>%
   facet_wrap(~home_team, ncol = 5)
 ```
 
-Some teams appear to be much more up and down between seasons, though this is not unexpected. Teams regularly trade players, draft new ones, have veterans retire, or lose players to injury. All of these things can impact a teams ability to compete, and affect it's relative strength compared to other teams. As a result, the goal differential any particular team experiences on home ice is bound to change with time. Techncally this means that games are not indepenent with time, and that we may be violating the assumption of independence. That being said, these trends appear to exist on the scale of seasons, and may not ultimately be enough of an issue to prevent us from performing our t-test. Let's take a closer look at one of the ore variable teams, the Arizona Coyotes. We will look for a trend in their goal differential over the span of each season:
+Some teams appear to be much more up and down between seasons, though this is not unexpected. Teams regularly trade players, draft new ones, have veterans retire, or lose players to injury. All of these things can impact a teams ability to compete, and affect it's relative strength compared to other teams. As a result, the goal differential any particular team experiences on home ice is bound to change with time. It is possible that this means we are violating the assumption of independence.
 
-```{r}
-reg_season_games %>%
-  filter(home_team == "Arizona Coyotes", season == "20132014") %>%
-  ggplot(aes(x = date, y = score_diff)) +
-  geom_point() +
-  geom_smooth(method = "lm")
+To check if this is the case, we will use the Ljung–Box test for autocorrelations in a time series dataset. [According to wikipedia](https://en.wikipedia.org/wiki/Ljung%E2%80%93Box_test#Box-Pierce_test), the Ljung-Box test sets up a hypothesis as follows:
 
-reg_season_games %>%
-  filter(home_team == "Arizona Coyotes", season == "20142015") %>%
-  ggplot(aes(x = date, y = score_diff)) +
-  geom_point() +
-  geom_smooth(method = "lm")
-
-reg_season_games %>%
-  filter(home_team == "Arizona Coyotes", season == "20152016") %>%
-  ggplot(aes(x = date, y = score_diff)) +
-  geom_point() +
-  geom_smooth(method = "lm")
-
-reg_season_games %>%
-  filter(home_team == "Arizona Coyotes", season == "20162017") %>%
-  ggplot(aes(x = date, y = score_diff)) +
-  geom_point() +
-  geom_smooth(method = "lm")
-```
-
-First notice that despite the appearance of a possible overall trend, there is no apparent strong relationship between one game or the next. Also notice the margin of uncertainty around the slope in each graph. It appears as though the slope may not be significant in any of the above plots. Let's test if this is true:
+* H0: The data are independently distributed (i.e. the correlations in the population from which the sample is taken are 0, so that any observed correlations in the data result from randomness of the sampling process).
+* Ha: The data are not independently distributed; they exhibit serial correlation. 
 
 ```{r}
 library(modelr)
 library(broom)
 
-AZ_by_season <- reg_season_games %>%
-  filter(home_team == "Arizona Coyotes") %>%
-  group_by(season) %>%
-  nest()
+season_ljung <- function(df) {
+  Box.test(df$score_diff, lag = 1, type = "Ljung-Box")
+}
 
-season_lm <- function(df) {
-  lm(score_diff ~ date, data = df)
-} 
-
-AZ_by_season <- AZ_by_season %>%
-  mutate(model = map(data, season_lm)) %>%
-  mutate(lm_stats = map(model, glance)) %>%
-  unnest(lm_stats)
-
-AZ_by_season %>% select(season, model, p.value)
-```
-
-For each of the four seasons, the p-value associated with the slope of the linear regression model fit to score_diff ~ date is greater than 0.05. This helps alleviate our concerns that the values of score_diff are not independent for the Arizona Coyotes. We can also see that this is almost always true of all teams over all seasons:
-
-```{r}
-lm_by_team_and_season <- reg_season_games %>%
+ljung_by_team_and_season <- reg_season_games %>%
   group_by(home_team, season) %>%
   nest()
 
-lm_by_team_and_season <- lm_by_team_and_season %>%
-  mutate(model = map(data, season_lm)) %>%
-  mutate(lm_stats = map(model, glance)) %>%
-  unnest(lm_stats)
+ljung_by_team_and_season <- ljung_by_team_and_season %>%
+  mutate(model = map(data, season_ljung)) %>%
+  mutate(ljung_stats = map(model, glance)) %>%
+  unnest(ljung_stats)
 
-lm_by_team_and_season %>% 
+ljung_by_team_and_season %>% 
   select(home_team, season, model, p.value) %>%
   arrange(p.value)
 ```
 
-The only exceptions are the Anaheim Ducks in 2013-2014 and 2015-2016, the Pittsburgh Penguins in 2013-2014 and 2015-2016, and the New York Rangers in 2016-2017. While this means that it may not be strictly true that the games are independent with time, there does not appear to be a very strong relationship between the score differential of one home game and the next for these team and season combinations. 
-
 ```{r}
-reg_season_games %>%
-  filter(home_team == "Anaheim Ducks", season == "20132014") %>%
-  ggplot(aes(x = date, y = score_diff)) +
-  geom_point() +
-  geom_smooth(method = "lm")
-
-reg_season_games %>%
-  filter(home_team == "Anaheim Ducks", season == "20152016") %>%
-  ggplot(aes(x = date, y = score_diff)) +
-  geom_point() +
-  geom_smooth(method = "lm")
-
-reg_season_games %>%
-  filter(home_team == "Pittsburgh Penguins", season == "20132014") %>%
-  ggplot(aes(x = date, y = score_diff)) +
-  geom_point() +
-  geom_smooth(method = "lm")
-
-reg_season_games %>%
-  filter(home_team == "Pittsburgh Penguins", season == "20152016") %>%
-  ggplot(aes(x = date, y = score_diff)) +
-  geom_point() +
-  geom_smooth(method = "lm")
-
 reg_season_games %>%
   filter(home_team == "New York Rangers", season == "20162017") %>%
   ggplot(aes(x = date, y = score_diff)) +
   geom_point() +
   geom_smooth(method = "lm")
+
+reg_season_games %>%
+  filter(home_team == "Colorado Avalanche", season == "20142015") %>%
+  ggplot(aes(x = date, y = score_diff)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+reg_season_games %>%
+  filter(home_team == "Washington Capitals", season == "20142015") %>%
+  ggplot(aes(x = date, y = score_diff)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+reg_season_games %>%
+  filter(home_team == "Ottawa Senators", season == "20142015") %>%
+  ggplot(aes(x = date, y = score_diff)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+reg_season_games %>%
+  filter(home_team == "Nashville Predators", season == "20152016") %>%
+  ggplot(aes(x = date, y = score_diff)) +
+  geom_point() +
+  geom_smooth(method = "lm")
 ```
 
-In light of the above, I am inclined to believe that the data we have are independent enough that we do not need to reject the t-test as invalid on the basis of our second asumption.
+Using the Ljung-Box test, we find that there are five team and season combinations where there is evidence for autocorrelation. Looking at the plot for the Rangers, it does appear that their home game goal differentials seem to alternate between clustering above zero, and then below zero across that season.
+
+For the other four teams, the relationship between the score differential of one homegame and the next appears far less obvious. Regardless, the assumption of independence did fail for five team and season combinations, so we cannot claim that the assumption truly holds. That being said, I am inclined to believe that the data we have are independent enough that we do not need to reject the t-test as invalid on the basis of our second asumption. The reason for this is that our assumption that home game score differentials are independent only failed in 5 out of the 120 team and season combinations. I expect that the effect they will have on the outcome of our t-test will be marginal, and only worth revisting if the results of our t-test are borderline.
 
 
-### Paired t-test
+### Paired t-test: Does Home Ice Advantage Exist?
 
 We can now move ahead and test the paired samples t-test for the NHL regular season:
 
@@ -357,10 +318,10 @@ t.test(reg_season_games$home_team_score,
        conf.level = 0.95)
 ```
 
-Based on the data available, there appears to be a 0.257 goal advantage when playing on home ice, with a 95% confidence interval of 0.192 to 0.322.
+Based on the data available, there appears to be a 0.257 goal advantage when playing on home ice, with a 95% confidence interval of 0.192 to 0.322. The p-value for the null hypothesis is very low at 1.195e-14, meaning that the probability of observing these data purely due to chance when no true effect exists are extremely low. Even with our trangressions of the assumptions required of a t-test, the case for home ice advantage really existing appears convincing.
 
 
-### Kruschke's BEST Test
+### Kruschke's BEST Test: Does Home Ice Advantage Exist 2?
 
 According to [Kruschke's paper](http://www.indiana.edu/~kruschke/articles/Kruschke2013JEPG.pdf), the BEST test is much more robust to violations of the assumption that data is normally distributed hen compaed to a normal t-test. This is due to it's use of numerical methods. There is no indication that it suffers any issues related to independence of data, so I assume that it is no more or less succeptible to minor deviations from independent data than our standard t-test is.
 
@@ -378,5 +339,6 @@ plot(best_results)
 best_results
 ```
 
-The BEST test has yielded a mean of 0.257, with a 95% Highest Density Interval (HDI) of 0.192 to 0.322. These are exactly the same results from the standard paired student's t-test we ran before.
+The BEST test has yielded a mean of 0.257, with a 95% Highest Density Interval (HDI) of 0.192 to 0.322. These are exactly the same results from the standard paired student's t-test we ran before. This is maybe not too surprising given the volume of data we had. Bayesian methods really shine when there is limted data, and in this case we definitly did not have that problem. When large amounts of data are available, the arguments for or againt frequentist statistics compared to bayesian statistics are essentially irrelevant.
+
 
