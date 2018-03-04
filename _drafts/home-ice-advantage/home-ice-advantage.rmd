@@ -1,0 +1,222 @@
+---
+title: "Is Home Ice Advantage in the NHL Real?"
+author: "Everett Robinson"
+date: "February 25, 2018"
+output: html_document
+---
+
+Many people have attempted to answer the question of whether or not home ice advantage exists. A [2013 paper](http://people.stat.sfu.ca/~tim/papers/hca.pdf) by Tim Swartz and Adriano Arce came to the conclusion that home ice advantage in the NHL is real, accounting for about 5% of goals in 2012. Furthermore, they observed that when total goals per game are accoutned for, there is no appreciable change in the home ice advantage over time. Lastly, they performed a one way ANOVA and a pairwise Tukey's HSD test on 16 NHL teams that have played in 30 seasons to determine if there is a significant difference between teams' home ice advantages. The result from their analysis was that there is not sufficient evidence to conclude that home ice advantage varies between teams.
+
+Later in 2017, a [fivethirtyeight blog post](https://fivethirtyeight.com/features/a-home-playoff-game-is-a-big-advantage-unless-you-p lay-hockey/) also tried to tackle this problem, coming to the conclusion that home ice in the regular season amounts to a win percentage of 55.1%, 5.1% better than even odds. In the playoffs this advantage declines slightly to a boost in win percentage that is only 4.8% better on home ice than at a theoretical neutral rink.
+
+The above two results appear fairly consistent with each other, and one might be satisfied that home ice advantage is a real phenomenon. This is probably a safe bet, but I'm all for reproducible research so I'm going to try my hand at answering this question myself and corroborating the previus findings. My goal is also to learn a bit about the nature of home ice advantage so I can use it later in a model for predicting NHL game outcomes.
+
+There are two questions that I want to attempt to answer:
+
+1. Is there evidence for home ice being advantageous in general? 
+2. Is there evidence that this advantage varies from team to team?
+
+I would also like to quantify the extent of home ice advantage in the above analysis, mainly in terms of the expected goal differential it causes. To do all of this I am going to a few different strategies. First I will attempt to demonstrate that the distrubution of goal totals for home and away teams follow a poisson distribution. Then I will show that the means of those distributions are significantly different. Finally, I will try to determine if the extent of home ice advantage varies significantly from team to team.
+
+
+### Acquiring Official NHL Data
+
+To start, we will need to get the data for NHL games that have already been played. I will do this using the undocumented NHL statistics API, which returns json files with a mostly self evident structure. These files will be retrieved and parsed using Python and the very easy requests and json libraries. 
+
+```{python, engine = python3}
+import requests
+import json
+import pandas as pd
+
+base_url = "https://statsapi.web.nhl.com"
+schedule_path = "/api/v1/schedule?startDate=2013-09-18&endDate=2017-08-1&expand=schedule.linescore"
+schedule_response = requests.get(base_url + schedule_path)
+schedule_json = schedule_response.json()
+
+# A function to extract the relevant data from the schedule
+# and return it as a pandas dataframe
+def extract_game_data(schedule):
+    """Given full JSON records for games from the NHL API,
+    returns a simplified list of just the data we need.
+    """
+    games = pd.DataFrame(columns=['date',
+                                  'season',
+                                  'game_type',
+                                  'home_team',
+                                  'home_team_reg_score',
+                                  'home_team_fin_score',
+                                  'away_team',
+                                  'away_team_reg_score',
+                                  'away_team_fin_score',
+                                  'went_to_shoot_out'
+                                  ])
+
+    for date_obj in schedule_json['dates']:
+        date = date_obj['date'];
+        for game_obj in date_obj['games']:
+            game_type = game_obj['gameType']
+            season = game_obj['season']
+            home_team_obj = game_obj['teams']['home']
+            away_team_obj = game_obj['teams']['away']
+
+            home_team = home_team_obj['team']['name']
+            home_team_fin_score = home_team_obj['score']
+
+            away_team = away_team_obj['team']['name']
+            away_team_fin_score = away_team_obj['score']
+
+            detailed_score_data = game_obj['linescore']
+            period_data = detailed_score_data['periods']
+            shootout_data = detailed_score_data['shootoutInfo']
+
+            home_team_reg_score = 0
+            away_team_reg_score = 0
+
+            for period in period_data[0:3]:
+                home_team_reg_score += period['home']['goals']
+                away_team_reg_score += period['away']['goals']
+
+            went_to_shoot_out = (shootout_data['home']['attempts'] != 0 or
+                                 shootout_data['away']['attempts'] != 0)
+
+            games = games.append({'date': date,
+                                  'season': season,
+                                  'game_type': game_type,
+                                  'home_team': home_team,
+                                  'home_team_reg_score': home_team_reg_score,
+                                  'home_team_fin_score': home_team_fin_score,
+                                  'away_team': away_team,
+                                  'away_team_reg_score': away_team_reg_score,
+                                  'away_team_fin_score': away_team_fin_score,
+                                  'went_to_shoot_out': went_to_shoot_out
+                                  }, ignore_index=True)
+
+    return games
+
+games = extract_game_data(schedule_json)
+games.to_csv('games.csv', index = False)
+
+```
+
+
+### Determining if the Distribution of Regulation Time Goals is Poisson
+
+```{r}
+library(tidyverse)
+library(lubridate)
+
+games <- read_csv("games.csv")
+
+reg_season_games <- games %>% 
+  filter(game_type == "R")
+dim(reg_season_games)
+```
+
+```{r}
+home_actual_score_counts <- reg_season_games %>% count(home_team_reg_score)
+away_actual_score_counts <- reg_season_games %>% count(away_team_reg_score)
+
+actual_score_counts <- reg_season_games %>% 
+  select(home_team_reg_score, away_team_reg_score) %>%
+  gather(key = game_type, value = goals, home_team_reg_score, away_team_reg_score) %>%
+  count(game_type, goals) %>%
+  rename(game_count = n)
+  
+actual_score_counts %>% 
+  ggplot() +
+  geom_col(aes(x = goals, y = game_count,  fill = game_type), position = "dodge") +
+  scale_x_continuous(breaks = seq(0, 10, by = 1))
+```
+
+```{r}
+home_actual_score_counts <- reg_season_games %>% count(home_team_reg_score)
+away_actual_score_counts <- reg_season_games %>% count(away_team_reg_score)
+
+home_expected_score_probs <- dpois(home_actual_score_counts$home_team_reg_score, lambda = mean(reg_season_games$home_team_reg_score))
+home_expected_score_comp <- 1.0- sum(home_expected_score_probs) 
+
+away_expected_score_probs <- dpois(away_actual_score_counts$away_team_reg_score, lambda = mean(reg_season_games$away_team_reg_score))
+away_expected_score_comp <- 1.0 - sum(away_expected_score_probs)
+```
+
+Home:
+```{r}
+chisq.test(x = c(home_actual_score_counts$n, 0), p = c(home_expected_score_probs, home_expected_score_comp), simulate.p.value = TRUE)
+```
+
+```{r}
+home_score_count_comparisons <- actual_score_counts %>%
+  filter(game_type == "home_team_reg_score") %>%
+  rename(actual = game_count) %>%
+  mutate(expected = nrow(reg_season_games) * dpois(goals, lambda = mean(reg_season_games$home_team_reg_score))) %>%
+  gather(key = count_type, value = count, actual, expected) %>%
+  count(goals, count_type, count) %>%
+  rename(game_count = count)
+
+home_score_count_comparisons %>% 
+  ggplot() +
+  geom_col(aes(x = goals, y = game_count,  fill = count_type), position = "dodge") +
+  scale_x_continuous(breaks = seq(0, 10, by = 1))
+```
+
+
+Away:
+```{r}
+chisq.test(x = c(away_actual_score_counts$n, 0), p = c(away_expected_score_probs, away_expected_score_comp), simulate.p.value = TRUE)
+```
+
+```{r}
+away_score_count_comparisons <- actual_score_counts %>%
+  filter(game_type == "away_team_reg_score") %>%
+  rename(actual = game_count) %>%
+  mutate(expected = nrow(reg_season_games) * dpois(goals, lambda = mean(reg_season_games$away_team_reg_score))) %>%
+  gather(key = count_type, value = count, actual, expected) %>%
+  count(goals, count_type, count) %>%
+  rename(game_count = count)
+
+away_score_count_comparisons %>% 
+  ggplot() +
+  geom_col(aes(x = goals, y = game_count,  fill = count_type), position = "dodge")
+```
+
+We can see that the distribution of scores for both home and away teams is not actually poisson, but it pretty close. I appears to skew slightly lower than the expected values, which means the data underdispered. I am comfortable going forward assuming that the goal counts can be modeled as poisson going forward.
+
+
+### Wilcoxon Signed Rank Test
+
+Because our dstributions are not even remotely normal, but also not exactly poisson, I will use the Wilcoxon Signed Rank Test to test if the means of each are different:
+
+```{r}
+wilcox.test(reg_season_games$home_team_reg_score,
+            reg_season_games$away_team_reg_score,
+            paired = TRUE,
+            conf.level = 0.95)
+```
+
+The Wilcoxon Signed Rank Test has yielded a highly significant p-value. This indicates that the average score differential of 0.252 additional goals for the home team is a real effect, not just statistical noise.
+
+
+### Running a Two Way ANOVA on a Poisson GLM
+
+In order to assess if the interaction between team and home vs away games is singnificant, I will run an ANOVA on a poisson family generalized linear model fit to the goal data from each game. My intent with this is to use the interaction term to decide if there is evidence that home team advantage varies by team.
+
+```{r}
+reg_season_games_home <- reg_season_games %>%
+  select(home_team, home_team_reg_score) %>% 
+  rename(team = home_team, goals = home_team_reg_score) %>% 
+  mutate(game_type = "home")
+
+reg_season_games_away <- reg_season_games %>%
+  select(away_team, away_team_reg_score) %>% 
+  rename(team = away_team, goals = away_team_reg_score) %>% 
+  mutate(game_type = "away")
+
+reg_season_games_for_anova <- rbind(reg_season_games_home, reg_season_games_away)
+```
+
+```{r}
+poisson_glm <- glm(goals ~ team * game_type, family = poisson, data = reg_season_games_for_anova)
+summary(aov(poisson_glm))
+```
+
+In the above Two Way ANOVA, we can see that the effect of team on goals scored is highly significant, as is the effect of game_type. This means that the mean number of goals scored per game varies between home and away games when we ignore which teams were playing. We already determined this earlier with the Wilcoxon Signed Rank Test, so it is reassuring to see the same result here. Simiarly, the mean number of goals scored per game varies between teams when ignoring if a game was played at home or away. The interaction term has a p-value of 0.648, which is no where near to being significant. This indicates to us that there is insufficient evidence to conclude that the effective difference between home and away games varies across teams. This clearly answers our second question with a definitive "no".
