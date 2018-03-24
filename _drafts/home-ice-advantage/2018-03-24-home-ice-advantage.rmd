@@ -1,29 +1,32 @@
 ---
 title: "Is Home Ice Advantage in the NHL Real?"
 author: "Everett Robinson"
-date: "February 25, 2018"
+date: "March 24, 2018"
 output: html_document
 ---
 
-Many people have attempted to answer the question of whether or not home ice advantage exists. A [2013 paper](http://people.stat.sfu.ca/~tim/papers/hca.pdf) by Tim Swartz and Adriano Arce came to the conclusion that home ice advantage in the NHL is real, accounting for about 5% of goals in 2012. Furthermore, they observed that when total goals per game are accoutned for, there is no appreciable change in the home ice advantage over time. Lastly, they performed a one way ANOVA and a pairwise Tukey's HSD test on 16 NHL teams that have played in 30 seasons to determine if there is a significant difference between teams' home ice advantages. The result from their analysis was that there is not sufficient evidence to conclude that home ice advantage varies between teams.
+Many people have attempted to answer the question of whether or not home ice advantage exists. A [2013 paper](http://people.stat.sfu.ca/~tim/papers/hca.pdf) by Tim Swartz and Adriano Arce came to the conclusion that home ice advantage in the NHL is real, accounting for about 5% of goals in 2012. Furthermore, they observed that when total goals per game are accounted for, there is no appreciable change in the home ice advantage over time. Lastly, they performed a one way ANOVA and a pairwise Tukey's HSD test on 16 NHL teams that have played in 30 seasons to determine if there is a significant difference between teams' home ice advantages. The result from their analysis was that there is not sufficient evidence to conclude that home ice advantage varies between teams.
 
 Later in 2017, a [fivethirtyeight blog post](https://fivethirtyeight.com/features/a-home-playoff-game-is-a-big-advantage-unless-you-p lay-hockey/) also tried to tackle this problem, coming to the conclusion that home ice in the regular season amounts to a win percentage of 55.1%, 5.1% better than even odds. In the playoffs this advantage declines slightly to a boost in win percentage that is only 4.8% better on home ice than at a theoretical neutral rink.
 
-The above two results appear fairly consistent with each other, and one might be satisfied that home ice advantage is a real phenomenon. This is probably a safe bet, but I'm all for reproducible research so I'm going to try my hand at answering this question myself and corroborating the previus findings. My goal is also to learn a bit about the nature of home ice advantage so I can use it later in a model for predicting NHL game outcomes.
+The above two results appear fairly consistent with each other, and one might be satisfied that home ice advantage is a real phenomenon. This is probably a safe bet, but I'm all for reproducible research so I'm going to try my hand at answering this question myself and corroborating the previous findings. My goal is also to learn a bit about the nature of home ice advantage so I can use it later in a model for predicting NHL game outcomes.
 
-There are two questions that I want to attempt to answer:
+There are three questions that I want to answer:
 
 1. Is there evidence for home ice being advantageous in general? 
 2. Is there evidence that this advantage varies from team to team?
+3. Is there evidence that home ice advantage still exists if a game goes to overtime or shootout?
 
-I would also like to quantify the extent of home ice advantage in the above analysis, mainly in terms of the expected goal differential it causes. To do all of this I am going to a few different strategies. First I will attempt to demonstrate that the distrubution of goal totals for home and away teams follow a poisson distribution. Then I will show that the means of those distributions are significantly different. Finally, I will try to determine if the extent of home ice advantage varies significantly from team to team.
+To do all of this I am going to a use few different strategies. First I will attempt to demonstrate that the distribution of goal totals for home and away teams follow a Poisson distribution. Then I will show that the distributions are significantly different using a Wilcoxon Signed-Rank Test. Next, I will try to determine if the extent of home ice advantage varies significantly from team to team using a two way ANOVA on a Poisson Generalized Linear Model. Finally, I will look at whether there is evidence for home ice advantage still playing a role in games that go to overtime or shootout using binomial tests and a simple proportion test.
+
+Overall the analysis I am about to do will be fairly quick and dirty, because I'm really only interested in answering the above questions to guide my model building process for my next post. As such, I do not recommend that anyone take the results of this analysis as being authoritative.
 
 
 ### Acquiring Official NHL Data
 
 To start, we will need to get the data for NHL games that have already been played. I will do this using the undocumented NHL statistics API, which returns json files with a mostly self evident structure. These files will be retrieved and parsed using Python and the very easy requests and json libraries. 
 
-```{python, engine = python3}
+```{python, engine = python3, eval=FALSE}
 import requests
 import json
 import pandas as pd
@@ -95,13 +98,14 @@ def extract_game_data(schedule):
 
 games = extract_game_data(schedule_json)
 games.to_csv('games.csv', index = False)
-
 ```
 
 
-### Determining if the Distribution of Regulation Time Goals is Poisson
+### Are the Distributions of Regulation Time Goals Poisson?
 
-```{r}
+Let's start by looking at the actual distribution of home and away goals.
+
+```{r, message=FALSE}
 library(tidyverse)
 library(lubridate)
 
@@ -125,8 +129,15 @@ actual_score_counts <- reg_season_games %>%
 actual_score_counts %>% 
   ggplot() +
   geom_col(aes(x = goals, y = game_count,  fill = game_type), position = "dodge") +
-  scale_x_continuous(breaks = seq(0, 10, by = 1))
+  scale_x_continuous(breaks = seq(0, 10, by = 1)) +
+  scale_fill_manual(labels = c("Away", "Home"), values = c("#F8766D", "#00BFC4")) +
+  labs(title = "Distribution of Actual Goals",
+       x = "Goals Scored in Game",
+       y = "Game Count",
+       fill = "Team Type")
 ```
+
+Both appear to be roughly Poisson distributed at first glance. Next let's look at how the observed home and away goal distributions compare to a theoretical Poisson distribution with the same mean.
 
 ```{r}
 home_actual_score_counts <- reg_season_games %>% count(home_team_reg_score)
@@ -139,7 +150,7 @@ away_expected_score_probs <- dpois(away_actual_score_counts$away_team_reg_score,
 away_expected_score_comp <- 1.0 - sum(away_expected_score_probs)
 ```
 
-Home:
+#### Home:
 ```{r}
 chisq.test(x = c(home_actual_score_counts$n, 0), p = c(home_expected_score_probs, home_expected_score_comp), simulate.p.value = TRUE)
 ```
@@ -156,11 +167,15 @@ home_score_count_comparisons <- actual_score_counts %>%
 home_score_count_comparisons %>% 
   ggplot() +
   geom_col(aes(x = goals, y = game_count,  fill = count_type), position = "dodge") +
-  scale_x_continuous(breaks = seq(0, 10, by = 1))
+  scale_x_continuous(breaks = seq(0, 10, by = 1))  +
+  labs(title = "Distribution of Actual and Expected Goals for Home Teams",
+       x = "Goals Scored in Game",
+       y = "Game Count",
+       fill = "Observation Type")
 ```
 
 
-Away:
+#### Away:
 ```{r}
 chisq.test(x = c(away_actual_score_counts$n, 0), p = c(away_expected_score_probs, away_expected_score_comp), simulate.p.value = TRUE)
 ```
@@ -176,15 +191,20 @@ away_score_count_comparisons <- actual_score_counts %>%
 
 away_score_count_comparisons %>% 
   ggplot() +
-  geom_col(aes(x = goals, y = game_count,  fill = count_type), position = "dodge")
+  geom_col(aes(x = goals, y = game_count,  fill = count_type), position = "dodge") +
+  scale_x_continuous(breaks = seq(0, 10, by = 1))  +
+  labs(title = "Distribution of Actual and Expected Goals for Away Teams",
+       x = "Goals Scored in Game",
+       y = "Game Count",
+       fill = "Observation Type")
 ```
 
-We can see that the distribution of scores for both home and away teams is not actually poisson, but it pretty close. I appears to skew slightly lower than the expected values, which means the data underdispered. I am comfortable going forward assuming that the goal counts can be modeled as poisson going forward.
+We can see that the distribution of scores for both home and away teams is not actually Poisson, but it pretty close. I appears to skew slightly lower than the expected values, which means the data is under-dispersed. This under-dispersion doesn't appear to be very severe however, so I am comfortable going forward assuming that the goal counts can be modeled as Poisson.
 
 
-### Wilcoxon Signed Rank Test
+### Is There a Difference Between Home and Away Goal Counts?
 
-Because our dstributions are not even remotely normal, but also not exactly poisson, I will use the Wilcoxon Signed Rank Test to test if the means of each are different:
+Because our distributions are not even remotely normal, but also not exactly Poisson, I will use the Wilcoxon Signed Rank Test to test if the means of each are different:
 
 ```{r}
 wilcox.test(reg_season_games$home_team_reg_score,
@@ -196,9 +216,9 @@ wilcox.test(reg_season_games$home_team_reg_score,
 The Wilcoxon Signed Rank Test has yielded a highly significant p-value. This indicates that the average score differential of 0.252 additional goals for the home team is a real effect, not just statistical noise.
 
 
-### Running a Two Way ANOVA on a Poisson GLM
+### Does Home Ice Advantage Vary by Team?
 
-In order to assess if the interaction between team and home vs away games is singnificant, I will run an ANOVA on a poisson family generalized linear model fit to the goal data from each game. My intent with this is to use the interaction term to decide if there is evidence that home team advantage varies by team.
+In order to assess if the interaction between team and home vs away games is significant, I will run an ANOVA on a Poisson family generalized linear model fit to the goal data from each game. My intent with this is to use the interaction term to decide if there is evidence that home team advantage varies by team.
 
 ```{r}
 reg_season_games_home <- reg_season_games %>%
@@ -219,4 +239,40 @@ poisson_glm <- glm(goals ~ team * game_type, family = poisson, data = reg_season
 summary(aov(poisson_glm))
 ```
 
-In the above Two Way ANOVA, we can see that the effect of team on goals scored is highly significant, as is the effect of game_type. This means that the mean number of goals scored per game varies between home and away games when we ignore which teams were playing. We already determined this earlier with the Wilcoxon Signed Rank Test, so it is reassuring to see the same result here. Simiarly, the mean number of goals scored per game varies between teams when ignoring if a game was played at home or away. The interaction term has a p-value of 0.648, which is no where near to being significant. This indicates to us that there is insufficient evidence to conclude that the effective difference between home and away games varies across teams. This clearly answers our second question with a definitive "no".
+In the above Two Way ANOVA, we can see that the effect of team on goals scored is highly significant, as is the effect of game_type. This means that the mean number of goals scored per game varies between home and away games when we ignore which teams were playing. We already determined this earlier with the Wilcoxon Signed Rank Test, so it is reassuring to see the same result here. Similarly, the mean number of goals scored per game varies between teams when ignoring if a game was played at home or away. The interaction term has a p-value of 0.648, which is no where near to being significant. This indicates to us that there is insufficient evidence to conclude that the effective difference between home and away games varies across teams. This appears to answer our second question with a definitive "no".
+
+
+### Does Home Ice Advantage Exist in Overtime or Shoot Out?
+
+Finally, we will attempt to answer one last question: Does the home team still have an advantage if a game goes to overtime? To answer this question I will split the games into two categories for overtime wins, and non-overtime wins. I will then examine if there is evidence that either of these differ from even odds. Finally I will use R's prop.test() function to see if there is evidence that the two proportions differ.
+
+```{r}
+reg_season_games_wins <- reg_season_games %>%
+  mutate(home_win = home_team_fin_score > away_team_fin_score) %>%
+  mutate(OT_win = home_team_reg_score == away_team_reg_score)
+
+reg_season_games_wins %>% group_by(OT_win) %>% summarize(mean_home_wins = mean(home_win), n = n())
+```
+
+```{r}
+non_ot_home_wins <- reg_season_games_wins$home_win[reg_season_games_wins$OT_win == FALSE]
+ot_home_wins <- reg_season_games_wins$home_win[reg_season_games_wins$OT_win == TRUE]
+
+x1 <- sum(non_ot_home_wins)
+n1 <- length(non_ot_home_wins)
+
+x2 <- sum(ot_home_wins)
+n2 <- length(ot_home_wins
+             )
+binom.test(x1, n1, 0.5)
+binom.test(x2, n2, 0.5)
+```
+
+We can see that there is evidence for home ice advantage leading to wins during regulation time, but once a game goes to overtime the evidence in favour of home ice advantage appears to vanish.
+
+```{r}
+prop.test(x = c(x1, x2), n = c(n1, n2))
+```
+
+Running a proportion test confirms that the two proportions appear to be different. For the purposes of my hierarchical Bayesian model, I will assume that once a game goes to overtime the probability of one team winning over the other will just be a Bernoulli random variable with probability based on the historical win percentage of that team over the other. No home ice advantage will be considered at that point.
+
