@@ -1,10 +1,17 @@
+---
+title: "Modeling the NHL"
+author: "Everett Robinson"
+date: "March 24, 2018"
+output: html_document
+layout: post
+---
 
 Originally I wanted to adapt a model for predicting NCAA basket ball outcomes to the NHL. The model is called [Bayesian Logistic Regression Markov Chain (LRMC)](https://www2.isye.gatech.edu/~jsokol/lrmc/) and it works by treating the difference in points between two teams in any game as a normally distributed random variable which depends on the inherent difference in skill between the two teams plus a home court advantage added to the home team. The home court advantage is assumed to be constant across all teams. Unfortunately, when I originally explored this idea I discovered that the difference in score between two teams in each game would not be a good fit for a normal distribution, and so I concluded there wouldn't be an easy way to fit the LRMC model to the NHL.
 
 Refusing to give up on this project, I started looking at other ways to model HHL games, and thought about trying to model them in PYMC3. This thought lead me to a PYMC3 example called [A Hierarchical model for Rugby prediction](https://docs.pymc.io/notebooks/rugby_analytics.html) by Peadar Coyle. That work was inspired by [Daniel Weitzenfeld](http://danielweitzenfeld.github.io/passtheroc/blog/2014/10/28/bayes-premier-league/), which in turn was based on a model first developed by [Gianluca Baio and Marta A. Blangiardo](http://www.statistica.it/gianluca/Research/BaioBlangiardo.pdf). With the help of the above examples and papers, I was able to figure out the preceding models and adapt them to the NHL. Due to NHL rules which force a winner of every game by first going to a five minute sudden death overtime, and then to a shootout, I have also extended the model to calculate a tie-breaker random variable to determine the ultimate winner.
 
 
-```python
+{% highlight python %}
 # Import all of the libraries needed for this post
 import requests
 import json
@@ -14,16 +21,13 @@ import pymc3 as pm
 import theano.tensor as tt
 import theano
 from itertools import combinations
-```
-
-    /home/everett/.local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
-      from ._conv import register_converters as _register_converters
+{% endhighlight %}
 
 
 Before we can dive into creating the model, we need to get some data. The functions below use the requests and json libraries to extract the data we need from the official NHL statistics API. I have written the data to CSV file so that it is possible to perform the rest of the analysis without constantly retrieving the data over the Internet.
 
 
-```python
+{% highlight python %}
 # A function that retrieves the game data from the NHL stats API
 # for a selected date range.
 def request_game_data(start_date, end_date):
@@ -100,12 +104,12 @@ completed_games.to_csv('completed_games.csv', index = False)
 scheduled_game_data = request_game_data('2018-03-24', '2018-04-09')
 scheduled_games = extract_game_data(scheduled_game_data)
 scheduled_games.to_csv('scheduled_games.csv', index = False)
-```
+{% endhighlight %}
 
 It is necessary to also decorate this data with integer labels for the home and away teams, as well as the team pairs. These labels serve as an array index for the random variables, and allow us to reference the correct random variables for each team or team pair in the PYMC3 model.
 
 
-```python
+{% highlight python %}
 # Filter the data to just regular season games from the 2015-2016 and 
 # 2016-2017 seasons 
 completed_games = pd.read_csv('completed_games.csv')
@@ -156,12 +160,12 @@ def add_team_data_labels(game_data):
     return game_data
     
 completed_games = add_team_data_labels(completed_games)
-```
+{% endhighlight %}
 
 Because the ultimate goal of this model is to make predictions about the outcomes for games that haven't been played yet we need to extract the data for the model into Theano shared variables as [described in the PYMC3 documentation](https://docs.pymc.io/advanced_theano.html). This will allow us to swap out the data for completed games with the scheduled games and then predict samples of game outcomes for those scheduled games too.
 
 
-```python
+{% highlight python %}
 # Determine the total number of teams and team pairs for PYMC3
 num_teams = len(completed_games.i_home.drop_duplicates())
 num_team_pairs  = len(completed_games.i_pair.drop_duplicates())
@@ -176,12 +180,12 @@ team_pair = theano.shared(completed_games.i_pair.values)
 observed_home_goals = completed_games.home_team_reg_score.values
 observed_away_goals = completed_games.away_team_reg_score.values
 observed_pair_outcomes = completed_games.i_pair_winner.values
-```
+{% endhighlight %}
 
-Now we can fit the PYMC3 model. The model assumes that goals scored in regulation time by the home and the away team can be modeled as Poisson distributed random variables, which we treat as observed random variables since we can see the number of goals that were scored. We also assume that the distribution of these variables is dependent on some inherent features of the teams such as their defensive and offensive skill, as well as other phenomenon not specific to teams such as home ice advantage and a constant intercept term. All of these are unobserved random variables that we expect to determine the Poisson distributions for goals scored in each game. Additionally, the tie breaker is modeled as a Bernoulli observed random variable which I have opted to define using a Beta distribution as the unobserved random variable that determines the probability of a success.
+Now we can fit the PYMC3 model. The model assumes that goals scored in regulation time by the home and the away team can be modeled as Poisson distributed random variables, which we treat as observed random variables since we can see the number of goals that were scored. We also assume that the distribution of these variables is dependent on some inherent features of the teams such as their defensive and offensive skill, as well as other phenomenon not specific to teams such as home ice advantage and a constant intercept term. All of these are unobserved random variables that we expect to determine the Poisson distributions for goals scored in each game. Additionally, the tie breaker is modeled as a Bernoulli observed random variable which I have opted to define using a Beta distribution as the unobserved random variable that determines the probability of a success. This Bernoulli random varable does not consider home ice advantage, as we determined in my last post that it does not play a major role in deciding the winner after a game makes it to overtime or a shootout.
 
 
-```python
+{% highlight python %}
 with pm.Model() as model:
     # Global model parameters
     home = pm.Flat('home')
@@ -206,14 +210,14 @@ with pm.Model() as model:
     home_goals = pm.Poisson('home_goals', mu=home_theta, observed=observed_home_goals)
     away_goals = pm.Poisson('away_goals', mu=away_theta, observed=observed_away_goals)
     tie_breaker = pm.Bernoulli('tie_breaker', p=bernoulli_p[team_pair], observed=observed_pair_outcomes)
-```
+{% endhighlight %}
 
 
-```python
+{% highlight python %}
 with model:
     trace = pm.sample(2000, tune=1000, cores=3)
     pm.traceplot(trace)
-```
+{% endhighlight %}
 
     Auto-assigning NUTS sampler...
     Initializing NUTS using jitter+adapt_diag...
@@ -225,7 +229,7 @@ with model:
 
 
 
-![png](output_10_1.png)
+![png](/../figs/2018-03-24-modeling-the-nhl/output_10_1.png)
 
 
 The trace plots make it appear as though the PYMC3 model has converged to the stationary distribution for each of the variables, suggesting that we do not need to adjust the burn-in period manually.
@@ -233,19 +237,19 @@ The trace plots make it appear as though the PYMC3 model has converged to the st
 Next we can also look at the BFMI and Gelman-Rubin statistics:
 
 
-```python
+{% highlight python %}
 bfmi = pm.bfmi(trace)
 max_gr = max(np.max(gr_stats) for gr_stats in pm.gelman_rubin(trace).values())
-```
+{% endhighlight %}
 
 
-```python
+{% highlight python %}
 (pm.energyplot(trace, legend=False, figsize=(6, 4))
    .set_title("BFMI = {}\nGelman-Rubin = {}".format(bfmi, max_gr)));
-```
+{% endhighlight %}
 
 
-![png](output_13_0.png)
+![png](/../figs/2018-03-24-modeling-the-nhl/output_13_0.png)
 
 
 The [BFMI statistic is well above the threshold of 0.2](https://docs.pymc.io/api/stats.html) that is typically suggested by the PYMC3 and Stan projects for indicating poor sampling. Furthermore, the Gelman-Rubin statistic is very close to 1, which further suggests that convergence on the stationary distribution has occurred.
@@ -253,7 +257,7 @@ The [BFMI statistic is well above the threshold of 0.2](https://docs.pymc.io/api
 Satisfied that the PYMC3 model hasn't failed miserably, let's look at the posterior distributions for some of the unobserved random variables like team offensive and defensive strengths:
 
 
-```python
+{% highlight python %}
 import matplotlib.pyplot as plt
 from matplotlib.ticker import StrMethodFormatter
 import seaborn as sns
@@ -282,16 +286,16 @@ axs.set_xlabel('Team')
 axs.set_ylabel('Posterior Offensive Strength')
 _= axs.set_xticks(df_hpd.index + .5)
 _= axs.set_xticklabels(df_hpd['index'].values, rotation=90)
-```
+{% endhighlight %}
 
 
-![png](output_15_0.png)
+![png](/../figs/2018-03-24-modeling-the-nhl/output_15_0.png)
 
 
 The spread of offensive strengths looks pretty reasonable, and it seems to rank the teams well based on what little I know about their ability to score goals. Note that the Vegas Golden Knights have a slightly wider Highest Posterior Density (HPD) interval than the other teams. This makes sense since they have only started playing in the current recent season, and have far fewer games than the rest of the teams since we have included the complete 2016-2017 season in the data as well.
 
 
-```python
+{% highlight python %}
 df_hpd = pd.DataFrame(pm.stats.hpd(trace['defence']),
                       columns=['hpd_low', 'hpd_high'],
                       index=teams.team.values)
@@ -315,10 +319,10 @@ axs.set_xlabel('Team')
 axs.set_ylabel('Posterior Defensive Strength')
 _= axs.set_xticks(df_hpd.index + .5)
 _= axs.set_xticklabels(df_hpd['index'].values, rotation=90)
-```
+{% endhighlight %}
 
 
-![png](output_17_0.png)
+![png](/../figs/2018-03-24-modeling-the-nhl/output_17_0.png)
 
 
 The spread of defensive strengths also appears reasonable, and once again Vegas has a slightly wider HPD as we would expect.
@@ -326,7 +330,7 @@ The spread of defensive strengths also appears reasonable, and once again Vegas 
 Now let's move on to the fun part and begin trying to predict outcomes for the remaining games.
 
 
-```python
+{% highlight python %}
 scheduled_games = pd.read_csv('scheduled_games.csv')
 scheduled_games = scheduled_games.loc[scheduled_games['game_type'] == 'R']
 
@@ -342,13 +346,13 @@ scheduled_games = add_team_data_labels(scheduled_games)
 home_team.set_value(scheduled_games.i_home.values)
 away_team.set_value(scheduled_games.i_away.values)
 team_pair.set_value(scheduled_games.i_pair.values)
-```
+{% endhighlight %}
 
 
-```python
+{% highlight python %}
 with model:
     post_pred = pm.sample_ppc(trace)
-```
+{% endhighlight %}
 
     100%|██████████| 2000/2000 [00:02<00:00, 723.01it/s]
 
@@ -356,12 +360,12 @@ with model:
 We can make sure that the shape of all our posterior predictions looks reasonable. There are 122 games left in the 2017-2018 Regular season, and for our posterior predictions there are 2000 samples for each game, times 122 games.
 
 
-```python
+{% highlight python %}
 print(scheduled_games.shape)
 print(post_pred['away_goals'].shape)
 print(post_pred['home_goals'].shape)
 print(post_pred['tie_breaker'].shape)
-```
+{% endhighlight %}
 
     (122, 10)
     (2000, 122)
@@ -372,7 +376,7 @@ print(post_pred['tie_breaker'].shape)
 Let's look at how these simulations play out. For simplicity I will first examine a single game; the Calgary Flames vs the San Jose Sharks in San Jose. I picked this game in particular since my father is a Flames fan, and this is the next game they will play. Let us start by looking at the predicted number of goals each team will score during regulation time:
 
 
-```python
+{% highlight python %}
 import matplotlib.pyplot as plt
 
 def plot_posterior_goal_count(posterior_goals, team_name):
@@ -393,20 +397,20 @@ def plot_posterior_goal_count(posterior_goals, team_name):
 
 plot_posterior_goal_count(post_pred['home_goals'][:,1], 'SJS')
 plot_posterior_goal_count(post_pred['away_goals'][:,1], 'CGY')
-```
+{% endhighlight %}
 
 
-![png](output_24_0.png)
+![png](/../figs/2018-03-24-modeling-the-nhl/output_24_0.png)
 
 
 
-![png](output_24_1.png)
+![png](/../figs/2018-03-24-modeling-the-nhl/output_24_1.png)
 
 
 San Jose appears to skew a bit higher in the predicted number of regulation tie goals. As a result, we should probably expect San Jose to be more likely to win this game. Let's see what the predicted probabilities are:
 
 
-```python
+{% highlight python %}
 # Determine all the games in which the home and away teams win, lose, 
 # or tie in regulation time
 home_won_regulation = post_pred['home_goals'] > post_pred['away_goals']
@@ -421,10 +425,10 @@ home_team_is_heads = np.array([(home_team == team_pairs_heads_dict[(home_team, a
                                zip(scheduled_games['home_team'], scheduled_games['away_team'])])
 home_won_tie_breaker = (home_won_tie_breaker == home_team_is_heads)
 away_won_tie_breaker = ~home_won_tie_breaker
-```
+{% endhighlight %}
 
 
-```python
+{% highlight python %}
 scheduled_game_probs = scheduled_games[['home_team', 'away_team']].copy()
 scheduled_game_probs['home_regulation_win'] = home_won_regulation.mean(axis=0)
 scheduled_game_probs['home_OT_SO_win'] = (regulation_tie & home_won_tie_breaker).mean(axis=0)
@@ -432,7 +436,7 @@ scheduled_game_probs['away_regulation_win'] = away_won_regulation.mean(axis=0)
 scheduled_game_probs['away_OT_SO_win'] = (regulation_tie & away_won_tie_breaker).mean(axis=0)
 
 scheduled_game_probs.loc[1, :]
-```
+{% endhighlight %}
 
 
 
@@ -452,12 +456,12 @@ The San Jose Sharks are definitely more likely to win this match according to ou
 Let's also look at the rest of the games the Flames are scheduled to play in:
 
 
-```python
+{% highlight python %}
 flames_home = scheduled_game_probs['home_team'] == "Calgary Flames"
 flames_away = scheduled_game_probs['away_team'] == "Calgary Flames"
 
 scheduled_game_probs.loc[(flames_home | flames_away), :]
-```
+{% endhighlight %}
 
 
 
@@ -556,12 +560,12 @@ scheduled_game_probs.loc[(flames_home | flames_away), :]
 </table>
 </div>
 
+<br>
 
-
-In order to earn a playoff spot the flames would likely need to win every game left in the season, and even then that may not be enough if the teams ahead of them also play well in the mean time. Ignoring that though, the odds of the Flames winning every single game left in the season do not appear to be promising. The Flames game at home against the Arizona Coyotes is the only game where they even have a greater than 50% chance of winning the game outright, whether that is in regulation, overtime, or shootout.
+In order to earn a playoff spot the flames would likely need to win every game left in the season, and even then that may not be enough if the teams ahead of them also play well in the mean time. The odds of the Flames winning every single game left in the season do not appear to be promising. The Flames game at home against the Arizona Coyotes is the only game where they even have a greater than 50% chance of winning the game outright, whether that is in regulation, overtime, or shootout.
 
 In the spirit of the above analysis, the next obvious step would be to look at the probability that each team will make it into the playoffs based on the predictions made for all the remaining games. Unfortunately it is not that straight forward to calculate the probability that a team will make it into the playoffs. Overall, the rules for calculating "Wild Card" playoff seed standings in the NHL are surprisingly convoluted. For starters, the current league is broken down into two conferences. Each conference has two divisions. The top three teams for each division earn a playoff spot. The remaining two playoff spots in each conference are then provided to the top two teams in those conferences that have not already qualified for a playoff spot. This doesn't sound too bad, except for the possibility where a tie occurs. In such a scenario, the tie breaking procedure is:
 
 "If two or more clubs are tied in points during the regular season, the standing of the clubs is determined in the following order: The fewer number of games played (i.e., superior points percentage).The greater number of games won, excluding games won in the Shootout. This figure is reflected in the ROW column. The greater number of points earned in games between the tied clubs. If two clubs are tied, and have not played an equal number of home games against each other, points earned in the first game played in the city that had the extra game shall not be included. If more than two clubs are tied, the higher percentage of available points earned in games among those clubs, and not including any "odd" games, shall be used to determine the standing. The greater differential between goals for and against for the entire regular season. NOTE: In standings a victory in a shootout counts as one goal for, while a shootout loss counts as one goal against."
 
-While I'd love to write some sort of function to calculate these values I'm worried I'll never finish this blog post if I start down that path. At the very least I probably won't finish it before the 2017-2018 season playoffs start, at which point the predictions will not be very interesting anymore. I will leave it as a project for another day, hopefully before the start of the 2018-2019 season in October. If I'm feeling very ambitious I may also try to make predictions for the playoff games once those start in April.
+While I'd love to write some sort of function to calculate these values I'm worried I'd never finish this blog post if I start down that path. At the very least I probably won't finish it before the 2017-2018 season playoffs start, at which point the predictions will not be very interesting anymore. I will leave it as a project for another day, hopefully before the start of the 2018-2019 season in October. If I'm feeling very ambitious over the next few weeks I may also try to make predictions for the playoff games once those start in April.
