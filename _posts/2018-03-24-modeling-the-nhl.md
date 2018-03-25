@@ -468,93 +468,87 @@ scheduled_game_probs.loc[(flames_home | flames_away), :]
 
 <div>
 <style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
+    table, th, td {
+	text-align: center;
+        border: 1px solid black;
+	border-collapse: collapse;
     }
 </style>
-<table border="1" class="dataframe">
+<table class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr class="header">
       <th></th>
-      <th>home_team</th>
-      <th>away_team</th>
-      <th>home_regulation_win</th>
-      <th>home_OT_SO_win</th>
-      <th>away_regulation_win</th>
-      <th>away_OT_SO_win</th>
+      <th>Home Team</th>
+      <th>Away Team</th>
+      <th>Home Regulation Win</th>
+      <th>Home OT/SO Win</th>
+      <th>Away Regulation Win</th>
+      <th>Away OT/SO Win</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>1</th>
-      <td>San Jose Sharks</td>
-      <td>Calgary Flames</td>
-      <td>0.5025</td>
-      <td>0.1015</td>
-      <td>0.3230</td>
-      <td>0.0730</td>
+      <td markdown="span">San Jose Sharks</td>
+      <td markdown="span">Calgary Flames</td>
+      <td markdown="span">0.5025</td>
+      <td markdown="span">0.1015</td>
+      <td markdown="span">0.3230</td>
+      <td markdown="span">0.0730</td>
     </tr>
     <tr>
       <th>25</th>
-      <td>Los Angeles Kings</td>
-      <td>Calgary Flames</td>
-      <td>0.4605</td>
-      <td>0.0725</td>
-      <td>0.3535</td>
-      <td>0.1135</td>
+      <td markdown="span">Los Angeles Kings</td>
+      <td markdown="span">Calgary Flames</td>
+      <td markdown="span">0.4605</td>
+      <td markdown="span">0.0725</td>
+      <td markdown="span">0.3535</td>
+      <td markdown="span">0.1135</td>
     </tr>
     <tr>
       <th>46</th>
-      <td>Calgary Flames</td>
-      <td>Columbus Blue Jackets</td>
-      <td>0.4245</td>
-      <td>0.0715</td>
-      <td>0.4045</td>
-      <td>0.0995</td>
+      <td markdown="span">Calgary Flames</td>
+      <td markdown="span">Columbus Blue Jackets</td>
+      <td markdown="span">0.4245</td>
+      <td markdown="span">0.0715</td>
+      <td markdown="span">0.4045</td>
+      <td markdown="span">0.0995</td>
     </tr>
     <tr>
       <th>65</th>
-      <td>Calgary Flames</td>
-      <td>Edmonton Oilers</td>
-      <td>0.4375</td>
-      <td>0.0345</td>
-      <td>0.3880</td>
-      <td>0.1400</td>
+      <td markdown="span">Calgary Flames</td>
+      <td markdown="span">Edmonton Oilers</td>
+      <td markdown="span">0.4375</td>
+      <td markdown="span">0.0345</td>
+      <td markdown="span">0.3880</td>
+      <td markdown="span">0.1400</td>
     </tr>
     <tr>
       <th>84</th>
-      <td>Calgary Flames</td>
-      <td>Arizona Coyotes</td>
-      <td>0.5215</td>
-      <td>0.1185</td>
-      <td>0.3165</td>
-      <td>0.0435</td>
+      <td markdown="span">Calgary Flames</td>
+      <td markdown="span">Arizona Coyotes</td>
+      <td markdown="span">0.5215</td>
+      <td markdown="span">0.1185</td>
+      <td markdown="span">0.3165</td>
+      <td markdown="span">0.0435</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>Winnipeg Jets</td>
-      <td>Calgary Flames</td>
-      <td>0.5205</td>
-      <td>0.0705</td>
-      <td>0.3080</td>
-      <td>0.1010</td>
+      <td markdown="span">Winnipeg Jets</td>
+      <td markdown="span">Calgary Flames</td>
+      <td markdown="span">0.5205</td>
+      <td markdown="span">0.0705</td>
+      <td markdown="span">0.3080</td>
+      <td markdown="span">0.1010</td>
     </tr>
     <tr>
       <th>117</th>
-      <td>Calgary Flames</td>
-      <td>Vegas Golden Knights</td>
-      <td>0.3920</td>
-      <td>0.0340</td>
-      <td>0.4330</td>
-      <td>0.1410</td>
+      <td markdown="span">Calgary Flames</td>
+      <td markdown="span">Vegas Golden Knights</td>
+      <td markdown="span">0.3920</td>
+      <td markdown="span">0.0340</td>
+      <td markdown="span">0.4330</td>
+      <td markdown="span">0.1410</td>
     </tr>
   </tbody>
 </table>
