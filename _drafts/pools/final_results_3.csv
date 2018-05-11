@@ -1,0 +1,1105 @@
+,game_pk,home_team,away_team,home_regulation_win,home_OT_SO_win,away_regulation_win,away_OT_SO_win,card
+1351,2016030163,St. Louis Blues,Minnesota Wild,0.4375,0.1065,0.3965,0.0595,647
+1352,2016030143,Columbus Blue Jackets,Pittsburgh Penguins,0.4505,0.072,0.38,0.0975,647
+1353,2016030113,New York Rangers,Montréal Canadiens,0.4905,0.0555,0.3275,0.1265,647
+1354,2016030183,San Jose Sharks,Edmonton Oilers,0.4205,0.0785,0.39,0.111,647
+1355,2016030123,Boston Bruins,Ottawa Senators,0.5155,0.044,0.305,0.1355,647
+1356,2016030133,Toronto Maple Leafs,Washington Capitals,0.409,0.0825,0.4165,0.092,647
+1357,2016030153,Nashville Predators,Chicago Blackhawks,0.4765,0.0745,0.3525,0.0965,647
+1358,2016030173,Calgary Flames,Anaheim Ducks,0.4295,0.0445,0.396,0.13,647
+1355,2016030123,Boston Bruins,Ottawa Senators,0.5005,0.0385,0.322,0.139,649
+1356,2016030133,Toronto Maple Leafs,Washington Capitals,0.397,0.081,0.426,0.096,649
+1357,2016030153,Nashville Predators,Chicago Blackhawks,0.4925,0.0775,0.343,0.087,649
+1358,2016030173,Calgary Flames,Anaheim Ducks,0.4245,0.032,0.382,0.1615,649
+1359,2016030114,New York Rangers,Montréal Canadiens,0.482,0.0505,0.3335,0.134,649
+1360,2016030144,Columbus Blue Jackets,Pittsburgh Penguins,0.435,0.06,0.3925,0.1125,649
+1361,2016030184,San Jose Sharks,Edmonton Oilers,0.411,0.0665,0.399,0.1235,649
+1359,2016030114,New York Rangers,Montréal Canadiens,0.4715,0.041,0.3595,0.128,651
+1360,2016030144,Columbus Blue Jackets,Pittsburgh Penguins,0.452,0.058,0.378,0.112,651
+1361,2016030184,San Jose Sharks,Edmonton Oilers,0.424,0.074,0.3875,0.1145,651
+1362,2016030134,Toronto Maple Leafs,Washington Capitals,0.3985,0.089,0.4295,0.083,651
+1363,2016030124,Boston Bruins,Ottawa Senators,0.486,0.0445,0.341,0.1285,651
+1364,2016030164,St. Louis Blues,Minnesota Wild,0.4305,0.118,0.392,0.0595,651
+1365,2016030174,Calgary Flames,Anaheim Ducks,0.424,0.0335,0.3895,0.153,651
+1362,2016030134,Toronto Maple Leafs,Washington Capitals,0.4085,0.0915,0.4175,0.0825,654
+1363,2016030124,Boston Bruins,Ottawa Senators,0.4915,0.0395,0.327,0.142,654
+1364,2016030164,St. Louis Blues,Minnesota Wild,0.4565,0.1105,0.382,0.051,654
+1365,2016030174,Calgary Flames,Anaheim Ducks,0.429,0.0445,0.369,0.1575,654
+1366,2016030115,Montréal Canadiens,New York Rangers,0.437,0.1115,0.3885,0.063,654
+1367,2016030145,Pittsburgh Penguins,Columbus Blue Jackets,0.4875,0.106,0.3395,0.067,654
+1368,2016030154,Nashville Predators,Chicago Blackhawks,0.481,0.087,0.3415,0.0905,654
+1369,2016030185,Edmonton Oilers,San Jose Sharks,0.4645,0.0885,0.354,0.093,654
+1377,2016030231,St. Louis Blues,Nashville Predators,0.444,0.0635,0.389,0.1035,662
+1378,2016030241,Anaheim Ducks,Edmonton Oilers,0.4585,0.063,0.3625,0.116,662
+1379,2016030211,Ottawa Senators,New York Rangers,0.3985,0.1045,0.4255,0.0715,662
+1380,2016030221,Washington Capitals,Pittsburgh Penguins,0.489,0.101,0.334,0.076,662
+1381,2016030232,St. Louis Blues,Nashville Predators,0.4575,0.0695,0.3635,0.1095,665
+1382,2016030242,Anaheim Ducks,Edmonton Oilers,0.442,0.0535,0.3835,0.121,665
+1383,2016030212,Ottawa Senators,New York Rangers,0.407,0.1185,0.419,0.0555,665
+1384,2016030222,Washington Capitals,Pittsburgh Penguins,0.5035,0.062,0.338,0.0965,665
+1385,2016030233,Nashville Predators,St. Louis Blues,0.471,0.1185,0.3405,0.07,665
+1386,2016030243,Edmonton Oilers,Anaheim Ducks,0.4875,0.1155,0.3395,0.0575,665
+1387,2016030223,Pittsburgh Penguins,Washington Capitals,0.464,0.0975,0.377,0.0615,665
+1534,2017020005,Boston Bruins,Nashville Predators,0.433,0.0845,0.3875,0.095,836
+1535,2017020006,Buffalo Sabres,Montréal Canadiens,0.4065,0.0875,0.398,0.108,836
+1536,2017020007,New York Rangers,Colorado Avalanche,0.61,0.113,0.2355,0.0415,836
+1537,2017020008,Ottawa Senators,Washington Capitals,0.4005,0.072,0.4145,0.113,836
+1538,2017020009,Detroit Red Wings,Minnesota Wild,0.3935,0.086,0.4335,0.087,836
+1539,2017020010,Chicago Blackhawks,Pittsburgh Penguins,0.4265,0.087,0.396,0.0905,836
+1540,2017020011,Anaheim Ducks,Arizona Coyotes,0.5125,0.0915,0.32,0.076,836
+1541,2017020012,Los Angeles Kings,Philadelphia Flyers,0.4425,0.0935,0.36,0.104,836
+1546,2017020016,Toronto Maple Leafs,New York Rangers,0.4965,0.0665,0.349,0.088,838
+1547,2017020017,Ottawa Senators,Detroit Red Wings,0.484,0.0595,0.3455,0.111,838
+1548,2017020018,Florida Panthers,Tampa Bay Lightning,0.4305,0.092,0.3955,0.082,838
+1549,2017020020,New York Islanders,Buffalo Sabres,0.4905,0.139,0.3035,0.067,838
+1550,2017020021,Pittsburgh Penguins,Nashville Predators,0.507,0.0945,0.3375,0.061,838
+1551,2017020022,Washington Capitals,Montréal Canadiens,0.5245,0.095,0.3075,0.073,838
+1552,2017020023,Carolina Hurricanes,Minnesota Wild,0.4155,0.06,0.4055,0.119,838
+1553,2017020024,St. Louis Blues,Dallas Stars,0.5345,0.0755,0.2955,0.0945,838
+1554,2017020025,Chicago Blackhawks,Columbus Blue Jackets,0.4565,0.095,0.3655,0.083,838
+1555,2017020026,Arizona Coyotes,Vegas Golden Knights,0.39,0.095,0.425,0.09,838
+1556,2017020028,Vancouver Canucks,Edmonton Oilers,0.346,0.0815,0.479,0.0935,838
+1557,2017020029,Anaheim Ducks,Philadelphia Flyers,0.4935,0.129,0.339,0.0385,838
+1558,2017020027,Calgary Flames,Winnipeg Jets,0.4305,0.111,0.387,0.0715,838
+1559,2017020030,San Jose Sharks,Los Angeles Kings,0.458,0.108,0.351,0.083,838
+1561,2017020032,Boston Bruins,Colorado Avalanche,0.558,0.0795,0.286,0.0765,839
+1562,2017020033,New York Islanders,St. Louis Blues,0.464,0.0705,0.3555,0.11,839
+1563,2017020034,Buffalo Sabres,New Jersey Devils,0.4665,0.028,0.349,0.1565,839
+1564,2017020035,Toronto Maple Leafs,Chicago Blackhawks,0.478,0.0275,0.3535,0.141,839
+1565,2017020036,Tampa Bay Lightning,Washington Capitals,0.456,0.09,0.3625,0.0915,839
+1566,2017020037,Edmonton Oilers,Winnipeg Jets,0.5105,0.136,0.3045,0.049,839
+1567,2017020038,Anaheim Ducks,Calgary Flames,0.497,0.151,0.3225,0.0295,839
+1568,2017020039,New York Rangers,St. Louis Blues,0.4865,0.086,0.341,0.0865,840
+1569,2017020040,Carolina Hurricanes,Columbus Blue Jackets,0.4235,0.0865,0.3995,0.0905,840
+1570,2017020041,Montréal Canadiens,Chicago Blackhawks,0.4425,0.0465,0.3815,0.1295,840
+1571,2017020042,Nashville Predators,Philadelphia Flyers,0.5105,0.083,0.3245,0.082,840
+1572,2017020043,Dallas Stars,Detroit Red Wings,0.459,0.095,0.3675,0.0785,840
+1573,2017020044,Vancouver Canucks,Ottawa Senators,0.4235,0.038,0.397,0.1415,840
+1574,2017020045,Vegas Golden Knights,Arizona Coyotes,0.5205,0.124,0.3015,0.054,840
+1580,2017020051,Tampa Bay Lightning,Pittsburgh Penguins,0.429,0.036,0.407,0.128,842
+1581,2017020052,Florida Panthers,St. Louis Blues,0.4295,0.091,0.387,0.0925,842
+1582,2017020053,Nashville Predators,Dallas Stars,0.519,0.102,0.32,0.059,842
+1583,2017020054,Chicago Blackhawks,Minnesota Wild,0.459,0.113,0.3715,0.0565,842
+1584,2017020055,Vancouver Canucks,Winnipeg Jets,0.424,0.07,0.4055,0.1005,842
+1585,2017020056,Arizona Coyotes,Detroit Red Wings,0.444,0.0875,0.382,0.0865,842
+1586,2017020057,San Jose Sharks,Buffalo Sabres,0.515,0.0865,0.3075,0.091,842
+1592,2017020068,Winnipeg Jets,Carolina Hurricanes,0.4875,0.0775,0.348,0.087,844
+1593,2017020063,Montréal Canadiens,Toronto Maple Leafs,0.4405,0.1065,0.3875,0.0655,844
+1594,2017020064,Tampa Bay Lightning,St. Louis Blues,0.4705,0.083,0.3575,0.089,844
+1595,2017020065,New York Rangers,New Jersey Devils,0.539,0.099,0.3055,0.0565,844
+1596,2017020066,Philadelphia Flyers,Washington Capitals,0.386,0.056,0.427,0.131,844
+1597,2017020067,Pittsburgh Penguins,Florida Panthers,0.535,0.12,0.3025,0.0425,844
+1598,2017020069,Dallas Stars,Colorado Avalanche,0.514,0.0705,0.325,0.0905,844
+1599,2017020070,Minnesota Wild,Columbus Blue Jackets,0.477,0.0435,0.351,0.1285,844
+1600,2017020071,Chicago Blackhawks,Nashville Predators,0.4605,0.086,0.352,0.1015,844
+1601,2017020072,Arizona Coyotes,Boston Bruins,0.396,0.049,0.418,0.137,844
+1602,2017020074,Vancouver Canucks,Calgary Flames,0.4295,0.115,0.389,0.0665,844
+1603,2017020073,Edmonton Oilers,Ottawa Senators,0.5235,0.0415,0.2995,0.1355,844
+1604,2017020075,Los Angeles Kings,Buffalo Sabres,0.476,0.094,0.34,0.09,844
+1605,2017020076,San Jose Sharks,New York Islanders,0.462,0.1475,0.3325,0.058,844
+1610,2017020082,New York Rangers,Pittsburgh Penguins,0.428,0.076,0.3965,0.0995,845
+1611,2017020083,Philadelphia Flyers,Florida Panthers,0.471,0.1625,0.328,0.0385,845
+1612,2017020084,Washington Capitals,Toronto Maple Leafs,0.4995,0.1035,0.3345,0.0625,845
+1613,2017020081,New Jersey Devils,Tampa Bay Lightning,0.422,0.062,0.4155,0.1005,845
+1614,2017020085,Ottawa Senators,Vancouver Canucks,0.5105,0.152,0.307,0.0305,845
+1615,2017020086,Nashville Predators,Colorado Avalanche,0.563,0.147,0.2625,0.0275,845
+1616,2017020087,Winnipeg Jets,Columbus Blue Jackets,0.4495,0.089,0.3745,0.087,845
+1617,2017020088,Dallas Stars,Arizona Coyotes,0.499,0.1355,0.3315,0.034,845
+1618,2017020089,Edmonton Oilers,Carolina Hurricanes,0.4965,0.0805,0.3355,0.0875,845
+1619,2017020090,Vegas Golden Knights,Buffalo Sabres,0.5425,0.0815,0.294,0.082,845
+1620,2017020091,San Jose Sharks,Montréal Canadiens,0.4525,0.1405,0.3625,0.0445,845
+1624,2017020095,Boston Bruins,Vancouver Canucks,0.506,0.135,0.3085,0.0505,848
+1625,2017020096,New York Rangers,New York Islanders,0.4915,0.0705,0.3445,0.0935,848
+1626,2017020097,Philadelphia Flyers,Nashville Predators,0.4525,0.0695,0.376,0.102,848
+1627,2017020098,Columbus Blue Jackets,Tampa Bay Lightning,0.4785,0.138,0.341,0.0425,848
+1628,2017020099,Ottawa Senators,New Jersey Devils,0.4855,0.117,0.3315,0.066,848
+1629,2017020100,Chicago Blackhawks,Edmonton Oilers,0.4855,0.077,0.3345,0.103,848
+1630,2017020101,Colorado Avalanche,St. Louis Blues,0.3575,0.047,0.458,0.1375,848
+1631,2017020102,Calgary Flames,Carolina Hurricanes,0.441,0.094,0.3695,0.0955,848
+1632,2017020103,Arizona Coyotes,Dallas Stars,0.4585,0.0275,0.377,0.137,848
+1633,2017020104,Buffalo Sabres,Vancouver Canucks,0.475,0.0485,0.346,0.1305,850
+1634,2017020105,New Jersey Devils,San Jose Sharks,0.4215,0.0445,0.403,0.131,850
+1635,2017020106,Detroit Red Wings,Washington Capitals,0.395,0.072,0.4195,0.1135,850
+1636,2017020107,Florida Panthers,Pittsburgh Penguins,0.397,0.029,0.427,0.147,850
+1637,2017020108,Winnipeg Jets,Minnesota Wild,0.399,0.051,0.4295,0.1205,850
+1638,2017020109,Anaheim Ducks,Montréal Canadiens,0.46,0.094,0.365,0.081,850
+1639,2017020110,New York Rangers,Nashville Predators,0.479,0.126,0.3565,0.0385,850
+1640,2017020111,Philadelphia Flyers,Edmonton Oilers,0.436,0.0865,0.3835,0.094,850
+1641,2017020112,Boston Bruins,Buffalo Sabres,0.506,0.153,0.319,0.022,851
+1642,2017020113,Ottawa Senators,Toronto Maple Leafs,0.4435,0.1365,0.382,0.038,851
+1643,2017020114,Tampa Bay Lightning,Pittsburgh Penguins,0.4185,0.0475,0.406,0.128,851
+1644,2017020115,New York Islanders,San Jose Sharks,0.4565,0.075,0.3735,0.095,851
+1645,2017020117,Columbus Blue Jackets,Los Angeles Kings,0.4955,0.098,0.3375,0.069,851
+1646,2017020116,Washington Capitals,Florida Panthers,0.4965,0.109,0.3105,0.084,851
+1647,2017020118,Dallas Stars,Carolina Hurricanes,0.4485,0.124,0.3885,0.039,851
+1648,2017020119,Arizona Coyotes,Chicago Blackhawks,0.362,0.056,0.459,0.123,851
+1649,2017020120,Calgary Flames,Minnesota Wild,0.3995,0.1215,0.4425,0.0365,851
+1650,2017020121,Vegas Golden Knights,St. Louis Blues,0.468,0.0685,0.3625,0.101,851
+1654,2017020126,New York Islanders,Arizona Coyotes,0.521,0.0895,0.308,0.0815,854
+1655,2017020127,Philadelphia Flyers,Anaheim Ducks,0.455,0.073,0.366,0.106,854
+1656,2017020128,Pittsburgh Penguins,Edmonton Oilers,0.4885,0.124,0.3545,0.033,854
+1657,2017020129,Carolina Hurricanes,Tampa Bay Lightning,0.4485,0.076,0.3845,0.091,854
+1658,2017020125,Buffalo Sabres,Detroit Red Wings,0.4425,0.1195,0.3815,0.0565,854
+1659,2017020130,Montréal Canadiens,Florida Panthers,0.466,0.1205,0.358,0.0555,854
+1660,2017020131,Ottawa Senators,Los Angeles Kings,0.4575,0.0965,0.3505,0.0955,854
+1661,2017020132,Nashville Predators,Calgary Flames,0.4965,0.1025,0.326,0.075,854
+1662,2017020133,Minnesota Wild,Vancouver Canucks,0.562,0.062,0.2785,0.0975,854
+1663,2017020134,Colorado Avalanche,Dallas Stars,0.404,0.0905,0.4195,0.086,854
+1664,2017020135,Vegas Golden Knights,Chicago Blackhawks,0.425,0.0815,0.3995,0.094,854
+1667,2017020138,Boston Bruins,San Jose Sharks,0.458,0.1365,0.3655,0.04,857
+1668,2017020139,Toronto Maple Leafs,Carolina Hurricanes,0.5025,0.097,0.3305,0.07,857
+1669,2017020140,New York Rangers,Arizona Coyotes,0.5435,0.1305,0.2855,0.0405,857
+1670,2017020141,Pittsburgh Penguins,Winnipeg Jets,0.5115,0.125,0.3175,0.046,857
+1671,2017020142,Montréal Canadiens,Los Angeles Kings,0.45,0.1055,0.372,0.0725,857
+1672,2017020143,Ottawa Senators,Philadelphia Flyers,0.467,0.069,0.348,0.116,857
+1673,2017020144,Tampa Bay Lightning,Detroit Red Wings,0.513,0.1465,0.3205,0.02,857
+1674,2017020145,Florida Panthers,Anaheim Ducks,0.4165,0.1465,0.3925,0.0445,857
+1675,2017020146,Minnesota Wild,New York Islanders,0.507,0.0915,0.3195,0.082,857
+1676,2017020147,Edmonton Oilers,Dallas Stars,0.535,0.0995,0.2925,0.073,857
+1677,2017020148,Vancouver Canucks,Washington Capitals,0.359,0.0445,0.464,0.1325,857
+1678,2017020149,Vegas Golden Knights,Colorado Avalanche,0.551,0.0915,0.278,0.0795,858
+1679,2017020150,New Jersey Devils,Ottawa Senators,0.4415,0.067,0.3915,0.1,858
+1680,2017020151,Columbus Blue Jackets,Winnipeg Jets,0.4945,0.0955,0.335,0.075,858
+1681,2017020152,Carolina Hurricanes,St. Louis Blues,0.4225,0.0865,0.4025,0.0885,858
+1682,2017020153,Chicago Blackhawks,Nashville Predators,0.462,0.091,0.363,0.084,858
+1683,2017020154,Calgary Flames,Dallas Stars,0.455,0.109,0.3615,0.0745,858
+1684,2017020155,Buffalo Sabres,San Jose Sharks,0.405,0.072,0.4225,0.1005,858
+1685,2017020156,Boston Bruins,Los Angeles Kings,0.476,0.135,0.3365,0.0525,861
+1686,2017020157,Toronto Maple Leafs,Philadelphia Flyers,0.517,0.1015,0.319,0.0625,861
+1687,2017020158,Montréal Canadiens,New York Rangers,0.4185,0.089,0.4075,0.085,861
+1688,2017020159,Tampa Bay Lightning,Anaheim Ducks,0.4945,0.0755,0.3445,0.0855,861
+1689,2017020160,Florida Panthers,Detroit Red Wings,0.4685,0.1215,0.3475,0.0625,861
+1690,2017020161,New Jersey Devils,Arizona Coyotes,0.4695,0.0885,0.369,0.073,861
+1691,2017020162,St. Louis Blues,Columbus Blue Jackets,0.4345,0.11,0.3875,0.068,861
+1692,2017020163,Nashville Predators,New York Islanders,0.492,0.0835,0.3435,0.081,861
+1693,2017020164,Minnesota Wild,Pittsburgh Penguins,0.463,0.1275,0.365,0.0445,861
+1694,2017020165,Colorado Avalanche,Chicago Blackhawks,0.351,0.0745,0.4735,0.101,861
+1695,2017020166,Edmonton Oilers,Washington Capitals,0.4435,0.0895,0.3865,0.0805,861
+1699,2017020170,New York Islanders,Vegas Golden Knights,0.453,0.0915,0.3675,0.088,863
+1700,2017020171,Philadelphia Flyers,Arizona Coyotes,0.5385,0.039,0.3015,0.121,863
+1701,2017020172,Columbus Blue Jackets,Boston Bruins,0.4895,0.081,0.321,0.1085,863
+1702,2017020173,Ottawa Senators,Montréal Canadiens,0.453,0.0855,0.3625,0.099,863
+1703,2017020174,Florida Panthers,Tampa Bay Lightning,0.445,0.1015,0.3725,0.081,863
+1704,2017020175,St. Louis Blues,Los Angeles Kings,0.483,0.1195,0.3305,0.067,863
+1705,2017020176,Vancouver Canucks,Dallas Stars,0.45,0.0735,0.374,0.1025,863
+1706,2017020177,San Jose Sharks,Toronto Maple Leafs,0.452,0.138,0.378,0.032,863
+1707,2017020178,New York Rangers,Vegas Golden Knights,0.4625,0.096,0.35,0.0915,865
+1708,2017020179,Detroit Red Wings,Arizona Coyotes,0.479,0.1095,0.3365,0.075,865
+1709,2017020180,Minnesota Wild,Winnipeg Jets,0.507,0.114,0.3235,0.0555,865
+1710,2017020181,Chicago Blackhawks,Philadelphia Flyers,0.508,0.085,0.326,0.081,865
+1711,2017020182,Edmonton Oilers,Pittsburgh Penguins,0.47,0.034,0.3595,0.1365,865
+1712,2017020183,Vancouver Canucks,New Jersey Devils,0.4575,0.044,0.361,0.1375,865
+1713,2017020184,Anaheim Ducks,Toronto Maple Leafs,0.447,0.1265,0.3855,0.041,865
+1714,2017020185,San Jose Sharks,Nashville Predators,0.433,0.074,0.378,0.115,865
+1715,2017020186,Boston Bruins,Vegas Golden Knights,0.445,0.0645,0.3745,0.116,868
+1716,2017020187,Washington Capitals,New York Islanders,0.501,0.1045,0.313,0.0815,868
+1717,2017020188,Ottawa Senators,Detroit Red Wings,0.5005,0.0555,0.3375,0.1065,868
+1718,2017020189,Tampa Bay Lightning,New York Rangers,0.471,0.059,0.3595,0.1105,868
+1719,2017020190,Florida Panthers,Columbus Blue Jackets,0.413,0.101,0.4095,0.0765,868
+1720,2017020191,St. Louis Blues,Philadelphia Flyers,0.491,0.121,0.3445,0.0435,868
+1721,2017020192,Minnesota Wild,Montréal Canadiens,0.516,0.1155,0.3195,0.049,868
+1722,2017020193,Winnipeg Jets,Dallas Stars,0.5065,0.1135,0.332,0.048,868
+1723,2017020194,Colorado Avalanche,Carolina Hurricanes,0.407,0.1455,0.4035,0.044,868
+1724,2017020195,Calgary Flames,Pittsburgh Penguins,0.3815,0.1315,0.4365,0.0505,868
+1725,2017020196,Arizona Coyotes,Buffalo Sabres,0.461,0.0905,0.356,0.0925,868
+1726,2017020197,Los Angeles Kings,Toronto Maple Leafs,0.4225,0.1235,0.3805,0.0735,868
+1730,2017020205,St. Louis Blues,Toronto Maple Leafs,0.47,0.1205,0.3645,0.045,871
+1731,2017020206,Winnipeg Jets,Montréal Canadiens,0.493,0.0815,0.3465,0.079,871
+1732,2017020201,Boston Bruins,Washington Capitals,0.43,0.04,0.3955,0.1345,871
+1733,2017020202,Tampa Bay Lightning,Columbus Blue Jackets,0.4535,0.051,0.359,0.1365,871
+1734,2017020203,Florida Panthers,New York Rangers,0.4085,0.101,0.4245,0.066,871
+1735,2017020204,Philadelphia Flyers,Colorado Avalanche,0.515,0.1375,0.3,0.0475,871
+1736,2017020207,Dallas Stars,Buffalo Sabres,0.487,0.0945,0.3405,0.078,871
+1737,2017020208,Minnesota Wild,Chicago Blackhawks,0.505,0.077,0.313,0.105,871
+1738,2017020209,Arizona Coyotes,Carolina Hurricanes,0.396,0.091,0.407,0.106,871
+1739,2017020210,Vancouver Canucks,Pittsburgh Penguins,0.3675,0.04,0.4615,0.131,871
+1740,2017020211,Los Angeles Kings,Nashville Predators,0.447,0.1545,0.367,0.0315,871
+1741,2017020212,San Jose Sharks,Anaheim Ducks,0.475,0.0685,0.343,0.1135,871
+1752,2017020223,Buffalo Sabres,Washington Capitals,0.373,0.0415,0.4525,0.133,873
+1753,2017020224,New Jersey Devils,St. Louis Blues,0.4105,0.044,0.394,0.1515,873
+1754,2017020225,New York Islanders,Edmonton Oilers,0.4565,0.082,0.373,0.0885,873
+1755,2017020226,Pittsburgh Penguins,Arizona Coyotes,0.565,0.08,0.2805,0.0745,873
+1756,2017020227,Carolina Hurricanes,Florida Panthers,0.462,0.108,0.346,0.084,873
+1757,2017020228,Columbus Blue Jackets,Nashville Predators,0.4725,0.0855,0.3575,0.0845,873
+1758,2017020229,Montréal Canadiens,Vegas Golden Knights,0.4495,0.082,0.381,0.0875,873
+1759,2017020230,Calgary Flames,Vancouver Canucks,0.477,0.082,0.3275,0.1135,873
+1760,2017020231,Anaheim Ducks,Los Angeles Kings,0.45,0.0945,0.3405,0.115,873
+1764,2017020235,New Jersey Devils,Edmonton Oilers,0.414,0.0415,0.4045,0.14,876
+1765,2017020236,Philadelphia Flyers,Chicago Blackhawks,0.427,0.078,0.3895,0.1055,876
+1766,2017020237,Montréal Canadiens,Minnesota Wild,0.4165,0.034,0.4015,0.148,876
+1767,2017020238,St. Louis Blues,Arizona Coyotes,0.56,0.1235,0.2865,0.03,876
+1768,2017020239,Calgary Flames,Detroit Red Wings,0.4645,0.142,0.3455,0.048,876
+1769,2017020240,Anaheim Ducks,Vancouver Canucks,0.5235,0.102,0.292,0.0825,876
+1770,2017020241,Los Angeles Kings,Tampa Bay Lightning,0.4495,0.0435,0.373,0.134,876
+1772,2017020242,Buffalo Sabres,Florida Panthers,0.4495,0.093,0.3805,0.077,877
+1773,2017020243,Toronto Maple Leafs,Boston Bruins,0.483,0.147,0.342,0.028,877
+1774,2017020244,Washington Capitals,Pittsburgh Penguins,0.4865,0.076,0.3385,0.099,877
+1775,2017020245,Columbus Blue Jackets,Carolina Hurricanes,0.484,0.1015,0.329,0.0855,877
+1776,2017020246,Dallas Stars,New York Islanders,0.406,0.0445,0.426,0.1235,877
+1777,2017020248,Vegas Golden Knights,Winnipeg Jets,0.47,0.0835,0.351,0.0955,877
+1778,2017020249,New York Rangers,Edmonton Oilers,0.477,0.1285,0.354,0.0405,877
+1779,2017020252,Ottawa Senators,Colorado Avalanche,0.531,0.133,0.295,0.041,877
+1780,2017020250,Boston Bruins,Toronto Maple Leafs,0.4695,0.025,0.356,0.1495,879
+1781,2017020251,Montréal Canadiens,Buffalo Sabres,0.5095,0.1115,0.306,0.073,879
+1782,2017020253,Detroit Red Wings,Columbus Blue Jackets,0.41,0.0325,0.421,0.1365,879
+1783,2017020254,New Jersey Devils,Florida Panthers,0.4325,0.032,0.386,0.1495,879
+1784,2017020255,Philadelphia Flyers,Minnesota Wild,0.4385,0.1305,0.3875,0.0435,879
+1785,2017020256,Carolina Hurricanes,Chicago Blackhawks,0.4095,0.092,0.4085,0.09,879
+1786,2017020257,St. Louis Blues,New York Islanders,0.4795,0.1085,0.3455,0.0665,879
+1787,2017020258,Nashville Predators,Pittsburgh Penguins,0.4645,0.061,0.3605,0.114,879
+1788,2017020260,San Jose Sharks,Vancouver Canucks,0.523,0.157,0.2995,0.0205,879
+1789,2017020259,Arizona Coyotes,Winnipeg Jets,0.3985,0.0755,0.4215,0.1045,879
+1796,2017020267,Pittsburgh Penguins,Buffalo Sabres,0.546,0.1025,0.2805,0.071,882
+1797,2017020268,Montréal Canadiens,Columbus Blue Jackets,0.4345,0.0625,0.388,0.115,882
+1798,2017020269,Florida Panthers,Dallas Stars,0.4525,0.0595,0.3715,0.1165,882
+1799,2017020270,Nashville Predators,Washington Capitals,0.424,0.131,0.3945,0.0505,882
+1800,2017020271,Minnesota Wild,Philadelphia Flyers,0.5115,0.0685,0.324,0.096,882
+1801,2017020272,Winnipeg Jets,Arizona Coyotes,0.532,0.115,0.297,0.056,882
+1802,2017020273,Edmonton Oilers,Vegas Golden Knights,0.4615,0.0865,0.3655,0.0865,882
+1803,2017020274,Los Angeles Kings,Vancouver Canucks,0.492,0.089,0.325,0.094,882
+1807,2017020278,Toronto Maple Leafs,New Jersey Devils,0.543,0.0675,0.3045,0.085,885
+1808,2017020279,New York Islanders,Carolina Hurricanes,0.4975,0.079,0.3245,0.099,885
+1809,2017020280,Montréal Canadiens,Arizona Coyotes,0.5295,0.1325,0.3025,0.0355,885
+1810,2017020281,Ottawa Senators,Pittsburgh Penguins,0.427,0.089,0.3955,0.0885,885
+1811,2017020282,Tampa Bay Lightning,Dallas Stars,0.5225,0.097,0.2905,0.09,885
+1812,2017020283,Minnesota Wild,Nashville Predators,0.5,0.0975,0.3235,0.079,885
+1813,2017020284,Winnipeg Jets,Philadelphia Flyers,0.4705,0.08,0.3595,0.09,885
+1814,2017020285,Colorado Avalanche,Washington Capitals,0.326,0.0445,0.49,0.1395,885
+1815,2017020286,Edmonton Oilers,St. Louis Blues,0.4775,0.1325,0.359,0.031,885
+1816,2017020287,Vancouver Canucks,Vegas Golden Knights,0.41,0.054,0.415,0.121,885
+1817,2017020288,Los Angeles Kings,Boston Bruins,0.4475,0.0755,0.365,0.112,885
+1818,2017020289,San Jose Sharks,Florida Panthers,0.499,0.0825,0.3345,0.084,885
+1826,2017020297,Buffalo Sabres,Carolina Hurricanes,0.4215,0.0495,0.3705,0.1585,888
+1827,2017020298,Montréal Canadiens,Toronto Maple Leafs,0.4425,0.087,0.392,0.0785,888
+1828,2017020299,Tampa Bay Lightning,New York Islanders,0.486,0.136,0.341,0.037,888
+1829,2017020300,Pittsburgh Penguins,Chicago Blackhawks,0.4895,0.0635,0.3455,0.1015,888
+1830,2017020301,Washington Capitals,Minnesota Wild,0.4745,0.125,0.351,0.0495,888
+1831,2017020302,Nashville Predators,Colorado Avalanche,0.5715,0.147,0.266,0.0155,888
+1832,2017020303,Vancouver Canucks,St. Louis Blues,0.3835,0.067,0.4395,0.11,888
+1833,2017020304,San Jose Sharks,Boston Bruins,0.462,0.031,0.3615,0.1455,888
+1848,2017020319,Buffalo Sabres,Minnesota Wild,0.3625,0.0715,0.4625,0.1035,890
+1849,2017020320,Detroit Red Wings,Edmonton Oilers,0.413,0.075,0.4015,0.1105,890
+1850,2017020321,Florida Panthers,Toronto Maple Leafs,0.4415,0.0475,0.384,0.127,890
+1851,2017020322,New Jersey Devils,Boston Bruins,0.4305,0.0685,0.394,0.107,890
+1852,2017020323,New York Islanders,Philadelphia Flyers,0.508,0.091,0.317,0.084,890
+1853,2017020324,Pittsburgh Penguins,Vancouver Canucks,0.5495,0.0955,0.3,0.055,890
+1854,2017020325,Washington Capitals,Ottawa Senators,0.527,0.107,0.3005,0.0655,890
+1855,2017020326,Carolina Hurricanes,New York Rangers,0.43,0.0815,0.412,0.0765,890
+1856,2017020327,Columbus Blue Jackets,Calgary Flames,0.518,0.0835,0.309,0.0895,890
+1857,2017020328,Tampa Bay Lightning,Chicago Blackhawks,0.463,0.1215,0.3625,0.053,890
+1858,2017020329,Nashville Predators,Montréal Canadiens,0.493,0.0385,0.339,0.1295,890
+1859,2017020330,Colorado Avalanche,Dallas Stars,0.422,0.0885,0.407,0.0825,890
+1860,2017020331,Arizona Coyotes,San Jose Sharks,0.419,0.1,0.4,0.081,890
+1861,2017020332,Anaheim Ducks,Vegas Golden Knights,0.449,0.0645,0.3805,0.106,890
+1862,2017020333,Los Angeles Kings,Winnipeg Jets,0.435,0.098,0.3935,0.0735,890
+1869,2017020339,Buffalo Sabres,Edmonton Oilers,0.399,0.1385,0.4195,0.043,893
+1870,2017020340,New Jersey Devils,Vancouver Canucks,0.4825,0.1305,0.349,0.038,893
+1871,2017020341,New York Rangers,Detroit Red Wings,0.5295,0.1005,0.3125,0.0575,893
+1872,2017020342,Columbus Blue Jackets,Ottawa Senators,0.517,0.07,0.314,0.099,893
+1873,2017020343,Carolina Hurricanes,Toronto Maple Leafs,0.424,0.0925,0.399,0.0845,893
+1874,2017020344,St. Louis Blues,Nashville Predators,0.4575,0.075,0.3635,0.104,893
+1875,2017020346,Arizona Coyotes,Los Angeles Kings,0.413,0.0905,0.4175,0.079,893
+1876,2017020345,Dallas Stars,Calgary Flames,0.4515,0.096,0.366,0.0865,893
+1877,2017020348,Toronto Maple Leafs,Washington Capitals,0.448,0.0705,0.374,0.1075,895
+1878,2017020349,Montréal Canadiens,Buffalo Sabres,0.5075,0.113,0.319,0.0605,895
+1879,2017020350,Ottawa Senators,New York Islanders,0.4215,0.1005,0.405,0.073,895
+1880,2017020351,Detroit Red Wings,New Jersey Devils,0.4785,0.114,0.338,0.0695,895
+1881,2017020352,Florida Panthers,Chicago Blackhawks,0.411,0.086,0.411,0.092,895
+1882,2017020353,Pittsburgh Penguins,Tampa Bay Lightning,0.4645,0.096,0.3675,0.072,895
+1883,2017020355,Arizona Coyotes,Vegas Golden Knights,0.3955,0.0395,0.441,0.124,895
+1884,2017020354,St. Louis Blues,Minnesota Wild,0.4305,0.107,0.392,0.0705,895
+1885,2017020357,San Jose Sharks,Winnipeg Jets,0.4615,0.1475,0.356,0.035,895
+1886,2017020356,Colorado Avalanche,Calgary Flames,0.423,0.0335,0.411,0.1325,895
+1887,2017020358,Los Angeles Kings,Anaheim Ducks,0.457,0.103,0.368,0.072,895
+1896,2017020367,Buffalo Sabres,Tampa Bay Lightning,0.3775,0.0285,0.4325,0.1615,898
+1897,2017020368,New York Islanders,Vancouver Canucks,0.54,0.131,0.2915,0.0375,898
+1898,2017020369,New York Rangers,Florida Panthers,0.512,0.087,0.312,0.089,898
+1899,2017020370,Philadelphia Flyers,San Jose Sharks,0.403,0.124,0.3985,0.0745,898
+1900,2017020371,Columbus Blue Jackets,Carolina Hurricanes,0.4965,0.0885,0.329,0.086,898
+1901,2017020372,Detroit Red Wings,Los Angeles Kings,0.4385,0.101,0.377,0.0835,898
+1902,2017020373,Nashville Predators,Chicago Blackhawks,0.441,0.1005,0.366,0.0925,898
+1903,2017020374,Calgary Flames,Toronto Maple Leafs,0.4205,0.0935,0.403,0.083,898
+1904,2017020375,Edmonton Oilers,Arizona Coyotes,0.562,0.087,0.2875,0.0635,898
+1905,2017020376,Vegas Golden Knights,Dallas Stars,0.546,0.1025,0.29,0.0615,898
+1910,2017020381,Washington Capitals,Los Angeles Kings,0.5005,0.0915,0.305,0.103,901
+1911,2017020382,Detroit Red Wings,Montréal Canadiens,0.45,0.0745,0.373,0.1025,901
+1912,2017020383,Nashville Predators,Vancouver Canucks,0.5385,0.0995,0.294,0.068,901
+1913,2017020384,Minnesota Wild,Vegas Golden Knights,0.487,0.075,0.3455,0.0925,901
+1914,2017020385,Chicago Blackhawks,Dallas Stars,0.53,0.1325,0.3065,0.031,901
+1915,2017020386,Calgary Flames,Arizona Coyotes,0.5005,0.1175,0.3415,0.0405,901
+1916,2017020387,Edmonton Oilers,Toronto Maple Leafs,0.457,0.0405,0.3745,0.128,901
+1917,2017020388,Buffalo Sabres,Pittsburgh Penguins,0.357,0.058,0.4725,0.1125,902
+1918,2017020389,New York Islanders,Ottawa Senators,0.497,0.0835,0.331,0.0885,902
+1919,2017020390,New York Rangers,Carolina Hurricanes,0.5285,0.1,0.3,0.0715,902
+1920,2017020391,Columbus Blue Jackets,Anaheim Ducks,0.486,0.1315,0.339,0.0435,902
+1921,2017020392,Florida Panthers,San Jose Sharks,0.4445,0.111,0.378,0.0665,902
+1922,2017020393,St. Louis Blues,Los Angeles Kings,0.471,0.124,0.3385,0.0665,902
+1923,2017020394,Winnipeg Jets,Vegas Golden Knights,0.4715,0.056,0.3625,0.11,902
+1924,2017020395,Colorado Avalanche,New Jersey Devils,0.4015,0.069,0.4085,0.121,902
+1937,2017020408,Chicago Blackhawks,Los Angeles Kings,0.502,0.073,0.3285,0.0965,906
+1938,2017020409,Winnipeg Jets,Ottawa Senators,0.513,0.14,0.325,0.022,906
+1939,2017020411,Vegas Golden Knights,Arizona Coyotes,0.5505,0.1325,0.286,0.031,906
+1940,2017020410,Colorado Avalanche,Dallas Stars,0.4115,0.1055,0.407,0.076,906
+1941,2017020412,Washington Capitals,San Jose Sharks,0.491,0.042,0.337,0.13,906
+1942,2017020413,Florida Panthers,New York Islanders,0.43,0.108,0.3905,0.0715,906
+1943,2017020414,Nashville Predators,Boston Bruins,0.478,0.076,0.34,0.106,906
+1944,2017020415,Calgary Flames,Philadelphia Flyers,0.442,0.1115,0.3685,0.078,906
+1945,2017020417,Columbus Blue Jackets,New Jersey Devils,0.5365,0.103,0.308,0.0525,908
+1946,2017020416,Pittsburgh Penguins,New York Rangers,0.465,0.121,0.353,0.061,908
+1947,2017020418,Montréal Canadiens,St. Louis Blues,0.4455,0.0435,0.3755,0.1355,908
+1948,2017020419,Detroit Red Wings,Winnipeg Jets,0.4105,0.087,0.425,0.0775,908
+1949,2017020420,Tampa Bay Lightning,New York Islanders,0.486,0.109,0.346,0.059,908
+1950,2017020421,Dallas Stars,Nashville Predators,0.43,0.065,0.4065,0.0985,908
+1951,2017020422,Colorado Avalanche,Buffalo Sabres,0.466,0.087,0.361,0.086,908
+1952,2017020423,Vancouver Canucks,Carolina Hurricanes,0.4355,0.0995,0.3725,0.0925,908
+1953,2017020424,Vegas Golden Knights,Anaheim Ducks,0.4935,0.1205,0.34,0.046,908
+1954,2017020425,Los Angeles Kings,Minnesota Wild,0.414,0.08,0.4035,0.1025,908
+1959,2017020430,Boston Bruins,Arizona Coyotes,0.575,0.125,0.2695,0.0305,911
+1960,2017020431,Pittsburgh Penguins,New York Islanders,0.491,0.089,0.3325,0.0875,911
+1961,2017020432,Montréal Canadiens,Calgary Flames,0.4935,0.089,0.333,0.0845,911
+1962,2017020433,Tampa Bay Lightning,Colorado Avalanche,0.557,0.0905,0.2605,0.092,911
+1963,2017020434,Florida Panthers,Winnipeg Jets,0.415,0.0415,0.4095,0.134,911
+1964,2017020435,St. Louis Blues,Dallas Stars,0.5025,0.0845,0.325,0.088,911
+1965,2017020436,Vancouver Canucks,Philadelphia Flyers,0.419,0.065,0.402,0.114,911
+1966,2017020437,Los Angeles Kings,Ottawa Senators,0.4895,0.0975,0.339,0.074,911
+1967,2017020438,San Jose Sharks,Carolina Hurricanes,0.4725,0.0895,0.3495,0.0885,911
+1974,2017020444,Boston Bruins,New York Islanders,0.464,0.0615,0.3645,0.11,913
+1975,2017020445,Montréal Canadiens,Edmonton Oilers,0.4545,0.0805,0.364,0.101,913
+1976,2017020447,Tampa Bay Lightning,Winnipeg Jets,0.4995,0.0825,0.343,0.075,913
+1977,2017020448,Florida Panthers,Colorado Avalanche,0.516,0.141,0.304,0.039,913
+1978,2017020449,New York Rangers,New Jersey Devils,0.5325,0.0835,0.308,0.076,913
+1979,2017020450,Pittsburgh Penguins,Toronto Maple Leafs,0.4955,0.0655,0.355,0.084,913
+1980,2017020451,Columbus Blue Jackets,Arizona Coyotes,0.5555,0.119,0.2865,0.039,913
+1981,2017020452,Dallas Stars,Vegas Golden Knights,0.4125,0.078,0.4255,0.084,913
+1982,2017020454,San Jose Sharks,Ottawa Senators,0.499,0.097,0.318,0.086,913
+1983,2017020453,Calgary Flames,Vancouver Canucks,0.4815,0.075,0.3385,0.105,913
+1984,2017020455,Los Angeles Kings,Carolina Hurricanes,0.4825,0.0845,0.336,0.097,913
+1985,2017020457,Chicago Blackhawks,Arizona Coyotes,0.565,0.131,0.277,0.027,915
+1986,2017020458,St. Louis Blues,Buffalo Sabres,0.55,0.096,0.2565,0.0975,915
+1987,2017020456,Toronto Maple Leafs,Edmonton Oilers,0.446,0.155,0.37,0.029,915
+1988,2017020459,San Jose Sharks,Minnesota Wild,0.432,0.0355,0.3855,0.147,915
+1989,2017020460,New York Islanders,Washington Capitals,0.4245,0.0745,0.3945,0.1065,915
+1990,2017020461,New York Rangers,Dallas Stars,0.5355,0.0915,0.2965,0.0765,915
+1991,2017020462,Pittsburgh Penguins,Colorado Avalanche,0.6065,0.063,0.2525,0.078,915
+1992,2017020463,Detroit Red Wings,Florida Panthers,0.442,0.073,0.387,0.098,915
+1993,2017020464,Winnipeg Jets,Vancouver Canucks,0.536,0.109,0.285,0.07,915
+1994,2017020465,Anaheim Ducks,Carolina Hurricanes,0.4875,0.1365,0.336,0.04,915
+1995,2017020466,Buffalo Sabres,Ottawa Senators,0.422,0.1415,0.3945,0.042,916
+1996,2017020467,New Jersey Devils,Los Angeles Kings,0.414,0.0435,0.4165,0.126,916
+1997,2017020468,Philadelphia Flyers,Toronto Maple Leafs,0.4405,0.0835,0.3925,0.0835,916
+1998,2017020469,Washington Capitals,Colorado Avalanche,0.6075,0.097,0.2465,0.049,916
+1999,2017020470,Columbus Blue Jackets,Edmonton Oilers,0.488,0.1395,0.3265,0.046,916
+2000,2017020471,St. Louis Blues,Tampa Bay Lightning,0.4705,0.0645,0.3555,0.1095,916
+2001,2017020472,Minnesota Wild,Calgary Flames,0.549,0.056,0.285,0.11,916
+2002,2017020473,Chicago Blackhawks,Florida Panthers,0.519,0.1035,0.3015,0.076,916
+2003,2017020474,Vegas Golden Knights,Carolina Hurricanes,0.5185,0.09,0.3155,0.076,916
+2008,2017020479,Boston Bruins,Washington Capitals,0.4295,0.03,0.3915,0.149,919
+2009,2017020480,Philadelphia Flyers,Buffalo Sabres,0.515,0.107,0.3065,0.0715,919
+2010,2017020481,Columbus Blue Jackets,New York Islanders,0.4785,0.1255,0.34,0.056,919
+2011,2017020482,Montréal Canadiens,New Jersey Devils,0.5085,0.0985,0.3255,0.0675,919
+2012,2017020483,St. Louis Blues,Anaheim Ducks,0.4835,0.103,0.332,0.0815,919
+2013,2017020484,Minnesota Wild,Toronto Maple Leafs,0.487,0.09,0.354,0.069,919
+2014,2017020485,Winnipeg Jets,Chicago Blackhawks,0.4625,0.1275,0.3675,0.0425,919
+2015,2017020486,Colorado Avalanche,Florida Panthers,0.4205,0.07,0.4005,0.109,919
+2016,2017020487,Calgary Flames,San Jose Sharks,0.439,0.091,0.4,0.07,919
+2017,2017020488,Edmonton Oilers,Nashville Predators,0.4665,0.0275,0.3715,0.1345,919
+2018,2017020489,Arizona Coyotes,Tampa Bay Lightning,0.3605,0.135,0.4605,0.044,919
+2019,2017020490,Vegas Golden Knights,Pittsburgh Penguins,0.4525,0.081,0.3865,0.08,919
+2027,2017020501,St. Louis Blues,Winnipeg Jets,0.4945,0.022,0.34,0.1435,921
+2028,2017020498,Ottawa Senators,Montréal Canadiens,0.422,0.074,0.3845,0.1195,921
+2029,2017020499,New York Islanders,Los Angeles Kings,0.4795,0.072,0.349,0.0995,921
+2030,2017020500,Philadelphia Flyers,Dallas Stars,0.481,0.0845,0.348,0.0865,921
+2031,2017020503,Carolina Hurricanes,Columbus Blue Jackets,0.3995,0.0785,0.4245,0.0975,921
+2032,2017020504,Arizona Coyotes,Pittsburgh Penguins,0.3545,0.066,0.4735,0.106,921
+2033,2017020502,Washington Capitals,Anaheim Ducks,0.5055,0.0875,0.3205,0.0865,921
+2034,2017020505,Colorado Avalanche,Tampa Bay Lightning,0.345,0.0755,0.483,0.0965,921
+2035,2017020506,Calgary Flames,Nashville Predators,0.3915,0.0795,0.434,0.095,921
+2036,2017020507,Winnipeg Jets,St. Louis Blues,0.452,0.135,0.369,0.044,923
+2037,2017020508,Chicago Blackhawks,Minnesota Wild,0.4625,0.103,0.3635,0.071,923
+2038,2017020509,Vancouver Canucks,Calgary Flames,0.423,0.114,0.39,0.073,923
+2039,2017020510,Vegas Golden Knights,Florida Panthers,0.5115,0.0755,0.3305,0.0825,923
+2040,2017020511,Boston Bruins,Columbus Blue Jackets,0.4355,0.0985,0.3755,0.0905,923
+2041,2017020512,New Jersey Devils,Anaheim Ducks,0.417,0.0985,0.388,0.0965,923
+2042,2017020513,Philadelphia Flyers,Los Angeles Kings,0.431,0.077,0.387,0.105,923
+2043,2017020514,Colorado Avalanche,Pittsburgh Penguins,0.3385,0.0965,0.4955,0.0695,923
+2044,2017020515,Edmonton Oilers,San Jose Sharks,0.461,0.098,0.3645,0.0765,923
+2046,2017020518,New York Islanders,Detroit Red Wings,0.516,0.068,0.323,0.093,925
+2047,2017020519,New York Rangers,Anaheim Ducks,0.4955,0.0865,0.3355,0.0825,925
+2048,2017020520,Ottawa Senators,Minnesota Wild,0.4015,0.054,0.415,0.1295,925
+2049,2017020517,Buffalo Sabres,Boston Bruins,0.3925,0.053,0.4295,0.125,925
+2050,2017020521,Nashville Predators,Winnipeg Jets,0.498,0.093,0.328,0.081,925
+2051,2017020522,Dallas Stars,Washington Capitals,0.363,0.091,0.459,0.087,925
+2052,2017020523,Arizona Coyotes,Florida Panthers,0.4285,0.075,0.4065,0.09,925
+2053,2017020524,Vancouver Canucks,Montréal Canadiens,0.418,0.0415,0.403,0.1375,925
+2054,2017020525,Vegas Golden Knights,Tampa Bay Lightning,0.457,0.0915,0.369,0.0825,925
+2058,2017020529,Boston Bruins,Winnipeg Jets,0.4465,0.1325,0.3775,0.0435,928
+2059,2017020530,New Jersey Devils,New York Rangers,0.393,0.0665,0.424,0.1165,928
+2060,2017020531,New York Islanders,Anaheim Ducks,0.455,0.0965,0.3715,0.077,928
+2061,2017020532,Pittsburgh Penguins,Columbus Blue Jackets,0.4855,0.0985,0.347,0.069,928
+2062,2017020533,Tampa Bay Lightning,Ottawa Senators,0.533,0.1085,0.3125,0.046,928
+2063,2017020534,Nashville Predators,Carolina Hurricanes,0.5185,0.0295,0.3175,0.1345,928
+2064,2017020535,Dallas Stars,Chicago Blackhawks,0.4055,0.053,0.417,0.1245,928
+2065,2017020536,Edmonton Oilers,St. Louis Blues,0.4875,0.0945,0.3525,0.0655,928
+2066,2017020537,Los Angeles Kings,Colorado Avalanche,0.534,0.064,0.299,0.103,928
+2067,2017020538,San Jose Sharks,Vancouver Canucks,0.541,0.146,0.2795,0.0335,928
+2074,2017020552,Edmonton Oilers,Montréal Canadiens,0.4915,0.1065,0.3255,0.0765,930
+2075,2017020545,Tampa Bay Lightning,Minnesota Wild,0.476,0.095,0.3425,0.0865,930
+2076,2017020546,Florida Panthers,Ottawa Senators,0.4605,0.0815,0.3625,0.0955,930
+2077,2017020547,New Jersey Devils,Chicago Blackhawks,0.406,0.07,0.4235,0.1005,930
+2078,2017020548,New York Rangers,Toronto Maple Leafs,0.486,0.0845,0.345,0.0845,930
+2079,2017020549,Pittsburgh Penguins,Anaheim Ducks,0.5075,0.1205,0.332,0.04,930
+2080,2017020550,Carolina Hurricanes,Buffalo Sabres,0.5075,0.1385,0.325,0.029,930
+2081,2017020551,Columbus Blue Jackets,Philadelphia Flyers,0.487,0.116,0.3375,0.0595,930
+2082,2017020555,Vegas Golden Knights,Washington Capitals,0.4355,0.086,0.3935,0.085,930
+2083,2017020554,Arizona Coyotes,Colorado Avalanche,0.4705,0.0975,0.3685,0.0635,930
+2084,2017020553,Dallas Stars,Nashville Predators,0.4085,0.0605,0.4105,0.1205,930
+2085,2017020556,Vancouver Canucks,St. Louis Blues,0.38,0.057,0.4435,0.1195,930
+2086,2017020557,San Jose Sharks,Los Angeles Kings,0.458,0.101,0.353,0.088,930
+2087,2017020558,Boston Bruins,Ottawa Senators,0.4905,0.0445,0.328,0.137,934
+2088,2017020559,New Jersey Devils,Detroit Red Wings,0.466,0.089,0.3495,0.0955,934
+2089,2017020560,New York Islanders,Buffalo Sabres,0.568,0.103,0.2775,0.0515,934
+2090,2017020562,Pittsburgh Penguins,Columbus Blue Jackets,0.459,0.12,0.358,0.063,934
+2091,2017020563,Carolina Hurricanes,Montréal Canadiens,0.453,0.108,0.367,0.072,934
+2092,2017020564,St. Louis Blues,Nashville Predators,0.468,0.068,0.3525,0.1115,934
+2093,2017020565,Minnesota Wild,Dallas Stars,0.5075,0.1095,0.334,0.049,934
+2094,2017020566,Winnipeg Jets,Edmonton Oilers,0.4645,0.0595,0.3605,0.1155,934
+2095,2017020561,New York Rangers,Washington Capitals,0.4605,0.068,0.377,0.0945,934
+2096,2017020567,Colorado Avalanche,Arizona Coyotes,0.473,0.082,0.359,0.086,934
+2097,2017020568,Anaheim Ducks,Vegas Golden Knights,0.4495,0.0315,0.3875,0.1315,934
+2098,2017020569,Washington Capitals,Boston Bruins,0.4895,0.153,0.331,0.0265,936
+2099,2017020570,Tampa Bay Lightning,Montréal Canadiens,0.527,0.0815,0.3095,0.082,936
+2100,2017020571,Florida Panthers,Philadelphia Flyers,0.45,0.034,0.368,0.148,936
+2101,2017020572,Arizona Coyotes,Toronto Maple Leafs,0.3835,0.103,0.4535,0.06,936
+2102,2017020573,Vancouver Canucks,Chicago Blackhawks,0.371,0.0765,0.4475,0.105,936
+2103,2017020574,Los Angeles Kings,Vegas Golden Knights,0.436,0.092,0.3895,0.0825,936
+2104,2017020575,San Jose Sharks,Calgary Flames,0.498,0.088,0.3235,0.0905,936
+2105,2017020576,New Jersey Devils,Buffalo Sabres,0.4935,0.14,0.3355,0.031,938
+2106,2017020577,Ottawa Senators,Columbus Blue Jackets,0.422,0.089,0.4075,0.0815,938
+2107,2017020578,Detroit Red Wings,New York Rangers,0.411,0.058,0.414,0.117,938
+2108,2017020579,Tampa Bay Lightning,Philadelphia Flyers,0.527,0.1005,0.3025,0.07,938
+2109,2017020580,Carolina Hurricanes,Pittsburgh Penguins,0.431,0.031,0.3965,0.1415,938
+2110,2017020581,Minnesota Wild,Nashville Predators,0.466,0.1005,0.3685,0.065,938
+2111,2017020582,Winnipeg Jets,New York Islanders,0.479,0.0615,0.3585,0.101,938
+2112,2017020583,Dallas Stars,St. Louis Blues,0.4275,0.074,0.399,0.0995,938
+2113,2017020584,Colorado Avalanche,Toronto Maple Leafs,0.35,0.0755,0.489,0.0855,938
+2114,2017020585,Edmonton Oilers,Chicago Blackhawks,0.4785,0.1245,0.3335,0.0635,938
+2115,2017020586,Anaheim Ducks,Calgary Flames,0.496,0.125,0.3315,0.0475,938
+2122,2017020593,Vegas Golden Knights,Toronto Maple Leafs,0.4915,0.0515,0.346,0.111,941
+2123,2017020598,Anaheim Ducks,Arizona Coyotes,0.5405,0.098,0.2865,0.075,941
+2124,2017020594,Columbus Blue Jackets,Tampa Bay Lightning,0.454,0.1105,0.355,0.0805,941
+2125,2017020600,Edmonton Oilers,Winnipeg Jets,0.4805,0.099,0.352,0.0685,941
+2126,2017020595,Detroit Red Wings,Pittsburgh Penguins,0.414,0.109,0.4265,0.0505,941
+2127,2017020597,Colorado Avalanche,New York Islanders,0.385,0.068,0.4415,0.1055,941
+2128,2017020596,Dallas Stars,San Jose Sharks,0.409,0.1025,0.4205,0.068,941
+2129,2017020599,Calgary Flames,Chicago Blackhawks,0.41,0.0695,0.422,0.0985,941
+2131,2017020602,Toronto Maple Leafs,Tampa Bay Lightning,0.455,0.077,0.3785,0.0895,943
+2132,2017020603,New York Islanders,Boston Bruins,0.451,0.0975,0.36,0.0915,943
+2133,2017020604,Philadelphia Flyers,Pittsburgh Penguins,0.4205,0.0645,0.415,0.1,943
+2134,2017020605,Carolina Hurricanes,Washington Capitals,0.4015,0.112,0.4175,0.069,943
+2135,2017020606,Montréal Canadiens,San Jose Sharks,0.4425,0.0385,0.3725,0.1465,943
+2136,2017020607,St. Louis Blues,New Jersey Devils,0.5075,0.1385,0.313,0.041,943
+2137,2017020608,Minnesota Wild,Florida Panthers,0.53,0.1005,0.304,0.0655,943
+2138,2017020609,Dallas Stars,Columbus Blue Jackets,0.426,0.043,0.409,0.122,943
+2139,2017020610,Colorado Avalanche,Winnipeg Jets,0.3605,0.092,0.4525,0.095,943
+2140,2017020611,Edmonton Oilers,Los Angeles Kings,0.503,0.111,0.313,0.073,943
+2141,2017020612,Vancouver Canucks,Anaheim Ducks,0.4055,0.068,0.414,0.1125,943
+2142,2017020613,Vegas Golden Knights,Nashville Predators,0.4705,0.1155,0.3605,0.0535,943
+2145,2017020617,Toronto Maple Leafs,San Jose Sharks,0.479,0.034,0.336,0.151,945
+2146,2017020618,Philadelphia Flyers,New York Islanders,0.429,0.082,0.376,0.113,945
+2147,2017020619,Pittsburgh Penguins,Carolina Hurricanes,0.514,0.124,0.3085,0.0535,945
+2148,2017020620,Montréal Canadiens,Tampa Bay Lightning,0.4145,0.0825,0.411,0.092,945
+2149,2017020621,St. Louis Blues,Vegas Golden Knights,0.446,0.056,0.381,0.117,945
+2150,2017020622,Minnesota Wild,Buffalo Sabres,0.5595,0.112,0.268,0.0605,945
+2151,2017020623,Dallas Stars,New Jersey Devils,0.466,0.0685,0.3595,0.106,945
+2152,2017020624,Colorado Avalanche,Columbus Blue Jackets,0.3695,0.0935,0.4515,0.0855,945
+2153,2017020625,Calgary Flames,Los Angeles Kings,0.4335,0.106,0.387,0.0735,945
+2154,2017020626,Edmonton Oilers,Anaheim Ducks,0.466,0.0865,0.378,0.0695,945
+2155,2017020627,Arizona Coyotes,Nashville Predators,0.3425,0.105,0.4875,0.065,945
+2156,2017020628,New York Islanders,Pittsburgh Penguins,0.428,0.0725,0.4075,0.092,947
+2157,2017020629,Ottawa Senators,San Jose Sharks,0.442,0.0655,0.3905,0.102,947
+2158,2017020630,Detroit Red Wings,Florida Panthers,0.4535,0.062,0.3815,0.103,947
+2159,2017020631,Winnipeg Jets,Buffalo Sabres,0.563,0.037,0.2705,0.1295,947
+2160,2017020632,Chicago Blackhawks,Vegas Golden Knights,0.4545,0.066,0.3645,0.115,947
+2161,2017020633,Philadelphia Flyers,St. Louis Blues,0.4335,0.0725,0.3735,0.1205,947
+2162,2017020634,Dallas Stars,Edmonton Oilers,0.411,0.078,0.4145,0.0965,947
+2163,2017020636,Boston Bruins,Carolina Hurricanes,0.501,0.07,0.3195,0.1095,948
+2164,2017020637,Toronto Maple Leafs,Vancouver Canucks,0.539,0.0705,0.2835,0.107,948
+2165,2017020638,Ottawa Senators,Tampa Bay Lightning,0.4235,0.0445,0.4055,0.1265,948
+2166,2017020639,Arizona Coyotes,New York Rangers,0.3595,0.0355,0.473,0.132,948
+2167,2017020635,Colorado Avalanche,Minnesota Wild,0.3725,0.087,0.458,0.0825,948
+2168,2017020640,Calgary Flames,Anaheim Ducks,0.4215,0.0375,0.392,0.149,948
+2169,2017020641,Los Angeles Kings,Nashville Predators,0.4315,0.117,0.3985,0.053,948
+2172,2017020645,Chicago Blackhawks,Edmonton Oilers,0.489,0.0825,0.3375,0.091,950
+2173,2017020646,Winnipeg Jets,San Jose Sharks,0.4675,0.034,0.3515,0.147,950
+2174,2017020644,Washington Capitals,St. Louis Blues,0.47,0.1375,0.34,0.0525,950
+2175,2017020647,Columbus Blue Jackets,Florida Panthers,0.518,0.088,0.3155,0.0785,950
+2176,2017020648,Montréal Canadiens,Vancouver Canucks,0.539,0.129,0.296,0.036,950
+2177,2017020649,Detroit Red Wings,Tampa Bay Lightning,0.398,0.0155,0.425,0.1615,950
+2178,2017020650,Pittsburgh Penguins,Boston Bruins,0.4825,0.088,0.349,0.0805,950
+2179,2017020651,Vegas Golden Knights,New York Rangers,0.4825,0.0585,0.3585,0.1005,950
+2181,2017020653,Buffalo Sabres,Winnipeg Jets,0.387,0.109,0.439,0.065,952
+2182,2017020654,Washington Capitals,Vancouver Canucks,0.5875,0.0935,0.2495,0.0695,952
+2183,2017020655,Ottawa Senators,Chicago Blackhawks,0.423,0.0805,0.406,0.0905,952
+2184,2017020656,Tampa Bay Lightning,Carolina Hurricanes,0.499,0.109,0.328,0.064,952
+2185,2017020657,St. Louis Blues,Florida Panthers,0.498,0.082,0.3195,0.1005,952
+2186,2017020658,Nashville Predators,Edmonton Oilers,0.485,0.1395,0.346,0.0295,952
+2187,2017020659,Minnesota Wild,Calgary Flames,0.5385,0.052,0.2985,0.111,952
+2193,2017020665,Columbus Blue Jackets,Vancouver Canucks,0.5325,0.0905,0.2895,0.0875,955
+2194,2017020666,Florida Panthers,Calgary Flames,0.482,0.0455,0.3475,0.125,955
+2195,2017020667,Carolina Hurricanes,Washington Capitals,0.378,0.105,0.4245,0.0925,955
+2196,2017020668,Chicago Blackhawks,Winnipeg Jets,0.486,0.061,0.347,0.106,955
+2197,2017020669,Arizona Coyotes,Edmonton Oilers,0.3895,0.069,0.436,0.1055,955
+2198,2017020670,New York Rangers,New York Islanders,0.486,0.0595,0.361,0.0935,955
+2199,2017020671,Pittsburgh Penguins,Detroit Red Wings,0.548,0.052,0.306,0.094,955
+2200,2017020674,Minnesota Wild,Winnipeg Jets,0.47,0.093,0.3665,0.0705,958
+2201,2017020672,Montréal Canadiens,Boston Bruins,0.434,0.089,0.3865,0.0905,958
+2202,2017020673,New Jersey Devils,Philadelphia Flyers,0.451,0.105,0.382,0.062,958
+2203,2017020675,Dallas Stars,Colorado Avalanche,0.534,0.0805,0.3025,0.083,958
+2204,2017020676,Vegas Golden Knights,Edmonton Oilers,0.4945,0.057,0.3405,0.108,958
+2205,2017020677,Los Angeles Kings,Anaheim Ducks,0.4545,0.1075,0.3705,0.0675,958
+2206,2017020678,San Jose Sharks,Arizona Coyotes,0.542,0.0835,0.284,0.0905,958
+2208,2017020680,Carolina Hurricanes,Calgary Flames,0.478,0.108,0.3435,0.0705,959
+2209,2017020679,Pittsburgh Penguins,New York Rangers,0.4765,0.0915,0.359,0.073,959
+2210,2017020682,Minnesota Wild,Vancouver Canucks,0.562,0.052,0.271,0.115,959
+2211,2017020683,Boston Bruins,Dallas Stars,0.5345,0.131,0.289,0.0455,959
+2212,2017020684,Colorado Avalanche,Anaheim Ducks,0.4035,0.0595,0.413,0.124,959
+2213,2017020685,Los Angeles Kings,San Jose Sharks,0.45,0.0695,0.371,0.1095,959
+2214,2017020686,Montréal Canadiens,New York Islanders,0.468,0.0575,0.367,0.1075,959
+2215,2017020687,Toronto Maple Leafs,St. Louis Blues,0.4835,0.0295,0.3475,0.1395,961
+2216,2017020688,New York Islanders,New Jersey Devils,0.487,0.1495,0.3285,0.035,961
+2217,2017020689,New York Rangers,Philadelphia Flyers,0.5055,0.081,0.326,0.0875,961
+2218,2017020690,Detroit Red Wings,Dallas Stars,0.4465,0.063,0.3885,0.102,961
+2219,2017020691,Nashville Predators,Vegas Golden Knights,0.463,0.051,0.3625,0.1235,961
+2220,2017020692,Arizona Coyotes,San Jose Sharks,0.386,0.087,0.4345,0.0925,961
+2221,2017020693,Boston Bruins,Montréal Canadiens,0.496,0.0885,0.337,0.0785,961
+2222,2017020694,Anaheim Ducks,Pittsburgh Penguins,0.4305,0.0655,0.399,0.105,961
+2223,2017020695,New Jersey Devils,Washington Capitals,0.3955,0.0775,0.4215,0.1055,963
+2224,2017020696,New York Islanders,Boston Bruins,0.4515,0.0755,0.373,0.1,963
+2225,2017020698,Philadelphia Flyers,Toronto Maple Leafs,0.4325,0.1035,0.384,0.08,963
+2226,2017020699,Columbus Blue Jackets,Dallas Stars,0.4945,0.135,0.338,0.0325,963
+2227,2017020697,New York Rangers,Buffalo Sabres,0.542,0.082,0.2875,0.0885,963
+2228,2017020700,Ottawa Senators,St. Louis Blues,0.4125,0.0925,0.417,0.078,963
+2229,2017020701,Tampa Bay Lightning,Vegas Golden Knights,0.4815,0.055,0.358,0.1055,963
+2230,2017020702,Nashville Predators,Arizona Coyotes,0.577,0.061,0.25,0.112,963
+2231,2017020703,Colorado Avalanche,San Jose Sharks,0.379,0.047,0.428,0.146,963
+2232,2017020704,Los Angeles Kings,Pittsburgh Penguins,0.4285,0.1325,0.395,0.044,963
+2233,2017020705,Florida Panthers,Vegas Golden Knights,0.3975,0.056,0.424,0.1225,965
+2234,2017020706,Washington Capitals,Montréal Canadiens,0.5105,0.111,0.3085,0.07,965
+2235,2017020707,Anaheim Ducks,Los Angeles Kings,0.4645,0.079,0.3495,0.107,965
+2236,2017020708,Buffalo Sabres,Dallas Stars,0.413,0.059,0.416,0.112,965
+2237,2017020709,Philadelphia Flyers,New Jersey Devils,0.471,0.076,0.335,0.118,965
+2238,2017020710,Colorado Avalanche,New York Rangers,0.3765,0.071,0.44,0.1125,965
+2239,2017020711,Calgary Flames,Winnipeg Jets,0.4125,0.1085,0.409,0.07,965
+2240,2017020712,Montréal Canadiens,Boston Bruins,0.4055,0.0645,0.413,0.117,966
+2241,2017020713,Ottawa Senators,Toronto Maple Leafs,0.429,0.1355,0.4025,0.033,966
+2242,2017020714,Detroit Red Wings,Carolina Hurricanes,0.4335,0.109,0.3955,0.062,966
+2243,2017020717,San Jose Sharks,Pittsburgh Penguins,0.4165,0.0535,0.388,0.142,966
+2244,2017020715,St. Louis Blues,Arizona Coyotes,0.552,0.132,0.283,0.033,966
+2245,2017020716,Nashville Predators,Florida Panthers,0.499,0.0605,0.329,0.1115,966
+2246,2017020718,Chicago Blackhawks,New York Islanders,0.5095,0.1295,0.318,0.043,966
+2247,2017020719,Minnesota Wild,Tampa Bay Lightning,0.472,0.0755,0.3575,0.095,966
+2248,2017020720,Edmonton Oilers,Vancouver Canucks,0.5365,0.08,0.2965,0.087,966
+2251,2017020723,Winnipeg Jets,Vancouver Canucks,0.53,0.1265,0.295,0.0485,968
+2252,2017020724,Anaheim Ducks,San Jose Sharks,0.44,0.111,0.3725,0.0765,968
+2253,2017020725,Los Angeles Kings,New York Rangers,0.4415,0.029,0.3895,0.14,968
+2254,2017020726,Toronto Maple Leafs,Colorado Avalanche,0.5445,0.0605,0.305,0.09,968
+2255,2017020727,New Jersey Devils,Detroit Red Wings,0.4965,0.09,0.343,0.0705,968
+2256,2017020728,Minnesota Wild,Ottawa Senators,0.5265,0.1495,0.2965,0.0275,968
+2257,2017020729,Chicago Blackhawks,Tampa Bay Lightning,0.452,0.0405,0.3835,0.124,968
+2258,2017020730,Calgary Flames,Buffalo Sabres,0.5055,0.0945,0.3165,0.0835,968
+2259,2017020731,Arizona Coyotes,New York Islanders,0.384,0.0705,0.447,0.0985,968
+2260,2017020732,Boston Bruins,New Jersey Devils,0.5155,0.119,0.304,0.0615,970
+2261,2017020733,Pittsburgh Penguins,Carolina Hurricanes,0.5095,0.0995,0.326,0.065,970
+2262,2017020734,Montréal Canadiens,Colorado Avalanche,0.5155,0.089,0.3145,0.081,970
+2263,2017020735,Detroit Red Wings,Philadelphia Flyers,0.423,0.0575,0.39,0.1295,970
+2264,2017020736,St. Louis Blues,Ottawa Senators,0.477,0.111,0.3425,0.0695,970
+2265,2017020737,Nashville Predators,Tampa Bay Lightning,0.4645,0.079,0.3705,0.086,970
+2266,2017020738,Dallas Stars,Florida Panthers,0.477,0.0955,0.3585,0.069,970
+2267,2017020739,Edmonton Oilers,Buffalo Sabres,0.5415,0.0315,0.28,0.147,970
+2268,2017020740,Vancouver Canucks,Los Angeles Kings,0.3935,0.0725,0.4355,0.0985,970
+2269,2017020741,Vegas Golden Knights,Columbus Blue Jackets,0.5005,0.0875,0.33,0.082,970
+2270,2017020742,Anaheim Ducks,New York Rangers,0.439,0.0705,0.3655,0.125,970
+2271,2017020743,San Jose Sharks,Winnipeg Jets,0.447,0.1335,0.3745,0.045,970
+2274,2017020746,New Jersey Devils,Nashville Predators,0.398,0.102,0.408,0.092,972
+2275,2017020747,Philadelphia Flyers,Tampa Bay Lightning,0.4305,0.0825,0.402,0.085,972
+2276,2017020748,Pittsburgh Penguins,Minnesota Wild,0.466,0.036,0.3595,0.1385,972
+2277,2017020749,Montréal Canadiens,Carolina Hurricanes,0.486,0.052,0.3475,0.1145,972
+2278,2017020750,Ottawa Senators,Boston Bruins,0.3955,0.1165,0.4135,0.0745,972
+2279,2017020751,Detroit Red Wings,Chicago Blackhawks,0.3935,0.0835,0.4255,0.0975,972
+2280,2017020752,Florida Panthers,Washington Capitals,0.391,0.0905,0.431,0.0875,972
+2281,2017020753,St. Louis Blues,Colorado Avalanche,0.5375,0.1195,0.3045,0.0385,972
+2282,2017020754,Dallas Stars,Toronto Maple Leafs,0.424,0.089,0.407,0.08,972
+2283,2017020755,Edmonton Oilers,Calgary Flames,0.499,0.159,0.33,0.012,972
+2284,2017020756,Arizona Coyotes,Columbus Blue Jackets,0.376,0.0295,0.45,0.1445,972
+2285,2017020757,Vancouver Canucks,Buffalo Sabres,0.466,0.1385,0.362,0.0335,972
+2286,2017020758,Vegas Golden Knights,New York Islanders,0.5105,0.0535,0.323,0.113,972
+2287,2017020759,Anaheim Ducks,Winnipeg Jets,0.4395,0.079,0.3885,0.093,972
+2288,2017020760,San Jose Sharks,New York Rangers,0.459,0.1085,0.3575,0.075,972
+2289,2017020761,Boston Bruins,Anaheim Ducks,0.481,0.0425,0.3265,0.15,976
+2290,2017020762,Buffalo Sabres,New Jersey Devils,0.4235,0.046,0.399,0.1315,976
+2291,2017020763,New York Islanders,Florida Panthers,0.495,0.077,0.329,0.099,976
+2292,2017020764,Pittsburgh Penguins,San Jose Sharks,0.501,0.0995,0.3385,0.061,976
+2293,2017020765,Carolina Hurricanes,Ottawa Senators,0.4565,0.0685,0.3695,0.1055,976
+2294,2017020766,Columbus Blue Jackets,Minnesota Wild,0.43,0.1415,0.3905,0.038,976
+2295,2017020767,St. Louis Blues,Montréal Canadiens,0.488,0.1455,0.3335,0.033,976
+2296,2017020768,Nashville Predators,Chicago Blackhawks,0.4655,0.1035,0.3525,0.0785,976
+2297,2017020769,Winnipeg Jets,Tampa Bay Lightning,0.465,0.063,0.3825,0.0895,976
+2298,2017020770,Dallas Stars,Los Angeles Kings,0.4595,0.1165,0.3695,0.0545,976
+2299,2017020771,Calgary Flames,Vegas Golden Knights,0.3975,0.091,0.423,0.0885,976
+2300,2017020772,Vancouver Canucks,Colorado Avalanche,0.4455,0.145,0.3775,0.032,976
+2304,2017020776,Boston Bruins,St. Louis Blues,0.47,0.081,0.3555,0.0935,979
+2305,2017020777,Buffalo Sabres,Florida Panthers,0.4145,0.075,0.3915,0.119,979
+2306,2017020778,New Jersey Devils,Philadelphia Flyers,0.4405,0.094,0.386,0.0795,979
+2307,2017020779,New York Rangers,Toronto Maple Leafs,0.476,0.0655,0.3695,0.089,979
+2308,2017020780,Carolina Hurricanes,Montréal Canadiens,0.448,0.1235,0.3745,0.054,979
+2309,2017020781,Ottawa Senators,Anaheim Ducks,0.4175,0.0695,0.4015,0.1115,979
+2310,2017020783,Winnipeg Jets,Vegas Golden Knights,0.4475,0.0895,0.388,0.075,979
+2311,2017020782,Nashville Predators,Los Angeles Kings,0.4885,0.0785,0.3355,0.0975,979
+2312,2017020784,Calgary Flames,Tampa Bay Lightning,0.415,0.106,0.4165,0.0625,979
+2313,2017020785,Edmonton Oilers,Colorado Avalanche,0.533,0.1385,0.295,0.0335,979
+2314,2017020786,Arizona Coyotes,Dallas Stars,0.4075,0.027,0.413,0.1525,979
+2315,2017020787,Vancouver Canucks,Chicago Blackhawks,0.3795,0.0885,0.438,0.094,979
+2322,2017020799,Winnipeg Jets,Colorado Avalanche,0.532,0.0675,0.301,0.0995,981
+2323,2017020794,Boston Bruins,Toronto Maple Leafs,0.4785,0.0215,0.3575,0.1425,981
+2324,2017020795,Buffalo Sabres,St. Louis Blues,0.405,0.0725,0.414,0.1085,981
+2325,2017020796,Florida Panthers,Detroit Red Wings,0.4765,0.092,0.3485,0.083,981
+2326,2017020797,New Jersey Devils,Pittsburgh Penguins,0.4075,0.0295,0.4225,0.1405,981
+2327,2017020798,New York Islanders,Columbus Blue Jackets,0.426,0.0415,0.39,0.1425,981
+2328,2017020800,Nashville Predators,New York Rangers,0.498,0.0305,0.339,0.1325,981
+2329,2017020801,Dallas Stars,Minnesota Wild,0.4035,0.0455,0.4135,0.1375,981
+2330,2017020803,Vancouver Canucks,Tampa Bay Lightning,0.3715,0.13,0.456,0.0425,981
+2331,2017020802,Calgary Flames,Chicago Blackhawks,0.402,0.0985,0.4175,0.082,981
+2332,2017020804,Los Angeles Kings,Arizona Coyotes,0.506,0.088,0.3075,0.0985,981
+2340,2017020812,Buffalo Sabres,Anaheim Ducks,0.383,0.11,0.4385,0.0685,984
+2341,2017020813,Pittsburgh Penguins,Vegas Golden Knights,0.4595,0.0515,0.3755,0.1135,984
+2342,2017020814,Carolina Hurricanes,Philadelphia Flyers,0.4675,0.0625,0.379,0.091,984
+2343,2017020815,Columbus Blue Jackets,Washington Capitals,0.399,0.061,0.4165,0.1235,984
+2344,2017020816,Ottawa Senators,New Jersey Devils,0.472,0.091,0.3465,0.0905,984
+2345,2017020817,Detroit Red Wings,Boston Bruins,0.3975,0.064,0.4205,0.118,984
+2346,2017020818,Florida Panthers,Vancouver Canucks,0.499,0.1095,0.3085,0.083,984
+2347,2017020819,St. Louis Blues,Minnesota Wild,0.4345,0.108,0.393,0.0645,984
+2348,2017020820,Winnipeg Jets,Arizona Coyotes,0.576,0.111,0.2725,0.0405,984
+2349,2017020821,Chicago Blackhawks,Calgary Flames,0.5115,0.065,0.3165,0.107,984
+2350,2017020822,Colorado Avalanche,San Jose Sharks,0.3725,0.082,0.4155,0.13,984
+2354,2017020826,Buffalo Sabres,New York Islanders,0.381,0.044,0.4455,0.1295,987
+2355,2017020827,New Jersey Devils,Calgary Flames,0.4525,0.0685,0.385,0.094,987
+2356,2017020828,Philadelphia Flyers,Montréal Canadiens,0.4435,0.075,0.3725,0.109,987
+2357,2017020829,Ottawa Senators,Nashville Predators,0.3815,0.039,0.444,0.1355,987
+2358,2017020830,Tampa Bay Lightning,Vancouver Canucks,0.5845,0.0635,0.2545,0.0975,987
+2359,2017020831,St. Louis Blues,Colorado Avalanche,0.53,0.1325,0.303,0.0345,987
+2360,2017020832,Minnesota Wild,Arizona Coyotes,0.588,0.1195,0.2535,0.039,987
+2361,2017020833,Chicago Blackhawks,Dallas Stars,0.4975,0.099,0.3355,0.068,987
+2362,2017020834,San Jose Sharks,Vegas Golden Knights,0.4105,0.1085,0.406,0.075,987
+2363,2017020835,New York Islanders,Detroit Red Wings,0.508,0.0565,0.32,0.1155,988
+2364,2017020836,New York Rangers,Calgary Flames,0.48,0.153,0.3255,0.0415,988
+2365,2017020837,Washington Capitals,Columbus Blue Jackets,0.4685,0.124,0.351,0.0565,988
+2366,2017020838,Florida Panthers,Los Angeles Kings,0.4265,0.0795,0.3905,0.1035,988
+2367,2017020839,Carolina Hurricanes,Vancouver Canucks,0.5055,0.069,0.3235,0.102,988
+2368,2017020840,Winnipeg Jets,St. Louis Blues,0.4815,0.14,0.3355,0.043,988
+2369,2017020841,Dallas Stars,Pittsburgh Penguins,0.4225,0.0945,0.4,0.083,988
+2370,2017020842,Anaheim Ducks,Edmonton Oilers,0.4555,0.0795,0.375,0.09,988
+2371,2017020843,Boston Bruins,Buffalo Sabres,0.563,0.121,0.2705,0.0455,990
+2372,2017020844,Toronto Maple Leafs,Ottawa Senators,0.5025,0.037,0.325,0.1355,990
+2373,2017020845,Montréal Canadiens,Nashville Predators,0.3995,0.115,0.4135,0.072,990
+2374,2017020846,Tampa Bay Lightning,Los Angeles Kings,0.506,0.1395,0.32,0.0345,990
+2375,2017020848,Columbus Blue Jackets,New Jersey Devils,0.499,0.11,0.3275,0.0635,990
+2376,2017020850,Arizona Coyotes,Philadelphia Flyers,0.4055,0.143,0.4155,0.036,990
+2377,2017020849,Minnesota Wild,Chicago Blackhawks,0.476,0.07,0.3515,0.1025,990
+2378,2017020847,Carolina Hurricanes,Colorado Avalanche,0.482,0.037,0.3525,0.1285,990
+2379,2017020851,San Jose Sharks,Edmonton Oilers,0.437,0.065,0.376,0.122,990
+2381,2017020854,Winnipeg Jets,New York Rangers,0.4795,0.041,0.346,0.1335,992
+2382,2017020852,Washington Capitals,Detroit Red Wings,0.5475,0.102,0.2895,0.061,992
+2383,2017020855,Dallas Stars,Vancouver Canucks,0.5575,0.101,0.2905,0.051,992
+2384,2017020856,Buffalo Sabres,Colorado Avalanche,0.463,0.1095,0.353,0.0745,992
+2385,2017020857,New Jersey Devils,Boston Bruins,0.4015,0.0445,0.4285,0.1255,992
+2386,2017020858,New York Islanders,Calgary Flames,0.4815,0.0855,0.3295,0.1035,992
+2387,2017020859,Vegas Golden Knights,Philadelphia Flyers,0.5415,0.074,0.2995,0.085,992
+2388,2017020860,Anaheim Ducks,San Jose Sharks,0.445,0.113,0.3705,0.0715,992
+2392,2017020864,Boston Bruins,Calgary Flames,0.5255,0.0835,0.298,0.093,995
+2393,2017020865,Buffalo Sabres,Tampa Bay Lightning,0.363,0.027,0.4585,0.1515,995
+2394,2017020866,New York Islanders,Columbus Blue Jackets,0.4465,0.0535,0.3765,0.1235,995
+2395,2017020867,Philadelphia Flyers,New Jersey Devils,0.4735,0.0775,0.3415,0.1075,995
+2396,2017020868,Pittsburgh Penguins,Ottawa Senators,0.5445,0.0835,0.2935,0.0785,995
+2397,2017020869,Carolina Hurricanes,Los Angeles Kings,0.4565,0.072,0.3695,0.102,995
+2398,2017020870,Detroit Red Wings,Anaheim Ducks,0.402,0.087,0.41,0.101,995
+2399,2017020871,Nashville Predators,St. Louis Blues,0.461,0.1165,0.3645,0.058,995
+2400,2017020872,Minnesota Wild,New York Rangers,0.4905,0.086,0.3315,0.092,995
+2401,2017020873,Winnipeg Jets,Washington Capitals,0.43,0.0475,0.391,0.1315,995
+2402,2017020874,Vegas Golden Knights,Chicago Blackhawks,0.4915,0.1255,0.346,0.037,995
+2403,2017020875,San Jose Sharks,Arizona Coyotes,0.5485,0.099,0.2765,0.076,995
+2407,2017020879,New Jersey Devils,Carolina Hurricanes,0.42,0.113,0.4,0.067,997
+2408,2017020880,New York Islanders,New York Rangers,0.435,0.126,0.3895,0.0495,997
+2409,2017020881,Pittsburgh Penguins,Los Angeles Kings,0.4995,0.0755,0.316,0.109,997
+2410,2017020882,Ottawa Senators,Buffalo Sabres,0.487,0.035,0.3465,0.1315,997
+2411,2017020883,Tampa Bay Lightning,Detroit Red Wings,0.517,0.1485,0.321,0.0135,997
+2412,2017020884,Nashville Predators,Calgary Flames,0.495,0.098,0.328,0.079,997
+2413,2017020885,Minnesota Wild,Washington Capitals,0.4445,0.039,0.374,0.1425,997
+2414,2017020886,Chicago Blackhawks,Anaheim Ducks,0.449,0.091,0.365,0.095,997
+2415,2017020887,Arizona Coyotes,Montréal Canadiens,0.423,0.0625,0.42,0.0945,997
+2416,2017020888,Vegas Golden Knights,Edmonton Oilers,0.5035,0.0425,0.3235,0.1305,997
+2417,2017020889,San Jose Sharks,Vancouver Canucks,0.5235,0.138,0.3115,0.027,997
+2418,2017020890,Columbus Blue Jackets,Philadelphia Flyers,0.476,0.1315,0.3395,0.053,998
+2419,2017020891,Carolina Hurricanes,New York Islanders,0.4395,0.0995,0.38,0.081,998
+2420,2017020892,Winnipeg Jets,Colorado Avalanche,0.5395,0.0875,0.2945,0.0785,998
+2421,2017020893,Dallas Stars,St. Louis Blues,0.439,0.074,0.396,0.091,998
+2422,2017020894,Buffalo Sabres,Los Angeles Kings,0.403,0.078,0.4165,0.1025,998
+2423,2017020896,Minnesota Wild,Anaheim Ducks,0.5105,0.1095,0.3235,0.0565,998
+2424,2017020895,Ottawa Senators,New York Rangers,0.41,0.106,0.4125,0.0715,998
+2425,2017020897,Arizona Coyotes,Edmonton Oilers,0.387,0.054,0.4445,0.1145,998
+2426,2017020900,Vegas Golden Knights,Montréal Canadiens,0.5195,0.06,0.306,0.1145,999
+2427,2017020898,Tampa Bay Lightning,New Jersey Devils,0.5345,0.075,0.303,0.0875,999
+2428,2017020899,Pittsburgh Penguins,Toronto Maple Leafs,0.47,0.046,0.364,0.12,999
+2429,2017020901,Nashville Predators,Detroit Red Wings,0.519,0.042,0.2975,0.1415,999
+2430,2017020902,Chicago Blackhawks,Washington Capitals,0.426,0.036,0.401,0.137,999
+2431,2017020904,Vancouver Canucks,Boston Bruins,0.36,0.0485,0.4485,0.143,999
+2432,2017020903,Calgary Flames,Florida Panthers,0.45,0.132,0.3835,0.0345,999
+2433,2017020905,New York Rangers,Philadelphia Flyers,0.489,0.0865,0.348,0.0765,1
+2434,2017020906,Colorado Avalanche,Edmonton Oilers,0.397,0.0615,0.4345,0.107,1
+2435,2017020907,Carolina Hurricanes,New Jersey Devils,0.467,0.0455,0.372,0.1155,1
+2436,2017020908,Columbus Blue Jackets,Pittsburgh Penguins,0.4335,0.0605,0.3965,0.1095,1
+2437,2017020909,Detroit Red Wings,Toronto Maple Leafs,0.3745,0.079,0.446,0.1005,1
+2438,2017020911,San Jose Sharks,Dallas Stars,0.4735,0.0615,0.344,0.121,1
+2439,2017020910,Winnipeg Jets,Florida Panthers,0.5035,0.106,0.3275,0.063,1
+2446,2017020918,Toronto Maple Leafs,Florida Panthers,0.499,0.1025,0.3295,0.069,2
+2447,2017020919,New Jersey Devils,Columbus Blue Jackets,0.41,0.054,0.3985,0.1375,2
+2448,2017020920,Philadelphia Flyers,Montréal Canadiens,0.474,0.081,0.355,0.09,2
+2449,2017020921,Washington Capitals,Tampa Bay Lightning,0.485,0.0925,0.352,0.0705,2
+2450,2017020922,Detroit Red Wings,Nashville Predators,0.376,0.1315,0.456,0.0365,2
+2451,2017020923,St. Louis Blues,San Jose Sharks,0.4515,0.143,0.371,0.0345,2
+2452,2017020924,Winnipeg Jets,Los Angeles Kings,0.495,0.078,0.334,0.093,2
+2453,2017020925,Edmonton Oilers,Boston Bruins,0.446,0.1425,0.366,0.0455,2
+2454,2017020926,Vancouver Canucks,Colorado Avalanche,0.4595,0.1465,0.365,0.029,2
+2458,2017020930,Toronto Maple Leafs,New York Islanders,0.5005,0.069,0.3515,0.079,3
+2459,2017020931,New Jersey Devils,Minnesota Wild,0.373,0.152,0.446,0.029,3
+2460,2017020932,Philadelphia Flyers,Columbus Blue Jackets,0.428,0.0815,0.37,0.1205,3
+2461,2017020933,Montréal Canadiens,New York Rangers,0.441,0.1,0.3705,0.0885,3
+2462,2017020934,Ottawa Senators,Tampa Bay Lightning,0.389,0.0695,0.439,0.1025,3
+2463,2017020935,Detroit Red Wings,Buffalo Sabres,0.4975,0.068,0.328,0.1065,3
+2464,2017020936,Florida Panthers,Washington Capitals,0.399,0.079,0.423,0.099,3
+2465,2017020937,Nashville Predators,San Jose Sharks,0.4675,0.09,0.345,0.0975,3
+2466,2017020938,Edmonton Oilers,Colorado Avalanche,0.531,0.104,0.3165,0.0485,3
+2467,2017020939,Arizona Coyotes,Calgary Flames,0.401,0.032,0.4155,0.1515,3
+2468,2017020940,Los Angeles Kings,Dallas Stars,0.471,0.0815,0.342,0.1055,3
+2469,2017020941,New York Rangers,Minnesota Wild,0.4265,0.064,0.391,0.1185,4
+2470,2017020942,Carolina Hurricanes,Pittsburgh Penguins,0.3885,0.069,0.4305,0.112,4
+2471,2017020943,St. Louis Blues,Winnipeg Jets,0.4625,0.0535,0.358,0.126,4
+2472,2017020944,Chicago Blackhawks,San Jose Sharks,0.471,0.0755,0.3475,0.106,4
+2473,2017020945,Vegas Golden Knights,Vancouver Canucks,0.591,0.1185,0.257,0.0335,4
+2474,2017020946,Ottawa Senators,Philadelphia Flyers,0.4095,0.102,0.408,0.0805,4
+2475,2017020947,Calgary Flames,Colorado Avalanche,0.5045,0.137,0.3285,0.03,4
+2477,2017020955,Dallas Stars,Winnipeg Jets,0.4295,0.042,0.4035,0.125,6
+2478,2017020948,Toronto Maple Leafs,Boston Bruins,0.4495,0.135,0.3805,0.035,6
+2479,2017020949,Montréal Canadiens,Tampa Bay Lightning,0.402,0.092,0.4205,0.0855,6
+2480,2017020950,Detroit Red Wings,Carolina Hurricanes,0.445,0.094,0.381,0.08,6
+2481,2017020951,Florida Panthers,Pittsburgh Penguins,0.3705,0.0295,0.448,0.152,6
+2482,2017020953,Washington Capitals,Buffalo Sabres,0.5895,0.106,0.264,0.0405,6
+2483,2017020954,Columbus Blue Jackets,Chicago Blackhawks,0.452,0.0695,0.382,0.0965,6
+2484,2017020956,Arizona Coyotes,Anaheim Ducks,0.376,0.079,0.4345,0.1105,6
+2485,2017020957,Los Angeles Kings,Edmonton Oilers,0.4355,0.1015,0.371,0.092,6
+2488,2017020960,New York Rangers,Detroit Red Wings,0.5125,0.0975,0.3195,0.0705,8
+2489,2017020962,Anaheim Ducks,Edmonton Oilers,0.452,0.092,0.3505,0.1055,8
+2490,2017020961,Minnesota Wild,San Jose Sharks,0.504,0.1585,0.3135,0.024,8
+2491,2017020963,Arizona Coyotes,Vancouver Canucks,0.444,0.0915,0.379,0.0855,8
+2492,2017020964,Columbus Blue Jackets,Washington Capitals,0.414,0.0525,0.41,0.1235,8
+2493,2017020965,Montréal Canadiens,Philadelphia Flyers,0.4405,0.086,0.388,0.0855,8
+2494,2017020966,Tampa Bay Lightning,Toronto Maple Leafs,0.4755,0.0875,0.348,0.089,8
+2495,2017020967,Colorado Avalanche,Vancouver Canucks,0.4505,0.0675,0.363,0.119,8
+2496,2017020968,Los Angeles Kings,Vegas Golden Knights,0.405,0.0645,0.4205,0.11,8
+2497,2017020969,Boston Bruins,Carolina Hurricanes,0.5035,0.0965,0.3035,0.0965,10
+2498,2017020970,Pittsburgh Penguins,New Jersey Devils,0.5415,0.1285,0.276,0.054,10
+2499,2017020971,Washington Capitals,Ottawa Senators,0.5455,0.1185,0.2995,0.0365,10
+2500,2017020972,Florida Panthers,Toronto Maple Leafs,0.412,0.062,0.408,0.118,10
+2501,2017020973,Minnesota Wild,St. Louis Blues,0.4885,0.068,0.3525,0.091,10
+2502,2017020974,Winnipeg Jets,Nashville Predators,0.44,0.0825,0.392,0.0855,10
+2503,2017020975,Dallas Stars,Calgary Flames,0.469,0.1105,0.346,0.0745,10
+2504,2017020976,Vegas Golden Knights,Los Angeles Kings,0.516,0.084,0.313,0.087,10
+2505,2017020977,San Jose Sharks,Edmonton Oilers,0.4565,0.063,0.3645,0.116,10
+2511,2017020983,Boston Bruins,Pittsburgh Penguins,0.428,0.0745,0.397,0.1005,12
+2512,2017020984,Philadelphia Flyers,Carolina Hurricanes,0.4645,0.118,0.3495,0.068,12
+2513,2017020985,Florida Panthers,New Jersey Devils,0.4765,0.138,0.3375,0.048,12
+2514,2017020986,Dallas Stars,Tampa Bay Lightning,0.404,0.07,0.411,0.115,12
+2515,2017020987,Edmonton Oilers,Nashville Predators,0.4325,0.02,0.3985,0.149,12
+2516,2017020988,Arizona Coyotes,Minnesota Wild,0.329,0.0665,0.481,0.1235,12
+2517,2017020990,San Jose Sharks,Chicago Blackhawks,0.441,0.108,0.36,0.091,12
+2518,2017020989,Los Angeles Kings,Columbus Blue Jackets,0.4415,0.098,0.387,0.0735,12
+2519,2017020991,New York Islanders,Montréal Canadiens,0.474,0.097,0.3535,0.0755,13
+2520,2017020992,Florida Panthers,Buffalo Sabres,0.5055,0.1085,0.322,0.064,13
+2521,2017020993,Carolina Hurricanes,New Jersey Devils,0.4825,0.046,0.346,0.1255,13
+2522,2017020994,Winnipeg Jets,Detroit Red Wings,0.532,0.061,0.3055,0.1015,13
+2523,2017020995,Colorado Avalanche,Minnesota Wild,0.36,0.0925,0.468,0.0795,13
+2524,2017020996,Calgary Flames,New York Rangers,0.4315,0.043,0.3795,0.146,13
+2525,2017020997,Vancouver Canucks,Nashville Predators,0.3735,0.069,0.459,0.0985,13
+2526,2017020998,Vegas Golden Knights,Ottawa Senators,0.5605,0.118,0.2715,0.05,13
+2527,2017020999,Anaheim Ducks,Columbus Blue Jackets,0.4755,0.028,0.3535,0.143,13
+2529,2017021001,Dallas Stars,St. Louis Blues,0.4635,0.081,0.366,0.0895,15
+2530,2017021002,Los Angeles Kings,Chicago Blackhawks,0.438,0.1375,0.3715,0.053,15
+2531,2017021003,Boston Bruins,Montréal Canadiens,0.5325,0.109,0.299,0.0595,15
+2532,2017021004,Pittsburgh Penguins,New York Islanders,0.5215,0.1065,0.304,0.068,15
+2533,2017021006,Arizona Coyotes,Ottawa Senators,0.4205,0.077,0.391,0.1115,15
+2534,2017021005,Washington Capitals,Toronto Maple Leafs,0.49,0.108,0.3385,0.0635,15
+2535,2017021007,Edmonton Oilers,New York Rangers,0.483,0.0295,0.3535,0.134,15
+2536,2017021009,Colorado Avalanche,Nashville Predators,0.3575,0.0145,0.4625,0.1655,17
+2537,2017021008,Florida Panthers,Philadelphia Flyers,0.447,0.0485,0.3725,0.132,17
+2538,2017021010,Anaheim Ducks,Chicago Blackhawks,0.452,0.108,0.358,0.082,17
+2539,2017021011,New Jersey Devils,Vegas Golden Knights,0.3785,0.0745,0.468,0.079,17
+2540,2017021013,Minnesota Wild,Detroit Red Wings,0.5345,0.0615,0.3025,0.1015,17
+2541,2017021012,Carolina Hurricanes,Winnipeg Jets,0.408,0.0675,0.4195,0.105,17
+2542,2017021014,San Jose Sharks,Columbus Blue Jackets,0.467,0.1365,0.36,0.0365,17
+2548,2017021020,Boston Bruins,Detroit Red Wings,0.5285,0.1125,0.3015,0.0575,20
+2549,2017021021,New Jersey Devils,Montréal Canadiens,0.4475,0.0695,0.373,0.11,20
+2550,2017021022,New York Rangers,Winnipeg Jets,0.435,0.141,0.383,0.041,20
+2551,2017021023,Columbus Blue Jackets,Vegas Golden Knights,0.4145,0.057,0.415,0.1135,20
+2552,2017021024,Tampa Bay Lightning,Florida Panthers,0.5235,0.093,0.2955,0.088,20
+2553,2017021025,Nashville Predators,Dallas Stars,0.514,0.09,0.3175,0.0785,20
+2554,2017021026,Minnesota Wild,Carolina Hurricanes,0.524,0.086,0.3015,0.0885,20
+2555,2017021027,Chicago Blackhawks,Colorado Avalanche,0.504,0.0915,0.309,0.0955,20
+2556,2017021028,Anaheim Ducks,Washington Capitals,0.4055,0.0645,0.411,0.119,20
+2560,2017021032,Boston Bruins,Philadelphia Flyers,0.5145,0.123,0.308,0.0545,23
+2561,2017021033,New Jersey Devils,Winnipeg Jets,0.394,0.0345,0.4355,0.136,23
+2562,2017021034,Columbus Blue Jackets,Colorado Avalanche,0.5385,0.065,0.282,0.1145,23
+2563,2017021035,Ottawa Senators,Buffalo Sabres,0.4935,0.0485,0.327,0.131,23
+2564,2017021036,Detroit Red Wings,Vegas Golden Knights,0.387,0.1085,0.4465,0.058,23
+2565,2017021037,Tampa Bay Lightning,New York Rangers,0.502,0.058,0.3305,0.1095,23
+2566,2017021038,Florida Panthers,Montréal Canadiens,0.4635,0.058,0.3605,0.118,23
+2567,2017021039,Nashville Predators,Anaheim Ducks,0.4875,0.101,0.348,0.0635,23
+2568,2017021040,Chicago Blackhawks,Carolina Hurricanes,0.4795,0.1105,0.3355,0.0745,23
+2569,2017021041,Edmonton Oilers,New York Islanders,0.4905,0.094,0.352,0.0635,23
+2570,2017021042,Los Angeles Kings,Washington Capitals,0.441,0.1005,0.394,0.0645,23
+2571,2017021043,San Jose Sharks,St. Louis Blues,0.45,0.069,0.357,0.124,23
+2572,2017021044,Columbus Blue Jackets,Detroit Red Wings,0.49,0.1385,0.3415,0.03,24
+2573,2017021045,Ottawa Senators,Calgary Flames,0.4555,0.0715,0.3605,0.1125,24
+2574,2017021046,Dallas Stars,Anaheim Ducks,0.444,0.09,0.382,0.084,24
+2575,2017021047,Vancouver Canucks,Minnesota Wild,0.3575,0.1215,0.4695,0.0515,24
+2576,2017021048,Boston Bruins,Chicago Blackhawks,0.4785,0.0795,0.3615,0.0805,24
+2577,2017021049,Buffalo Sabres,Vegas Golden Knights,0.345,0.05,0.4985,0.1065,24
+2578,2017021050,Tampa Bay Lightning,Montréal Canadiens,0.509,0.0985,0.32,0.0725,24
+2579,2017021051,Philadelphia Flyers,Winnipeg Jets,0.4025,0.0695,0.4305,0.0975,24
+2580,2017021052,Colorado Avalanche,Arizona Coyotes,0.4555,0.073,0.366,0.1055,26
+2581,2017021053,Los Angeles Kings,St. Louis Blues,0.4445,0.075,0.3785,0.102,26
+2582,2017021054,San Jose Sharks,Washington Capitals,0.439,0.1105,0.38,0.0705,26
+2583,2017021055,Toronto Maple Leafs,Pittsburgh Penguins,0.4575,0.095,0.367,0.0805,26
+2584,2017021056,Florida Panthers,New York Rangers,0.443,0.09,0.3905,0.0765,26
+2585,2017021057,Nashville Predators,New Jersey Devils,0.5395,0.11,0.2835,0.067,26
+2586,2017021058,Edmonton Oilers,Minnesota Wild,0.4365,0.0575,0.394,0.112,26
+2599,2017021071,Carolina Hurricanes,Boston Bruins,0.408,0.0775,0.411,0.1035,29
+2600,2017021072,Montréal Canadiens,Dallas Stars,0.4625,0.114,0.353,0.0705,29
+2601,2017021073,Tampa Bay Lightning,Ottawa Senators,0.5395,0.102,0.303,0.0555,29
+2602,2017021074,Nashville Predators,Winnipeg Jets,0.4885,0.0865,0.3575,0.0675,29
+2603,2017021075,Minnesota Wild,Colorado Avalanche,0.5505,0.071,0.2745,0.104,29
+2604,2017021076,Calgary Flames,Edmonton Oilers,0.433,0.0085,0.388,0.1705,29
+2605,2017021077,Arizona Coyotes,Los Angeles Kings,0.4055,0.088,0.416,0.0905,29
+2611,2017021083,Buffalo Sabres,Toronto Maple Leafs,0.362,0.053,0.4695,0.1155,32
+2612,2017021084,New York Islanders,Washington Capitals,0.432,0.0795,0.4075,0.081,32
+2613,2017021085,Philadelphia Flyers,Columbus Blue Jackets,0.4125,0.082,0.3895,0.116,32
+2614,2017021086,Montréal Canadiens,Pittsburgh Penguins,0.4175,0.07,0.412,0.1005,32
+2615,2017021087,Florida Panthers,Boston Bruins,0.4365,0.026,0.4065,0.131,32
+2616,2017021088,St. Louis Blues,Colorado Avalanche,0.5125,0.136,0.319,0.0325,32
+2617,2017021089,Winnipeg Jets,Chicago Blackhawks,0.495,0.0955,0.3355,0.074,32
+2618,2017021090,Arizona Coyotes,Nashville Predators,0.3665,0.0935,0.478,0.062,32
+2619,2017021091,Los Angeles Kings,Detroit Red Wings,0.513,0.108,0.316,0.063,32
+2620,2017021092,Washington Capitals,New York Islanders,0.497,0.102,0.3265,0.0745,35
+2621,2017021093,Ottawa Senators,Dallas Stars,0.447,0.1295,0.3885,0.035,35
+2622,2017021094,Colorado Avalanche,Nashville Predators,0.393,0.0155,0.4365,0.155,35
+2623,2017021095,Calgary Flames,San Jose Sharks,0.432,0.076,0.379,0.113,35
+2624,2017021096,Anaheim Ducks,Detroit Red Wings,0.5015,0.073,0.315,0.1105,35
+2625,2017021097,Vegas Golden Knights,Minnesota Wild,0.4725,0.0385,0.353,0.136,35
+2626,2017021098,Buffalo Sabres,Chicago Blackhawks,0.3825,0.0345,0.43,0.153,35
+2627,2017021099,Florida Panthers,Edmonton Oilers,0.446,0.068,0.3835,0.1025,35
+2628,2017021100,Los Angeles Kings,New Jersey Devils,0.478,0.11,0.344,0.068,35
+2629,2017021101,Toronto Maple Leafs,Montréal Canadiens,0.5135,0.0915,0.313,0.082,37
+2630,2017021102,Tampa Bay Lightning,Boston Bruins,0.463,0.041,0.3725,0.1235,37
+2631,2017021103,Carolina Hurricanes,Philadelphia Flyers,0.47,0.0805,0.359,0.0905,37
+2632,2017021104,Columbus Blue Jackets,Ottawa Senators,0.521,0.0745,0.324,0.0805,37
+2633,2017021105,St. Louis Blues,New York Rangers,0.4465,0.1155,0.3725,0.0655,37
+2634,2017021106,Arizona Coyotes,Minnesota Wild,0.3685,0.079,0.4515,0.101,37
+2635,2017021107,Vancouver Canucks,San Jose Sharks,0.381,0.028,0.446,0.145,37
+2636,2017021108,Colorado Avalanche,Detroit Red Wings,0.443,0.1065,0.3755,0.075,40
+2637,2017021109,Vegas Golden Knights,Calgary Flames,0.548,0.127,0.279,0.046,40
+2638,2017021110,Tampa Bay Lightning,Edmonton Oilers,0.481,0.0685,0.343,0.1075,40
+2639,2017021111,New York Islanders,Carolina Hurricanes,0.4985,0.0825,0.331,0.088,40
+2640,2017021112,Philadelphia Flyers,Washington Capitals,0.3965,0.07,0.439,0.0945,40
+2641,2017021113,Chicago Blackhawks,St. Louis Blues,0.459,0.0975,0.359,0.0845,40
+2642,2017021114,Winnipeg Jets,Dallas Stars,0.5185,0.1225,0.326,0.033,40
+2643,2017021115,Anaheim Ducks,New Jersey Devils,0.491,0.073,0.3325,0.1035,40
+2649,2017021121,New York Islanders,Pittsburgh Penguins,0.4215,0.056,0.4175,0.105,42
+2650,2017021122,New York Rangers,Columbus Blue Jackets,0.446,0.059,0.384,0.111,42
+2651,2017021123,Washington Capitals,Dallas Stars,0.534,0.1065,0.294,0.0655,42
+2652,2017021124,Carolina Hurricanes,Edmonton Oilers,0.4315,0.098,0.3965,0.074,42
+2653,2017021125,Ottawa Senators,Florida Panthers,0.4395,0.091,0.3855,0.084,42
+2654,2017021126,Detroit Red Wings,Philadelphia Flyers,0.433,0.0485,0.3945,0.124,42
+2655,2017021127,Tampa Bay Lightning,Toronto Maple Leafs,0.458,0.1025,0.362,0.0775,42
+2656,2017021128,Winnipeg Jets,Los Angeles Kings,0.5095,0.072,0.321,0.0975,42
+2657,2017021129,Chicago Blackhawks,Colorado Avalanche,0.513,0.0955,0.3195,0.072,42
+2658,2017021130,Vegas Golden Knights,Vancouver Canucks,0.5935,0.122,0.256,0.0285,42
+2659,2017021131,San Jose Sharks,New Jersey Devils,0.5175,0.1375,0.3105,0.0345,42
+2664,2017021136,New York Islanders,Tampa Bay Lightning,0.412,0.05,0.414,0.124,46
+2665,2017021137,Philadelphia Flyers,New York Rangers,0.4585,0.0775,0.382,0.082,46
+2666,2017021138,Carolina Hurricanes,Arizona Coyotes,0.4885,0.0635,0.3395,0.1085,46
+2667,2017021139,Columbus Blue Jackets,Florida Panthers,0.5015,0.0865,0.336,0.076,46
+2668,2017021140,Ottawa Senators,Edmonton Oilers,0.4065,0.145,0.4085,0.04,46
+2669,2017021141,Detroit Red Wings,Washington Capitals,0.3705,0.0765,0.4465,0.1065,46
+2670,2017021142,Nashville Predators,Toronto Maple Leafs,0.483,0.028,0.3615,0.1275,46
+2671,2017021143,Chicago Blackhawks,Vancouver Canucks,0.5195,0.085,0.298,0.0975,46
+2672,2017021144,Colorado Avalanche,Los Angeles Kings,0.417,0.094,0.4015,0.0875,46
+2673,2017021145,San Jose Sharks,Vegas Golden Knights,0.434,0.078,0.402,0.086,46
+2674,2017021146,Buffalo Sabres,Montréal Canadiens,0.415,0.0615,0.3965,0.127,47
+2675,2017021147,Pittsburgh Penguins,New Jersey Devils,0.553,0.107,0.285,0.055,47
+2676,2017021148,St. Louis Blues,Vancouver Canucks,0.539,0.1305,0.286,0.0445,47
+2677,2017021149,Winnipeg Jets,Anaheim Ducks,0.4705,0.074,0.3415,0.114,47
+2678,2017021150,Dallas Stars,Boston Bruins,0.4105,0.0745,0.413,0.102,47
+2679,2017021151,Colorado Avalanche,Vegas Golden Knights,0.37,0.066,0.456,0.108,47
+2680,2017021152,San Jose Sharks,Calgary Flames,0.505,0.108,0.319,0.068,47
+2681,2017021153,Toronto Maple Leafs,Detroit Red Wings,0.526,0.106,0.3,0.068,49
+2682,2017021154,Montréal Canadiens,Washington Capitals,0.414,0.072,0.419,0.095,49
+2683,2017021155,Ottawa Senators,Carolina Hurricanes,0.451,0.091,0.369,0.089,49
+2684,2017021156,Florida Panthers,Arizona Coyotes,0.533,0.105,0.298,0.064,49
+2685,2017021157,New Jersey Devils,Tampa Bay Lightning,0.378,0.1125,0.431,0.0785,49
+2686,2017021158,New York Islanders,Chicago Blackhawks,0.4605,0.061,0.382,0.0965,49
+2687,2017021159,New York Rangers,Buffalo Sabres,0.5345,0.093,0.294,0.0785,49
+2688,2017021160,Columbus Blue Jackets,St. Louis Blues,0.4765,0.057,0.3525,0.114,49
+2689,2017021161,Minnesota Wild,Nashville Predators,0.464,0.1085,0.36,0.0675,49
+2690,2017021162,Edmonton Oilers,Los Angeles Kings,0.483,0.0965,0.3365,0.084,49
+2696,2017021168,Toronto Maple Leafs,Buffalo Sabres,0.5725,0.1155,0.2615,0.0505,51
+2697,2017021169,New York Islanders,Florida Panthers,0.4665,0.074,0.3635,0.096,51
+2698,2017021171,Carolina Hurricanes,Ottawa Senators,0.468,0.0995,0.368,0.0645,51
+2699,2017021170,New York Rangers,Washington Capitals,0.4195,0.0845,0.4125,0.0835,51
+2700,2017021172,Montréal Canadiens,Detroit Red Wings,0.476,0.133,0.3295,0.0615,51
+2701,2017021173,Tampa Bay Lightning,Arizona Coyotes,0.56,0.069,0.274,0.097,51
+2702,2017021174,Chicago Blackhawks,San Jose Sharks,0.4325,0.0735,0.3805,0.1135,51
+2703,2017021175,Vegas Golden Knights,Colorado Avalanche,0.5655,0.084,0.263,0.0875,51
+2704,2017021176,Los Angeles Kings,Calgary Flames,0.481,0.0745,0.332,0.1125,51
+2705,2017021177,New Jersey Devils,Carolina Hurricanes,0.4725,0.11,0.363,0.0545,52
+2706,2017021178,Ottawa Senators,New York Islanders,0.4285,0.0955,0.3985,0.0775,52
+2707,2017021179,Detroit Red Wings,Pittsburgh Penguins,0.375,0.1015,0.468,0.0555,52
+2708,2017021180,St. Louis Blues,San Jose Sharks,0.4495,0.093,0.3775,0.08,52
+2709,2017021181,Nashville Predators,Minnesota Wild,0.467,0.061,0.3625,0.1095,52
+2710,2017021182,Winnipeg Jets,Boston Bruins,0.448,0.0265,0.3865,0.139,52
+2711,2017021183,Dallas Stars,Philadelphia Flyers,0.454,0.079,0.371,0.096,52
+2712,2017021184,Edmonton Oilers,Columbus Blue Jackets,0.45,0.0685,0.3765,0.105,52
+2713,2017021185,Vancouver Canucks,Anaheim Ducks,0.364,0.0595,0.452,0.1245,52
+2718,2017021190,Boston Bruins,Tampa Bay Lightning,0.4465,0.134,0.3775,0.042,55
+2719,2017021191,Buffalo Sabres,Detroit Red Wings,0.422,0.125,0.4005,0.0525,55
+2720,2017021192,New Jersey Devils,Pittsburgh Penguins,0.38,0.0735,0.446,0.1005,55
+2721,2017021193,Ottawa Senators,Florida Panthers,0.434,0.083,0.38,0.103,55
+2722,2017021194,Nashville Predators,San Jose Sharks,0.5015,0.0845,0.334,0.08,55
+2723,2017021195,Minnesota Wild,Dallas Stars,0.534,0.104,0.3025,0.0595,55
+2724,2017021196,Chicago Blackhawks,Winnipeg Jets,0.445,0.061,0.3955,0.0985,55
+2725,2017021197,Calgary Flames,Columbus Blue Jackets,0.3875,0.0735,0.435,0.104,55
+2726,2017021198,Vancouver Canucks,Edmonton Oilers,0.3945,0.0805,0.4325,0.0925,55
+2727,2017021199,Los Angeles Kings,Arizona Coyotes,0.5355,0.0885,0.293,0.083,55
+2728,2017021200,New York Islanders,Toronto Maple Leafs,0.4005,0.0745,0.434,0.091,57
+2729,2017021201,New York Rangers,Tampa Bay Lightning,0.4625,0.086,0.3875,0.064,57
+2730,2017021202,Washington Capitals,Carolina Hurricanes,0.5225,0.0765,0.301,0.1,57
+2731,2017021203,Colorado Avalanche,Chicago Blackhawks,0.4165,0.0905,0.413,0.08,57
+2732,2017021204,Anaheim Ducks,Los Angeles Kings,0.451,0.089,0.369,0.091,57
+2733,2017021205,Vegas Golden Knights,St. Louis Blues,0.4825,0.0865,0.3425,0.0885,57
+2734,2017021206,Boston Bruins,Florida Panthers,0.5105,0.113,0.332,0.0445,57
+2735,2017021207,Detroit Red Wings,Ottawa Senators,0.4585,0.114,0.37,0.0575,57
+2736,2017021208,Vancouver Canucks,Columbus Blue Jackets,0.3885,0.1155,0.4255,0.0705,57
+2737,2017021209,Toronto Maple Leafs,Winnipeg Jets,0.4445,0.109,0.3805,0.066,60
+2738,2017021210,New Jersey Devils,New York Islanders,0.441,0.055,0.389,0.115,60
+2739,2017021211,Pittsburgh Penguins,Montréal Canadiens,0.5355,0.1125,0.2995,0.0525,60
+2740,2017021212,Carolina Hurricanes,New York Rangers,0.4345,0.0555,0.391,0.119,60
+2741,2017021213,Nashville Predators,Buffalo Sabres,0.592,0.106,0.2395,0.0625,60
+2742,2017021214,Dallas Stars,Minnesota Wild,0.4065,0.051,0.422,0.1205,60
+2743,2017021215,Arizona Coyotes,St. Louis Blues,0.3875,0.055,0.425,0.1325,60
+2744,2017021216,Calgary Flames,Edmonton Oilers,0.407,0.026,0.41,0.157,60
+2745,2017021217,Vegas Golden Knights,San Jose Sharks,0.4935,0.067,0.35,0.0895,60
+2747,2017021219,Tampa Bay Lightning,Nashville Predators,0.4545,0.0855,0.381,0.079,62
+2748,2017021220,Montréal Canadiens,New Jersey Devils,0.452,0.1005,0.362,0.0855,62
+2749,2017021221,Pittsburgh Penguins,Washington Capitals,0.4585,0.0975,0.3665,0.0775,62
+2750,2017021222,Anaheim Ducks,Colorado Avalanche,0.513,0.0935,0.3235,0.07,62
+2751,2017021223,Toronto Maple Leafs,Buffalo Sabres,0.5725,0.105,0.2625,0.06,62
+2752,2017021224,Ottawa Senators,Winnipeg Jets,0.3795,0.024,0.443,0.1535,62
+2753,2017021225,Florida Panthers,Carolina Hurricanes,0.4765,0.0485,0.349,0.126,62
+2754,2017021226,St. Louis Blues,Washington Capitals,0.42,0.044,0.407,0.129,62
+2755,2017021227,Minnesota Wild,Edmonton Oilers,0.5015,0.095,0.318,0.0855,62
+2756,2017021228,Los Angeles Kings,Colorado Avalanche,0.481,0.0955,0.3295,0.094,62
+2757,2017021229,New Jersey Devils,New York Rangers,0.4125,0.086,0.4025,0.099,66
+2758,2017021230,New York Islanders,Philadelphia Flyers,0.464,0.0955,0.3565,0.084,66
+2759,2017021231,Columbus Blue Jackets,Detroit Red Wings,0.506,0.1555,0.314,0.0245,66
+2760,2017021232,Montréal Canadiens,Winnipeg Jets,0.398,0.116,0.42,0.066,66
+2761,2017021233,Tampa Bay Lightning,Boston Bruins,0.474,0.0275,0.3635,0.135,66
+2762,2017021234,Florida Panthers,Nashville Predators,0.3955,0.099,0.43,0.0755,66
+2763,2017021235,Calgary Flames,Arizona Coyotes,0.4585,0.134,0.36,0.0475,66
+2764,2017021236,Vancouver Canucks,Vegas Golden Knights,0.353,0.0305,0.4805,0.136,66
+2765,2017021237,San Jose Sharks,Dallas Stars,0.501,0.0655,0.337,0.0965,66
+2769,2017021241,New Jersey Devils,Toronto Maple Leafs,0.4105,0.082,0.4065,0.101,70
+2770,2017021242,New York Islanders,New York Rangers,0.4555,0.1265,0.359,0.059,70
+2771,2017021243,Philadelphia Flyers,Carolina Hurricanes,0.451,0.111,0.3645,0.0735,70
+2772,2017021244,Washington Capitals,Nashville Predators,0.4725,0.033,0.366,0.1285,70
+2773,2017021245,Columbus Blue Jackets,Pittsburgh Penguins,0.4455,0.056,0.382,0.1165,70
+2774,2017021246,Detroit Red Wings,Montréal Canadiens,0.4205,0.062,0.393,0.1245,70
+2775,2017021247,Florida Panthers,Boston Bruins,0.419,0.0415,0.405,0.1345,70
+2776,2017021248,Winnipeg Jets,Calgary Flames,0.5415,0.0615,0.304,0.093,70
+2777,2017021249,Edmonton Oilers,Vegas Golden Knights,0.417,0.1025,0.418,0.0625,70
+2778,2017021250,Vancouver Canucks,Arizona Coyotes,0.4555,0.0785,0.37,0.096,70
+2779,2017021251,Los Angeles Kings,Minnesota Wild,0.416,0.107,0.3965,0.0805,70
+2780,2017021252,San Jose Sharks,Colorado Avalanche,0.5295,0.074,0.3095,0.087,70
+2786,2017021264,Winnipeg Jets,Chicago Blackhawks,0.491,0.08,0.35,0.079,72
+2787,2017021258,Boston Bruins,Ottawa Senators,0.539,0.061,0.293,0.107,72
+2788,2017021259,Toronto Maple Leafs,Montréal Canadiens,0.527,0.0855,0.324,0.0635,72
+2789,2017021260,Detroit Red Wings,New York Islanders,0.424,0.0905,0.4025,0.083,72
+2790,2017021261,Florida Panthers,Buffalo Sabres,0.502,0.1175,0.321,0.0595,72
+2791,2017021262,Washington Capitals,New Jersey Devils,0.5315,0.0845,0.3075,0.0765,72
+2792,2017021263,Carolina Hurricanes,Tampa Bay Lightning,0.4175,0.0665,0.4155,0.1005,72
+2793,2017021265,Nashville Predators,Columbus Blue Jackets,0.4695,0.0975,0.3535,0.0795,72
+2794,2017021267,Arizona Coyotes,Anaheim Ducks,0.362,0.0855,0.4485,0.104,72
+2795,2017021266,Colorado Avalanche,St. Louis Blues,0.4105,0.055,0.4105,0.124,72
+2796,2017021268,Calgary Flames,Vegas Golden Knights,0.3625,0.034,0.47,0.1335,72
+2797,2017021269,Edmonton Oilers,Vancouver Canucks,0.5265,0.0855,0.3035,0.0845,72
+2798,2017021270,Los Angeles Kings,Dallas Stars,0.4665,0.071,0.3465,0.116,72
+2799,2017021271,San Jose Sharks,Minnesota Wild,0.418,0.0225,0.381,0.1785,72
+2801,2017030161,Winnipeg Jets,Minnesota Wild,0.4475,0.0675,0.3785,0.1065,78
+2802,2017030141,Pittsburgh Penguins,Philadelphia Flyers,0.535,0.1015,0.3145,0.049,78
+2803,2017030171,Vegas Golden Knights,Los Angeles Kings,0.4945,0.0675,0.3345,0.1035,78
+2804,2017030111,Tampa Bay Lightning,New Jersey Devils,0.5325,0.0615,0.2965,0.1095,78
+2805,2017030121,Boston Bruins,Toronto Maple Leafs,0.4565,0.034,0.3745,0.135,78
+2806,2017030131,Washington Capitals,Columbus Blue Jackets,0.4855,0.0955,0.3495,0.0695,78
+2807,2017030151,Nashville Predators,Colorado Avalanche,0.5605,0.1375,0.29,0.012,78
+2808,2017030181,Anaheim Ducks,San Jose Sharks,0.4455,0.1015,0.3765,0.0765,78
+2804,2017030111,Tampa Bay Lightning,New Jersey Devils,0.5265,0.0575,0.312,0.104,80
+2805,2017030121,Boston Bruins,Toronto Maple Leafs,0.4705,0.0395,0.349,0.141,80
+2806,2017030131,Washington Capitals,Columbus Blue Jackets,0.4775,0.107,0.353,0.0625,80
+2807,2017030151,Nashville Predators,Colorado Avalanche,0.5555,0.156,0.2745,0.014,80
+2808,2017030181,Anaheim Ducks,San Jose Sharks,0.461,0.0925,0.3615,0.085,80
+2809,2017030142,Pittsburgh Penguins,Philadelphia Flyers,0.534,0.1155,0.3115,0.039,80
+2810,2017030162,Winnipeg Jets,Minnesota Wild,0.4635,0.0685,0.381,0.087,80
+2811,2017030172,Vegas Golden Knights,Los Angeles Kings,0.5015,0.0835,0.3285,0.0865,80
+2809,2017030142,Pittsburgh Penguins,Philadelphia Flyers,0.5445,0.1205,0.29,0.045,81
+2810,2017030162,Winnipeg Jets,Minnesota Wild,0.4755,0.0725,0.361,0.091,81
+2811,2017030172,Vegas Golden Knights,Los Angeles Kings,0.5085,0.096,0.319,0.0765,81
+2812,2017030152,Nashville Predators,Colorado Avalanche,0.5525,0.1445,0.286,0.017,81
+2813,2017030112,Tampa Bay Lightning,New Jersey Devils,0.529,0.0725,0.307,0.0915,81
+2814,2017030122,Boston Bruins,Toronto Maple Leafs,0.4945,0.051,0.3395,0.115,81
+2815,2017030182,Anaheim Ducks,San Jose Sharks,0.4355,0.094,0.3805,0.09,81
+2812,2017030152,Nashville Predators,Colorado Avalanche,0.5685,0.1365,0.276,0.019,84
+2813,2017030112,Tampa Bay Lightning,New Jersey Devils,0.558,0.066,0.2895,0.0865,84
+2814,2017030122,Boston Bruins,Toronto Maple Leafs,0.46,0.0375,0.3625,0.14,84
+2815,2017030182,Anaheim Ducks,San Jose Sharks,0.4455,0.089,0.371,0.0945,84
+2816,2017030143,Philadelphia Flyers,Pittsburgh Penguins,0.412,0.057,0.417,0.114,84
+2817,2017030163,Minnesota Wild,Winnipeg Jets,0.463,0.1005,0.3515,0.085,84
+2818,2017030132,Washington Capitals,Columbus Blue Jackets,0.4885,0.0995,0.3385,0.0735,84
+2819,2017030173,Los Angeles Kings,Vegas Golden Knights,0.409,0.08,0.413,0.098,84
+2816,2017030143,Philadelphia Flyers,Pittsburgh Penguins,0.4075,0.062,0.407,0.1235,86
+2817,2017030163,Minnesota Wild,Winnipeg Jets,0.4845,0.089,0.3535,0.073,86
+2818,2017030132,Washington Capitals,Columbus Blue Jackets,0.465,0.1175,0.3515,0.066,86
+2819,2017030173,Los Angeles Kings,Vegas Golden Knights,0.43,0.081,0.395,0.094,86
+2820,2017030123,Toronto Maple Leafs,Boston Bruins,0.4375,0.12,0.3815,0.061,86
+2821,2017030113,New Jersey Devils,Tampa Bay Lightning,0.4005,0.0845,0.435,0.08,86
+2822,2017030153,Colorado Avalanche,Nashville Predators,0.37,0.017,0.4575,0.1555,86
+2823,2017030183,San Jose Sharks,Anaheim Ducks,0.458,0.0965,0.359,0.0865,86
+2820,2017030123,Toronto Maple Leafs,Boston Bruins,0.459,0.105,0.3785,0.0575,88
+2821,2017030113,New Jersey Devils,Tampa Bay Lightning,0.3945,0.0785,0.4325,0.0945,88
+2822,2017030153,Colorado Avalanche,Nashville Predators,0.378,0.01,0.463,0.149,88
+2823,2017030183,San Jose Sharks,Anaheim Ducks,0.472,0.0795,0.3645,0.084,88
+2824,2017030133,Columbus Blue Jackets,Washington Capitals,0.4425,0.077,0.3935,0.087,88
+2825,2017030164,Minnesota Wild,Winnipeg Jets,0.5005,0.095,0.335,0.0695,88
+2826,2017030174,Los Angeles Kings,Vegas Golden Knights,0.433,0.0735,0.3925,0.101,88
+2824,2017030133,Columbus Blue Jackets,Washington Capitals,0.4535,0.071,0.3765,0.099,90
+2825,2017030164,Minnesota Wild,Winnipeg Jets,0.4925,0.085,0.35,0.0725,90
+2826,2017030174,Los Angeles Kings,Vegas Golden Knights,0.411,0.066,0.409,0.114,90
+2827,2017030144,Philadelphia Flyers,Pittsburgh Penguins,0.424,0.055,0.3995,0.1215,90
+2828,2017030114,New Jersey Devils,Tampa Bay Lightning,0.3985,0.1095,0.4165,0.0755,90
+2829,2017030154,Colorado Avalanche,Nashville Predators,0.384,0.025,0.4445,0.1465,90
+2830,2017030184,San Jose Sharks,Anaheim Ducks,0.4875,0.097,0.344,0.0715,90
