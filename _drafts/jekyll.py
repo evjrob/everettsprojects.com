@@ -29,4 +29,4 @@ c.MarkdownExporter.filters = {'path2support': path2support}
 
 if f:
     c.NbConvertApp.output_base = f.lower().replace(' ', '-')
-    c.FilesWriter.build_directory = '/home/everett/Development/everettsprojects.com/_drafts/logiq-tower/' # point this to your build directory
+    c.FilesWriter.build_directory = os.getcwd() # point this to your build directory

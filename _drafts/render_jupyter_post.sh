@@ -31,9 +31,18 @@ sed -i "4i title: \"$ttl\"" $BUILD_DIR$fname
 echo "added title $ttl in line 4"
 
 # Copy images over
-img_dir_name="$dt-${ipynb_fname/.ipynb/}"
-cp -r "$BUILD_DIR/img" "$IMG_DIR/$img_dir_name"
-cp -r "$BUILD_DIR/${ipynb_fname/.ipynb/}_files/" "$IMG_DIR/$img_dir_name/${ipynb_fname/.ipynb/}_files/"
+imgs_exist=false
+
+if [ -d "$BUILD_DIR/img" ]; then
+  img_dir_name="$dt-${ipynb_fname/.ipynb/}"
+  cp -r "$BUILD_DIR/img" "$IMG_DIR/$img_dir_name"
+  imgs_exist=true
+fi
+
+if [ -d "$BUILD_DIR/${ipynb_fname/.ipynb/}_files/" ]; then
+  cp -r "$BUILD_DIR/${ipynb_fname/.ipynb/}_files/" "$IMG_DIR/$img_dir_name/${ipynb_fname/.ipynb/}_files/"
+  imgs_exist=true
+fi
 
 # Fix image paths on md file
 sed -i "s/img\//\/img\/sed_temp_path\//g" $BUILD_DIR$fname
