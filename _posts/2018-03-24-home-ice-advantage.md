@@ -147,7 +147,7 @@ actual_score_counts %>%
        fill = "Team Type")
 {% endhighlight %}
 
-![center](/../figs/2018-03-24-home-ice-advantage.rmd/unnamed-chunk-3-1.png)
+![center](/../img/2018-03-24-home-ice-advantage.rmd/unnamed-chunk-3-1.png)
 
 Both appear to be roughly Poisson distributed at first glance. Next let's look at how the observed home and away goal distributions compare to a theoretical Poisson distribution with the same mean.
 
@@ -200,7 +200,7 @@ home_score_count_comparisons %>%
        fill = "Observation Type")
 {% endhighlight %}
 
-![center](/../figs/2018-03-24-home-ice-advantage.rmd/unnamed-chunk-6-1.png)
+![center](/../img/2018-03-24-home-ice-advantage.rmd/unnamed-chunk-6-1.png)
 
 
 #### Away:
@@ -240,7 +240,7 @@ away_score_count_comparisons %>%
        fill = "Observation Type")
 {% endhighlight %}
 
-![center](/../figs/2018-03-24-home-ice-advantage.rmd/unnamed-chunk-8-1.png)
+![center](/../img/2018-03-24-home-ice-advantage.rmd/unnamed-chunk-8-1.png)
 
 We can see that the distribution of scores for both home and away teams is not actually Poisson, but it pretty close. I appears to skew slightly lower than the expected values, which means the data is under-dispersed. This under-dispersion doesn't appear to be very severe however, so I am comfortable going forward assuming that the goal counts can be modeled as Poisson.
 

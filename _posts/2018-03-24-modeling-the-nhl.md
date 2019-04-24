@@ -229,7 +229,7 @@ with model:
 
 
 
-![png](/../figs/2018-03-24-modeling-the-nhl/output_10_1.png)
+![png](/../img/2018-03-24-modeling-the-nhl/output_10_1.png)
 
 
 The trace plots make it appear as though the PYMC3 model has converged to the stationary distribution for each of the variables, suggesting that we do not need to adjust the burn-in period manually.
@@ -249,7 +249,7 @@ max_gr = max(np.max(gr_stats) for gr_stats in pm.gelman_rubin(trace).values())
 {% endhighlight %}
 
 
-![png](/../figs/2018-03-24-modeling-the-nhl/output_13_0.png)
+![png](/../img/2018-03-24-modeling-the-nhl/output_13_0.png)
 
 
 The [BFMI statistic is well above the threshold of 0.2](https://docs.pymc.io/api/stats.html) that is typically suggested by the PYMC3 and Stan projects for indicating poor sampling. Furthermore, the Gelman-Rubin statistic is very close to 1, which further suggests that convergence on the stationary distribution has occurred.
@@ -289,7 +289,7 @@ _= axs.set_xticklabels(df_hpd['index'].values, rotation=90)
 {% endhighlight %}
 
 
-![png](/../figs/2018-03-24-modeling-the-nhl/output_15_0.png)
+![png](/../img/2018-03-24-modeling-the-nhl/output_15_0.png)
 
 
 The spread of offensive strengths looks pretty reasonable, and it seems to rank the teams well based on what little I know about their ability to score goals. Note that the Vegas Golden Knights have a slightly wider Highest Posterior Density (HPD) interval than the other teams. This makes sense since they have only started playing in the current recent season, and have far fewer games than the rest of the teams since we have included the complete 2016-2017 season in the data as well.
@@ -322,7 +322,7 @@ _= axs.set_xticklabels(df_hpd['index'].values, rotation=90)
 {% endhighlight %}
 
 
-![png](/../figs/2018-03-24-modeling-the-nhl/output_17_0.png)
+![png](/../img/2018-03-24-modeling-the-nhl/output_17_0.png)
 
 
 The spread of defensive strengths also appears reasonable, and once again Vegas has a slightly wider HPD as we would expect.
@@ -400,11 +400,11 @@ plot_posterior_goal_count(post_pred['away_goals'][:,1], 'CGY')
 {% endhighlight %}
 
 
-![png](/../figs/2018-03-24-modeling-the-nhl/output_24_0.png)
+![png](/../img/2018-03-24-modeling-the-nhl/output_24_0.png)
 
 
 
-![png](/../figs/2018-03-24-modeling-the-nhl/output_24_1.png)
+![png](/../img/2018-03-24-modeling-the-nhl/output_24_1.png)
 
 
 San Jose appears to skew a bit higher in the predicted number of regulation tie goals. As a result, we should probably expect San Jose to be more likely to win this game. Let's see what the predicted probabilities are:

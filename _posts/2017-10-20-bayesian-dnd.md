@@ -50,7 +50,7 @@ ggplot(data = binom_data) +
   theme(legend.position="none")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/Binom-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/Binom-1.png)
 
 This presumes that we already know the true probability for **p**. In our case we are uncertain about the probability, so how do we deal with that? This is where the beta prior in the beta-binomial model comes in handy. In our Bayesian approach we get to start with a prior belief of what the probability of rolling a specific face of the coin is. Rather than picking a single value like we would in frequentist statistics, we define a probability density function that shows our relative belief in any **p** being true across all possible values of **p**. Since we are working with a probability, this is the range 0 to 1. Using observed data of k successes in n trials, we can update the beta prior distribution to find our posterior distribution. This is all a result of conjugacy, which is just a fancy way of saying that if we start with a beta distribution for the probability **p**, and then gather data that comes from a binomial distribution, we can find a new beta distribution that describes the posterior probability of seeing that face. 
 
@@ -80,7 +80,7 @@ ggplot(data.frame(x = c(0:1))) +
   theme(legend.position="none")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/Beta(1,1)-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/Beta(1,1)-1.png)
 
 But we do know a little bit about how dice work, and usually our prior belief in the likelihood of any given face is based on the dice being fair. For our d20, this means we expect **p = 0.05**. To model this prior we could simply say that we expect 1 roll out of twenty to be our face, and model it with <span class="inlinecode">$Beta(1,19)$</span>:
 
@@ -100,7 +100,7 @@ ggplot(data.frame(x = c(0:1))) +
   theme(legend.position="none")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/Beta(1,19)-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/Beta(1,19)-1.png)
 
 Notice that this isn't a very confident prior distribution. We can see a decent likelihood for values of **p** anywhere between 0 and 0.25. If we want a stronger prior we can use larger values of <span class="inlinecode">$\alpha$</span> and <span class="inlinecode">$\beta$</span> where <span class="inlinecode">$\frac{\alpha}{(\alpha + \beta)} = 0.05$</span>. Let's look at <span class="inlinecode">$Beta(5,95)$</span>:
 
@@ -120,7 +120,7 @@ ggplot(data.frame(x = c(0:1))) +
   theme(legend.position="none")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/Beta(5,95)-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/Beta(5,95)-1.png)
 
 That's a bit better. There is a definite peak around **p = 0.05** with a much tighter spread. You may find it strange that we are going through all this effort just to maintain uncertainty about the value of p. Isn't our goal to get more confident in the true probability of rolling a certain face? It seems counter intuitive, but the power of Bayesian statistics is that we can continually work with uncertainty in our estimates, and that we treat **p** as a probability density function rather than a point estimate. This is true in both the prior and the posterior. Think of it as a means of not just finding a new most likely value for **p**, but also finding our uncertainty in this estimate of **p**, so that we also know how confident we are in our new estimate. If we wanted to find some common summary statistics for **p** from a beta distribution (either the prior or the posterior), we can do it with the following formulas and functions:
 
@@ -171,7 +171,7 @@ ggplot(data.frame(x = c(0:1))) +
   theme(legend.position="none")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/beta-binomial-updating-example-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/beta-binomial-updating-example-1.png)
 
 Notice that the high observed frequency of rolled ones has really shifted the distribution for the probability upwards from **p = 0.05**. It has also widened our posterior distribution compared to our prior, because we are less certain about the probability of rolling a one after such an unexpected result on 100 rolls. A nice feature of Bayesian statistics is is that we can take a posterior distribution and use it as our new prior while we continue testing and collecting more data. Let's pretend that after seeing this result we are not satisfied, so we decide to roll the dice 1000 more times and observe 203 ones:
 
@@ -206,7 +206,7 @@ ggplot(data.frame(x = c(0:1))) +
   theme(legend.position="none")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/beta-binomial-updating-example-two-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/beta-binomial-updating-example-two-1.png)
 
 The posterior distribution has narrowed, and the mean has moved further towards the right to **p = 0.190**. This illustrates another useful feature of Bayesian statistics: As we collect more data, our chosen prior has less influence and becomes less important.
 
@@ -234,7 +234,7 @@ So what exactly does a Dirichlet distribution look like? For a three dimensional
 
 $$ p_1 + p_2 + p_3 = 1 $$
 
-![center](/figs/2017-10-20-bayesian-dnd/200px-2D-simplex.svg.png)
+![center](/img/2017-10-20-bayesian-dnd/200px-2D-simplex.svg.png)
 
 A probability density function on this surface can look like this when all of the faces are equally likely:
 
@@ -249,7 +249,7 @@ ggplot(mesh, aes(x, y)) +
   coord_equal(xlim = c(0,1), ylim = c(0, .85))
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/unnamed-chunk-2-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/unnamed-chunk-2-1.png)
 
 As we update our Dirichlet distribution using the rules above, it can shift the probability just like we saw for the beta distribution:
 
@@ -264,7 +264,7 @@ ggplot(mesh, aes(x, y)) +
   coord_equal(xlim = c(0,1), ylim = c(0, .85))
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/unnamed-chunk-3-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/unnamed-chunk-3-1.png)
 
 Unfortunately these visualizations don't work so well for dice with more than three faces since it is hard to visualize probability densities in n-1 dimensions for an n-faced dice.
 
@@ -366,7 +366,7 @@ ggplot(d10_result, aes(x = face, y = posterior_mean)) +
        y = "Posterior Probability Distribution")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/d10-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/d10-1.png)
 
 It definitely looks like my d10 is a little unbalanced, and in a favourable way for me. But it's no where near as skewed as my reputation was leading me to believe. Based on the 95% credible interval the true probability of rolling a 10 is likely to found somewhere in the interval of approximately 0.105 to 0.180. This is certainly higher than 0.10, but no where near the "trick dice rolls 10 every time" levels I was concerned about. I think I'll keep using the dice and hope that the DM never reads this blog post.
 
@@ -389,7 +389,7 @@ ggplot(d20_result, aes(x = face, y = posterior_mean)) +
        y = "Posterior Probability Distribution")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/d20-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/d20-1.png)
 
 
 {% highlight r %}
@@ -408,7 +408,7 @@ ggplot(d12_result, aes(x = face, y = posterior_mean)) +
        y = "Posterior Probability Distribution")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/d12-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/d12-1.png)
 
 
 {% highlight r %}
@@ -427,7 +427,7 @@ ggplot(d100_result, aes(x = face, y = posterior_mean)) +
        y = "Posterior Probability Distribution")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/d100-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/d100-1.png)
 
 
 {% highlight r %}
@@ -446,7 +446,7 @@ ggplot(d8_result, aes(x = face, y = posterior_mean)) +
        y = "Posterior Probability Distribution")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/d8-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/d8-1.png)
 
 
 {% highlight r %}
@@ -465,7 +465,7 @@ ggplot(d6_result, aes(x = face, y = posterior_mean)) +
        y = "Posterior Probability Distribution")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/d6-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/d6-1.png)
 
 
 {% highlight r %}
@@ -484,6 +484,6 @@ ggplot(d4_result, aes(x = face, y = posterior_mean)) +
        y = "Posterior Probability Distribution")
 {% endhighlight %}
 
-![center](/../figs/2017-10-20-bayesian-dnd/d4-1.png)
+![center](/../img/2017-10-20-bayesian-dnd/d4-1.png)
 
 Of all my remaining dice, the only other potential issues are that my d12 may roll a 10 less than expected, and my d100 may roll 90 more that expected. I cannot think of a single time my character has had to roll a d12 so any unfairness in that dice is moot. Furthermore, a 10 is a good roll, so I will probably be disadvantaged by the balance issues in this dice. Similar to my d12, I rarely use my d100, so the benefits of rolling 90 more often than expected are wasted on my character. Overall my dice appear to be less than perfect, but I suppose that is to be expected when you order your dice in bulk from a generic looking amazon seller.

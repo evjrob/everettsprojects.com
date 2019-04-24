@@ -161,7 +161,7 @@ plt.show()
 {% endhighlight %}
 
 
-![png](/../figs/2018-01-17-mnist-visualization/output_8_0.png)
+![png](/../img/2018-01-17-mnist-visualization/output_8_0.png)
 
 
 ### The Second Convolutional Layer
@@ -187,7 +187,7 @@ plt.show()
 {% endhighlight %}
 
 
-![png](/../figs/2018-01-17-mnist-visualization/output_10_0.png)
+![png](/../img/2018-01-17-mnist-visualization/output_10_0.png)
 
 
 ### The Third Convolutional Layer
@@ -213,7 +213,7 @@ plt.show()
 {% endhighlight %}
 
 
-![png](/../figs/2018-01-17-mnist-visualization/output_12_0.png)
+![png](/../img/2018-01-17-mnist-visualization/output_12_0.png)
 
 
 ### The Fourth Convolutional Layer
@@ -239,7 +239,7 @@ plt.show()
 {% endhighlight %}
 
 
-![png](/../figs/2018-01-17-mnist-visualization/output_14_0.png)
+![png](/../img/2018-01-17-mnist-visualization/output_14_0.png)
 
 
 ### The Output Layer
@@ -265,7 +265,7 @@ plt.show()
 {% endhighlight %}
 
 
-![png](/../figs/2018-01-17-mnist-visualization/output_16_0.png)
+![png](/../img/2018-01-17-mnist-visualization/output_16_0.png)
 
 
 If you squint really hard, then the above images do sort of look like the digits they're meant to represent. The are very grey, however, which isn't at all like the original white on black MNIST digits provided. We can de-average the digits to restore them to a darker and less grey state:
@@ -287,7 +287,7 @@ plt.show()
 {% endhighlight %}
 
 
-![png](/../figs/2018-01-17-mnist-visualization/output_18_0.png)
+![png](/../img/2018-01-17-mnist-visualization/output_18_0.png)
 
 
 We can now make sure we computed things correctly by feeding these "perfect" digits back to the neural network for classification. If it doesn't return a correct classification for any of them, then we should probably suspect that something strange has happened.
