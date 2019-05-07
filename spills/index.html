@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Alberta Oil and Gas Incidents 1975 - 2013</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+        <link href="default.css" rel="stylesheet">
+        <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-51737914-1', 'x10.mx');
+      ga('send', 'pageview');
+    
+    </script>
+    <!-- End Google Analytics -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIxpXOSPJWNG7TnhMYq-Q2hPcM7zEQs8g&sensor=false">
+        </script>
+        <script>
+            // Fetch the parameters from the Database to populate the filters
+            var filterParameters = {};
+            
+            $.ajax({
+                async: false,
+                url : "filters.json",
+                dataType : "json",
+                success: function(data){
+                    filterParameters = data;
+                },
+                error: function (data)
+                {
+                    alert("Couldn't retrieve the data for the filters. A page refresh will usually fix this.");
+                }
+            });
+            
+            //Make a bunch of variables to track the filters and map boundaries
+            var sqlParameters = {
+                currentSubstance : "All",
+                currentSource : "All",
+                currentLicensee : "All",
+                currentFailure : "All",
+                yearMin : filterParameters['dates'][0],
+                yearMax : filterParameters['dates'][1],
+                volumeMin : 0,
+                volumeMax : filterParameters['volume'][0],
+                injuryMin : 0,
+                injuryMax : filterParameters['injuryCount'][0],
+                fatalityMin : 0,
+                fatalityMax : filterParameters['fatalityCount'][0],
+                latMin : 0,
+                latMax : 0,
+                lngMin : 0,
+                lngMax : 0 
+            }
+            
+                 
+    
+            /////////////////////////////////////
+            //Nice control widgets from jQueryUI:
+            /////////////////////////////////////
+             
+            //Popup dialog window for disclaimer
+            $(function() {
+                $( "#disclaimer" ).dialog({
+                    autoOpen: false
+                });
+             
+                $( "#disclaimer-opener" ).click(function() {
+                    $( "#disclaimer" ).dialog( "open" );
+                });
+            });
+            
+            //Popup dialog window for license
+            $(function() {
+                $( "#license" ).dialog({
+                    autoOpen: false,
+                    width: 350
+                });
+             
+                $( "#license-opener" ).click(function() {
+                    $( "#license" ).dialog( "open" );
+                });
+            });
+            
+            //No data fetched dialog
+            $(function() {
+                $("#no-data").dialog({
+                    height: 80,
+                    autoOpen: false,
+                    dialogClass: 'noTitleDialog',
+                    open: function(event, ui){
+                        setTimeout("$('#no-data').dialog('close')",3000);
+                    }
+                });
+            });
+    
+            // A function to build the sliders when we are ready to do so
+            function makeSliders() {
+                $(".slider").each(function () {
+                    var begin = $(this).data("begin"),
+                        end = $(this).data("end"),
+                        step = $(this).data("step");
+        
+                    $(this).slider({
+                        range: "true",
+                        values: [begin, end],
+                        min: begin,
+                        max: end, 
+                        step: step,
+                        slide: function (event, ui) {
+                            //Update text box quantity when the slider changes
+                            var sliderlow = ("#" + $(this).attr("id") + "_amount_low");
+                            $(sliderlow).val(ui.values[0]);
+                        
+                            var sliderhigh = ("#" + $(this).attr("id") + "_amount_high");
+                            $(sliderhigh).val(ui.values[1]);
+                        },
+                        //When the slider changes, update the displayed spills
+                        change: function(event, ui) {
+                            if ($(this).attr("id") == "yearBounds") {
+                                sqlParameters.yearMin = ui.values[0];
+                                sqlParameters.yearMax = ui.values[1];
+                            } else if ($(this).attr("id") == "volume") {
+                                sqlParameters.volumeMin = ui.values[0];
+                                sqlParameters.volumeMax = ui.values[1];
+                            } else if ($(this).attr("id") == "injuries") {
+                                sqlParameters.injuryMin = ui.values[0];
+                                sqlParameters.injuryMaxMax = ui.values[1];
+                            } else if ($(this).attr("id") == "fatalities") {
+                                sqlParameters.fatalityMin = ui.values[0];
+                                sqlParameters.fatalityMax = ui.values[1];
+                            }
+                            getSpills();
+                        }
+                    });
+    
+                    //Initialize the text box quantity
+                    var sliderlow = ("#" + $(this).attr("id") + "_amount_low");
+                    $(sliderlow).val($(this).slider("values", 0));
+                    
+                    var sliderhigh = ("#" + $(this).attr("id") + "_amount_high");
+                    $(sliderhigh).val($(this).slider("values", 1));
+                
+    
+                //When the text box is changed, update the slider
+                $('.amount1').change(function () {
+                    var value = this.value,
+                    selector = $("#" + this.id.split('_')[0]);
+                    selector.slider("values", 0, value);
+                })
+                $('.amount2').change(function () {
+                    var value = this.value,
+                    selector = $("#" + this.id.split('_')[0]);
+                    selector.slider("values", 1, value);
+                })
+            })}
+            
+           
+            //Accordian divs
+            $(function() {
+                $( "#accordion" ).accordion({   
+                    collapsible: true,
+                    autoHeight: false,
+                    heightStyle: "content"
+                });
+            });
+            
+            //Get the Licensee list for the autocomplete widget
+            var licenseeList = filterParameters['licensees'];
+            
+            //Auto Complete Licensee Selector
+            $(function() {
+                var cache = [];
+                $( "#licensee-selector" ).autocomplete({
+                    minLength: 2,
+                    source: licenseeList,
+                    select: function( event, ui ) {
+                        sqlParameters.currentLicensee = ui.item.value;
+                        getSpills();
+                    }
+                });
+                
+                $( "#licensee-clear" ).click(function() {
+                    $( "#licensee-selector" ).val("");
+                    sqlParameters.currentLicensee = 'All';
+                    getSpills();
+                });
+        
+            });
+    
+            //Drop down menus
+            $(function() {
+                $( "#substance-menu, #source-menu, #failure-menu" ).menu();
+            });  
+    
+            //When the DOM is loaded, we want to configure stuff like the menus and sliders
+            $( document ).ready(function() {
+                //The menus
+                makeMenus();
+               
+                //Set the parameters for each slider, then build them all
+                $( "#yearBounds" ).data("begin", parseInt(filterParameters['dates'][0],10)); //parseInt since it hates the normal value for some reason
+                $( "#yearBounds" ).data("end", parseInt(filterParameters['dates'][1],10));
+                $( "#yearBounds" ).data("step", 1);
+            
+                $( "#volume" ).data("begin", 0);
+                $( "#volume" ).data("end", parseInt(filterParameters['volume'][0]));
+                $( "#volume" ).data("step", 1000);
+            
+                $( "#injuries" ).data("begin", 0);
+                $( "#injuries" ).data("end", parseInt(filterParameters['injuryCount'][0]));
+                $( "#injuries" ).data("step", 1);
+            
+                $( "#fatalities" ).data("begin", 0);
+                $( "#fatalities" ).data("end", parseInt(filterParameters['fatalityCount'][0]));
+                $( "#fatalities" ).data("step", 1);
+                makeSliders();               
+       
+                //A hackish way to set the spill-info content max height based on window height
+                document.getElementById("spill-info").style.maxHeight = $(window).height()*0.40 + "px";
+                
+            });
+            
+            
+    
+            //Build the menus after the window has loaded
+            function makeMenus() {
+
+                //Get the substances and sources for the filter menus
+                var substanceList = filterParameters["substances"];
+                //replace the initial null element
+                substanceList[0] = "All";
+        
+                //The Sources too
+                var sourceList = filterParameters['sources'];
+                //replace the initial null element
+                sourceList[0] = "All";
+                
+                //And the Failure Types
+                var failureList = filterParameters['failureTypes'];
+                //replace the initial null element
+                failureList[0] = "All";
+                
+                //Build the lists using the database results
+                //Function courtesy of http://stackoverflow.com/questions/11128700/create-a-ul-and-fill-it-based-on-a-passed-array
+                function constructLI(domID, array) {
+                
+                    var fieldID = (domID.split("-"))[0]+"-selected";
+                
+                    for(var i = 0; i < array.length; i++) {
+                        // Create the list item:
+                        var member = document.createElement('li');
+                
+                        // Set its contents:
+                        var linkText = document.createTextNode(array[i]);
+                        var link = document.createElement('a');
+                        link.appendChild(linkText);
+                        link.href= "#";
+                        link.title= linkText;
+                        
+                        //Make the onclick aspect of them menu work
+                        link.onclick = function() { setText( fieldID, this.firstChild.nodeValue ) };
+                        
+                        member.appendChild(link);
+                
+                        // Add it to the list:
+                        document.getElementById(domID).appendChild(member);
+                    }
+                }
+                constructLI("substance-links", substanceList);
+                constructLI("source-links", sourceList);
+                constructLI("failure-links", failureList);
+            }
+    
+            
+            //Set the drop down menu to reflect the new filter value and update the displayed results
+            function setText(domID, text) {
+                document.getElementById(domID).innerHTML = text;
+                if (domID == "substance-selected") {
+                    sqlParameters.currentSubstance = text;
+                } else if (domID == "source-selected") {
+                    sqlParameters.currentSource = text;
+                } else if (domID == "failure-selected") {
+                    sqlParameters.currentFailure = text;
+                }
+                getSpills();
+            };
+    
+
+            //////////////////////////////
+            //Start the Google Maps stuff
+            //////////////////////////////
+            
+            var map;
+            var markers = [];
+            var selectedMarker = new google.maps.Marker({
+                                position: null,
+                                icon: 'spotlight-poi.png',
+                                map: map,
+                                ATSLocation: ""
+                        });
+            var spillLocations;
+            
+            //Initialize when the map is done
+            google.maps.event.addDomListener(window, 'load', initialize);
+    
+            function initialize() {         clearStyle: true;
+                var middleEarth = new google.maps.LatLng(54.5, -115.0);
+                var mapOptions = {
+                    zoom: 6,
+                    center: middleEarth,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+            
+                map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);       
+            
+                makeGetSpillsEvent();
+            }
+    
+            function makeGetSpillsEvent(){
+                google.maps.event.addListener(map, 'idle', function() { getSpills();} );  
+            }
+    
+            function getSpills() {
+                var mapCorners = map.getBounds();
+                var ne = mapCorners.getNorthEast(); // LatLng of the north-east corner
+                var sw = mapCorners.getSouthWest(); // LatLng of the south-west corder
+                
+                sqlParameters.latMin = sw.lat();
+                sqlParameters.latMax = ne.lat();
+                sqlParameters.lngMin = sw.lng();
+                sqlParameters.lngMax = ne.lng();
+                
+                var newSpillLocations;  
+                    
+                //Get the spill location data
+                $.ajax({
+                    url : "https://d3cwzjnawb.execute-api.us-east-1.amazonaws.com/everettsprojects-production",
+                    type: "POST",
+                    data : JSON.stringify(sqlParameters),
+                    dataType : "json",
+                    success: function(data){
+                        var result = JSON.parse(data);
+                        SpillLocations = result.body;  
+                        plotSpills(SpillLocations);
+                    },
+                    error: function (data)
+                    {
+                        $( "#no-data" ).dialog( "open" );
+                    }
+                });
+            }
+    
+            function plotSpills(spillLocations){
+                
+                map.clearMarkers(markers);
+                markers = [];
+                alreadyMapped = []; //An array to keep track of already populated ATS legal subdivisions
+                markers.push(selectedMarker);
+                alreadyMapped.push(selectedMarker.ATSLocation);
+                //Stick those markers into the map canvas
+                for (var i = 0; i < spillLocations.length; i++) {
+                    //Dont duplicate the selected marker or LSDs with a marker already.
+                    if (jQuery.inArray(spillLocations[i].Location, alreadyMapped) == -1) {
+                        alreadyMapped.push(spillLocations[i].ATSLocation);
+                        
+                        var marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(spillLocations[i].Latitude, spillLocations[i].Longitude),
+                            icon: 'spotlight-poi.png',
+                            map: map,
+                            ATSLocation: spillLocations[i].Location
+                        });
+                        
+                        makeLoadSpillInfoEvent(marker);
+            
+                        markers.push(marker);
+                    } 
+                } 
+            }
+    
+            //The info window function from http://jsfiddle.net/yV6xv/161/
+            function makeLoadSpillInfoEvent(marker) {
+                google.maps.event.addListener(marker, 'click', function() {
+                    //Set the old marker back to red
+                    selectedMarker.setIcon('spotlight-poi.png');
+                    //Set the new marker to orange
+                    selectedMarker = marker;
+                    selectedMarker.setIcon('spotlight-poi-orange.png');
+                    loadSpillInfo(marker.ATSLocation);
+                });
+            }
+            
+            //A function that fetches the specific spill info and loads it into the spill-info div
+            function loadSpillInfo(ATSLocation) {
+                
+                var spillInfo = {};
+                
+                $.ajax({
+                    async: false,
+                    url : "https://x8kjzlgzz1.execute-api.us-east-1.amazonaws.com/everettsprojects-production",
+                    type: "POST",
+                    data: JSON.stringify($.extend({Location: ATSLocation}, sqlParameters)), //send ATS location + filter parameters
+                    dataType : "json",
+                    success: function(data){
+                        var result = JSON.parse(data);
+                        spillInfo = result.body;
+                    },
+                    error: function (data)
+                    {
+                        $( "#no-data" ).dialog( "open" );
+                    }
+                });
+                
+                //Clear existing content
+                document.getElementById("spill-info").innerHTML = "";
+                
+                //A count of the selected incidents for the user to know how many spill info tables have been loaded
+                var incidentCount = document.createElement('strong');
+                incidentCount.innerHTML = 'Number of incidents selected: '+spillInfo.length.toString()+'<br>';
+                document.getElementById("spill-info").appendChild(incidentCount);
+                
+                //Iterate through the JSON encoded spill info objects and create a table for each
+                for (var i = 0;  i < spillInfo.length; i++){
+                    var lineBreak = document.createElement('br');
+                    var table = document.createElement('table');
+                    
+                    //Populated the new table element
+                    for (var key in spillInfo[i]) {
+                        if (spillInfo[i].hasOwnProperty(key)) {
+                            var row = document.createElement('tr');
+                            row.style.backgroundColor = "#ffebb8";
+                            var cell1 = row.insertCell(0);
+                            cell1.innerHTML = '<strong>'+key+'</strong>';
+                            var cell2 = row.insertCell(1);
+                            cell2.innerHTML = spillInfo[i][key];
+                            table.appendChild(row);
+                        }
+                    }
+                    
+                    //Put the table into the div
+                    document.getElementById("spill-info").appendChild(lineBreak);
+                    document.getElementById("spill-info").appendChild(table);
+            }
+            //Open the spill info accordion section
+            $('#accordion').accordion("option", "active", 1);
+        }
+        
+    
+            //A customized clearOverlays function to remove the defunct markers but keep the selected one.
+            google.maps.Map.prototype.clearMarkers = function() {
+                for (var i = 0; i < markers.length; i++ ) {
+                    //Dont kill the selected marker, we want it to persist
+                    if (!(markers[i] === selectedMarker)) {
+                        markers[i].setMap(null);
+                    }
+                }
+            }   
+        </script>
+    </head>
+    <body>
+        <div id="map-canvas" style="width:100%;height:100%;"></div>
+        <div id="info-panel" style="text-align:left;">
+            <div class="text-block">
+                <h3>Alberta Oil and Gas Incidents 1944 - 2013</h3>
+                This is a map that interactively graphs all of the recorded Oil and Gas related spills in alberta between the years 1944 and 2013. It is based on the data acquired by <a href="http://globalnews.ca/news/622513/open-data-alberta-oil-spills-1975-2013/" target="blank">Global News</a> from the <a href="http://en.wikipedia.org/wiki/Energy_Resources_Conservation_Board" target="blank">ERCB</a> (now the <a href="http://www.aer.ca/" target="blank">AER</a>).
+                </br>
+                </br>
+                For optimal loading speeds and a clean map, it caps the number of incidents displayed to the 100 biggest spills (by volume in m<sup>3</sup>) in the current map area. Try zooming in to see more spills, or play with the provided filters to see more incidents.
+                </br>
+                <p>
+                    Learn more about this project at:
+                    <a href="http://everettsprojects.com/2014/06/25/mapping-oil-and-gas-incidents-in-alberta-improvements/" target="blank">everettsprojects.com</a>
+                </p>
+            </div>
+            <div id="accordion">
+                <h3>Filter the Results</h3>
+                <div id="filter-pane">
+                    <p>
+                        <label for="amount">Years:</label>
+                        <span style="float:right;">
+                            <input type="text" class="amount1" id="yearBounds_amount_low"  size="4">
+                            <span class="orange-text"> - </span>  
+                            <input type="text" class="amount2" id="yearBounds_amount_high" size="4">
+                        </span>
+                    </p>
+                    <div class="slider" id="yearBounds"> </div>
+            
+                    <p>
+                        <label for="amount">Volume:</label>
+                        <span style="float:right;">
+                            <input type="text" class="amount1" id="volume_amount_low" size="9">
+                            <span class="orange-text"> - </span>
+                            <input type="text" class="amount2" id="volume_amount_high" size="9">
+                            <span class="orange-text"> m<sup>3</sup></span>
+                        </span>
+                    </p>
+                    
+                    <div class="slider" id="volume"> </div>
+                    
+                    <p>
+                        <label for="amount">Injuries:</label>
+                        <span style="float:right;">
+                            <input type="text" class="amount1" id="injuries_amount_low" size="2">
+                            <span class="orange-text"> - </span>
+                            <input type="text" class="amount2" id="injuries_amount_high" size="2">
+                        </span>
+                    </p>
+                    
+                    <div class="slider" id="injuries"> </div>
+                    
+                    <p>
+                        <label for="amount">Fatalities:</label>
+                        <span style="float:right;">
+                            <input type="text" class="amount1" id="fatalities_amount_low" size="2">
+                            <span class="orange-text"> - </span>
+                            <input type="text" class="amount2" id="fatalities_amount_high" size="2">
+                        </span>
+                    </p>
+                    
+                    <div class="slider" id="fatalities"> </div>
+                    <br>
+                    <p>
+                        <div class="ui-widget">
+                            <label for="licensee-selector">Company: </label>
+                            <input id="licensee-selector" style="width:17em;" class="orange-text">  <span style="float:right;">[<a href=# id="licensee-clear">X</a>]</span>
+                            <br>
+                        </div>
+                    </p>
+                    
+                    
+                    <p>
+                        <ul id="substance-menu">
+                            <li><a href="#">Substance: <span id="substance-selected" class="orange-text">All</span></a>
+                                <ul id="substance-links">
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <ul id="source-menu">
+                            <li><a href="#">Source: <span id="source-selected" class="orange-text">All</span></a>
+                                <ul id="source-links">
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <ul id="failure-menu">
+                            <li><a href="#">Failure Type: <span id="failure-selected" class="orange-text">All</span></a>
+                                <ul id="failure-links">
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <h3>Incident Details</h3>
+                <div id="spill-info">
+                    This is where the data for a selected spill will be displayed. Click one to check it out!
+                </div>
+            </div>
+            <div class="text-block"> 
+                <p>
+                    <a href="#" id="disclaimer-opener">Disclaimer</a> -  
+                    <a href="#" id="license-opener">Copyright (c) 2019 Everett Robinson</a> - 
+            <a href="https://github.com/evjrob/Alberta-Spills-Map/">ver.3.0</a>
+                </p>
+            </div>
+        </div>
+        <div id="disclaimer" title="Disclaimer:" style="font-size:0.75em;">
+            <p>
+                I do not under any circumstances guarantee the accuracy or truthfulness of the provided information. Furthermore, this project should not be taken as representative of the former ERCB, AER, or any other applicable parties.
+                <br>
+                <br>
+                Due to the use of the Alberta Township System, many locations are approximations only. In general, points can be considered accurate to 200 metres.
+                <br>
+                <br>
+                Any spills originating from trans-provincial or trans-national pipelines are not included, since they do not fall under the jursdiction of the AER. Furthermore, many spills under 2 m<sup>3</sup> that did not originate from a pipeline may be absent, as they are not required to be reported.
+            </p>
+        </div>
+        <div id="license" title="MIT License:" style="font-size:0.75em;">
+            <p>
+                Copyright (c) 2014 Everett Robinson
+            </p>
+            <p>
+This content is released under the MIT License.
+<br><br>
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+<br><br>
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+<br><br>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+            </p>
+        </div>
+        <div id="no-data" class="noTitleDialog" style="font-size:0.75em;">
+            <p>
+                Oops, the spill locations or data couldn't be loaded right now.
+            </p>
+        </div>
+    </body>
+</html>

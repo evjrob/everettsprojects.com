@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <script
+    src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+  function succeeded(json){
+    var str = json.body;
+    var result = str.fontcolor("green");
+    document.getElementById("result").innerHTML = result;
+  }
+
+  function failed(){
+    var str = 'Yes!';
+    var result = str.fontcolor("red");
+    document.getElementById("result").innerHTML = result;
+  }
+
+  $.ajax({
+    type: "GET",
+    url: "https://vb7y770vle.execute-api.us-east-1.amazonaws.com/everettsprojects-production",
+    dataType: "json",
+    success: function (data) { 
+      succeeded(data)
+    },
+    error: function() {
+      failed()
+    }
+  });
+  </script>
+
+  <head>
+    <title>Has the World Ended Yet?</title>
+    <style>
+      a:link {color:#FFFFFF;}
+      a:visited {color:#FFFFFF;}
+
+    html {
+      overflow-y: scroll;
+      background: url(/img/eow.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 24px;
+      color: #fff;
+      padding-bottom: 20px;
+    }
+
+    #main
+    {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      background: #000;
+      background: rgba(0, 0, 0, 0.85);
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      border: solid 1px #000;
+      width:800px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    #result
+    {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 112px;
+    }
+
+    #disclaimer
+    {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      color: #fff;
+      margin-top: 80px;
+      margin-left: 100px;
+      margin-right: 100px;
+      margin-bottom: 50px;
+    }
+    </style>
+
+  </head>
+  <body>
+    <div id="main">
+        <H1>Has the world ended yet? <sup>*</sup></H1>
+        <br>
+        <b>
+        <div id="result">
+        </div>
+        </b>
+        <div id="disclaimer">
+            <sup>*</sup> Does not actually check if the world has ended. Result is based on the assumption that if AWS is not responding, the world has probably ended. <br><br> <a href="http://everettsprojects.com">http://everettsprojects.com/</a>
+        </div>
+    </div>
+</body>
+</html>
