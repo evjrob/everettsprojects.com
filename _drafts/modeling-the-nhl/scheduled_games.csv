@@ -1,123 +1,311 @@
 date,season,game_type,home_team,home_team_reg_score,home_team_fin_score,away_team,away_team_reg_score,away_team_fin_score,went_to_shoot_out
-2018-03-24,20172018,R,Colorado Avalanche,0,0,Vegas Golden Knights,0,0,False
-2018-03-24,20172018,R,San Jose Sharks,0,0,Calgary Flames,0,0,False
-2018-03-24,20172018,R,Toronto Maple Leafs,0,0,Detroit Red Wings,0,0,False
-2018-03-24,20172018,R,Montréal Canadiens,0,0,Washington Capitals,0,0,False
-2018-03-24,20172018,R,Ottawa Senators,0,0,Carolina Hurricanes,0,0,False
-2018-03-24,20172018,R,Florida Panthers,0,0,Arizona Coyotes,0,0,False
-2018-03-24,20172018,R,New Jersey Devils,0,0,Tampa Bay Lightning,0,0,False
-2018-03-24,20172018,R,New York Islanders,0,0,Chicago Blackhawks,0,0,False
-2018-03-24,20172018,R,New York Rangers,0,0,Buffalo Sabres,0,0,False
-2018-03-24,20172018,R,Columbus Blue Jackets,0,0,St. Louis Blues,0,0,False
-2018-03-24,20172018,R,Minnesota Wild,0,0,Nashville Predators,0,0,False
-2018-03-24,20172018,R,Edmonton Oilers,0,0,Los Angeles Kings,0,0,False
-2018-03-25,20172018,R,Pittsburgh Penguins,0,0,Philadelphia Flyers,0,0,False
-2018-03-25,20172018,R,Dallas Stars,0,0,Vancouver Canucks,0,0,False
-2018-03-25,20172018,R,Winnipeg Jets,0,0,Nashville Predators,0,0,False
-2018-03-25,20172018,R,Minnesota Wild,0,0,Boston Bruins,0,0,False
-2018-03-25,20172018,R,Edmonton Oilers,0,0,Anaheim Ducks,0,0,False
-2018-03-26,20172018,R,Toronto Maple Leafs,0,0,Buffalo Sabres,0,0,False
-2018-03-26,20172018,R,New York Islanders,0,0,Florida Panthers,0,0,False
-2018-03-26,20172018,R,Carolina Hurricanes,0,0,Ottawa Senators,0,0,False
-2018-03-26,20172018,R,New York Rangers,0,0,Washington Capitals,0,0,False
-2018-03-26,20172018,R,Montréal Canadiens,0,0,Detroit Red Wings,0,0,False
-2018-03-26,20172018,R,Tampa Bay Lightning,0,0,Arizona Coyotes,0,0,False
-2018-03-26,20172018,R,Chicago Blackhawks,0,0,San Jose Sharks,0,0,False
-2018-03-26,20172018,R,Vegas Golden Knights,0,0,Colorado Avalanche,0,0,False
-2018-03-26,20172018,R,Los Angeles Kings,0,0,Calgary Flames,0,0,False
-2018-03-27,20172018,R,New Jersey Devils,0,0,Carolina Hurricanes,0,0,False
-2018-03-27,20172018,R,Ottawa Senators,0,0,New York Islanders,0,0,False
-2018-03-27,20172018,R,Detroit Red Wings,0,0,Pittsburgh Penguins,0,0,False
-2018-03-27,20172018,R,St. Louis Blues,0,0,San Jose Sharks,0,0,False
-2018-03-27,20172018,R,Nashville Predators,0,0,Minnesota Wild,0,0,False
-2018-03-27,20172018,R,Winnipeg Jets,0,0,Boston Bruins,0,0,False
-2018-03-27,20172018,R,Dallas Stars,0,0,Philadelphia Flyers,0,0,False
-2018-03-27,20172018,R,Edmonton Oilers,0,0,Columbus Blue Jackets,0,0,False
-2018-03-27,20172018,R,Vancouver Canucks,0,0,Anaheim Ducks,0,0,False
-2018-03-28,20172018,R,Toronto Maple Leafs,0,0,Florida Panthers,0,0,False
-2018-03-28,20172018,R,Washington Capitals,0,0,New York Rangers,0,0,False
-2018-03-28,20172018,R,Vegas Golden Knights,0,0,Arizona Coyotes,0,0,False
-2018-03-28,20172018,R,Colorado Avalanche,0,0,Philadelphia Flyers,0,0,False
-2018-03-29,20172018,R,Boston Bruins,0,0,Tampa Bay Lightning,0,0,False
-2018-03-29,20172018,R,Buffalo Sabres,0,0,Detroit Red Wings,0,0,False
-2018-03-29,20172018,R,New Jersey Devils,0,0,Pittsburgh Penguins,0,0,False
-2018-03-29,20172018,R,Ottawa Senators,0,0,Florida Panthers,0,0,False
-2018-03-29,20172018,R,Nashville Predators,0,0,San Jose Sharks,0,0,False
-2018-03-29,20172018,R,Minnesota Wild,0,0,Dallas Stars,0,0,False
-2018-03-29,20172018,R,Chicago Blackhawks,0,0,Winnipeg Jets,0,0,False
-2018-03-29,20172018,R,Calgary Flames,0,0,Columbus Blue Jackets,0,0,False
-2018-03-29,20172018,R,Vancouver Canucks,0,0,Edmonton Oilers,0,0,False
-2018-03-29,20172018,R,Los Angeles Kings,0,0,Arizona Coyotes,0,0,False
-2018-03-30,20172018,R,New York Islanders,0,0,Toronto Maple Leafs,0,0,False
-2018-03-30,20172018,R,New York Rangers,0,0,Tampa Bay Lightning,0,0,False
-2018-03-30,20172018,R,Washington Capitals,0,0,Carolina Hurricanes,0,0,False
-2018-03-30,20172018,R,Colorado Avalanche,0,0,Chicago Blackhawks,0,0,False
-2018-03-30,20172018,R,Anaheim Ducks,0,0,Los Angeles Kings,0,0,False
-2018-03-30,20172018,R,Vegas Golden Knights,0,0,St. Louis Blues,0,0,False
-2018-03-31,20172018,R,Boston Bruins,0,0,Florida Panthers,0,0,False
-2018-03-31,20172018,R,Detroit Red Wings,0,0,Ottawa Senators,0,0,False
-2018-03-31,20172018,R,Vancouver Canucks,0,0,Columbus Blue Jackets,0,0,False
-2018-03-31,20172018,R,Toronto Maple Leafs,0,0,Winnipeg Jets,0,0,False
-2018-03-31,20172018,R,New Jersey Devils,0,0,New York Islanders,0,0,False
-2018-03-31,20172018,R,Pittsburgh Penguins,0,0,Montréal Canadiens,0,0,False
-2018-03-31,20172018,R,Carolina Hurricanes,0,0,New York Rangers,0,0,False
-2018-03-31,20172018,R,Nashville Predators,0,0,Buffalo Sabres,0,0,False
-2018-03-31,20172018,R,Dallas Stars,0,0,Minnesota Wild,0,0,False
-2018-03-31,20172018,R,Arizona Coyotes,0,0,St. Louis Blues,0,0,False
-2018-03-31,20172018,R,Calgary Flames,0,0,Edmonton Oilers,0,0,False
-2018-03-31,20172018,R,Vegas Golden Knights,0,0,San Jose Sharks,0,0,False
-2018-04-01,20172018,R,Philadelphia Flyers,0,0,Boston Bruins,0,0,False
-2018-04-01,20172018,R,Tampa Bay Lightning,0,0,Nashville Predators,0,0,False
-2018-04-01,20172018,R,Montréal Canadiens,0,0,New Jersey Devils,0,0,False
-2018-04-01,20172018,R,Pittsburgh Penguins,0,0,Washington Capitals,0,0,False
-2018-04-01,20172018,R,Anaheim Ducks,0,0,Colorado Avalanche,0,0,False
-2018-04-02,20172018,R,Toronto Maple Leafs,0,0,Buffalo Sabres,0,0,False
-2018-04-02,20172018,R,Ottawa Senators,0,0,Winnipeg Jets,0,0,False
-2018-04-02,20172018,R,Florida Panthers,0,0,Carolina Hurricanes,0,0,False
-2018-04-02,20172018,R,St. Louis Blues,0,0,Washington Capitals,0,0,False
-2018-04-02,20172018,R,Minnesota Wild,0,0,Edmonton Oilers,0,0,False
-2018-04-02,20172018,R,Los Angeles Kings,0,0,Colorado Avalanche,0,0,False
-2018-04-03,20172018,R,New Jersey Devils,0,0,New York Rangers,0,0,False
-2018-04-03,20172018,R,New York Islanders,0,0,Philadelphia Flyers,0,0,False
-2018-04-03,20172018,R,Columbus Blue Jackets,0,0,Detroit Red Wings,0,0,False
-2018-04-03,20172018,R,Montréal Canadiens,0,0,Winnipeg Jets,0,0,False
-2018-04-03,20172018,R,Tampa Bay Lightning,0,0,Boston Bruins,0,0,False
-2018-04-03,20172018,R,Florida Panthers,0,0,Nashville Predators,0,0,False
-2018-04-03,20172018,R,Calgary Flames,0,0,Arizona Coyotes,0,0,False
-2018-04-03,20172018,R,Vancouver Canucks,0,0,Vegas Golden Knights,0,0,False
-2018-04-03,20172018,R,San Jose Sharks,0,0,Dallas Stars,0,0,False
-2018-04-04,20172018,R,Buffalo Sabres,0,0,Ottawa Senators,0,0,False
-2018-04-04,20172018,R,St. Louis Blues,0,0,Chicago Blackhawks,0,0,False
-2018-04-04,20172018,R,Anaheim Ducks,0,0,Minnesota Wild,0,0,False
-2018-04-05,20172018,R,New Jersey Devils,0,0,Toronto Maple Leafs,0,0,False
-2018-04-05,20172018,R,New York Islanders,0,0,New York Rangers,0,0,False
-2018-04-05,20172018,R,Philadelphia Flyers,0,0,Carolina Hurricanes,0,0,False
-2018-04-05,20172018,R,Washington Capitals,0,0,Nashville Predators,0,0,False
-2018-04-05,20172018,R,Columbus Blue Jackets,0,0,Pittsburgh Penguins,0,0,False
-2018-04-05,20172018,R,Detroit Red Wings,0,0,Montréal Canadiens,0,0,False
-2018-04-05,20172018,R,Florida Panthers,0,0,Boston Bruins,0,0,False
-2018-04-05,20172018,R,Winnipeg Jets,0,0,Calgary Flames,0,0,False
-2018-04-05,20172018,R,Edmonton Oilers,0,0,Vegas Golden Knights,0,0,False
-2018-04-05,20172018,R,Vancouver Canucks,0,0,Arizona Coyotes,0,0,False
-2018-04-05,20172018,R,Los Angeles Kings,0,0,Minnesota Wild,0,0,False
-2018-04-05,20172018,R,San Jose Sharks,0,0,Colorado Avalanche,0,0,False
-2018-04-06,20172018,R,Pittsburgh Penguins,0,0,Ottawa Senators,0,0,False
-2018-04-06,20172018,R,Tampa Bay Lightning,0,0,Buffalo Sabres,0,0,False
-2018-04-06,20172018,R,Chicago Blackhawks,0,0,St. Louis Blues,0,0,False
-2018-04-06,20172018,R,Anaheim Ducks,0,0,Dallas Stars,0,0,False
-2018-04-07,20172018,R,Philadelphia Flyers,0,0,New York Rangers,0,0,False
-2018-04-07,20172018,R,Winnipeg Jets,0,0,Chicago Blackhawks,0,0,False
-2018-04-07,20172018,R,Boston Bruins,0,0,Ottawa Senators,0,0,False
-2018-04-07,20172018,R,Toronto Maple Leafs,0,0,Montréal Canadiens,0,0,False
-2018-04-07,20172018,R,Detroit Red Wings,0,0,New York Islanders,0,0,False
-2018-04-07,20172018,R,Florida Panthers,0,0,Buffalo Sabres,0,0,False
-2018-04-07,20172018,R,Washington Capitals,0,0,New Jersey Devils,0,0,False
-2018-04-07,20172018,R,Carolina Hurricanes,0,0,Tampa Bay Lightning,0,0,False
-2018-04-07,20172018,R,Nashville Predators,0,0,Columbus Blue Jackets,0,0,False
-2018-04-07,20172018,R,Arizona Coyotes,0,0,Anaheim Ducks,0,0,False
-2018-04-07,20172018,R,Colorado Avalanche,0,0,St. Louis Blues,0,0,False
-2018-04-07,20172018,R,Calgary Flames,0,0,Vegas Golden Knights,0,0,False
-2018-04-07,20172018,R,Edmonton Oilers,0,0,Vancouver Canucks,0,0,False
-2018-04-07,20172018,R,Los Angeles Kings,0,0,Dallas Stars,0,0,False
-2018-04-07,20172018,R,San Jose Sharks,0,0,Minnesota Wild,0,0,False
-2018-04-08,20172018,R,Boston Bruins,0,0,Florida Panthers,0,0,False
+2019-02-25,20182019,R,Toronto Maple Leafs,0,0,Buffalo Sabres,0,0,False
+2019-02-25,20182019,R,New Jersey Devils,0,0,Montréal Canadiens,0,0,False
+2019-02-25,20182019,R,Tampa Bay Lightning,0,0,Los Angeles Kings,0,0,False
+2019-02-25,20182019,R,Nashville Predators,0,0,Edmonton Oilers,0,0,False
+2019-02-25,20182019,R,Colorado Avalanche,0,0,Florida Panthers,0,0,False
+2019-02-25,20182019,R,Vancouver Canucks,0,0,Anaheim Ducks,0,0,False
+2019-02-26,20182019,R,Boston Bruins,0,0,San Jose Sharks,0,0,False
+2019-02-26,20182019,R,New York Islanders,0,0,Calgary Flames,0,0,False
+2019-02-26,20182019,R,Philadelphia Flyers,0,0,Buffalo Sabres,0,0,False
+2019-02-26,20182019,R,Washington Capitals,0,0,Ottawa Senators,0,0,False
+2019-02-26,20182019,R,Carolina Hurricanes,0,0,Los Angeles Kings,0,0,False
+2019-02-26,20182019,R,Columbus Blue Jackets,0,0,Pittsburgh Penguins,0,0,False
+2019-02-26,20182019,R,Detroit Red Wings,0,0,Montréal Canadiens,0,0,False
+2019-02-26,20182019,R,St. Louis Blues,0,0,Nashville Predators,0,0,False
+2019-02-26,20182019,R,Winnipeg Jets,0,0,Minnesota Wild,0,0,False
+2019-02-26,20182019,R,Arizona Coyotes,0,0,Florida Panthers,0,0,False
+2019-02-26,20182019,R,Vegas Golden Knights,0,0,Dallas Stars,0,0,False
+2019-02-27,20182019,R,Toronto Maple Leafs,0,0,Edmonton Oilers,0,0,False
+2019-02-27,20182019,R,New Jersey Devils,0,0,Calgary Flames,0,0,False
+2019-02-27,20182019,R,New York Rangers,0,0,Tampa Bay Lightning,0,0,False
+2019-02-27,20182019,R,Colorado Avalanche,0,0,Vancouver Canucks,0,0,False
+2019-02-27,20182019,R,Anaheim Ducks,0,0,Chicago Blackhawks,0,0,False
+2019-02-28,20182019,R,New York Islanders,0,0,Toronto Maple Leafs,0,0,False
+2019-02-28,20182019,R,Columbus Blue Jackets,0,0,Philadelphia Flyers,0,0,False
+2019-02-28,20182019,R,Boston Bruins,0,0,Tampa Bay Lightning,0,0,False
+2019-02-28,20182019,R,Ottawa Senators,0,0,Edmonton Oilers,0,0,False
+2019-02-28,20182019,R,Arizona Coyotes,0,0,Vancouver Canucks,0,0,False
+2019-02-28,20182019,R,Vegas Golden Knights,0,0,Florida Panthers,0,0,False
+2019-02-28,20182019,R,Los Angeles Kings,0,0,Dallas Stars,0,0,False
+2019-03-01,20182019,R,Buffalo Sabres,0,0,Pittsburgh Penguins,0,0,False
+2019-03-01,20182019,R,New Jersey Devils,0,0,Philadelphia Flyers,0,0,False
+2019-03-01,20182019,R,New York Islanders,0,0,Washington Capitals,0,0,False
+2019-03-01,20182019,R,New York Rangers,0,0,Montréal Canadiens,0,0,False
+2019-03-01,20182019,R,Carolina Hurricanes,0,0,St. Louis Blues,0,0,False
+2019-03-01,20182019,R,Winnipeg Jets,0,0,Nashville Predators,0,0,False
+2019-03-01,20182019,R,Anaheim Ducks,0,0,Vegas Golden Knights,0,0,False
+2019-03-01,20182019,R,San Jose Sharks,0,0,Colorado Avalanche,0,0,False
+2019-03-02,20182019,R,Columbus Blue Jackets,0,0,Edmonton Oilers,0,0,False
+2019-03-02,20182019,R,Los Angeles Kings,0,0,Chicago Blackhawks,0,0,False
+2019-03-02,20182019,R,Boston Bruins,0,0,New Jersey Devils,0,0,False
+2019-03-02,20182019,R,Toronto Maple Leafs,0,0,Buffalo Sabres,0,0,False
+2019-03-02,20182019,R,Montréal Canadiens,0,0,Pittsburgh Penguins,0,0,False
+2019-03-02,20182019,R,Tampa Bay Lightning,0,0,Ottawa Senators,0,0,False
+2019-03-02,20182019,R,Florida Panthers,0,0,Carolina Hurricanes,0,0,False
+2019-03-02,20182019,R,Arizona Coyotes,0,0,Detroit Red Wings,0,0,False
+2019-03-02,20182019,R,St. Louis Blues,0,0,Dallas Stars,0,0,False
+2019-03-02,20182019,R,Calgary Flames,0,0,Minnesota Wild,0,0,False
+2019-03-03,20182019,R,New York Rangers,0,0,Washington Capitals,0,0,False
+2019-03-03,20182019,R,New York Islanders,0,0,Philadelphia Flyers,0,0,False
+2019-03-03,20182019,R,Vegas Golden Knights,0,0,Vancouver Canucks,0,0,False
+2019-03-03,20182019,R,Anaheim Ducks,0,0,Colorado Avalanche,0,0,False
+2019-03-03,20182019,R,Florida Panthers,0,0,Ottawa Senators,0,0,False
+2019-03-03,20182019,R,Columbus Blue Jackets,0,0,Winnipeg Jets,0,0,False
+2019-03-03,20182019,R,Minnesota Wild,0,0,Nashville Predators,0,0,False
+2019-03-03,20182019,R,San Jose Sharks,0,0,Chicago Blackhawks,0,0,False
+2019-03-04,20182019,R,Buffalo Sabres,0,0,Edmonton Oilers,0,0,False
+2019-03-04,20182019,R,Calgary Flames,0,0,Toronto Maple Leafs,0,0,False
+2019-03-05,20182019,R,Boston Bruins,0,0,Carolina Hurricanes,0,0,False
+2019-03-05,20182019,R,New Jersey Devils,0,0,Columbus Blue Jackets,0,0,False
+2019-03-05,20182019,R,New York Islanders,0,0,Ottawa Senators,0,0,False
+2019-03-05,20182019,R,Pittsburgh Penguins,0,0,Florida Panthers,0,0,False
+2019-03-05,20182019,R,Tampa Bay Lightning,0,0,Winnipeg Jets,0,0,False
+2019-03-05,20182019,R,Nashville Predators,0,0,Minnesota Wild,0,0,False
+2019-03-05,20182019,R,Dallas Stars,0,0,New York Rangers,0,0,False
+2019-03-05,20182019,R,Colorado Avalanche,0,0,Detroit Red Wings,0,0,False
+2019-03-05,20182019,R,Arizona Coyotes,0,0,Anaheim Ducks,0,0,False
+2019-03-05,20182019,R,Los Angeles Kings,0,0,Montréal Canadiens,0,0,False
+2019-03-06,20182019,R,Philadelphia Flyers,0,0,Washington Capitals,0,0,False
+2019-03-06,20182019,R,Vancouver Canucks,0,0,Toronto Maple Leafs,0,0,False
+2019-03-06,20182019,R,Anaheim Ducks,0,0,St. Louis Blues,0,0,False
+2019-03-06,20182019,R,Vegas Golden Knights,0,0,Calgary Flames,0,0,False
+2019-03-07,20182019,R,Boston Bruins,0,0,Florida Panthers,0,0,False
+2019-03-07,20182019,R,Pittsburgh Penguins,0,0,Columbus Blue Jackets,0,0,False
+2019-03-07,20182019,R,Ottawa Senators,0,0,New York Islanders,0,0,False
+2019-03-07,20182019,R,Detroit Red Wings,0,0,New York Rangers,0,0,False
+2019-03-07,20182019,R,Tampa Bay Lightning,0,0,Minnesota Wild,0,0,False
+2019-03-07,20182019,R,Chicago Blackhawks,0,0,Buffalo Sabres,0,0,False
+2019-03-07,20182019,R,Dallas Stars,0,0,Colorado Avalanche,0,0,False
+2019-03-07,20182019,R,Edmonton Oilers,0,0,Vancouver Canucks,0,0,False
+2019-03-07,20182019,R,Arizona Coyotes,0,0,Calgary Flames,0,0,False
+2019-03-07,20182019,R,Los Angeles Kings,0,0,St. Louis Blues,0,0,False
+2019-03-07,20182019,R,San Jose Sharks,0,0,Montréal Canadiens,0,0,False
+2019-03-08,20182019,R,Florida Panthers,0,0,Minnesota Wild,0,0,False
+2019-03-08,20182019,R,Washington Capitals,0,0,New Jersey Devils,0,0,False
+2019-03-08,20182019,R,Carolina Hurricanes,0,0,Winnipeg Jets,0,0,False
+2019-03-08,20182019,R,Anaheim Ducks,0,0,Montréal Canadiens,0,0,False
+2019-03-09,20182019,R,Colorado Avalanche,0,0,Buffalo Sabres,0,0,False
+2019-03-09,20182019,R,San Jose Sharks,0,0,St. Louis Blues,0,0,False
+2019-03-09,20182019,R,Edmonton Oilers,0,0,Toronto Maple Leafs,0,0,False
+2019-03-09,20182019,R,Boston Bruins,0,0,Ottawa Senators,0,0,False
+2019-03-09,20182019,R,Tampa Bay Lightning,0,0,Detroit Red Wings,0,0,False
+2019-03-09,20182019,R,New York Islanders,0,0,Philadelphia Flyers,0,0,False
+2019-03-09,20182019,R,New York Rangers,0,0,New Jersey Devils,0,0,False
+2019-03-09,20182019,R,Columbus Blue Jackets,0,0,Pittsburgh Penguins,0,0,False
+2019-03-09,20182019,R,Arizona Coyotes,0,0,Los Angeles Kings,0,0,False
+2019-03-09,20182019,R,Nashville Predators,0,0,Carolina Hurricanes,0,0,False
+2019-03-09,20182019,R,Dallas Stars,0,0,Chicago Blackhawks,0,0,False
+2019-03-09,20182019,R,Vancouver Canucks,0,0,Vegas Golden Knights,0,0,False
+2019-03-10,20182019,R,Florida Panthers,0,0,Detroit Red Wings,0,0,False
+2019-03-10,20182019,R,Washington Capitals,0,0,Winnipeg Jets,0,0,False
+2019-03-10,20182019,R,Pittsburgh Penguins,0,0,Boston Bruins,0,0,False
+2019-03-10,20182019,R,Calgary Flames,0,0,Vegas Golden Knights,0,0,False
+2019-03-10,20182019,R,Anaheim Ducks,0,0,Los Angeles Kings,0,0,False
+2019-03-11,20182019,R,Toronto Maple Leafs,0,0,Tampa Bay Lightning,0,0,False
+2019-03-11,20182019,R,New York Islanders,0,0,Columbus Blue Jackets,0,0,False
+2019-03-11,20182019,R,Philadelphia Flyers,0,0,Ottawa Senators,0,0,False
+2019-03-11,20182019,R,Minnesota Wild,0,0,San Jose Sharks,0,0,False
+2019-03-11,20182019,R,Chicago Blackhawks,0,0,Arizona Coyotes,0,0,False
+2019-03-11,20182019,R,Colorado Avalanche,0,0,Carolina Hurricanes,0,0,False
+2019-03-11,20182019,R,Edmonton Oilers,0,0,New York Rangers,0,0,False
+2019-03-12,20182019,R,Buffalo Sabres,0,0,Dallas Stars,0,0,False
+2019-03-12,20182019,R,Pittsburgh Penguins,0,0,Washington Capitals,0,0,False
+2019-03-12,20182019,R,Columbus Blue Jackets,0,0,Boston Bruins,0,0,False
+2019-03-12,20182019,R,Montréal Canadiens,0,0,Detroit Red Wings,0,0,False
+2019-03-12,20182019,R,St. Louis Blues,0,0,Arizona Coyotes,0,0,False
+2019-03-12,20182019,R,Winnipeg Jets,0,0,San Jose Sharks,0,0,False
+2019-03-12,20182019,R,Calgary Flames,0,0,New Jersey Devils,0,0,False
+2019-03-12,20182019,R,Anaheim Ducks,0,0,Nashville Predators,0,0,False
+2019-03-13,20182019,R,Toronto Maple Leafs,0,0,Chicago Blackhawks,0,0,False
+2019-03-13,20182019,R,Edmonton Oilers,0,0,New Jersey Devils,0,0,False
+2019-03-13,20182019,R,Vancouver Canucks,0,0,New York Rangers,0,0,False
+2019-03-14,20182019,R,Buffalo Sabres,0,0,Pittsburgh Penguins,0,0,False
+2019-03-14,20182019,R,New York Islanders,0,0,Montréal Canadiens,0,0,False
+2019-03-14,20182019,R,Philadelphia Flyers,0,0,Washington Capitals,0,0,False
+2019-03-14,20182019,R,Ottawa Senators,0,0,St. Louis Blues,0,0,False
+2019-03-14,20182019,R,Detroit Red Wings,0,0,Tampa Bay Lightning,0,0,False
+2019-03-14,20182019,R,Minnesota Wild,0,0,Dallas Stars,0,0,False
+2019-03-14,20182019,R,Winnipeg Jets,0,0,Boston Bruins,0,0,False
+2019-03-14,20182019,R,Arizona Coyotes,0,0,Anaheim Ducks,0,0,False
+2019-03-14,20182019,R,Los Angeles Kings,0,0,Nashville Predators,0,0,False
+2019-03-14,20182019,R,San Jose Sharks,0,0,Florida Panthers,0,0,False
+2019-03-15,20182019,R,Toronto Maple Leafs,0,0,Philadelphia Flyers,0,0,False
+2019-03-15,20182019,R,Columbus Blue Jackets,0,0,Carolina Hurricanes,0,0,False
+2019-03-15,20182019,R,Dallas Stars,0,0,Vegas Golden Knights,0,0,False
+2019-03-15,20182019,R,Colorado Avalanche,0,0,Anaheim Ducks,0,0,False
+2019-03-15,20182019,R,Calgary Flames,0,0,New York Rangers,0,0,False
+2019-03-15,20182019,R,Vancouver Canucks,0,0,New Jersey Devils,0,0,False
+2019-03-16,20182019,R,Pittsburgh Penguins,0,0,St. Louis Blues,0,0,False
+2019-03-16,20182019,R,Detroit Red Wings,0,0,New York Islanders,0,0,False
+2019-03-16,20182019,R,Los Angeles Kings,0,0,Florida Panthers,0,0,False
+2019-03-16,20182019,R,Winnipeg Jets,0,0,Calgary Flames,0,0,False
+2019-03-16,20182019,R,Boston Bruins,0,0,Columbus Blue Jackets,0,0,False
+2019-03-16,20182019,R,Montréal Canadiens,0,0,Chicago Blackhawks,0,0,False
+2019-03-16,20182019,R,Ottawa Senators,0,0,Toronto Maple Leafs,0,0,False
+2019-03-16,20182019,R,Tampa Bay Lightning,0,0,Washington Capitals,0,0,False
+2019-03-16,20182019,R,Carolina Hurricanes,0,0,Buffalo Sabres,0,0,False
+2019-03-16,20182019,R,Minnesota Wild,0,0,New York Rangers,0,0,False
+2019-03-16,20182019,R,Arizona Coyotes,0,0,Edmonton Oilers,0,0,False
+2019-03-16,20182019,R,San Jose Sharks,0,0,Nashville Predators,0,0,False
+2019-03-17,20182019,R,Colorado Avalanche,0,0,New Jersey Devils,0,0,False
+2019-03-17,20182019,R,Buffalo Sabres,0,0,St. Louis Blues,0,0,False
+2019-03-17,20182019,R,Minnesota Wild,0,0,New York Islanders,0,0,False
+2019-03-17,20182019,R,Dallas Stars,0,0,Vancouver Canucks,0,0,False
+2019-03-17,20182019,R,Pittsburgh Penguins,0,0,Philadelphia Flyers,0,0,False
+2019-03-17,20182019,R,Anaheim Ducks,0,0,Florida Panthers,0,0,False
+2019-03-17,20182019,R,Vegas Golden Knights,0,0,Edmonton Oilers,0,0,False
+2019-03-18,20182019,R,Tampa Bay Lightning,0,0,Arizona Coyotes,0,0,False
+2019-03-18,20182019,R,Chicago Blackhawks,0,0,Vancouver Canucks,0,0,False
+2019-03-18,20182019,R,Los Angeles Kings,0,0,Winnipeg Jets,0,0,False
+2019-03-18,20182019,R,San Jose Sharks,0,0,Vegas Golden Knights,0,0,False
+2019-03-19,20182019,R,New York Islanders,0,0,Boston Bruins,0,0,False
+2019-03-19,20182019,R,New York Rangers,0,0,Detroit Red Wings,0,0,False
+2019-03-19,20182019,R,Philadelphia Flyers,0,0,Montréal Canadiens,0,0,False
+2019-03-19,20182019,R,Carolina Hurricanes,0,0,Pittsburgh Penguins,0,0,False
+2019-03-19,20182019,R,New Jersey Devils,0,0,Washington Capitals,0,0,False
+2019-03-19,20182019,R,St. Louis Blues,0,0,Edmonton Oilers,0,0,False
+2019-03-19,20182019,R,Nashville Predators,0,0,Toronto Maple Leafs,0,0,False
+2019-03-19,20182019,R,Minnesota Wild,0,0,Colorado Avalanche,0,0,False
+2019-03-19,20182019,R,Dallas Stars,0,0,Florida Panthers,0,0,False
+2019-03-19,20182019,R,Calgary Flames,0,0,Columbus Blue Jackets,0,0,False
+2019-03-20,20182019,R,Buffalo Sabres,0,0,Toronto Maple Leafs,0,0,False
+2019-03-20,20182019,R,Washington Capitals,0,0,Tampa Bay Lightning,0,0,False
+2019-03-20,20182019,R,Vancouver Canucks,0,0,Ottawa Senators,0,0,False
+2019-03-20,20182019,R,Anaheim Ducks,0,0,Winnipeg Jets,0,0,False
+2019-03-21,20182019,R,Florida Panthers,0,0,Arizona Coyotes,0,0,False
+2019-03-21,20182019,R,New Jersey Devils,0,0,Boston Bruins,0,0,False
+2019-03-21,20182019,R,Carolina Hurricanes,0,0,Tampa Bay Lightning,0,0,False
+2019-03-21,20182019,R,Montréal Canadiens,0,0,New York Islanders,0,0,False
+2019-03-21,20182019,R,St. Louis Blues,0,0,Detroit Red Wings,0,0,False
+2019-03-21,20182019,R,Nashville Predators,0,0,Pittsburgh Penguins,0,0,False
+2019-03-21,20182019,R,Chicago Blackhawks,0,0,Philadelphia Flyers,0,0,False
+2019-03-21,20182019,R,Dallas Stars,0,0,Colorado Avalanche,0,0,False
+2019-03-21,20182019,R,Calgary Flames,0,0,Ottawa Senators,0,0,False
+2019-03-21,20182019,R,Edmonton Oilers,0,0,Columbus Blue Jackets,0,0,False
+2019-03-21,20182019,R,Vegas Golden Knights,0,0,Winnipeg Jets,0,0,False
+2019-03-21,20182019,R,Los Angeles Kings,0,0,San Jose Sharks,0,0,False
+2019-03-22,20182019,R,Washington Capitals,0,0,Minnesota Wild,0,0,False
+2019-03-22,20182019,R,Anaheim Ducks,0,0,San Jose Sharks,0,0,False
+2019-03-23,20182019,R,New Jersey Devils,0,0,Arizona Coyotes,0,0,False
+2019-03-23,20182019,R,Philadelphia Flyers,0,0,New York Islanders,0,0,False
+2019-03-23,20182019,R,Colorado Avalanche,0,0,Chicago Blackhawks,0,0,False
+2019-03-23,20182019,R,Edmonton Oilers,0,0,Ottawa Senators,0,0,False
+2019-03-23,20182019,R,Winnipeg Jets,0,0,Nashville Predators,0,0,False
+2019-03-23,20182019,R,Toronto Maple Leafs,0,0,New York Rangers,0,0,False
+2019-03-23,20182019,R,Montréal Canadiens,0,0,Buffalo Sabres,0,0,False
+2019-03-23,20182019,R,Florida Panthers,0,0,Boston Bruins,0,0,False
+2019-03-23,20182019,R,Carolina Hurricanes,0,0,Minnesota Wild,0,0,False
+2019-03-23,20182019,R,St. Louis Blues,0,0,Tampa Bay Lightning,0,0,False
+2019-03-23,20182019,R,Dallas Stars,0,0,Pittsburgh Penguins,0,0,False
+2019-03-23,20182019,R,Vancouver Canucks,0,0,Calgary Flames,0,0,False
+2019-03-23,20182019,R,Vegas Golden Knights,0,0,Detroit Red Wings,0,0,False
+2019-03-23,20182019,R,Los Angeles Kings,0,0,Anaheim Ducks,0,0,False
+2019-03-24,20182019,R,Washington Capitals,0,0,Philadelphia Flyers,0,0,False
+2019-03-24,20182019,R,New York Islanders,0,0,Arizona Coyotes,0,0,False
+2019-03-24,20182019,R,Carolina Hurricanes,0,0,Montréal Canadiens,0,0,False
+2019-03-24,20182019,R,Chicago Blackhawks,0,0,Colorado Avalanche,0,0,False
+2019-03-24,20182019,R,Vancouver Canucks,0,0,Columbus Blue Jackets,0,0,False
+2019-03-25,20182019,R,Toronto Maple Leafs,0,0,Florida Panthers,0,0,False
+2019-03-25,20182019,R,New Jersey Devils,0,0,Buffalo Sabres,0,0,False
+2019-03-25,20182019,R,New York Rangers,0,0,Pittsburgh Penguins,0,0,False
+2019-03-25,20182019,R,Tampa Bay Lightning,0,0,Boston Bruins,0,0,False
+2019-03-25,20182019,R,St. Louis Blues,0,0,Vegas Golden Knights,0,0,False
+2019-03-25,20182019,R,Minnesota Wild,0,0,Nashville Predators,0,0,False
+2019-03-25,20182019,R,Winnipeg Jets,0,0,Dallas Stars,0,0,False
+2019-03-25,20182019,R,Calgary Flames,0,0,Los Angeles Kings,0,0,False
+2019-03-25,20182019,R,San Jose Sharks,0,0,Detroit Red Wings,0,0,False
+2019-03-26,20182019,R,Washington Capitals,0,0,Carolina Hurricanes,0,0,False
+2019-03-26,20182019,R,Columbus Blue Jackets,0,0,New York Islanders,0,0,False
+2019-03-26,20182019,R,Montréal Canadiens,0,0,Florida Panthers,0,0,False
+2019-03-26,20182019,R,Ottawa Senators,0,0,Buffalo Sabres,0,0,False
+2019-03-26,20182019,R,Edmonton Oilers,0,0,Los Angeles Kings,0,0,False
+2019-03-26,20182019,R,Vancouver Canucks,0,0,Anaheim Ducks,0,0,False
+2019-03-26,20182019,R,Arizona Coyotes,0,0,Chicago Blackhawks,0,0,False
+2019-03-27,20182019,R,Philadelphia Flyers,0,0,Toronto Maple Leafs,0,0,False
+2019-03-27,20182019,R,Boston Bruins,0,0,New York Rangers,0,0,False
+2019-03-27,20182019,R,Calgary Flames,0,0,Dallas Stars,0,0,False
+2019-03-27,20182019,R,Colorado Avalanche,0,0,Vegas Golden Knights,0,0,False
+2019-03-28,20182019,R,Buffalo Sabres,0,0,Detroit Red Wings,0,0,False
+2019-03-28,20182019,R,Carolina Hurricanes,0,0,Washington Capitals,0,0,False
+2019-03-28,20182019,R,Columbus Blue Jackets,0,0,Montréal Canadiens,0,0,False
+2019-03-28,20182019,R,Ottawa Senators,0,0,Florida Panthers,0,0,False
+2019-03-28,20182019,R,Winnipeg Jets,0,0,New York Islanders,0,0,False
+2019-03-28,20182019,R,Edmonton Oilers,0,0,Dallas Stars,0,0,False
+2019-03-28,20182019,R,Vancouver Canucks,0,0,Los Angeles Kings,0,0,False
+2019-03-28,20182019,R,San Jose Sharks,0,0,Chicago Blackhawks,0,0,False
+2019-03-29,20182019,R,New York Rangers,0,0,St. Louis Blues,0,0,False
+2019-03-29,20182019,R,Pittsburgh Penguins,0,0,Nashville Predators,0,0,False
+2019-03-29,20182019,R,Detroit Red Wings,0,0,New Jersey Devils,0,0,False
+2019-03-29,20182019,R,Colorado Avalanche,0,0,Arizona Coyotes,0,0,False
+2019-03-29,20182019,R,Calgary Flames,0,0,Anaheim Ducks,0,0,False
+2019-03-29,20182019,R,Vegas Golden Knights,0,0,Minnesota Wild,0,0,False
+2019-03-30,20182019,R,Boston Bruins,0,0,Florida Panthers,0,0,False
+2019-03-30,20182019,R,Carolina Hurricanes,0,0,Philadelphia Flyers,0,0,False
+2019-03-30,20182019,R,Winnipeg Jets,0,0,Montréal Canadiens,0,0,False
+2019-03-30,20182019,R,Ottawa Senators,0,0,Toronto Maple Leafs,0,0,False
+2019-03-30,20182019,R,Tampa Bay Lightning,0,0,Washington Capitals,0,0,False
+2019-03-30,20182019,R,New Jersey Devils,0,0,St. Louis Blues,0,0,False
+2019-03-30,20182019,R,New York Islanders,0,0,Buffalo Sabres,0,0,False
+2019-03-30,20182019,R,Nashville Predators,0,0,Columbus Blue Jackets,0,0,False
+2019-03-30,20182019,R,San Jose Sharks,0,0,Vegas Golden Knights,0,0,False
+2019-03-30,20182019,R,Vancouver Canucks,0,0,Dallas Stars,0,0,False
+2019-03-30,20182019,R,Edmonton Oilers,0,0,Anaheim Ducks,0,0,False
+2019-03-30,20182019,R,Los Angeles Kings,0,0,Chicago Blackhawks,0,0,False
+2019-03-31,20182019,R,Philadelphia Flyers,0,0,New York Rangers,0,0,False
+2019-03-31,20182019,R,Arizona Coyotes,0,0,Minnesota Wild,0,0,False
+2019-03-31,20182019,R,Pittsburgh Penguins,0,0,Carolina Hurricanes,0,0,False
+2019-03-31,20182019,R,Buffalo Sabres,0,0,Columbus Blue Jackets,0,0,False
+2019-03-31,20182019,R,Detroit Red Wings,0,0,Boston Bruins,0,0,False
+2019-03-31,20182019,R,San Jose Sharks,0,0,Calgary Flames,0,0,False
+2019-04-01,20182019,R,Florida Panthers,0,0,Washington Capitals,0,0,False
+2019-04-01,20182019,R,New Jersey Devils,0,0,New York Rangers,0,0,False
+2019-04-01,20182019,R,New York Islanders,0,0,Toronto Maple Leafs,0,0,False
+2019-04-01,20182019,R,Ottawa Senators,0,0,Tampa Bay Lightning,0,0,False
+2019-04-01,20182019,R,St. Louis Blues,0,0,Colorado Avalanche,0,0,False
+2019-04-01,20182019,R,Chicago Blackhawks,0,0,Winnipeg Jets,0,0,False
+2019-04-01,20182019,R,Vegas Golden Knights,0,0,Edmonton Oilers,0,0,False
+2019-04-01,20182019,R,Los Angeles Kings,0,0,Calgary Flames,0,0,False
+2019-04-02,20182019,R,Buffalo Sabres,0,0,Nashville Predators,0,0,False
+2019-04-02,20182019,R,Columbus Blue Jackets,0,0,Boston Bruins,0,0,False
+2019-04-02,20182019,R,Toronto Maple Leafs,0,0,Carolina Hurricanes,0,0,False
+2019-04-02,20182019,R,Montréal Canadiens,0,0,Tampa Bay Lightning,0,0,False
+2019-04-02,20182019,R,Detroit Red Wings,0,0,Pittsburgh Penguins,0,0,False
+2019-04-02,20182019,R,Minnesota Wild,0,0,Winnipeg Jets,0,0,False
+2019-04-02,20182019,R,Dallas Stars,0,0,Philadelphia Flyers,0,0,False
+2019-04-02,20182019,R,Colorado Avalanche,0,0,Edmonton Oilers,0,0,False
+2019-04-02,20182019,R,Vancouver Canucks,0,0,San Jose Sharks,0,0,False
+2019-04-02,20182019,R,Arizona Coyotes,0,0,Los Angeles Kings,0,0,False
+2019-04-03,20182019,R,New York Rangers,0,0,Ottawa Senators,0,0,False
+2019-04-03,20182019,R,Chicago Blackhawks,0,0,St. Louis Blues,0,0,False
+2019-04-03,20182019,R,Anaheim Ducks,0,0,Calgary Flames,0,0,False
+2019-04-04,20182019,R,Buffalo Sabres,0,0,Ottawa Senators,0,0,False
+2019-04-04,20182019,R,Toronto Maple Leafs,0,0,Tampa Bay Lightning,0,0,False
+2019-04-04,20182019,R,Florida Panthers,0,0,New York Islanders,0,0,False
+2019-04-04,20182019,R,Pittsburgh Penguins,0,0,Detroit Red Wings,0,0,False
+2019-04-04,20182019,R,Washington Capitals,0,0,Montréal Canadiens,0,0,False
+2019-04-04,20182019,R,Carolina Hurricanes,0,0,New Jersey Devils,0,0,False
+2019-04-04,20182019,R,St. Louis Blues,0,0,Philadelphia Flyers,0,0,False
+2019-04-04,20182019,R,Nashville Predators,0,0,Vancouver Canucks,0,0,False
+2019-04-04,20182019,R,Minnesota Wild,0,0,Boston Bruins,0,0,False
+2019-04-04,20182019,R,Colorado Avalanche,0,0,Winnipeg Jets,0,0,False
+2019-04-04,20182019,R,Edmonton Oilers,0,0,San Jose Sharks,0,0,False
+2019-04-04,20182019,R,Vegas Golden Knights,0,0,Arizona Coyotes,0,0,False
+2019-04-05,20182019,R,New York Rangers,0,0,Columbus Blue Jackets,0,0,False
+2019-04-05,20182019,R,Chicago Blackhawks,0,0,Dallas Stars,0,0,False
+2019-04-05,20182019,R,Anaheim Ducks,0,0,Los Angeles Kings,0,0,False
+2019-04-06,20182019,R,Boston Bruins,0,0,Tampa Bay Lightning,0,0,False
+2019-04-06,20182019,R,St. Louis Blues,0,0,Vancouver Canucks,0,0,False
+2019-04-06,20182019,R,Montréal Canadiens,0,0,Toronto Maple Leafs,0,0,False
+2019-04-06,20182019,R,Ottawa Senators,0,0,Columbus Blue Jackets,0,0,False
+2019-04-06,20182019,R,Detroit Red Wings,0,0,Buffalo Sabres,0,0,False
+2019-04-06,20182019,R,Florida Panthers,0,0,New Jersey Devils,0,0,False
+2019-04-06,20182019,R,Philadelphia Flyers,0,0,Carolina Hurricanes,0,0,False
+2019-04-06,20182019,R,Pittsburgh Penguins,0,0,New York Rangers,0,0,False
+2019-04-06,20182019,R,Washington Capitals,0,0,New York Islanders,0,0,False
+2019-04-06,20182019,R,Nashville Predators,0,0,Chicago Blackhawks,0,0,False
+2019-04-06,20182019,R,Dallas Stars,0,0,Minnesota Wild,0,0,False
+2019-04-06,20182019,R,Arizona Coyotes,0,0,Winnipeg Jets,0,0,False
+2019-04-06,20182019,R,Calgary Flames,0,0,Edmonton Oilers,0,0,False
+2019-04-06,20182019,R,Los Angeles Kings,0,0,Vegas Golden Knights,0,0,False
+2019-04-06,20182019,R,San Jose Sharks,0,0,Colorado Avalanche,0,0,False
