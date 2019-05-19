@@ -24,9 +24,9 @@ tags:
   - Web Development
 comments: true
 ---
-[<img class="aligncenter size-full wp-image-844" src="wp-content/uploads/2013/09/travelmap.png" alt="travelMap" width="594" height="408" srcset="/wp-content/uploads/2013/09/travelmap.png 1148w, /wp-content/uploads/2013/09/travelmap-300x206.png 300w, /wp-content/uploads/2013/09/travelmap-1024x703.png 1024w" sizes="(max-width: 594px) 100vw, 594px" />](http://everett.x10.mx/maps/)
+[<img class="aligncenter size-full wp-image-844" src="wp-content/uploads/2013/09/travelmap.png" alt="travelMap" width="594" height="408" srcset="/wp-content/uploads/2013/09/travelmap.png 1148w, /wp-content/uploads/2013/09/travelmap-300x206.png 300w, /wp-content/uploads/2013/09/travelmap-1024x703.png 1024w" sizes="(max-width: 594px) 100vw, 594px" />](/maps/)
 
-See the finished project at: <https://everettsprojects.com/maps/>
+See the finished project at: [https://everettsprojects.com/maps/](/maps/)
 
 For the last three months I have been on a backpacking trip, which is part of the reason why this blog has been so neglected for the past few months. A travel blog hosted at [meandmypack.wordpress.com](http://meandmypack.wordpress.com) had taken precedence, and I habitually kept that one updated throughout my trip. With all of that over though, I&#8217;ve had to find things to do in my time to keep my self from becoming bored and lethargic with life back home in Canada. One such activity is the tying up of loose ends as far as documentation of my trip is concerned, and from early on I had it in my mind to make a nice map of all the places I went. Over time this idea evolved into a whole project in it&#8217;s own right, using Google maps and becoming more interactive and feature rich every time my mind drifted back to the idea of it. I couldn&#8217;t really spare the time to design it while in Europe, and that probably would have been a waste of the limited time I had there any way. So I stored the idea away and made a promise to my self to figure it out back home. Now some two weeks later, I&#8217;ve pulled it off.
 
@@ -471,7 +471,7 @@ With all of the main features of the map coded, and a few hours spent finding th
           <b>Distance Travelled: </b>
           <div id="distanceTravelled"></div><br>
           <a href="http://meandmypack.wordpress.com" target="blank">meandmypack.wordpress.com</a><br>
-          <a href="http://everettsprojects.com" target="blank">everettsprojects.com</a>
+          <a href="/" target="blank">everettsprojects.com</a>
         </div>
   </body>
 </html>

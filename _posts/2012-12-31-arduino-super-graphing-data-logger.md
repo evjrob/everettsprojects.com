@@ -29,7 +29,7 @@ tags:
 comments: true
 ---
 <p style="text-align:left;">
-  <a href="http://everettsprojects.com/2012/12/31/arduino-super-graphing-data-logger/zoomeddaylight/" rel="attachment wp-att-714"><img class="size-large wp-image-714 aligncenter" alt="The intensity of natural light in my basement." src="wp-content/uploads/2012/12/zoomeddaylight.png?w=594" width="594" height="210" srcset="/wp-content/uploads/2012/12/zoomeddaylight.png 1374w, /wp-content/uploads/2012/12/zoomeddaylight-300x106.png 300w, /wp-content/uploads/2012/12/zoomeddaylight-1024x362.png 1024w" sizes="(max-width: 594px) 100vw, 594px" /></a><br />
+  <a href="/2012/12/31/arduino-super-graphing-data-logger/zoomeddaylight/" rel="attachment wp-att-714"><img class="size-large wp-image-714 aligncenter" alt="The intensity of natural light in my basement." src="wp-content/uploads/2012/12/zoomeddaylight.png?w=594" width="594" height="210" srcset="/wp-content/uploads/2012/12/zoomeddaylight.png 1374w, /wp-content/uploads/2012/12/zoomeddaylight-300x106.png 300w, /wp-content/uploads/2012/12/zoomeddaylight-1024x362.png 1024w" sizes="(max-width: 594px) 100vw, 594px" /></a><br />
 </p>
 ### Sections:
 
@@ -60,7 +60,7 @@ comments: true
 ### The Results
 
 <p>
-  The best way to appreciate the final product is to actually&nbsp;play with it. While I&#8217;m not going to open up my home network and Arduino to the big wide internet, I have mirrored the pages and datafiles it produces on the webhost I used for my <a title="Has the world ended yet? A first attempt at web&nbsp;development" href="http://everettsprojects.com/2012/12/16/has-the-world-ended-yet-a-first-attempt-at-web-development/">Has the World Ended Yet?</a> project. <strong><span style="color:#ff9900;"><a href="http://everett.x10.mx/SGDL/index.html"><span style="color:#ff9900;">You can find them here</span></a></span></strong>. These won&#8217;t be updated with new datapoints like the actual Arduino version will be, but they should at least give a fair impression of how the project looks and feels without the need to actually implement it.
+  The best way to appreciate the final product is to actually&nbsp;play with it. While I&#8217;m not going to open up my home network and Arduino to the big wide internet, I have mirrored the pages and datafiles it produces on the webhost I used for my <a title="Has the world ended yet? A first attempt at web&nbsp;development" href="/2012/12/16/has-the-world-ended-yet-a-first-attempt-at-web-development/">Has the World Ended Yet?</a> project. <strong><span style="color:#ff9900;"><a href="/SGDL/index.html"><span style="color:#ff9900;">You can find them here</span></a></span></strong>. These won&#8217;t be updated with new datapoints like the actual Arduino version will be, but they should at least give a fair impression of how the project looks and feels without the need to actually implement it.
 </p>
 
 <p>
@@ -68,7 +68,7 @@ comments: true
 </p>
 
 <div id="attachment_717" style="width: 428px" class="wp-caption aligncenter">
-  <a href="http://everettsprojects.com/2012/12/31/arduino-super-graphing-data-logger/fileslist-2/" rel="attachment wp-att-717"><img class="size-full wp-image-717" alt="The list of data files available for graphing." src="wp-content/uploads/2012/12/fileslist1.png" width="418" height="122" srcset="/wp-content/uploads/2012/12/fileslist1.png 418w, /wp-content/uploads/2012/12/fileslist1-300x87.png 300w" sizes="(max-width: 418px) 100vw, 418px" /></a>
+  <a href="/2012/12/31/arduino-super-graphing-data-logger/fileslist-2/" rel="attachment wp-att-717"><img class="size-full wp-image-717" alt="The list of data files available for graphing." src="wp-content/uploads/2012/12/fileslist1.png" width="418" height="122" srcset="/wp-content/uploads/2012/12/fileslist1.png 418w, /wp-content/uploads/2012/12/fileslist1-300x87.png 300w" sizes="(max-width: 418px) 100vw, 418px" /></a>
 
   <p class="wp-caption-text">
     The list of data files available for graphing.
@@ -79,7 +79,7 @@ comments: true
   </p>
 
   <div id="attachment_713" style="width: 604px" class="wp-caption aligncenter">
-    <a href="http://everettsprojects.com/2012/12/31/arduino-super-graphing-data-logger/wholechart/" rel="attachment wp-att-713"><img class="size-large wp-image-713" alt="A graph for the first week of data collected." src="wp-content/uploads/2012/12/wholechart.png?w=594" width="594" height="208" srcset="/wp-content/uploads/2012/12/wholechart.png 1374w, /wp-content/uploads/2012/12/wholechart-300x105.png 300w, /wp-content/uploads/2012/12/wholechart-1024x359.png 1024w" sizes="(max-width: 594px) 100vw, 594px" /></a>
+    <a href="/2012/12/31/arduino-super-graphing-data-logger/wholechart/" rel="attachment wp-att-713"><img class="size-large wp-image-713" alt="A graph for the first week of data collected." src="wp-content/uploads/2012/12/wholechart.png?w=594" width="594" height="208" srcset="/wp-content/uploads/2012/12/wholechart.png 1374w, /wp-content/uploads/2012/12/wholechart-300x105.png 300w, /wp-content/uploads/2012/12/wholechart-1024x359.png 1024w" sizes="(max-width: 594px) 100vw, 594px" /></a>
 
     <p class="wp-caption-text">
       A graph for the first week of data collected.
@@ -91,7 +91,7 @@ comments: true
   </p>
 
   <div id="attachment_714" style="width: 604px" class="wp-caption aligncenter">
-    <a href="http://everettsprojects.com/2012/12/31/arduino-super-graphing-data-logger/zoomeddaylight/" rel="attachment wp-att-714"><img class="size-large wp-image-714" alt="The intensity of natural light in my basement." src="wp-content/uploads/2012/12/zoomeddaylight.png?w=594" width="594" height="210" srcset="/wp-content/uploads/2012/12/zoomeddaylight.png 1374w, /wp-content/uploads/2012/12/zoomeddaylight-300x106.png 300w, /wp-content/uploads/2012/12/zoomeddaylight-1024x362.png 1024w" sizes="(max-width: 594px) 100vw, 594px" /></a>
+    <a href="/2012/12/31/arduino-super-graphing-data-logger/zoomeddaylight/" rel="attachment wp-att-714"><img class="size-large wp-image-714" alt="The intensity of natural light in my basement." src="wp-content/uploads/2012/12/zoomeddaylight.png?w=594" width="594" height="210" srcset="/wp-content/uploads/2012/12/zoomeddaylight.png 1374w, /wp-content/uploads/2012/12/zoomeddaylight-300x106.png 300w, /wp-content/uploads/2012/12/zoomeddaylight-1024x362.png 1024w" sizes="(max-width: 594px) 100vw, 594px" /></a>
 
     <p class="wp-caption-text">
       The intensity of natural light in my basement.
@@ -119,7 +119,7 @@ comments: true
   <tr>
     <td>
       <div id="attachment_677" style="width: 310px" class="wp-caption aligncenter">
-        <a href="http://everettsprojects.com/2012/12/31/arduino-super-graphing-data-logger/dscf2941/" rel="attachment wp-att-677"><img class="size-medium wp-image-677 " alt="The photo sensor board fits like a charm." src="/wp-content/uploads/2012/12/dscf2941.jpg?w=300" width="300" height="225" srcset="/wp-content/uploads/2012/12/dscf2941.jpg 3664w, /wp-content/uploads/2012/12/dscf2941-300x225.jpg 300w, /wp-content/uploads/2012/12/dscf2941-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+        <a href="/2012/12/31/arduino-super-graphing-data-logger/dscf2941/" rel="attachment wp-att-677"><img class="size-medium wp-image-677 " alt="The photo sensor board fits like a charm." src="/wp-content/uploads/2012/12/dscf2941.jpg?w=300" width="300" height="225" srcset="/wp-content/uploads/2012/12/dscf2941.jpg 3664w, /wp-content/uploads/2012/12/dscf2941-300x225.jpg 300w, /wp-content/uploads/2012/12/dscf2941-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 
         <p class="wp-caption-text">
           The photo sensor board fits like a charm.
@@ -128,7 +128,7 @@ comments: true
     </td>
     <td>
       <div id="attachment_675" style="width: 310px" class="wp-caption aligncenter">
-        <a href="http://everettsprojects.com/2012/12/31/arduino-super-graphing-data-logger/dscf2931/" rel="attachment wp-att-675"><img class=" wp-image-675        " alt="DSCF2931" src="/wp-content/uploads/2012/12/dscf2931.jpg?w=300" width="212" height="225" /></a>
+        <a href="/2012/12/31/arduino-super-graphing-data-logger/dscf2931/" rel="attachment wp-att-675"><img class=" wp-image-675        " alt="DSCF2931" src="/wp-content/uploads/2012/12/dscf2931.jpg?w=300" width="212" height="225" /></a>
 
         <p class="wp-caption-text">
           One header is bent to reach A0.
@@ -141,7 +141,7 @@ The pins on the male headers don&#8217;t quite line up, so I intentionally used 
 
 
 <div id="attachment_691" style="width: 310px" class="wp-caption aligncenter">
-  <a href="http://everettsprojects.com/2012/12/31/arduino-super-graphing-data-logger/circuit/" rel="attachment wp-att-691"><img class="size-medium wp-image-691 " alt="The circuit." src="wp-content/uploads/2012/12/circuit.jpg?w=300" width="300" height="290" srcset="/wp-content/uploads/2012/12/circuit.jpg 909w, /wp-content/uploads/2012/12/circuit-300x290.jpg 300w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="/2012/12/31/arduino-super-graphing-data-logger/circuit/" rel="attachment wp-att-691"><img class="size-medium wp-image-691 " alt="The circuit." src="wp-content/uploads/2012/12/circuit.jpg?w=300" width="300" height="290" srcset="/wp-content/uploads/2012/12/circuit.jpg 909w, /wp-content/uploads/2012/12/circuit-300x290.jpg 300w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 
   <p class="wp-caption-text">
     The circuit.

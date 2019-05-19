@@ -29,7 +29,7 @@ tags:
   - PHP
 comments: true
 ---
-**This post is a continuation of the original [Mapping Oil and Gas Incidents in Alberta with Google Maps, JQuery, and PHP](http://everettsprojects.com/2014/06/07/mapping-oil-and-gas-incidents-in-alberta-with-google-maps-jquery-and-php/) post. If you wish to know more about this project or find the code for version 1, it is suggested you start there.**
+**This post is a continuation of the original [Mapping Oil and Gas Incidents in Alberta with Google Maps, JQuery, and PHP](/2014/06/07/mapping-oil-and-gas-incidents-in-alberta-with-google-maps-jquery-and-php/) post. If you wish to know more about this project or find the code for version 1, it is suggested you start there.**
 
 <div id="attachment_1033" style="width: 959px" class="wp-caption aligncenter">
   <a href="/spills/"><img class="wp-image-1033 size-full" src="/wp-content/uploads/2014/06/mapsimproved.png" alt="" width="949" height="679" srcset="/wp-content/uploads/2014/06/mapsimproved.png 949w, /wp-content/uploads/2014/06/mapsimproved-300x214.png 300w" sizes="(max-width: 949px) 100vw, 949px" /></a>
@@ -39,7 +39,7 @@ comments: true
   </p>
 </div>
 
-_If you just want a copy of all the files necessary (minus the database), then I have them both on [github](https://github.com/evjrob/Alberta-Spills-Map) or in a [zipped archive](/spills/spills.zip). Don&#8217;t forget to go in and change the values of config.inc.php to reflect your own MySQL database. If you would like the original ver. 1 source code, please check the [original post](http://everettsprojects.com/2014/06/07/mapping-oil-and-gas-incidents-in-alberta-with-google-maps-jquery-and-php/ "Mapping Oil and Gas Incidents in Alberta with Google Maps, JQuery, and PHP")._
+_If you just want a copy of all the files necessary (minus the database), then I have them both on [github](https://github.com/evjrob/Alberta-Spills-Map) or in a [zipped archive](/spills/spills.zip). Don&#8217;t forget to go in and change the values of config.inc.php to reflect your own MySQL database. If you would like the original ver. 1 source code, please check the [original post](/2014/06/07/mapping-oil-and-gas-incidents-in-alberta-with-google-maps-jquery-and-php/ "Mapping Oil and Gas Incidents in Alberta with Google Maps, JQuery, and PHP")._
 
 Developing software is a never-ending process. There&#8217;s always a bug to fix, a feature that should have been included, and a better way of doing the same thing. The first version of this project had a number of issues that I had identified. There are still the issues related to the data; that only incidents falling under the jurisdiction of the ERCB/AER are included, and that plotted incident locations are only accurate to +/-200m in each axis. The related issue of multiple incidents being plotted on top of each other and difficult to select without extensive filter use is now fixed though. All incidents for a given ATS Legal Subdivision and the applied filters are now returned and listed in the _Incident Details_ panel, along with a small indication of the number of incidents that have been selected.
 
@@ -655,7 +655,7 @@ Now the index.html file needs to be updated to reflect these changes. This start
                 </br>
                 <p>
                     Learn more about this project at:
-                    <a href="http://everettsprojects.com/2014/06/24/mapping-oil-and-gas-incidents-in-alberta-improvements/" target="blank">everettsprojects.com</a>
+                    <a href="/2014/06/24/mapping-oil-and-gas-incidents-in-alberta-improvements/" target="blank">everettsprojects.com</a>
                 </p>
             </div>
             <div id="accordion">
@@ -720,7 +720,7 @@ Now the index.html file needs to be updated to reflect these changes. This start
                 <p>
                     <a href="#" id="disclaimer-opener">Disclaimer</a> -
                     <a href="#" id="license-opener">Copyright (c) 2014 Everett Robinson</a> -
-            <a href="http://everettsprojects.com/2014/06/24/mapping-oil-and-gas-incidents-in-alberta-improvements/">ver. 2</a>
+            <a href="/2014/06/24/mapping-oil-and-gas-incidents-in-alberta-improvements/">ver. 2</a>
                 </p>
             </div>
         </div>

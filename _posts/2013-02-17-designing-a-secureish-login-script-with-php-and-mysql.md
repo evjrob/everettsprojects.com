@@ -29,14 +29,11 @@ tags:
   - Web Server
 comments: true
 ---
-[<img class="aligncenter size-large wp-image-788" alt="Login" src="wp-content/uploads/2013/02/login.png?w=594" width="594" height="300" srcset="/wp-content/uploads/2013/02/login.png 666w, /wp-content/uploads/2013/02/login-300x151.png 300w" sizes="(max-width: 594px) 100vw, 594px" />](wp-content/uploads/2013/02/login.png)
+[<img class="aligncenter size-large wp-image-788" alt="Login" src="wp-content/uploads/2013/02/login.png?w=594" width="594" height="300" srcset="/wp-content/uploads/2013/02/login.png 666w, /wp-content/uploads/2013/02/login-300x151.png 300w" sizes="(max-width: 594px) 100vw, 594px" />](/wp-content/uploads/2013/02/login.png)
+
 
 <p style="text-align:center;">
-  <a href="https://everettsprojects.com/phplogin/">If you just want to see the final product in action, then you can click here.</a>
-</p>
-
-<p style="text-align:center;">
-  <a href="https://everettsprojects.com/phplogin/phpLogin.zip">If you want the source code right away, click here.</a>
+  <a href="/phplogin/phpLogin.zip">If you want the source code right away, click here.</a>
 </p>
 
 This project has taken me much longer to complete than I originally expected it would. I guess I just wanted to make sure that it functioned in a sane and relatively secure manner. I usually don&#8217;t feel compelled to reinvent the wheel, but I wanted a good project that I could use to learn PHP and MySQL, and a login script turns out to be a solid project which incorporates all of that. I set out to make sure my login script wasn&#8217;t a piece of junk by design, which means that I did a little research to make sure I wasn&#8217;t doing anything inherently insecure. This doesn&#8217;t mean that it is secure, and I really wouldn&#8217;t recommend using my scripts in an actual project, since they are not rigorously tested. Furthermore, because I am too cheap to pay for a proper webhost, my site has no SSL certificate and hence no HTTPS, which is a major security hole. If someone happened to eavesdrop on your connection they could easily steal your session or your password. For this reason, it is a good idea to not register on my example page using credentials that you&#8217;ve used in other places. This is also why I decided to call my project secureish in the title. Regardless of these potential issues, I am pleased with the final result, which incorporates all of the following:
@@ -67,7 +64,7 @@ This project has taken me much longer to complete than I originally expected it 
 
 ### The code and how it works:
 
-If you just want the source code, [I have them all zipped up and ready to go](https://everettsprojects.com/phplogin/phpLogin.zip). The config.inc.php and request_reset.php files will need to be updated with your own site specific information, such as base URLs and database login credentials.
+If you just want the source code, [I have them all zipped up and ready to go](/phplogin/phpLogin.zip). The config.inc.php and request_reset.php files will need to be updated with your own site specific information, such as base URLs and database login credentials.
 
 Because it would take a lot of words to describe the interactions between all of the files, I&#8217;ve decided to condense that information into a flow chart. The index.php page is assumed to be the starting point and coloured blue to reflect this.
 

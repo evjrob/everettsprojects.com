@@ -27,10 +27,10 @@ tags:
   - Web DevelopmentS
 comments: true
 ---
-Despite the sheer nuttiness of it, everyone keeps going on about the end of the world as &#8220;predicted&#8221; by the Mayan calendar. National Geographic even had and entire day devoted to it. Building on that theme, I decided to make a very convenient (and pretty much useless) [webpage](http://everett.x10.mx/end-of-the-world.php) that helps you figure out if the world has in fact ended: <http://everett.x10.mx/end-of-the-world.php>. This project was really simple, didn&#8217;t involve a lot of code or design, and was basically thrown together over the course of an hour and a half. It turns out PHP is extremely easy if your host is already configured for it, and I&#8217;m looking forward to doing some more web development related stuff both with PHP and other languages or tools. The HTML side of the page was also relatively straightforward. I&#8217;m impressed by what&#8217;s possible design wise using modern HTML and CSS3. My inspiration on that front was this amazing site: <http://www.tubalr.com/>
+Despite the sheer nuttiness of it, everyone keeps going on about the end of the world as &#8220;predicted&#8221; by the Mayan calendar. National Geographic even had and entire day devoted to it. Building on that theme, I decided to make a very convenient (and pretty much useless) [webpage](/end-of-the-world.html) that helps you figure out if the world has in fact ended: [http://everett.x10.mx/end-of-the-world.php](/end-of-the-world.html). This project was really simple, didn&#8217;t involve a lot of code or design, and was basically thrown together over the course of an hour and a half. It turns out PHP is extremely easy if your host is already configured for it, and I&#8217;m looking forward to doing some more web development related stuff both with PHP and other languages or tools. The HTML side of the page was also relatively straightforward. I&#8217;m impressed by what&#8217;s possible design wise using modern HTML and CSS3. My inspiration on that front was this amazing site: <http://www.tubalr.com/>
 
 <p style="text-align:center;">
-  <a href="http://everett.x10.mx/end-of-the-world.php" rel="attachment wp-att-651"><img class="size-medium wp-image-651 aligncenter" alt="screenshot" src="/wp-content/uploads/2014/07/screenshot.png?w=300" width="600" height="360" /></a>
+  <a href="end-of-the-world.php" rel="attachment wp-att-651"><img class="size-medium wp-image-651 aligncenter" alt="screenshot" src="/wp-content/uploads/2014/07/screenshot.png?w=300" width="600" height="360" /></a>
 </p>
 
 <p style="text-align:left;">
@@ -143,7 +143,7 @@ body {
             <b> <?=$answer?></b>
         </div>
         <div id="disclaimer">
-            <sup>*</sup> Does not actually check if the world has ended. Result is based on the assumption that if Google.com is not responding, the world has probably ended. <br><br> <a href="http://everettsprojects.com">http://everettsprojects.com/</a>
+            <sup>*</sup> Does not actually check if the world has ended. Result is based on the assumption that if Google.com is not responding, the world has probably ended. <br><br> <a href="/">http://everettsprojects.com/</a>
         </div>
     </div>
 </body>
