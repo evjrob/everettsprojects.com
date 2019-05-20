@@ -20,7 +20,7 @@ tags:
   - Recyling
 comments: true
 ---
-[<img class="aligncenter size-full wp-image-400" title="DSCF3155" src="/wp-content/uploads/2012/05/dscf3155.jpg" alt="" width="594" height="445" srcset="/wp-content/uploads/2012/05/dscf3155.jpg 2000w, /wp-content/uploads/2012/05/dscf3155-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3155-1024x768.jpg 1024w" sizes="(max-width: 594px) 100vw, 594px" />](/wp-content/uploads/2012/05/dscf3155.jpg)
+[<img class="aligncenter size-full wp-image-400" title="DSCF3155" src="/wp-content/uploads/2012/05/dscf3155.jpg" alt="The Beaglebone and case" width="594" height="445" srcset="/wp-content/uploads/2012/05/dscf3155.jpg 2000w, /wp-content/uploads/2012/05/dscf3155-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3155-1024x768.jpg 1024w" sizes="(max-width: 594px) 100vw, 594px" />](/wp-content/uploads/2012/05/dscf3155.jpg)
 
 I recently purchased a [BeagleBone](http://beagleboard.org/bone) with the intent of using it to make a home server and media box that could run constantly without costing a small fortune when the power bill arrived. I originally intended to make this project using a raspberry pi, though they&#8217;re having serious issues satisfying the demand, and I have other projects a raspberry pi can be put to use on that would make better use of its video capabilities.
 
@@ -30,7 +30,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
   <tr>
     <td>
       <div id="attachment_388" style="width: 169px" class="wp-caption aligncenter">
-        <a href="/wp-content/uploads/2012/05/beaglebone-case-template-print-at-95.png"><img class=" wp-image-388  " title="beaglebone case template print at 95%" src="/wp-content/uploads/2012/05/beaglebone-case-template-print-at-95.png?w=221" alt="" width="159" height="216" srcset="/wp-content/uploads/2012/05/beaglebone-case-template-print-at-95.png 2356w, /wp-content/uploads/2012/05/beaglebone-case-template-print-at-95-221x300.png 221w, /wp-content/uploads/2012/05/beaglebone-case-template-print-at-95-757x1024.png 757w" sizes="(max-width: 159px) 100vw, 159px" /></a>
+        <a href="/wp-content/uploads/2012/05/beaglebone-case-template-print-at-95.png"><img class=" wp-image-388  " title="beaglebone case template print at 95%" src="/wp-content/uploads/2012/05/beaglebone-case-template-print-at-95.png?w=221" alt="The template for the case" width="159" height="216" srcset="/wp-content/uploads/2012/05/beaglebone-case-template-print-at-95.png 2356w, /wp-content/uploads/2012/05/beaglebone-case-template-print-at-95-221x300.png 221w, /wp-content/uploads/2012/05/beaglebone-case-template-print-at-95-757x1024.png 757w" sizes="(max-width: 159px) 100vw, 159px" /></a>
 
         <p class="wp-caption-text">
           The Basic Template
@@ -39,7 +39,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
     </td>
     <td>
       <div id="attachment_404" style="width: 176px" class="wp-caption aligncenter">
-        <a href="/wp-content/uploads/2012/05/scan0081.jpg"><img class=" wp-image-404  " title="SCAN0081" src="/wp-content/uploads/2012/05/scan0081.jpg?w=230" alt="" width="166" height="216" srcset="/wp-content/uploads/2012/05/scan0081.jpg 2496w, /wp-content/uploads/2012/05/scan0081-230x300.jpg 230w, /wp-content/uploads/2012/05/scan0081-786x1024.jpg 786w" sizes="(max-width: 166px) 100vw, 166px" /></a>
+        <a href="/wp-content/uploads/2012/05/scan0081.jpg"><img class=" wp-image-404  " title="SCAN0081" src="/wp-content/uploads/2012/05/scan0081.jpg?w=230" alt="Rough guide of layers 1 to 4" width="166" height="216" srcset="/wp-content/uploads/2012/05/scan0081.jpg 2496w, /wp-content/uploads/2012/05/scan0081-230x300.jpg 230w, /wp-content/uploads/2012/05/scan0081-786x1024.jpg 786w" sizes="(max-width: 166px) 100vw, 166px" /></a>
 
         <p class="wp-caption-text">
           Rough guide for layers 1 &#8211; 4
@@ -50,7 +50,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
   <tr>
     <td>
       <div id="attachment_405" style="width: 177px" class="wp-caption aligncenter">
-        <a href="/wp-content/uploads/2012/05/scan0082.jpg"><img class=" wp-image-405  " title="SCAN0082" src="/wp-content/uploads/2012/05/scan0082.jpg?w=231" alt="" width="167" height="216" srcset="/wp-content/uploads/2012/05/scan0082.jpg 2496w, /wp-content/uploads/2012/05/scan0082-231x300.jpg 231w, /wp-content/uploads/2012/05/scan0082-790x1024.jpg 790w" sizes="(max-width: 167px) 100vw, 167px" /></a>
+        <a href="/wp-content/uploads/2012/05/scan0082.jpg"><img class=" wp-image-405  " title="SCAN0082" src="/wp-content/uploads/2012/05/scan0082.jpg?w=231" alt="A rough guide for the layers" width="167" height="216" srcset="/wp-content/uploads/2012/05/scan0082.jpg 2496w, /wp-content/uploads/2012/05/scan0082-231x300.jpg 231w, /wp-content/uploads/2012/05/scan0082-790x1024.jpg 790w" sizes="(max-width: 167px) 100vw, 167px" /></a>
 
         <p class="wp-caption-text">
           Rough guide for layers 5 &#8211; 7
@@ -59,7 +59,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
     </td>
     <td>
       <div id="attachment_390" style="width: 310px" class="wp-caption alignleft">
-        <a href="/wp-content/uploads/2012/05/dscf3108.jpg"><img class="size-medium wp-image-390" title="DSCF3108" src="/wp-content/uploads/2012/05/dscf3108.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3108.jpg 2000w, /wp-content/uploads/2012/05/dscf3108-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3108-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+        <a href="/wp-content/uploads/2012/05/dscf3108.jpg"><img class="size-medium wp-image-390" title="DSCF3108" src="/wp-content/uploads/2012/05/dscf3108.jpg?w=300" alt="The beginning of my template" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3108.jpg 2000w, /wp-content/uploads/2012/05/dscf3108-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3108-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 
         <p class="wp-caption-text">
           The beginning of my template
@@ -77,7 +77,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
 </p>
 
 <div id="attachment_391" style="width: 310px" class="wp-caption alignright">
-  <a href="/wp-content/uploads/2012/05/dscf3115.jpg"><img class="size-medium wp-image-391 " title="DSCF3115" src="/wp-content/uploads/2012/05/dscf3115.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3115.jpg 2000w, /wp-content/uploads/2012/05/dscf3115-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3115-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="/wp-content/uploads/2012/05/dscf3115.jpg"><img class="size-medium wp-image-391 " title="DSCF3115" src="/wp-content/uploads/2012/05/dscf3115.jpg?w=300" alt="The two bottom most layers of the case" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3115.jpg 2000w, /wp-content/uploads/2012/05/dscf3115-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3115-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 
   <p class="wp-caption-text">
     The two bottom most layers of the case, along with a couple template stencils.
@@ -89,7 +89,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
 </p>
 
 <div id="attachment_393" style="width: 310px" class="wp-caption alignleft">
-  <a href="/wp-content/uploads/2012/05/dscf3125.jpg"><img class="size-medium wp-image-393" title="DSCF3125" src="/wp-content/uploads/2012/05/dscf3125.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3125.jpg 2000w, /wp-content/uploads/2012/05/dscf3125-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3125-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="/wp-content/uploads/2012/05/dscf3125.jpg"><img class="size-medium wp-image-393" title="DSCF3125" src="/wp-content/uploads/2012/05/dscf3125.jpg?w=300" alt="Letting the glue set" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3125.jpg 2000w, /wp-content/uploads/2012/05/dscf3125-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3125-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 
   <p class="wp-caption-text">
     Letting the glue set
@@ -101,7 +101,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
 </p>
 
 <div id="attachment_394" style="width: 310px" class="wp-caption alignright">
-  <a href="/wp-content/uploads/2012/05/dscf3126.jpg"><img class="size-medium wp-image-394" title="DSCF3126" src="/wp-content/uploads/2012/05/dscf3126.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3126.jpg 2000w, /wp-content/uploads/2012/05/dscf3126-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3126-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="/wp-content/uploads/2012/05/dscf3126.jpg"><img class="size-medium wp-image-394" title="DSCF3126" src="/wp-content/uploads/2012/05/dscf3126.jpg?w=300" alt="Cutting out the next set of layers" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3126.jpg 2000w, /wp-content/uploads/2012/05/dscf3126-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3126-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 
   <p class="wp-caption-text">
     Cutting out the next set of layers
@@ -113,7 +113,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
 </p>
 
 <div id="attachment_395" style="width: 310px" class="wp-caption alignleft">
-  <a href="/wp-content/uploads/2012/05/dscf3127.jpg"><img class=" wp-image-395" title="DSCF3127" src="/wp-content/uploads/2012/05/dscf3127.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3127.jpg 2000w, /wp-content/uploads/2012/05/dscf3127-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3127-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="/wp-content/uploads/2012/05/dscf3127.jpg"><img class=" wp-image-395" title="DSCF3127" src="/wp-content/uploads/2012/05/dscf3127.jpg?w=300" alt="Building the walls of the case" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3127.jpg 2000w, /wp-content/uploads/2012/05/dscf3127-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3127-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 
   <p class="wp-caption-text">
     Building up the walls of the case
@@ -125,7 +125,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
 </p>
 
 <div id="attachment_397" style="width: 310px" class="wp-caption alignright">
-  <a href="/wp-content/uploads/2012/05/dscf3140.jpg"><img class="size-medium wp-image-397" title="DSCF3140" src="/wp-content/uploads/2012/05/dscf3140.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3140.jpg 2000w, /wp-content/uploads/2012/05/dscf3140-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3140-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="/wp-content/uploads/2012/05/dscf3140.jpg"><img class="size-medium wp-image-397" title="DSCF3140" src="/wp-content/uploads/2012/05/dscf3140.jpg?w=300" alt="The case with the fifth layer added" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3140.jpg 2000w, /wp-content/uploads/2012/05/dscf3140-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3140-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 
   <p class="wp-caption-text">
     The case with the fifth layer added
@@ -137,7 +137,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
 </p>
 
 <div id="attachment_402" style="width: 310px" class="wp-caption alignleft">
-  <a href="/wp-content/uploads/2012/05/dscf3163.jpg"><img class="size-medium wp-image-402" title="DSCF3163" src="/wp-content/uploads/2012/05/dscf3163.jpg?w=300" alt="" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3163.jpg 2000w, /wp-content/uploads/2012/05/dscf3163-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3163-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="/wp-content/uploads/2012/05/dscf3163.jpg"><img class="size-medium wp-image-402" title="DSCF3163" src="/wp-content/uploads/2012/05/dscf3163.jpg?w=300" alt="Some simple hardware holds the board in place" width="300" height="225" srcset="/wp-content/uploads/2012/05/dscf3163.jpg 2000w, /wp-content/uploads/2012/05/dscf3163-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3163-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 
   <p class="wp-caption-text">
     Some basic hardware holds the board firmly in place.
@@ -156,7 +156,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
   <tr>
     <td>
       <div id="attachment_399" style="width: 250px" class="wp-caption aligncenter">
-        <a href="/wp-content/uploads/2012/05/dscf3146.jpg"><img class=" wp-image-399 " title="DSCF3146" src="/wp-content/uploads/2012/05/dscf3146.jpg?w=300" alt="" width="240" height="180" srcset="/wp-content/uploads/2012/05/dscf3146.jpg 2000w, /wp-content/uploads/2012/05/dscf3146-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3146-1024x768.jpg 1024w" sizes="(max-width: 240px) 100vw, 240px" /></a>
+        <a href="/wp-content/uploads/2012/05/dscf3146.jpg"><img class=" wp-image-399 " title="DSCF3146" src="/wp-content/uploads/2012/05/dscf3146.jpg?w=300" alt="A side profile of the case" width="240" height="180" srcset="/wp-content/uploads/2012/05/dscf3146.jpg 2000w, /wp-content/uploads/2012/05/dscf3146-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3146-1024x768.jpg 1024w" sizes="(max-width: 240px) 100vw, 240px" /></a>
 
         <p class="wp-caption-text">
           A side profile of the case
@@ -165,7 +165,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
     </td>
     <td>
       <div id="attachment_401" style="width: 250px" class="wp-caption aligncenter">
-        <a href="/wp-content/uploads/2012/05/dscf3157.jpg"><img class=" wp-image-401 " title="DSCF3157" src="/wp-content/uploads/2012/05/dscf3157.jpg?w=300" alt="" width="240" height="180" srcset="/wp-content/uploads/2012/05/dscf3157.jpg 2000w, /wp-content/uploads/2012/05/dscf3157-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3157-1024x768.jpg 1024w" sizes="(max-width: 240px) 100vw, 240px" /></a>
+        <a href="/wp-content/uploads/2012/05/dscf3157.jpg"><img class=" wp-image-401 " title="DSCF3157" src="/wp-content/uploads/2012/05/dscf3157.jpg?w=300" alt="With the lid on" width="240" height="180" srcset="/wp-content/uploads/2012/05/dscf3157.jpg 2000w, /wp-content/uploads/2012/05/dscf3157-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3157-1024x768.jpg 1024w" sizes="(max-width: 240px) 100vw, 240px" /></a>
 
         <p class="wp-caption-text">
           With the lid on
@@ -177,7 +177,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
   <tr>
     <td>
       <div id="attachment_403" style="width: 250px" class="wp-caption aligncenter">
-        <a href="/wp-content/uploads/2012/05/dscf3168.jpg"><img class=" wp-image-403 " title="DSCF3168" src="/wp-content/uploads/2012/05/dscf3168.jpg?w=300" alt="" width="240" height="180" srcset="/wp-content/uploads/2012/05/dscf3168.jpg 2000w, /wp-content/uploads/2012/05/dscf3168-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3168-1024x768.jpg 1024w" sizes="(max-width: 240px) 100vw, 240px" /></a>
+        <a href="/wp-content/uploads/2012/05/dscf3168.jpg"><img class=" wp-image-403 " title="DSCF3168" src="/wp-content/uploads/2012/05/dscf3168.jpg?w=300" alt="The case and board in action" width="240" height="180" srcset="/wp-content/uploads/2012/05/dscf3168.jpg 2000w, /wp-content/uploads/2012/05/dscf3168-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3168-1024x768.jpg 1024w" sizes="(max-width: 240px) 100vw, 240px" /></a>
 
         <p class="wp-caption-text">
           The case and board in action
@@ -186,7 +186,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
     </td>
     <td>
       <div id="attachment_442" style="width: 250px" class="wp-caption aligncenter">
-        <a href="/wp-content/uploads/2012/05/dscf3175.jpg"><img class=" wp-image-442 " title="DSCF3175" src="/wp-content/uploads/2012/05/dscf3175.jpg?w=300" alt="" width="240" height="180" srcset="/wp-content/uploads/2012/05/dscf3175.jpg 2000w, /wp-content/uploads/2012/05/dscf3175-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3175-1024x768.jpg 1024w" sizes="(max-width: 240px) 100vw, 240px" /></a>
+        <a href="/wp-content/uploads/2012/05/dscf3175.jpg"><img class=" wp-image-442 " title="DSCF3175" src="/wp-content/uploads/2012/05/dscf3175.jpg?w=300" alt="Decorative elements added to the case" width="240" height="180" srcset="/wp-content/uploads/2012/05/dscf3175.jpg 2000w, /wp-content/uploads/2012/05/dscf3175-300x225.jpg 300w, /wp-content/uploads/2012/05/dscf3175-1024x768.jpg 1024w" sizes="(max-width: 240px) 100vw, 240px" /></a>
 
         <p class="wp-caption-text">
           Decorative elements can be added too

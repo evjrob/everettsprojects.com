@@ -88,7 +88,7 @@ Having finished the Dancing Links implementation, I put the whole business of so
 I set to work making my sudoku solving android app and after a couple dozen hours of development spread over evenings and weekends I finally have an app I feel is worth publishing. The code for this app is up on [GitHub](https://github.com/evjrob/SudokuBotSolver) and the app itself can be downloaded on the [Google Play store](https://play.google.com/store/apps/details?id=com.everettsprojects.sudokubotsolver&hl=en).
 
 <div text-align="center">
-  <img width="350" height="622" src="/wp-content/uploads/2017/03/Screenshot_20170308-204149-576x1024.png"/>
+  <img width="350" height="622" src="/wp-content/uploads/2017/03/Screenshot_20170308-204149-576x1024.png" alt="The unsolved sudoku"/>
 
-  <img width="350" height="622" src="/wp-content/uploads/2017/03/Screenshot_20170308-204203-576x1024.png"/>
+  <img width="350" height="622" src="/wp-content/uploads/2017/03/Screenshot_20170308-204203-576x1024.png" alt="The solved sudoku" />
 </div>
