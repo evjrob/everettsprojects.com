@@ -31,3 +31,6 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:path/
+
+plugins:
+  - jekyll-feed

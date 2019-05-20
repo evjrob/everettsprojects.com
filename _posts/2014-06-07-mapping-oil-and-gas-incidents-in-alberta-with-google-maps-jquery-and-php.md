@@ -27,7 +27,7 @@ tags:
   - PHP
 comments: true
 ---
-### [<img class="aligncenter wp-image-989 size-full" src="/wp-content/uploads/2014/06/spills.png" alt="spills" width="594" height="324" srcset="/wp-content/uploads/2014/06/spills.png 1440w, /wp-content/uploads/2014/06/spills-300x163.png 300w, /wp-content/uploads/2014/06/spills-1024x558.png 1024w" sizes="(max-width: 594px) 100vw, 594px" />](/spills/#)
+### [<img class="aligncenter wp-image-989 size-full" src="/wp-content/uploads/2014/06/spills.png" alt="spills" width="594" height="324" srcset="/wp-content/uploads/2014/06/spills.png 1440w, /wp-content/uploads/2014/06/spills-300x163.png 300w, /wp-content/uploads/2014/06/spills-1024x558.png 1024w" sizes="(max-width: 594px) 100vw, 594px" />](/spills/index.html)
 
 [**_There is an updated version of this project with a number of improvements._**](/2014/06/25/mapping-oil-and-gas-incidents-in-alberta-improvements/)
 
@@ -194,9 +194,7 @@ And there we have it, a database that should be ready for the web application th
 ### The Code:
 <a href="/2014/06/25/mapping-oil-and-gas-incidents-in-alberta-improvements/"><em>There is an updated version of this project with a number of improvements.</em></a>
 
-If you just want a copy of all the files necessary (for version 1), then I have them <a href="/spillsv1/spills.zip">all in a zipped archive</a>. Don&#8217;t forget to go in and change the values of config.inc.php to reflect your own MySQL database.
-
-For everyone else, lets take a closer look at the code that makes it all work, starting with the JavaScript laden index.html file:
+Lets take a closer look at the code that makes it all work, starting with the JavaScript laden index.html file:
 
 <div id="index"></div>
 #### index.html

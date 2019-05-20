@@ -48,7 +48,7 @@ comments: true
 
 
 <div>
-  I spent a lot of time working out the logistics of motorizing a longboard, and explored all of the options. There was the expensive but very slick looking <a href="https://www.redrockboardshop.com/2013-05-12-04-30-16/lagrange-l1-specs">LaGrange L1 truck</a>. The pretty venerable looking <a href="http://www.aliendrivesystems.com/">Alien Drive System</a> and <a href="http://alienpowersystem.com/">Alien Power System</a> combo. Last of all, there was the very sturdy looking one piece Paris truck with welded on motor mount provided at <a href="http://diyelectricskateboard.com/">http://diyelectricskateboard.com/</a>. The DIY Electric Skateboard kit looked to be the newest kid on the block, and didn't really have as much in the way of reviews. But it looked like it was the most approachable in terms of repairs and tinkering, and that's what sold me on it. Or on the design at least.
+  I spent a lot of time working out the logistics of motorizing a longboard, and explored all of the options. There was the expensive but very slick looking <a href="https://web.archive.org/web/20131220020120/https://www.redrockboardshop.com/2013-05-12-04-30-16/lagrange-l1-specs">LaGrange L1 truck</a>. The pretty venerable looking <a href="http://www.aliendrivesystems.com/">Alien Drive System</a> and <a href="http://alienpowersystem.com/">Alien Power System</a> combo. Last of all, there was the very sturdy looking one piece Paris truck with welded on motor mount provided at <a href="http://diyelectricskateboard.com/">http://diyelectricskateboard.com/</a>. The DIY Electric Skateboard kit looked to be the newest kid on the block, and didn't really have as much in the way of reviews. But it looked like it was the most approachable in terms of repairs and tinkering, and that's what sold me on it. Or on the design at least.
 </div>
 
 
@@ -70,15 +70,15 @@ comments: true
 
 
   1.  A longboard deck. _I used the [Earthwing Big Hoopty](http://www.earthwingboards.com/#!store/c2fv). It's a super solid and awesome board at an easy $107 from a local board shop._
-  2. The trucks and drive mechanism from [DIYelectricskateboard.com](http://diyelectricskateboard.com/product/single-motor-electric-longboard-kit/).
+  2. The trucks and drive mechanism from [DIYelectricskateboard.com](https://diyelectricskateboard.com/collections/single-motor-mechanical-kit/products/single-motor-mechanical-kit).
   3. Some bearings, as they don't come with the DIY Electric kit.
-  4. A [brushless DC motor](http://www.hobbyking.com/hobbyking/store/__18180__Turnigy_Aerodrive_SK3_6364_213kv_Brushless_Outrunner_Motor.html).
-  5. An Electronic Speed Controller to run the motor. _I took a risk on this [Boat ESC](http://www.hobbyking.com/hobbyking/store/__28224__HobbyKing_120A_Boat_ESC_4A_UBEC.html). The braking is a little soft, but it runs well, barely gets warm even without proper cooling, and doesn't make excess noise._
-  6. At least one battery pack. _A 5000 mAh 6S (22.2V) provides plenty of speed and power. I used two [3S batteries](http://www.hobbyking.com/hobbyking/store/__8579__ZIPPY_Flightmax_5000mAh_3S1P_20C.html) in series to make a 6S battery with a lower profile. _
-  7. A receiver and transmitter of some sort. I used the all too common [Quanum (nope, not a typo) pistol grip combo](http://www.hobbyking.com/hobbyking/store/__44693__Quanum_2_4Ghz_3ch_Pistol_Grip_Tx_Rx_System.html).
-  8. RC connectors. _I used [HXT4mm](http://www.hobbyking.com/hobbyking/store/__9283__HXT_4mm_Gold_Connector_w_Protector_10pcs_set_.html) to be consistent with the existing connectors._
-  9. Some way to attach the parts to the deck. I used [industrial strength Velcro tape](http://www.homedepot.ca/product/velcro-industrial-strength-4-ft-x-2-in-tape/967153#BVRRWidgetID).
- 10. Some way to shield the LiPo batteries from damage by debris. I tried using ABS, gave up, and resorted to a box made from [22 gauge galvanized steel sheet](http://www.homedepot.ca/product/8x24sheet-metal-22g-galvanized/955471).
+  4. A brushless DC motor (Turnigy Aerodrive SK3 6364 213kv).
+  5. An Electronic Speed Controller to run the motor. _I took a risk on the HobbyKing 120A UBEC Boat ESC. The braking is a little soft, but it runs well, barely gets warm even without proper cooling, and doesn't make excess noise._
+  6. At least one battery pack. _A 5000 mAh 6S (22.2V) provides plenty of speed and power. I used two 3S batteries (ZIPPY Flightmax 5000mAh 3S1P 20C) in series to make a 6S battery with a lower profile. _
+  7. A receiver and transmitter of some sort. I used the all too common Quanum (nope, not a typo) pistol grip combo.
+  8. RC connectors. _I used HXT4mm to be consistent with the existing connectors._
+  9. Some way to attach the parts to the deck. I used industrial strength Velcro tape.
+ 10. Some way to shield the LiPo batteries from damage by debris. I tried using ABS, gave up, and resorted to a box made from 22 gauge galvanized steel sheet.
 
 &nbsp;
 
@@ -282,6 +282,6 @@ The final product of all this labour is an adrenaline rush. I've never taken a l
 
 Forgive the poor quality of the video, I lack a GoPro, so I had to film it with my phone. This also had the side effect that I didn't really want to get up to speed, it's nerve racking enough already without the additional filmography concerns.
 
-In general, the acceleration has a ton of punch and the brakes are quite soft, especially at lower speeds. At higher speeds they work a lot better, and will certainly get you down to a speed at which you can toe drag to slow down. If you're going down a really steep hill you may find that the brakes are too weak to prevent the acceleration due to gravity, so act accordingly. If that means toe dragging the whole way or walking the board down the hill, then do it. It also helps to reprogram the ESC to fit your riding style. You can find the instructions here: <http://www.hobbyking.com/hobbyking/store/uploads/842133110X337002X22.pdf>
+In general, the acceleration has a ton of punch and the brakes are quite soft, especially at lower speeds. At higher speeds they work a lot better, and will certainly get you down to a speed at which you can toe drag to slow down. If you're going down a really steep hill you may find that the brakes are too weak to prevent the acceleration due to gravity, so act accordingly. If that means toe dragging the whole way or walking the board down the hill, then do it. It also helps to reprogram the ESC to fit your riding style.
 
 I ended up keeping all the defaults except the startup acceleration, which I set to 9 levels. This makes the acceleration a lot smoother, so you're less likely to over do it and fall over backwards as the board rockets forward.
