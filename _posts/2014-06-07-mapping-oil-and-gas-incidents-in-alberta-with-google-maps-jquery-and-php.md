@@ -31,6 +31,8 @@ comments: true
 
 [**_There is an updated version of this project with a number of improvements._**](/2014/06/25/mapping-oil-and-gas-incidents-in-alberta-improvements/)
 
+[**_There is an updated updated version of this project that uses AWS Lambda functions._**](/2019/05/20/going-serverless.html)
+
 ### Sections:
 
   1. [Motivations](#motivation)

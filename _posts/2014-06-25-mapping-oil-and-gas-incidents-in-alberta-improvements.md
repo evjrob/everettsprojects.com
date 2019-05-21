@@ -31,6 +31,8 @@ comments: true
 ---
 **This post is a continuation of the original [Mapping Oil and Gas Incidents in Alberta with Google Maps, JQuery, and PHP](/2014/06/07/mapping-oil-and-gas-incidents-in-alberta-with-google-maps-jquery-and-php/) post. If you wish to know more about this project or find the code for version 1, it is suggested you start there.**
 
+[**_There is an updated updated version of this project that uses AWS Lambda functions._**](/2019/05/20/going-serverless.html)
+
 <div id="attachment_1033" style="width: 959px" class="wp-caption aligncenter">
   <a href="/spills/"><img class="wp-image-1033 size-full" src="/wp-content/uploads/2014/06/mapsimproved.png" alt="The new map, with no marker overlap and all relevant incidents displayed for a selected location" width="949" height="679" srcset="/wp-content/uploads/2014/06/mapsimproved.png 949w, /wp-content/uploads/2014/06/mapsimproved-300x214.png 300w" sizes="(max-width: 949px) 100vw, 949px" /></a>
 

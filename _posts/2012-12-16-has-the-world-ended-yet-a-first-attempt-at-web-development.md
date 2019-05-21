@@ -28,6 +28,8 @@ tags:
 comments: true
 ---
 
+[**_There is an updated updated version of this project that uses AWS Lambda functions._**](/2019/05/20/going-serverless.html)
+
 Despite the sheer nuttiness of it, everyone keeps going on about the end of the world as &#8220;predicted&#8221; by the Mayan calendar. National Geographic even had and entire day devoted to it. Building on that theme, I decided to make a very convenient (and pretty much useless) [webpage](/end-of-the-world.html) that helps you figure out if the world has in fact ended: [http://everett.x10.mx/end-of-the-world.php](/end-of-the-world.html). This project was really simple, didn&#8217;t involve a lot of code or design, and was basically thrown together over the course of an hour and a half. It turns out PHP is extremely easy if your host is already configured for it, and I&#8217;m looking forward to doing some more web development related stuff both with PHP and other languages or tools. The HTML side of the page was also relatively straightforward. I&#8217;m impressed by what&#8217;s possible design wise using modern HTML and CSS3. My inspiration on that front was this amazing site: <https://web.archive.org/web/20121211090057/http://www.tubalr.com/>
 
 <p style="text-align:center;">
