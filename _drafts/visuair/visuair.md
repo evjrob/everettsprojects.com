@@ -6,9 +6,9 @@ output: html_document
 layout: post
 ---
 
-[![visuair](/img/visuair.png)](http://visuair.s3-website-us-east-1.amazonaws.com/)
+[![visuair](/img/visuair.png)](http://visuair2.s3-website-us-east-1.amazonaws.com/)
 
-[Visuair](http://visuair.s3-website-us-east-1.amazonaws.com/) is a webapp with the goal of augmenting the OpenAQ data over the continental USA using the common IDW interpolation technique. It's a group project completed during the Fall 2019 semester for CSE 6242x in the Georgia Tech Masters of Science in Analytics with the help of my talented team mates Ben Kester, Dalton Fabian, Jacob Vander Ploeg, and Cameron Griser.
+[Visuair](http://visuair2.s3-website-us-east-1.amazonaws.com/) is a webapp with the goal of augmenting the OpenAQ data over the continental USA using the common IDW interpolation technique. It's a group project completed during the Fall 2019 semester for CSE 6242x in the Georgia Tech Masters of Science in Analytics with the help of my talented team mates Ben Kester, Dalton Fabian, Jacob Vander Ploeg, and Cameron Griser.
 
 Our implementation touched a number of interesting technologies, including:
 * [D3.js](https://d3js.org/) for visualizations
