@@ -299,7 +299,7 @@ Resources:
         Type: CODEPIPELINE
       Environment:
         ComputeType: !Ref ComputeType
-        Image: 'aws/codebuild/standard:2.0'
+        Image: 'aws/codebuild/standard:4.0'
         Type: !Ref EnvironmentType
         EnvironmentVariables:
           - Name: PACKAGE_BUCKET
@@ -329,7 +329,7 @@ Resources:
         Type: CODEPIPELINE
       Environment:
         ComputeType: !Ref ComputeType
-        Image: 'aws/codebuild/standard:2.0'
+        Image: 'aws/codebuild/standard:4.0'
         Type: !Ref EnvironmentType
         EnvironmentVariables:
           - Name: PACKAGE_BUCKET
