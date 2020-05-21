@@ -9,7 +9,7 @@ phases:
       - pip install cfn-lint
       - gem install bundler
       - bundle install
-  prebuild:
+  pre_build:
     commands:
       - cfn-lint -t _deploy/sam-app/template.yaml
   build:
