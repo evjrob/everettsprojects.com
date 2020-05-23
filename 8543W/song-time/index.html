@@ -103,10 +103,9 @@
                 url: "https://10phigl5s2.execute-api.us-east-1.amazonaws.com/Prod/songtime",
                 dataType: "json",
                 data: JSON.stringify({"guess":guess}),
-                success: function (resp) { 
-                    resp = JSON.parse(resp);
-                    var solved = resp.body.solved;
-                    var message = resp.body.message;
+                success: function (resp) {
+                    var solved = resp.solved;
+                    var message = resp.message;
                     format_message(message, solved);
                 },
                 error: function() {

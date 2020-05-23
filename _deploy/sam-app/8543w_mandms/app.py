@@ -45,7 +45,7 @@ def evaluate_guess(secret_code, guess):
 
 def lambda_handler(event, context):
     # Get the guess from the POST data
-    guess = event['guess']
+    guess = json.loads(event['body'])['guess']
 
     solved = False
     score = []

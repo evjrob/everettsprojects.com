@@ -81,11 +81,10 @@
           dataType: "json",
           data: JSON.stringify(get_guess()),
           success: function (resp) { 
-            resp = JSON.parse(resp);
-            var prev_guess = resp.body.guess;
-            var solved = resp.body.solved;
-            var score = resp.body.score;
-            var message = resp.body.message;
+            var prev_guess = resp.guess;
+            var solved = resp.solved;
+            var score = resp.score;
+            var message = resp.message;
             record_guess_score(prev_guess, score);
             format_message(message, solved);
           },

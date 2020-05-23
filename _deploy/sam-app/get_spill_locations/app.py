@@ -68,6 +68,7 @@ def get_spill_locations(long_min, long_max, lat_min, lat_max, date_min, date_max
     
 
 def lambda_handler(event, context):
+    event = json.loads(event['body'])
     # Get all of the POST data
     licensee = event['currentLicensee']
     substance = event['currentSubstance']

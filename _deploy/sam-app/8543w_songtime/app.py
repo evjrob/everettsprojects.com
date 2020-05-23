@@ -9,7 +9,7 @@ success_message = ["Congratulations!",
 
 def lambda_handler(event, context):
     # Get the guess from the POST data
-    guess = event['guess']
+    guess = json.loads(event['body'])
     solved = False
     message = ["Nope. That's not it"]
     

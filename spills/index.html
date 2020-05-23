@@ -347,8 +347,7 @@
                     data : JSON.stringify(sqlParameters),
                     dataType : "json",
                     success: function(data){
-                        var result = JSON.parse(data);
-                        SpillLocations = result.body;  
+                        SpillLocations = data;
                         plotSpills(SpillLocations);
                     },
                     error: function (data)
@@ -409,8 +408,7 @@
                     data: JSON.stringify($.extend({Location: ATSLocation}, sqlParameters)), //send ATS location + filter parameters
                     dataType : "json",
                     success: function(data){
-                        var result = JSON.parse(data);
-                        spillInfo = result.body;
+                        spillInfo = data;
                     },
                     error: function (data)
                     {

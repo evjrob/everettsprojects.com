@@ -76,6 +76,7 @@ def get_spill_info(location, date_min, date_max, volume_min, volume_max,
     
 
 def lambda_handler(event, context):
+    event = json.loads(event['body'])
     # Get all of the POST data
     location= event['Location']
     licensee = event['currentLicensee']
