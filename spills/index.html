@@ -342,7 +342,7 @@
                     
                 //Get the spill location data
                 $.ajax({
-                    url : "https://d3cwzjnawb.execute-api.us-east-1.amazonaws.com/everettsprojects-production",
+                    url : "https://10phigl5s2.execute-api.us-east-1.amazonaws.com/Prod/spilllocations",
                     type: "POST",
                     data : JSON.stringify(sqlParameters),
                     dataType : "json",
@@ -404,7 +404,7 @@
                 
                 $.ajax({
                     async: false,
-                    url : "https://x8kjzlgzz1.execute-api.us-east-1.amazonaws.com/everettsprojects-production",
+                    url : "https://10phigl5s2.execute-api.us-east-1.amazonaws.com/Prod/spillinfo",
                     type: "POST",
                     data: JSON.stringify($.extend({Location: ATSLocation}, sqlParameters)), //send ATS location + filter parameters
                     dataType : "json",

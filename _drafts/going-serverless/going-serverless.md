@@ -131,7 +131,7 @@ The code for the new page, [everettsprojects.com/end-of-the-world.html](/end-of-
 
   $.ajax({
     type: "GET",
-    url: "https://vb7y770vle.execute-api.us-east-1.amazonaws.com/everettsprojects-production",
+    url: "https://10phigl5s2.execute-api.us-east-1.amazonaws.com/Prod/hasworldended",
     dataType: "json",
     success: function (data) { 
       succeeded(data)
@@ -890,7 +890,7 @@ In addition to the changes to the backend, some minor changes have been made to 
                     
                 //Get the spill location data
                 $.ajax({
-                    url : "https://d3cwzjnawb.execute-api.us-east-1.amazonaws.com/everettsprojects-production",
+                    url : "https://10phigl5s2.execute-api.us-east-1.amazonaws.com/Prod/spilllocations",
                     type: "POST",
                     data : JSON.stringify(sqlParameters),
                     dataType : "json",
@@ -952,7 +952,7 @@ In addition to the changes to the backend, some minor changes have been made to 
                 
                 $.ajax({
                     async: false,
-                    url : "https://x8kjzlgzz1.execute-api.us-east-1.amazonaws.com/everettsprojects-production",
+                    url : "https://10phigl5s2.execute-api.us-east-1.amazonaws.com/Prod/spillinfo",
                     type: "POST",
                     data: JSON.stringify($.extend({Location: ATSLocation}, sqlParameters)), //send ATS location + filter parameters
                     dataType : "json",
