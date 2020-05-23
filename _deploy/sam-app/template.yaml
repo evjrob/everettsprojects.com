@@ -18,6 +18,12 @@ Parameters:
     Type: String
     Default: BlogPipeline
 
+Globals:
+  Api:
+    Cors:
+      AllowMethods: "'OPTIONS,POST,GET'"
+      AllowOrigin: "'*'"
+
 Resources:
   # Set up the S3 website bucket
   S3WebsiteBucket:
