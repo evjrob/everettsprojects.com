@@ -23,11 +23,10 @@ def lambda_handler(event, context):
             "Access-Control-Allow-Origin" : "*",
             "Access-Control-Allow-Credentials" : True 
         },
-        "body": {
+        "body": json.dumps({
             "solved": solved,
             "message": message
-        }
+        })
     }
 
-    # Spit out the results in json form
-    return json.dumps(response)
+    return response

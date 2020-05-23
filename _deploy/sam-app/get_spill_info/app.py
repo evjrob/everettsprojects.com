@@ -105,9 +105,8 @@ def lambda_handler(event, context):
             "Access-Control-Allow-Origin" : "*",
             "Access-Control-Allow-Credentials" : True 
         },
-        "body": result
+        "body": json.dumps(result)
     }
 
-    # Spit out the results in json form
-    return json.dumps(response)
+    return response
     
