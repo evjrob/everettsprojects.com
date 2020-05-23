@@ -86,5 +86,63 @@ Resources:
           Properties:
             Path: /hello
             Method: get
-
-  
+  HasWorldEndedFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: has_world_ended/
+      Handler: app.lambda_handler
+      Runtime: python3.7
+      Events:
+        HasWorldEnded:
+          Type: Api 
+          Properties:
+            Path: /hasworldended
+            Method: get
+  GetSpillInfoFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: get_spill_info/
+      Handler: app.lambda_handler
+      Runtime: python3.7
+      Events:
+        SpillInfo:
+          Type: Api 
+          Properties:
+            Path: /spillinfo
+            Method: post
+  GetSpillLocationsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: get_spill_locations/
+      Handler: app.lambda_handler
+      Runtime: python3.7
+      Events:
+        SpillInfo:
+          Type: Api 
+          Properties:
+            Path: /spilllocations
+            Method: post
+  8543WMandMsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: 8543W_mandms/
+      Handler: app.lambda_handler
+      Runtime: python3.7
+      Events:
+        SpillInfo:
+          Type: Api 
+          Properties:
+            Path: /mandms
+            Method: post
+  8543WSongTimeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: 8543W_songtime/
+      Handler: app.lambda_handler
+      Runtime: python3.7
+      Events:
+        SpillInfo:
+          Type: Api 
+          Properties:
+            Path: /songtime
+            Method: post
