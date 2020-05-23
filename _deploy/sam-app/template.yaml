@@ -125,7 +125,7 @@ Resources:
   8543WMandMsFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: 8543W_mandms/
+      CodeUri: 8543w_mandms/
       Handler: app.lambda_handler
       Runtime: python3.7
       Events:
@@ -137,7 +137,7 @@ Resources:
   8543WSongTimeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: 8543W_songtime/
+      CodeUri: 8543w_songtime/
       Handler: app.lambda_handler
       Runtime: python3.7
       Events:
