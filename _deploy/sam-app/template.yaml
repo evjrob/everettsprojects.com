@@ -80,6 +80,8 @@ Resources:
       CodeUri: hello_world/
       Handler: app.lambda_handler
       Runtime: python3.7
+      Timeout: 3
+      MemorySize: 128
       Events:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
@@ -92,6 +94,8 @@ Resources:
       CodeUri: has_world_ended/
       Handler: app.lambda_handler
       Runtime: python3.7
+      Timeout: 3
+      MemorySize: 128
       Events:
         HasWorldEnded:
           Type: Api 
@@ -104,6 +108,8 @@ Resources:
       CodeUri: get_spill_info/
       Handler: app.lambda_handler
       Runtime: python3.7
+      Timeout: 10
+      MemorySize: 128
       Events:
         SpillInfo:
           Type: Api 
@@ -116,6 +122,8 @@ Resources:
       CodeUri: get_spill_locations/
       Handler: app.lambda_handler
       Runtime: python3.7
+      Timeout: 30
+      MemorySize: 192
       Events:
         SpillInfo:
           Type: Api 
@@ -128,6 +136,8 @@ Resources:
       CodeUri: 8543w_mandms/
       Handler: app.lambda_handler
       Runtime: python3.7
+      Timeout: 3
+      MemorySize: 128
       Events:
         SpillInfo:
           Type: Api 
@@ -140,6 +150,8 @@ Resources:
       CodeUri: 8543w_songtime/
       Handler: app.lambda_handler
       Runtime: python3.7
+      Timeout: 3
+      MemorySize: 128
       Events:
         SpillInfo:
           Type: Api 
