@@ -64,10 +64,14 @@ Resources:
   S3WebsiteAliasBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: www.everettsprojects.com
+      BucketName: 
+        Fn::Join: 
+          - ''
+          - - www.
+            - !Ref S3WebsiteBucket
       WebsiteConfiguration:
         RedirectAllRequestsTo:
-          HostName: everettsprojects.com
+          HostName: !Ref S3WebsiteBucket
           Protocol: http
 
   HelloWorldFunction:
