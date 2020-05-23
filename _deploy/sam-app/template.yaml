@@ -74,20 +74,6 @@ Resources:
           HostName: !Ref S3WebsiteBucket
           Protocol: http
 
-  HelloWorldFunction:
-    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-    Properties:
-      CodeUri: hello_world/
-      Handler: app.lambda_handler
-      Runtime: python3.7
-      Timeout: 3
-      MemorySize: 128
-      Events:
-        HelloWorld:
-          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
-          Properties:
-            Path: /hello
-            Method: get
   HasWorldEndedFunction:
     Type: AWS::Serverless::Function
     Properties:
