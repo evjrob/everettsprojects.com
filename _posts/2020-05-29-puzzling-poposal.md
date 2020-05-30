@@ -95,11 +95,11 @@ Nothing more is provided.
 
 You find two locked boxes. The first has a direction lock. The second expects a four letter code and the word MUTT opens it. Inside you find:
 
-1. A Rubik's cube covered in arrows. It didn't come pre-solved, so you could solve one before proceeding if you would like the full experience:
+1.) A Rubik's cube covered in arrows. It didn't come pre-solved, so you could solve one before proceeding if you would like the full experience:
 
 ![Rubiks Cube](/img/2020-05-29-puzzling-proposal/puzzle4rubiks.png)
 
-2. The following diagram:
+2.) The following diagram:
 
 ![Puzzle 4](/img/2020-05-29-puzzling-proposal/puzzle4.png)
 
@@ -116,7 +116,7 @@ You find two locked boxes. The first has a direction lock. The second expects a 
         <li>2 + 3: Blue + Yellow = Green</li>
         <li>blanc: French for White</li>
       </ul>  
-    Matching the colors to the faces of the Rubik's cube and then choosing the arrows located in the same square in order of the circle numbers gives the code: Up Up Down Down Left Right.
+    Matching the colors to the faces of the Rubik's cube and then choosing the arrows located in the same square in order of the circled numbers gives the code: Up Up Down Down Left Right.
   </p>
   <img src='/img/2020-05-29-puzzling-proposal/puzzle4solution.png'/>
   <p>
