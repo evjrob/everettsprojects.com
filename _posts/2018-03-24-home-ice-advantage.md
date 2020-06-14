@@ -1,5 +1,6 @@
 ---
 title: "Is Home Ice Advantage in the NHL Real?"
+description: A statistical analysis of home ice advantage in the NHL using Python for data acquisition and R for analysis. Models; Chi-Squared Goodness of Fit test, Wilcoxon Signed Rank test, Generalized Poisson Regression, Two-Way ANOVA.
 author: "Everett Robinson"
 date: "March 24, 2018"
 output: html_document

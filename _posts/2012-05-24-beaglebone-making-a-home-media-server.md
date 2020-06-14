@@ -1,8 +1,7 @@
 ---
 id: 465
 title: 'BeagleBone: Making a Home Media Server'
-date: 2012-05-24T01:07:36+00:00
-author: Everett
+description: How to turn a BeagleBone into Home Media Server NAS device. Powered by Ubuntu, rTorrent/ruTorrent, and Samba.
 layout: post
 guid: http://everettsprojects.com/?p=465
 permalink: /2012/05/24/beaglebone-making-a-home-media-server/

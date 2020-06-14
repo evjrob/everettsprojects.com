@@ -1,6 +1,7 @@
 ---
 id: 840
 title: An Interactive Route Map for my Travel Blog
+description: A google maps JavaScript API powered interactive travel map for my 2013 backpacking trip through Europe.
 date: 2013-09-03T23:38:55+00:00
 author: Everett
 layout: post

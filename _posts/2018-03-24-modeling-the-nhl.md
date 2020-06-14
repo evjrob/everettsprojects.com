@@ -1,5 +1,6 @@
 ---
 title: "Modeling the NHL"
+description: Using Python and a PyMC3 based Bayesian hierarchical Poisson regression model to infer relative NHL team strengths and predict the outcomes of future games.
 author: "Everett Robinson"
 date: "March 24, 2018"
 output: html_document

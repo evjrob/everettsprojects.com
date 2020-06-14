@@ -1,5 +1,6 @@
 ---
 title: "A Bayesian Analysis of My D&D Dice"
+description: An R based shiny app using Bayesian probability analysis to assess dice fairness. Know that they're fair! Or confirm that they're not! ;)
 author: "Everett Robinson"
 date: "October 20, 2017"
 output: html_document

@@ -1,6 +1,7 @@
 ---
 id: 670
 title: 'Arduino: Super Graphing Data Logger'
+description: An Arduino project that records and plots sensor data without an external web server! JavaScript plots delivered via minimal local web server and an ethernet shield.
 date: 2012-12-31T00:39:39+00:00
 author: Everett
 layout: post

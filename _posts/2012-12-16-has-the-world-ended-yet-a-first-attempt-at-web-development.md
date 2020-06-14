@@ -1,6 +1,7 @@
 ---
 id: 650
 title: Has the world ended yet? A first attempt at web development
+description: A toy PHP based web development project. If Google isn't working it's pretty much the end of the world, right?
 date: 2012-12-16T22:53:48+00:00
 author: Everett
 layout: post

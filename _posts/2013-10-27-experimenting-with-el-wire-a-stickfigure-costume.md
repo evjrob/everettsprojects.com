@@ -1,6 +1,7 @@
 ---
 id: 853
 title: 'Experimenting with EL wire: A Stickfigure Costume'
+description: Maker project - Home made Halloween stick figure costume using EL wire
 date: 2013-10-27T19:42:11+00:00
 author: Everett
 layout: post

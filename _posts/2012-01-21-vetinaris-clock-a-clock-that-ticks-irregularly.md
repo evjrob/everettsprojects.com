@@ -1,6 +1,7 @@
 ---
 id: 165
 title: "Vetinari's Clock: A Clock that Ticks Irregularly"
+description: "My implementation of Simon Inn's Vetinari clock. Using a microcontroller the clock ticks irregularly but maintains accurate time."
 date: 2012-01-21T19:32:54+00:00
 author: Everett
 layout: post

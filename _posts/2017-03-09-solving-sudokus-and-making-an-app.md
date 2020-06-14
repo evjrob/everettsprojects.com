@@ -1,6 +1,7 @@
 ---
 id: 1260
 title: Solving Sudokus and Making an App
+description: An Android App written in Java and Go that solves sudoku puzzles using Donald Knuth's Dancing Links algorithm.
 date: 2017-03-09T22:51:00+00:00
 author: Everett
 layout: post

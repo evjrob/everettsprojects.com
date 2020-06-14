@@ -1,6 +1,7 @@
 ---
 id: 24
 title: 'Arduino Project: HTML to LCD'
+description: 'Arduino project implementing a simple web server to connect an html page and a physical LCD screen using the ethernet shield.'
 date: 2011-05-19T21:16:03+00:00
 author: Everett
 layout: post

@@ -1,6 +1,7 @@
 ---
 id: 387
 title: 'Beaglebone: Making a Case'
+description: A home made cardboard case for my new BeagleBone single board computer.
 date: 2012-05-13T13:41:34+00:00
 author: Everett
 layout: post

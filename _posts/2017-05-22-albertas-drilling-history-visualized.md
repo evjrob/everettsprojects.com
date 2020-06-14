@@ -1,6 +1,7 @@
 ---
 id: 1317
 title: "Alberta's Drilling History Visualized"
+description: An R script that plots and animates the history of oil and gas drilling activity in Alberta using ST37 data retrieved via my aertidywells R package.
 date: 2017-05-22T16:39:31+00:00
 author: Everett
 layout: post

@@ -1,5 +1,6 @@
 ---
 title: "A Puzzling Proposal"
+description: The set of puzzles I designed and made my fiance solve to find the site of my marriage proposal. Can you solve them?
 author: "Everett Robinson"
 date: "May 29, 2020"
 output: html_document

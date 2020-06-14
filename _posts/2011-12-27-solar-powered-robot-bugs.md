@@ -1,6 +1,7 @@
 ---
 id: 74
 title: Solar Powered Robot Bugs!
+description: 'A microcontroller free solar powered autonomous robot based on BEAM robotics principles. Robotics kit sold by Solarbotics Ltd.'
 date: 2011-12-27T02:03:12+00:00
 author: Everett
 layout: post

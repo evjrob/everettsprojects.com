@@ -1,5 +1,6 @@
 ---
 title: "What Does my MNIST ConvNet Actually See?"
+description: A deeper understanding of my Convolutional Neural Network through the visualization of filters in the hidden layers with NumPy and Matplotlib
 author: "Everett Robinson"
 date: "January 17, 2018"
 output: html_document

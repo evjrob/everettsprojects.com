@@ -1,6 +1,7 @@
 ---
 id: 272
 title: Terrarium! Nature in a Candy Jar.
+description: I tried to grow moss in a candy jar. Instead I ended up with everything else but moss!
 date: 2012-03-17T14:08:14+00:00
 author: Everett
 layout: post

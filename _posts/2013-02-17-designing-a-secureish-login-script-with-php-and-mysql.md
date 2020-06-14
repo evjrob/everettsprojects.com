@@ -1,6 +1,7 @@
 ---
 id: 667
 title: Designing a secure(ish) login script with PHP and MySQL
+description: Learning the basics of data bases and password hashing using PHP by re-inventing the login script.
 date: 2013-02-17T13:53:15+00:00
 author: Everett
 layout: post

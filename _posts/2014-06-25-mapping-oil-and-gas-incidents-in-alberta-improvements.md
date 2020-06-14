@@ -1,6 +1,7 @@
 ---
 id: 1023
 title: 'Mapping Oil and Gas Incidents in Alberta: Improvements'
+description: Using Google Maps, JavaScript, JQuery, PHP, and MySQL I have created an improved iterative map for exploring historical oil and gas spill records in Alberta, Canada.
 date: 2014-06-25T01:26:35+00:00
 author: Everett
 layout: post

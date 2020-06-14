@@ -1,6 +1,7 @@
 ---
 id: 1076
 title: Electric Longboards and Adrenaline Rushes
+description: Using a kit from diyelectricskateboard.com and other RC vehicle parts I turned an Earthwing long board deck into a high powered electric vehicle.
 date: 2014-08-08T09:18:06+00:00
 author: Everett
 layout: post

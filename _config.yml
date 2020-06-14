@@ -1,7 +1,7 @@
 # Site settings
 title: Everett's Projects
 email: evjrob@gmail.com
-description: ""
+description: "Maker projects, data science, and general programming."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://everettsprojects.com" # the base hostname & protocol for your site
 github_username:  evjrob
@@ -34,3 +34,4 @@ collections:
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag

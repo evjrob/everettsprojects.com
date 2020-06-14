@@ -1,5 +1,6 @@
 ---
 title: "Going Serverless"
+description: A serverless blog architecture using a public website S3 bucket and AWS lambda functions to reduce hosting costs and make it easier to update with new content!
 author: "Everett Robinson"
 date: "May 20, 2019"
 output: html_document

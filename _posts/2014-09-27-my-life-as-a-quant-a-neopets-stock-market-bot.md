@@ -1,6 +1,7 @@
 ---
 id: 1205
 title: 'My Life As A Quant: A Neopets Stock Market Bot.'
+description: A Python script for web scraping and interaction that programatically plays the Neopets stock market game... and earns a lot of Neopoints in the process!
 date: 2014-09-27T16:20:32+00:00
 author: Everett
 layout: post

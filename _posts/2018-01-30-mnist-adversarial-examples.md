@@ -1,5 +1,6 @@
 ---
 title: "Attacking My MNIST Neural Net With Adversarial Examples"
+description: Exploring the limits and fragility of my Keras MNIST digit Convolutional Neural Network through the use of adversarial examples with CleverHans
 author: "Everett Robinson"
 date: "January 30, 2018"
 output: html_document
