@@ -51,9 +51,9 @@ $$d_{k,t} = d_{k,t-1} + \Delta_d$$
 
 The Poisson/Exponential rate parameters:
 
-$$log\lambda_{H,t-1} = i + h + o_{j,t} - d_{k,t}$$
+$$log\lambda_{H,t} = i + h + o_{j,t} - d_{k,t}$$
 
-$$log\lambda_{A,t-1} = i + o_{k,t} - d_{j,t}$$
+$$log\lambda_{A,t} = i + o_{k,t} - d_{j,t}$$
 
 $$ \lambda_{H,t} = exp(log\lambda_{H,t})$$
 
