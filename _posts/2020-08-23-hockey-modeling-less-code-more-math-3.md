@@ -7,6 +7,13 @@ output: html_document
 layout: post
 ---
 
+This post is part of a series exploring the math behind my hockey model:
+
+1. [Incorporating win/loss data for inference](/2020/08/20/hockey-modeling-less-code-more-math-1.html)
+2. [Predicting regulation score probabilities](/2020/08/22/hockey-modeling-less-code-more-math-2.html)
+3. [Predicting the winner in overtime/shootout](/2020/08/23/hockey-modeling-less-code-more-math-3.html)
+4. [Differentiating overtime wins from shootout wins](/2020/08/24/hockey-modeling-less-code-more-math-4.html)
+   
 With Bayesian posterior distributions for the model parameters, we need to account for the full range of each when we go to estimate things like scores and win probabilities. We turn to probability theory and calculus to figure this out! Here we will determine the probability of the home team ultimately winning the game in overtime or shootout.
 
 ### The Bernoulli probability of a home win

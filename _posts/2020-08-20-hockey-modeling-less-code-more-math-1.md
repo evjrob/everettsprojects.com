@@ -7,6 +7,13 @@ output: html_document
 layout: post
 ---
 
+This post is part of a series exploring the math behind my hockey model:
+
+1. [Incorporating win/loss data for inference](/2020/08/20/hockey-modeling-less-code-more-math-1.html)
+2. [Predicting regulation score probabilities](/2020/08/22/hockey-modeling-less-code-more-math-2.html)
+3. [Predicting the winner in overtime/shootout](/2020/08/23/hockey-modeling-less-code-more-math-3.html)
+4. [Differentiating overtime wins from shootout wins](/2020/08/24/hockey-modeling-less-code-more-math-4.html)
+
 ### Using win/loss information for better inference
 
 While a hockey game can certainly end with a tie in regulation time, the NHL wont have any of that. In all games they ensure there's a victor and a loser either in overtime or in a shoot out. This means that an ordinary Poisson based model on final scores isn't appropriate. The Poisson parameter $$\lambda$$ that we are estimating is a rate; it's fundamentally tied to the duration over which the observation is taken from and that duration needs to remain fixed!
