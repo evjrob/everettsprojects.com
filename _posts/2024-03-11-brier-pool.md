@@ -1,6 +1,6 @@
 ---
 title: "How to Simulate the Brier 10,000 Times and Still Lose"
-description: Gaining insight into what the Birb Cam Sees with Grad-CAM
+description: Using data to try and win my first sports pool
 author: "Everett Robinson"
 date: Mar 11, 2024
 output: html_document
