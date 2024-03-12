@@ -7,7 +7,7 @@ phases:
         python: 3.7
     commands:
       - pip install cfn-lint
-      - gem install bundler
+      - gem install bundler -v 2.4.22
       - bundle install
   pre_build:
     commands:
