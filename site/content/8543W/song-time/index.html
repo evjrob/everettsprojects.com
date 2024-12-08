@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>Song Time</title>
+	<script src="./js/Tone.js"></script>
+    <script src="./js/tonejs-ui.js"></script>
+    <link 
+      rel="stylesheet" 
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div id="main" class="container-fluid">
+        <div class="row justify-content-center" id="header-info">
+            <h1>Song Time</h1>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row justify-content-center" id="header-info">
+            Try pressing the keys "A" through "L". Press "Z" to go down an octave, "X" to go up an octave.
+        </div>
+        <div class="row">&nbsp;</div>
+        <div id="current-guess">
+            <div class="row justify-content-center" id="current-guess-inputs">
+                <div class="col-lg-4 col-md-6 col-sm-8 col-10">
+                    <input type="text" class="form-control" id="guess" required="" size="3" disabled>
+                </div>
+            </div>
+            <div class="row">&nbsp;</div>
+            <div class="row justify-content-center" id="submit-guess">
+                <div class="col-lg-2 col-md-2 col-sm-4 col-6">
+                    <button class="btn btn-primary btn-block" onclick='submitGuess();'>Submit</button>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+                    <button class="btn btn-primary btn-block" onclick='resetGuess();'>&#8634;</button>
+                </div>
+            </div>
+        </div>
+        <style>
+            tone-piano {
+                margin-bottom: 10px;
+            }
+        </style>
+        <tone-content>
+            <tone-piano polyphonic></tone-piano>
+        </tone-content>
+        <div class="row">&nbsp;</div>
+        <div class="row justify-content-center" id="message-row">
+            <div class="col-lg-3 col-md-6 col-sm-8 col-10" id="message"></div>
+        </div>
+    </div>
+	
+    <script type="text/javascript">
+        // Track the current guess
+        var guess = [];
+
+        // Create the keyboard synthesizer
+		var synth = new Tone.PolySynth(8, Tone.Synth, {
+			"oscillator" : {
+				"partials" : [0, 2, 3, 4],
+			}
+		}).toMaster();
+
+		// Bind the interface
+        document.querySelector("tone-piano").bind(synth);
+
+        // Clear the guess
+        function resetGuess() {
+            guess = [];
+            writeNotes();
+            document.getElementById("message").innerHTML = "";
+        };
+
+        // Format the message returned by lambda function
+        function format_message(message, solved){
+            if (solved){
+                document.getElementById("message").innerHTML = "";
+                var title = message[0];
+                var row_1 = message[1];
+                var row_2 = message[2];
+
+                $("#message").append(`<div class="row justify-content-center"><h3>${title}</h3></div>`);
+                $("#message").append("<br>");
+                $("#message").append(`<div class="row justify-content-center" style="text-align:center;">${row_1}</div>`);
+                $("#message").append("<br>");
+                $("#message").append(`<div class="row justify-content-center"><b>${row_2}</b></div>`);
+            } else {
+                document.getElementById("message").innerHTML = "";
+                $("#message").append(`<div class="row justify-content-center"><font color="red"><h3>${message[0]}</h3></font></div>`);
+            }
+        }
+
+        // Submit the current guess to be evaluated
+        function submitGuess() {
+            $.ajax({
+                type: "POST",
+                url: "https://10phigl5s2.execute-api.us-east-1.amazonaws.com/Prod/songtime",
+                dataType: "json",
+                data: JSON.stringify({"guess":guess}),
+                success: function (resp) {
+                    var solved = resp.solved;
+                    var message = resp.message;
+                    format_message(message, solved);
+                },
+                error: function() {
+                    alert('Uh-oh, something broke! Try again and then text me if the problem continues!')
+                }
+            });
+            return false;
+        };
+
+        // Write the corresponding notes to the guess window
+        function writeNotes() {
+            note_str= guess.join();
+            $("#guess").attr("placeholder", note_str);
+        };
+
+        // Capture tone events and track the notes
+        document.querySelector('tone-piano').addEventListener('noteon', e => {
+            var note = e.detail.name;
+            note = note.replace(/\d/g, '');
+            guess.push(note);
+            writeNotes();
+        });
+	</script>
+</body>
+</html>
