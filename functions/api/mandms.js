@@ -19,24 +19,30 @@ const successMessage = [
 
 function evaluateGuess(secretCode, guess) {
   const score = [];
-  const accountedFor = new Array(secretCode.length).fill(false);
-  let whiteList = [...secretCode];
+  const secretAccountedFor = new Array(secretCode.length).fill(false);
+  const guessAccountedFor = new Array(secretCode.length).fill(false);
 
   // Check for exact matches (black)
   for (let i = 0; i < secretCode.length; i++) {
     if (guess[i] === secretCode[i]) {
       score.push('black');
-      accountedFor[i] = true;
-      whiteList = whiteList.filter((val, idx) => idx !== i);
+      secretAccountedFor[i] = true;
+      guessAccountedFor[i] = true;
     }
   }
 
   // Check for correct color wrong position (white)
-  for (let i = 0; i < secretCode.length; i++) {
-    if (!accountedFor[i] && whiteList.includes(guess[i])) {
-      score.push('white');
-      const index = whiteList.indexOf(guess[i]);
-      whiteList.splice(index, 1);
+  for (let i = 0; i < guess.length; i++) {
+    if (guessAccountedFor[i]) continue; // Skip if this position was used for a black peg
+    
+    // Look for a matching number in the secret code that hasn't been used yet
+    for (let j = 0; j < secretCode.length; j++) {
+      if (!secretAccountedFor[j] && guess[i] === secretCode[j]) {
+        score.push('white');
+        secretAccountedFor[j] = true;
+        guessAccountedFor[i] = true;
+        break;
+      }
     }
   }
 
