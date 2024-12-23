@@ -53,7 +53,7 @@ export const onRequestPost = async (context) => {
     sql += ') ORDER BY "Volume Released" DESC LIMIT 100';
 
     // Execute the query
-    const results = await context.env.DB.prepare(sql)
+    const results = await context.env.spills.prepare(sql)
       .bind(...params)
       .all();
 
