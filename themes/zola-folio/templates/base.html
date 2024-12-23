@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}</title>
+
+  <meta name="description" content="{{ config.description }}">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <nav class="title-nav">
+        <div class="trigger">
+          <a class="page-link-title" href="{{ config.base_url }}/">{{ config.title }}</a>
+        </div>
+      </nav>
+
+      {% block header_menu %}
+      {%- if config.extra.menu_items %}
+      {%- set menu_items = config.extra.menu_items -%}
+      <nav class="site-nav">
+        {%- for item in menu_items %}
+        <a class="page-link" href="{{ item.url | safe }}">{{ item.name
+          | safe }}</a>
+        {% endfor -%}
+      </nav>
+      {% endif -%}
+      {% endblock header_menu %}
+    </div>
+  </header>
+  <div class="page-content">
+    <div class="wrapper">
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </div>
+  <footer class="site-footer">
+
+    <div class="wrapper">
+      {%- if config.extra.author %}
+      <span>© {{ now() | date(format="%Y") }} {{ config.extra.author }}. This site was built using <a
+          href="https://www.getzola.org/">Zola</a> and the <a href="https://github.com/evjrob/zola-folio"
+          target="_blank">zola-folio theme</a>.</span>
+      {% endif -%}
+    </div>
+
+  </footer>
+  <!-- optional scripts -->
+  {% block scripts %}
+  {% if config.extra.math %}
+  <!-- MathJax script for rendering LaTeX math equations -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"],
+        ],
+        displayMath: [
+          ["$$", "$$"],
+          ["\\[", "\\]"],
+        ],
+      },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js" async></script>
+  {% endif %}
+  {% endblock scripts %}
+</body>
+
+</html>

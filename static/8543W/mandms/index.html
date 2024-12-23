@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>M&Ms</title>
+    <link 
+      rel="stylesheet" 
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/mandms.css">
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous">
+    </script>
+
+    <script>
+    function get_guess(){
+      var guess_1 = $('#guess-1').val();
+      var guess_2 = $('#guess-2').val();
+      var guess_3 = $('#guess-3').val();
+      var guess_4 = $('#guess-4').val();
+      var guess_5 = $('#guess-5').val();
+      guess = {"guess": [guess_1, guess_2, guess_3, guess_4, guess_5]};
+      return guess;
+    }
+
+    function record_guess_score(guess, score){
+      var prev_guess_div = $(`<div class="row justify-content-center">`);
+      guess.forEach(function(g){
+        guess_num_div = prev_guess_div.append(`<div class="col-md-1 col-sm-2 col-2">
+        <input type="text" class="form-control" placeholder='${g}' required="" size="3" disabled>
+        </div>`);
+      });
+      $("#previous-guesses").append(prev_guess_div);
+      $("#previous-guesses").append("<br>");
+
+      var score_div = $(`<div class="row justify-content-center"></div>`);
+      score.forEach(function(s){
+        score_div.append(`<img src="/img/mandms/${s}.svg" alt="${s} score peg" height="64px" width="64px" />`);
+      });
+      $("#previous-guesses").append(score_div);
+      $("#previous-guesses").append("<br>");
+
+    }
+
+    function format_message(message, solved){
+      if (solved){
+        document.getElementById("message").innerHTML = "";
+        document.getElementById("current-guess-inputs").innerHTML = "";
+        document.getElementById("submit-guess").innerHTML = "";
+        var title = message[0];
+        var row_1 = message[1];
+        var row_2 = message[2];
+        var row_3 = message[3];
+        var hint_button = message[4];
+        var hint = message[5];
+
+        $("#message").append(`<div class="row justify-content-center"><h3>${title}</h3></div>`);
+        $("#message").append("<br>");
+        $("#message").append(`<div class="row justify-content-center">${row_1}</div>`);
+        $("#message").append("<br>");
+        $("#message").append(`<div class="row justify-content-center">${row_2}</div>`);
+        $("#message").append(`<div class="row justify-content-center"><b>${row_3}</b></div>`);
+        $("#message").append("<br>");
+        $("#message").append(`<div class="row justify-content-center"><div id="hint" class="col-lg-2 col-md-4 col-sm-4 col-6">`);
+        $("#message").find("#hint").append(`<button class="btn btn-primary btn-block" onclick="alert('${hint}');">${hint_button}</button>`);
+
+      } else {
+        $("#message").html(`<div class="row justify-content-center"><font color="red"><h3>${message}</h3></font></div>`);
+      }
+    }
+
+    $(document).ready(function(e){
+      $("#current-guess").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "/api/mandms",
+          dataType: "json",
+          data: JSON.stringify(get_guess()),
+          success: function (resp) { 
+            var prev_guess = resp.guess;
+            var solved = resp.solved;
+            var score = resp.score;
+            var message = resp.message;
+            record_guess_score(prev_guess, score);
+            format_message(message, solved);
+          },
+          error: function() {
+            alert('Uh-oh, something broke! Try again and then text me if the problem continues!')
+          }
+        });
+      });
+    });
+  </script>
+  </head>
+  <body>
+    <div id="main" class="container-fluid">
+        <H1 id="title" class="row justify-content-center">M&Ms</H1>
+        <br>
+        <div class="row justify-content-center">
+            <img src="/img/mandms/red.svg" alt="red m&m" height="64px" width="64px" />
+            <img src="/img/mandms/orange.svg" alt="orange m&m" height="64px" width="64px" />
+            <img src="/img/mandms/yellow.svg" alt="yellow m&m" height="64px" width="64px" />
+            <img src="/img/mandms/green.svg" alt="green m&m" height="64px" width="64px" />
+            <img src="/img/mandms/blue.svg" alt="blue m&m" height="64px" width="64px" />
+            <img src="/img/mandms/brown.svg" alt="brown m&m" height="64px" width="64px" />
+        </div>
+        <br>
+        <div id="previous-guesses">
+
+        </div>
+        <form id="current-guess">
+          <div class="row justify-content-center" id="current-guess-inputs">
+            <div class="col-md-1 col-sm-2 col-2">
+              <input type="text" class="form-control" id="guess-1" placeholder="V" required="" size="3">
+            </div>
+            <div class="col-md-1 col-sm-2 col-2">
+              <input type="text" class="form-control" id="guess-2" placeholder="W" required="" size="3">
+            </div>
+            <div class="col-md-1 col-sm-2 col-2">
+              <input type="text" class="form-control" id="guess-3" placeholder="X" required="" size="3">
+            </div>
+            <div class="col-md-1 col-sm-2 col-2">
+              <input type="text" class="form-control" id="guess-4" placeholder="Y" required="" size="3">
+            </div>
+            <div class="col-md-1 col-sm-2 col-2">
+              <input type="text" class="form-control" id="guess-5" placeholder="Z" required="" size="3">
+            </div>
+          </div>
+          <div class="row">&nbsp;</div>
+          <div id="submit-guess" class="row justify-content-center">
+            <div class="col-md-2 col-sm-4 col-6">
+              <button class="btn btn-primary btn-block" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+        <div class="row">&nbsp;</div>
+        <div id="message"></div>
+    </div>
+</body>
+</html>
