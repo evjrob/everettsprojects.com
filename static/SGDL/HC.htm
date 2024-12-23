@@ -1,0 +1,159 @@
+	
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Super Graphing Data Logger!</title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript">
+function getDataFilename(str){
+    point = str.lastIndexOf("file=")+4;
+
+    tempString = str.substring(point+1,str.length)
+    if (tempString.indexOf("&") == -1){
+	return(tempString);
+    }
+    else{
+        return tempString.substring(0,tempString.indexOf("&"));
+    }
+    	
+}
+
+query  = window.location.search;
+
+var dataFilePath = "data/"+getDataFilename(query);
+
+$(function () {
+    var chart;
+    $(document).ready(function() {
+    
+        // define the options
+        var options = {
+    
+            chart: {
+                renderTo: 'container',
+                zoomType: 'x',
+                spacingRight: 20
+            },
+    
+            title: {
+                text: 'Light levels recorded by the Arduino'
+            },
+    
+            subtitle: {
+                text: 'Click and drag in the plot area to zoom in'
+            },
+    
+            xAxis: {
+                type: 'datetime',
+                maxZoom: 2 * 3600000
+            },
+    
+            yAxis: {
+                title: {
+                    text: 'Light Levels (0 - 1024)'
+                },
+                min: 0,
+                startOnTick: false,
+                showFirstLabel: false
+            },
+    
+            legend: {
+                enabled: false
+            },
+    
+            tooltip: {
+                formatter: function() {
+                        return '<b>'+ this.series.name +'</b><br/>'+
+                        Highcharts.dateFormat('%H:%M - %b %e, %Y', this.x) +': '+ this.y;
+                }
+            },
+    
+            plotOptions: {
+                series: {
+                    cursor: 'pointer',
+                    lineWidth: 1.0,
+                    point: {
+                        events: {
+                            click: function() {
+                                hs.htmlExpand(null, {
+                                    pageOrigin: {
+                                        x: this.pageX,
+                                        y: this.pageY
+                                    },
+                                    headingText: this.series.name,
+                                    maincontentText: Highcharts.dateFormat('%H:%M - %b %e, %Y', this.x) +':<br/> '+
+                                        this.y,
+                                    width: 200
+                                });
+                            }
+                        }
+                    },
+                }
+            },
+    
+            series: [{
+                name: 'Light Levels',
+                marker: {
+                    radius: 2
+                }
+            }]
+        };
+    
+    
+        // Load data asynchronously using jQuery. On success, add the data
+        // to the options and initiate the chart.
+        // This data is obtained by exporting a GA custom report to TSV.
+        // http://api.jquery.com/jQuery.get/
+        jQuery.get(dataFilePath, null, function(csv, state, xhr) {
+            var lines = [],
+                date,
+    
+                // set up the two data series
+                lightLevels = [];
+    
+            // inconsistency
+            if (typeof csv !== 'string') {
+                csv = xhr.responseText;
+            }
+    
+            // split the data return into lines and parse them
+            csv = csv.split(/\n/g);
+            jQuery.each(csv, function(i, line) {
+    
+                // all data lines start with a double quote
+                line = line.split(',');
+                date = parseInt(line[0], 10)*1000;
+    
+                lightLevels.push([
+                    date,
+                    parseInt(line[1], 10)
+                ]);
+                
+            });
+    
+            options.series[0].data = lightLevels;
+    
+            chart = new Highcharts.Chart(options);
+        });
+    });
+    
+});
+        </script>	
+
+    </head>
+    <body>
+    <p style="text-align:center;">Please allow the chart to load, it may take up to 30 seconds </p>
+    <hr />
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highcharts/2.3.1/highcharts.js"></script>
+
+<!-- Additional files for the Highslide popup effect -->
+<script type="text/javascript" src="http://www.highcharts.com/highslide/highslide-full.min.js"></script>
+<script type="text/javascript" src="http://www.highcharts.com/highslide/highslide.config.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="http://www.highcharts.com/highslide/highslide.css" />
+
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
+    </body>
+</html>

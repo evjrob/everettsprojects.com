@@ -1,0 +1,117 @@
+html, body {
+  background-color:#b0c4de;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  -webkit-text-size-adjust: none;
+}
+
+#map-canvas, #map_canvas {
+  height: 100%;
+}
+
+@media print {
+  html, body {
+    height: auto;
+  }
+
+  #map-canvas, #map_canvas {
+    height: 650px;
+  }
+}
+
+#info-panel {
+  width: 30em;
+  max-height: 96%;
+  position: absolute;
+  font-size: 0.75em;
+  top: 90px;
+  left: 10px;
+  background-color: #fff;
+  padding: 2px;
+  border: 1px solid #999;
+  background: rgba(255, 255, 255, 1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: outset 1px #a1b5cf;
+}
+
+.text-block {
+  margin: 10px;
+  border-width: 2px;
+  text-align: center;
+}
+
+#accordion {
+  margin: 10px;
+  border-width: 2px;
+  overflow: auto;
+}
+
+#filter-pane {
+  overflow: auto;
+  font-size: smaller;
+}
+
+.amount1, .amount2 {
+  border: 0;
+  color: #f6931f;
+  font-weight: bold;
+  text-align: center;
+}
+
+ul.ui-autocomplete {
+  overflow: auto;
+  width: 200px;
+  max-height: 200px;
+  font-size: 75%;
+
+}
+
+#substance-links {
+  overflow: auto;
+  width: 200px;
+  max-height: 200px;
+  z-index: 1;
+}
+
+#source-links {
+  overflow: auto;
+  width: 200px;
+  max-height: 200px;
+  z-index: 1;
+}
+
+#failure-links {
+  overflow: auto;
+  width: 200px;
+  max-height: 200px;
+  z-index: 1;
+}
+
+.orange-text {
+  color: #f6931f;
+  font-weight:bold;
+}
+
+#spill-info {
+  overflow: auto;
+  font-size:smaller;
+  max-height: 400px;
+}
+
+.noTitleDialog {
+  text-align: center;
+}
+
+.noTitleDialog .ui-dialog-titlebar {
+  display:none;
+}
+
+.ui-autocomplete-loading {
+    background: white url('images/ui-anim_basic_16x16.gif') right center no-repeat;
+}
