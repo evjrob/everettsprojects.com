@@ -342,7 +342,7 @@
                     
                 //Get the spill location data
                 $.ajax({
-                    url : "https://10phigl5s2.execute-api.us-east-1.amazonaws.com/Prod/spilllocations",
+                    url : "/api/spilllocations",
                     type: "POST",
                     data : JSON.stringify(sqlParameters),
                     dataType : "json",
@@ -403,7 +403,7 @@
                 
                 $.ajax({
                     async: false,
-                    url : "https://10phigl5s2.execute-api.us-east-1.amazonaws.com/Prod/spillinfo",
+                    url : "/api/spillinfo",
                     type: "POST",
                     data: JSON.stringify($.extend({Location: ATSLocation}, sqlParameters)), //send ATS location + filter parameters
                     dataType : "json",
