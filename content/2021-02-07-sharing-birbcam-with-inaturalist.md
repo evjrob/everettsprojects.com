@@ -5,6 +5,9 @@ date = "2021-02-07"
 authors = [ "Everett Robinson",]
 aliases = ["/2021/02/07/sharing-birbcam-with-inaturalist.html"]
 
+[taxonomies]
+tags = ["Data Science", "Python", "Computer Vision", "Flask", "iNaturalist"]
+
 [extra]
 layout = "post"
 output = "html_document"

@@ -5,6 +5,9 @@ date = "2017-10-20"
 authors = [ "Everett Robinson",]
 aliases = ["/2017/10/20/bayesian-dnd.html"]
 
+[taxonomies]
+tags = ["Data Science", "R Programming Language", "Statistics", "Dungeons & Dragons"]
+
 [extra]
 layout = "post"
 output = "html_document"

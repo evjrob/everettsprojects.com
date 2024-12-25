@@ -5,6 +5,9 @@ date = "2018-03-24"
 authors = [ "Everett Robinson",]
 aliases = ["/2018/03/24/modeling-the-nhl.html"]
 
+[taxonomies]
+tags = ["Data Science", "Python", "Hockey", "NHL", "Sports"]
+
 [extra]
 layout = "post"
 output = "html_document"

@@ -5,6 +5,9 @@ date = "2019-05-20"
 authors = [ "Everett Robinson",]
 aliases = ["/2019/05/20/going-serverless.html"]
 
+[taxonomies]
+tags = ["Serverless", "AWS",  "S3", "Lambda", "Jekyll"]
+
 [extra]
 layout = "post"
 output = "html_document"

@@ -5,6 +5,9 @@ date = "2020-06-20"
 authors = [ "Everett Robinson",]
 aliases = ["/2020/06/20/devops-cicd.html"]
 
+[taxonomies]
+tags = ["AWS", "CloudFormation", "CodePipeline"]
+
 [extra]
 layout = "post"
 output = "html_document"

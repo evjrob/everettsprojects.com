@@ -5,6 +5,9 @@ date = "2020-05-29"
 authors = [ "Everett Robinson",]
 aliases = ["/2020/05/29/puzzling-proposal.html"]
 
+[taxonomies]
+tags = ["Proposal", "Puzzles", "Arduino"]
+
 [extra]
 layout = "post"
 output = "html_document"

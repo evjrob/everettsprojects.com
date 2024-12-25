@@ -5,6 +5,9 @@ date = "2021-02-15"
 authors = [ "Everett Robinson",]
 aliases = ["/2021/02/15/birbcam-grad-cam.html"]
 
+[taxonomies]
+tags = ["Data Science", "Python", "Computer Vision", "Fast.ai"]
+
 [extra]
 layout = "post"
 output = "html_document"

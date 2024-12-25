@@ -5,6 +5,9 @@ date = "2020-08-23"
 authors = [ "Everett Robinson",]
 aliases = ["/2020/08/23/hockey-modeling-less-code-more-math-3.html"]
 
+[taxonomies]
+tags = ["Data Science", "Python", "Statistics", "Bayesian Statistics", "Hockey", "NHL", "Sports"]
+
 [extra]
 layout = "post"
 output = "html_document"

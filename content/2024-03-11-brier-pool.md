@@ -5,6 +5,9 @@ date = "2024-03-11"
 authors = [ "Everett Robinson",]
 aliases = ["/2024/03/11/brier-pool.html"]
 
+[taxonomies]
+tags = ["Data Science", "Python", "Statistics", "Simulation", "Curling", "Brier", "Sports"]
+
 [extra]
 layout = "post"
 output = "html_document"

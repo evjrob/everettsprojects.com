@@ -5,6 +5,9 @@ date = "2018-01-17"
 authors = [ "Everett Robinson",]
 aliases = ["/2018/01/17/mnist-visualization.html"]
 
+[taxonomies]
+tags = ["Data Science", "Python", "Computer Vision", "MNIST"]
+
 [extra]
 layout = "post"
 output = "html_document"
