@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% macro social_links(page) %}
+    {%- if page.extra.socials %}
+    <br/>
+    <hr/>
+    <br/>
+    
+    <span class="contacticon center">
+      {% for social in page.extra.socials %}
+      <a href="{{ social.uri }}">{{ load_data(path="themes/zola-folio/templates/icons/square-"~social.name~".svg") | safe}}</a>
+      {% endfor %}
+    </span>
+    {% endif -%}
+{% endmacro social_links %}
+
+{% block content %}
+<div class="post-content">
+  {{ page.content | safe }}
+</div>
+{{ self::social_links(page=page) }}
+{% endblock content %}
