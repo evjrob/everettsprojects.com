@@ -20,7 +20,7 @@ Over the past year I've been very excited about curling. My wife and I took the 
 
 The Pool I entered consists of the following (paper!) entry form:
 
-![Entry Form](entry_form.png)
+![Entry Form]({{ resize_image(path="entry_form.png") }})
 
 #### The Rules
 
@@ -719,7 +719,7 @@ This constrains which scenarios are possible in the prior matches, we need one o
 
 The final step of this process was to asign all the points values to each pick. The natural way to do this optimally is to just assign the highest points values greedily to the highest expected value for the proportion of point returned. We then progressively work down until the one point bet is given to the pick with the lowest expected payout.
 
-![Assigning Picks](brier2024_picks_sm.jpg)
+![Assigning Picks]({{ resize_image(path="brier2024_picks_sm.jpg") }})
 
 I [tweeted out my picks at the beginning of the tournament](https://twitter.com/evjrob/status/1763715830364213546) to lock them in, and needless to say things did not go according to plan! Despite all of this, I managed to finish tenth out of fourty-seven entries into the pool, which is not bad! Had some of my high value round robin picks paid off, I think I could have easily been right near the top.
 

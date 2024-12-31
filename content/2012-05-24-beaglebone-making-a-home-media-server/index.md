@@ -263,7 +263,7 @@ To make sure everything is working, on your client machine type the local ip add
 You should see the following:
 
 
-<a href="working-apache.png"><img title="working apache" src="working-apache.png" alt="The landing page that indicates apache is working" /></a>
+<a href="working-apache.png"><img title="working apache" src="{{ resize_image(path="working-apache.png") }}"  alt="The landing page that indicates apache is working" /></a>
 
 
 Because our rutorrent front end to rtorrent will be password protected, we need to have HTTPS functionality eneabled. To achieve this we need an SSL certificate. This process will ask for a lot of information which you can fill in however you see fit, though it&#8217;s a good idea to use the domain name your BeagleBone will be connected to if you have one:
@@ -906,7 +906,7 @@ Finally, we have to change the ownership of these files and folders so that the 
 If everything went as expected, then going to <strong>https://_Local IP address_/rutorrent</strong> should prompt us for a username and password (this is the one we created for the webserver, _webusername_, and is not necessarily the user account we created for the OS). After logging in, we should see the empty rutorrent webgui:
 
 
-<a href="rutorrentwebui.png"><img title="rutorrentWebui" src="rutorrentwebui.png" alt="The rutorrent web user interface"/></a>
+<a href="rutorrentwebui.png"><img title="rutorrentWebui" src="{{ resize_image(path="rutorrentwebui.png") }}"  alt="The rutorrent web user interface"/></a>
 
 
 At this point we&#8217;re essentially finished with this part of the guide unless you wish to install an FTP server. For my purposes I am content with using sftp, which is built into SSH, though the <a href="http://forums.rutorrent.org/index.php?topic=256.0">original source for this portion of the guide</a> also includes instructions for setting up a true FTP server using Pure-FTPd. There are also instructions to enable a multi-user rtorrent setup, though I have not pursued those either since I don&#8217;t have any need for it. Since we are finished with rtorrent and rutorrent, you can now start adding your torrents to it. You should make sure to point rutorrent to the right directory  if you add any torrents that you already have the data for and are seeding so that it won&#8217;t redownload the entire thing.

@@ -15,15 +15,15 @@ output = "html_document"
 
 Last year I converted this blog to be entirely serverless. The lambda functions, associated API gateway, and public website S3 bucket were all configured in the AWS console. No longer! Now a mere commit to the master branch of this blog's GitHub repository is published live within a few minutes. I used my [Visuair school project](https://github.com/evjrob/visuair) as a proving ground for the refactoring process before committing my blog to the same treatment. Both went over without much difficulty, and I learned a lot about DevOps and the AWS Serverless Application Model (SAM) along the way!
 
-![CloudFormation - Pipeline Stack](CloudFormation-PipelineStack.png)
+![CloudFormation - Pipeline Stack]({{ resize_image(path="CloudFormation-PipelineStack.png") }})
 
 To accomplish my CICD objectives I use AWS CodePipeline, CodeBuild, and CloudFormation to automate everything. The pipeline gets its own CloudFormation Stack defined by [pipeline_template.yaml](https://github.com/evjrob/everettsprojects.com/blob/master/_deploy/pipeline_template.yaml). To have CodePipeline use GitHub as a source, you will need to configure an [OAuth token for authentication](https://docs.aws.amazon.com/codepipeline/latest/userguide/GitHub-authentication.html) first. Once this is done all of the relevant details can be provided through the CloudFormation parameters in the pipeline template. 
 
-![CodePipeline - Source Stage](CodePipeline-Source.png)
+![CodePipeline - Source Stage]({{ resize_image(path="CodePipeline-Source.png") }})
 
 Once this CodePipeline stack has deployed, new commits to the selected GitHub repository and branch will trigger it to do its magic.
 
-![CodePipeline - Build Stage](CodePipeline-Build.png)
+![CodePipeline - Build Stage]({{ resize_image(path="CodePipeline-Build.png") }})
 
 To facilitate some of this magic I redefined my lambda functions and API gateways using AWS's Serverless Application Model (SAM). Like the pipeline template, the python code for these, and the SAM enabled CloudFormation template all live in the [_deploy directory](https://github.com/evjrob/everettsprojects.com/tree/master/_deploy). Using SAM is pretty slick, because the APIGateways can all be defined implicitly with using the Events key in the Properties section of the lambda function definition. For example the following snippet let's SAM know that I want an API gateway, that the path for this API call relative to the root should be "/songtime", and that it should expect POST requests. That's a lot of heavy lifting for only six lines of CloudFormation YAML.
 
@@ -74,7 +74,7 @@ I need both my python based SAM app built, and my Ruby based Jekyll website stat
 
 I define runtimes for both Python and Ruby, build and deploy the SAM app to the SAMArtifacts prefix of my artifacts bucket, and the website assets to the BlogArtifacts prefix. SAM handles the installation of packages for each lambda function independently using their respective requirements.txt files. For Jekyll I use bundler to handle installation and execution of the required gems.
 
-![CodePipeline - Deploy Stage](CodePipeline-Deploy.png)
+![CodePipeline - Deploy Stage]({{ resize_image(path="CodePipeline-Deploy.png") }})
 
 Finally the deployment stages of the pipeline are invoked. First a CloudFormation change set is generated and then executed. For deployments more critical than my personal blog one is well advised to insert a manually approval step between these steps so that the change set can be inspected for issues before being pushed into production. Pipelines for these types of projects would also do well to have several other stages for deployment to dev and testing environments as well. Unlike my projects at work, my personal blog really isn't worth the extra effort and resources this requires.
 

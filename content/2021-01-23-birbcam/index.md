@@ -17,7 +17,7 @@ output = "html_document"
 
 I had no idea how many critters visited my balcony planter box until I started working from home last March. I would sit nearby with my laptop and watch chickadees and sparrows fly in and out, magpies wander across the railing, and even a squirrel that decided to start caching treats in the soil. At first, I was content to watch them come and go. Eventually, I started to wonder how often they were visiting without me even noticing. Then it occurred to me: I didn't need to wonder, I could know!
 
-[![critters](critters.jpg)](critters.jpg)
+[![critters]({{ resize_image(path="critters.jpg") }})](critters.jpg)
 
 
 ### How?
@@ -80,7 +80,7 @@ while True:
 
 This code produces the following plots, but with critters instead of me:
 
-[![Background subtraction model](birbcam_bgsub.png)](birbcam_bgsub.png)
+[![Background subtraction model]({{ resize_image(path="birbcam_bgsub.png") }})](birbcam_bgsub.png)
 
 
 ### Why Fast.ai?
@@ -127,11 +127,11 @@ It's concise, with only 26 lines total, 10 of which are actual code if you throw
 
 #### Learning Rate Finder
 
-[![Learning rate finder](learning_rates.png)](learning_rates.png)
+[![Learning rate finder]({{ resize_image(path="learning_rates.png") }})](learning_rates.png)
 
 #### Training Epochs
 
-[![Training epochs](training_epochs.png)](training_epochs.png)
+[![Training epochs]({{ resize_image(path="training_epochs.png") }})](training_epochs.png)
 
 
 ### Why Google Cloud Functions?
@@ -189,7 +189,7 @@ def model_inference(request):
 
 I'm using the Raspberry Pi because I buy tech toys and then retroactively justify the purchase somehow. I use the old webcam simply because I had it lying around. I also want the web app for this project to run locally on my LAN rather than online. The camera overlooks my street, and one could theoretically use it to surveil members of my community. The internet can be a messed up place, and some of the folks on it scare me. The last thing I want is for someone to use the Birb Cam for nefarious purposes.
 
-[![The actual Birb Cam](birbcam.jpg){:width="500px"}](birbcam.jpg)
+[![The actual Birb Cam]({{ resize_image(path="birbcam.jpg") }}){:width="500px"}](birbcam.jpg)
 
 
 ### Why Flask?
@@ -200,18 +200,18 @@ Lately, I have enjoyed Streamlit as my go-to solution for building data-driven w
 
 Presenting the model results is accomplished using Flask, with a simple REST API to serve the data and images. The data feeds into a D3 based visualization using the open-source JavaScript library EventDrops kindly shared by the team at [marmelab](https://github.com/marmelab/EventDrops). It's nearly the exact visualization I imagined building, just with more features! No sense in building my own worse version for this project when the open source community already has me covered! Getting tooltips to preview each image captured required only a little extra JavaScript: 
 
-[![Visualization with tooltip](birbcam_visualization.png)](birbcam_visualization.png)
+[![Visualization with tooltip]({{ resize_image(path="birbcam_visualization.png") }})](birbcam_visualization.png)
 
 A little more JavaScript and Bootstrap facilitates displaying the full-sized image in a modal when the user clicks on a data point.
 
-[![Visualization image modal](birbcam_visualization_2.png)](birbcam_visualization_2.png)
+[![Visualization image modal]({{ resize_image(path="birbcam_visualization_2.png") }})](birbcam_visualization_2.png)
 
 The web app does more than visualize the data; it also allows for the manual evaluation of the labels predicted by the model:
 
-[![Label evaluation](birbcam_evaluate.png)](birbcam_evaluate.png)
+[![Label evaluation]({{ resize_image(path="birbcam_evaluate.png") }})](birbcam_evaluate.png)
 
 And it provides the ability to revise these labels in the event of a mistake:
 
-[![Label revision](birbcam_revise.png)](birbcam_revise.png)
+[![Label revision]({{ resize_image(path="birbcam_revise.png") }})](birbcam_revise.png)
 
 So far, I have learned a lot of interesting things with the Birb Cam. I have discovered that the birds and squirrels don't always show up every day but have surprisingly regular schedules when they do. I also repositioned the camera for less backlighting and discovered that my street has way more traffic than I ever expected. I have also found out that I get a lot of glare on the window from my TV, and it's hard to prevent this from triggering the change detection between sunset and dusk. I'm excited to collect more data, dig into the patterns that emerge, and see how they change with the seasons. The Birb Cam has been a great pandemic project, and while I'm not sure I'm much of a bird watcher, I hope to maintain and keep the Birb Cam running for quite a while yet.

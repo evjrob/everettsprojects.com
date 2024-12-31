@@ -17,7 +17,7 @@ feature_image = "mapsimproved.png"
 [**_There is an updated updated version of this project that uses AWS Lambda functions._**](/2019/05/20/going-serverless.html)
 
 <div>
-  <a href="/spills/"><img src="mapsimproved.png" alt="The new map, with no marker overlap and all relevant incidents displayed for a selected location" /></a>
+  <a href="/spills/"><img src="{{ resize_image(path="mapsimproved.png") }}"  alt="The new map, with no marker overlap and all relevant incidents displayed for a selected location" /></a>
 
   <p class="caption">
     The new map, with 100% less marker overlap and all relevant incidents displayed for a selected location.

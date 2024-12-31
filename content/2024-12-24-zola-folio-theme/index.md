@@ -10,7 +10,7 @@ tags = ["Zola", "Design", "CloudFlare"]
 
 TL;DR - I created a [Zola theme](https://github.com/evjrob/zola-folio). You're probably looking at it right now! You can use it if you'd like!
 
-![zola-folio](/img/zola-folio.png)
+![zola-folio]({{ resize_image(path="zola-folio.png") }})
 
 Five years ago I decided to move this blog from [Wordpress to Jekyll on AWS in an S3 Bucket](/going-serverless/). A little while later I [automated updating the blog to use a CI/CD process via AWS CodePipeline](/devops-cicd/). For insufficient reasons, I recently had the impulse to migrate this blog all over again. I have ported this blog from Jekyll to [Zola](https://www.getzola.org/) and changed hosts from AWS to CloudFlare.
 

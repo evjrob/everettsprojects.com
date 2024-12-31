@@ -19,7 +19,7 @@ One of the superpowers of Bayesian modeling is that the posterior from a previou
 
 The original model simply estimated the required parameters from all games in the last 365 days. This is a pretty big assumption: That the innate abilities of the teams are constant over that year long period. Sports fans of any type are eager to incorrectly attribute any small blip in team performance to a permanent change for the better or worse, but I think my old model goes too far in the opposite direction. A year is a long time, and a lot can happen to a team during that span: Traded players, changes in coaching, or a breakdown in synergy on key lines. The new model structure looks like this:
 
-![Model structure](model.png)
+![Model structure]({{ resize_image(path="model.png") }})
 
 The linkages between parameters are marked by the lines, with red lines corresponding to away team parameters, blue to home team parameters, and purple to league wide parameters. The yellow boxes are the observed random variables for regulation score and whether or not the home team ultimately won. The precise mathematical structure is described in more detail later.
 
@@ -81,11 +81,11 @@ This model addition makes use of the relationship between Poisson and Exponentia
 
 Compared to the old modeling approach, this one yields better inference of the latent parameters when executed on an ideal data generation process that approximately mirrors NHL scheduling. For example here the model is estimating the intercept parameter $i$ on ideal simulated data:
 
-![Ideal data intercept estimation](estimated_i.png)
+![Ideal data intercept estimation]({{ resize_image(path="estimated_i.png") }})
 
 And for the parameter $h$ we have:
 
-![Ideal data home ice advantage estimation](estimated_h.png)
+![Ideal data home ice advantage estimation]({{ resize_image(path="estimated_h.png") }})
 
 For both models the parameter $i$ is underestimated while $h$ is over estimated. But clearly the new model is closer to the truth. Across all of the latent variables the MSE of estimates for the old model fit is 0.00441 while it's 14% lower at 0.00379 for the new model.
 
@@ -94,7 +94,7 @@ For both models the parameter $i$ is underestimated while $h$ is over estimated.
 
 Of course a MCMC based Bayesian estimation framework like PyMC3 doesn't actually give you a proper probability distribution as a posterior; you actually get a trace for the parameter, which is just a sample whose density approximates the true posterior. In this form you can't just plug it into the model for the next run. To handle this, I leverage SciPy to find the maximum likelihood estimate (MLE) of the ideal probability distribution for each parameter in the trace. This is what gets plugged in as the priors for the next iteration. It works because the posterior density from PyMC3 for one of the originally normal model parameters is generally pretty close to normal itself. For example, here is the MLE fit and a histogram of the actual PyMC3 posterior for the team one's offence after the first model iteration:
 
-![Posterior MLE fit](estimated_o1_mle_fit.png)
+![Posterior MLE fit]({{ resize_image(path="estimated_o1_mle_fit.png") }})
 
 A secondary benefit of this new approach to handling posteriors is that I can store these MLE fit distributions directly and use them to compute arbitrary game outcomes and score distributions for the future. This allows me to forgo the old approach of storing thousands of simulated games in PostgreSQL and opens up new possibilities for simulating hypothetical games selected by the user on any given game date. I hope to add this as a feature to the web app https://bayesbet.everettsprojects.com/ at a later date.
 

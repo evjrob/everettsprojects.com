@@ -17,12 +17,12 @@ I don't appreciate the value of posting to Reddit enough. After posting the Birb
 
 It didn't take long to discover that iNaturalist provides tools to build interaction with the platform into projects through a [REST API](https://api.inaturalist.org/v1/docs/#/). I don't even need to write the python code to interact with the REST API directly, thanks to Nicolas Noé and the other contributors to the [ipynaturalist package](https://github.com/niconoe/pyinaturalist). These tools allowed me to add the core functions and UI elements to the Birb Cam web app with very little trouble. I now provide a button to upload an observation to iNaturalist when a user opens the full-size image modal.
 
-[![iNaturalist upload button](upload_button.png)](upload_button.png)
+[![iNaturalist upload button]({{ resize_image(path="upload_button.png") }})](upload_button.png)
 
 Clicking this button uploads the observation image and all other relevant details to [my iNaturalist account](https://www.inaturalist.org/observations?place_id=any&user_id=evjrob&verifiable=any). I indicate which images are linked with an iNaturalist observation using the iNaturalist logo. The modal icon also functions as a link to the iNaturalist observation page.
 
-[![iNaturalist upload button](tooltip_inaturalist_logo.png)](tooltip_inaturalist_logo.png)
+[![iNaturalist upload button]({{ resize_image(path="tooltip_inaturalist_logo.png") }})](tooltip_inaturalist_logo.png)
 
 The Birb Cam has been an excellent pandemic project that has combined my interest in programming, machine learning, and the natural world. Integrating iNaturalist into the project was a fun development task that has kept it feeling fresh. Early on in the project's development, my sister shared a news article about how [bird watching has the same effect on happiness as a pay raise](https://www.greenmatters.com/p/birds-linked-happiness). These benefits could be real in my experience; watching the critters' antics has been something I look forward to week after week.  While working on this project is done purely for my enjoyment, I hope that sharing it on iNaturalist gives a little bit of this happiness to someone else. With that in mind, let me share one of the funniest images captured yet:
 
-[![Squirrel fell over](funny_squirrel.png)](https://www.inaturalist.org/photos/112155844)
+[![Squirrel fell over]({{ resize_image(path="funny_squirrel.png") }})](https://www.inaturalist.org/photos/112155844)

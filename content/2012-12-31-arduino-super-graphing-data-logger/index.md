@@ -13,7 +13,7 @@ feature_image = "zoomeddaylight.png"
 +++
 
 <p style="text-align:left;">
-  <a href="zoomeddaylight.png" rel="attachment wp-att-714"><img class="size-large wp-image-714 aligncenter" alt="The intensity of natural light in my basement." src="zoomeddaylight.png"/></a><br />
+  <a href="zoomeddaylight.png" rel="attachment wp-att-714"><img class="size-large wp-image-714 aligncenter" alt="The intensity of natural light in my basement." src="{{ resize_image(path="zoomeddaylight.png") }}" /></a><br />
 </p>
 
 ### Sections:
@@ -54,7 +54,7 @@ feature_image = "zoomeddaylight.png"
 </p>
 
 <div class="col half-width right">
-  <a href="fileslist1.png"><img class="col full-width" style="height: revert" alt="The list of data files available for graphing." src="fileslist1.png"/></a>
+  <a href="fileslist1.png"><img class="col full-width" style="height: revert" alt="The list of data files available for graphing." src="{{ resize_image(path="fileslist1.png") }}" /></a>
 
   <p class="caption">
     The list of data files available for graphing.
@@ -65,7 +65,7 @@ feature_image = "zoomeddaylight.png"
 </p>
 
 <div class="row">
-  <a href="wholechart.png"><img alt="A graph for the first week of data collected." src="wholechart.png"/></a>
+  <a href="wholechart.png"><img alt="A graph for the first week of data collected." src="{{ resize_image(path="wholechart.png") }}" /></a>
   <p class="caption">
     A graph for the first week of data collected.
   </p>
@@ -76,7 +76,7 @@ feature_image = "zoomeddaylight.png"
 </p>
 
 <div class="row">
-  <a href="zoomeddaylight.png"><img alt="The intensity of natural light in my basement." src="zoomeddaylight.png"/></a>
+  <a href="zoomeddaylight.png"><img alt="The intensity of natural light in my basement." src="{{ resize_image(path="zoomeddaylight.png") }}" /></a>
   <p class="caption">
     The intensity of natural light in my basement.
   </p>
@@ -100,19 +100,19 @@ feature_image = "zoomeddaylight.png"
 
 <div class="row">
   <div class="col one-third-width">
-    <a href="dscf2941.jpg"><img class="col full-width" alt="The photo sensor board fits like a charm." src="dscf2941.jpg"/></a>
+    <a href="dscf2941.jpg"><img class="col full-width" alt="The photo sensor board fits like a charm." src="{{ resize_image(path="dscf2941.jpg") }}" /></a>
     <p class="caption">
       The photo sensor board fits like a charm.
     </p>
   </div>
   <div class="col one-third-width">
-    <a href="dscf2931.jpg"><img class="col full-width" alt="DSCF2931" src="dscf2931.jpg" width="212" height="225"/></a>
+    <a href="dscf2931.jpg"><img class="col full-width" alt="DSCF2931" src="{{ resize_image(path="dscf2931.jpg") }}"  width="212" height="225"/></a>
     <p class="caption">
       One header is bent to reach A0.
     </p>
   </div>
   <div class="col one-third-width">
-    <a href="circuit.jpg"><img class="col full-width" alt="The circuit." src="circuit.jpg"/></a>
+    <a href="circuit.jpg"><img class="col full-width" alt="The circuit." src="{{ resize_image(path="circuit.jpg") }}" /></a>
     <p class="caption">
       The circuit.
     </p>

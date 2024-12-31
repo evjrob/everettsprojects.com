@@ -65,7 +65,7 @@ You're presented with a small box containing:
 
 You arrive at the next puzzle to find only this:
 
-![Puzzle 2](puzzle2.png)
+![Puzzle 2]({{ resize_image(path="puzzle2.png") }})
 
 <button class="collapsible" id="puzzle2">Click here to see the solution.</button>
 
@@ -104,11 +104,11 @@ You find two locked boxes. The first has a direction lock. The second expects a 
 
 1.) A Rubik's cube covered in arrows. It didn't come pre-solved, so you could solve one before proceeding if you would like the full experience:
 
-![Rubiks Cube](puzzle4rubiks.png)
+![Rubiks Cube]({{ resize_image(path="puzzle4rubiks.png") }})
 
 2.) The following diagram:
 
-![Puzzle 4](puzzle4.png)
+![Puzzle 4]({{ resize_image(path="puzzle4.png") }})
 
 <button class="collapsible" id="puzzle4">Click here to see the solution.</button>
 

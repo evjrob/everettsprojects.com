@@ -12,7 +12,7 @@ tags = [ "Adafruit", "Costume", "DIY", "E-textiles", "EL wire", "Electronics", "
 feature_image = "img_2396.jpg"
 +++
 
-[<img alt="IMG_2396" src="img_2396.jpg" width="594" height="445"/>](img_2396.jpg)
+[<img alt="IMG_2396" src="{{ resize_image(path="img_2396.jpg") }}"  width="594" height="445"/>](img_2396.jpg)
 
 Like most people on the internet, I saw [this video](http://www.youtube.com/watch?v=GkBDRUO8hAo) leading up to this year&#8217;s Halloween. Unlike most people, I thought &#8220;I need to make one of those, but adult male sized!&#8221; A quick bit of research led me to realize that normal LED light strips as used in the video are a little impractical for a suit my size. They cost more than 4x as much per unit length compared to High brightness EL Wire and they appear to consume far more power as well. Not wanting to carry piles of spare batteries around when I go out for Halloween, I decided to use EL wire and settle for the few tradeoffs it has. The most major tradeoff is that EL wire doesn&#8217;t hold up as well to repeated flex in the joints or tight bends. I may regret the choice to use EL wire if it fails on the dance floor, but for now it seems like the smarter choice.
 
@@ -34,7 +34,7 @@ Like most people on the internet, I saw [this video](http://www.youtube.com/watc
   * 1 x [Heat Shrink Pack](http://www.adafruit.com/products/344)
 
 <p>
-  <a href="img_23691.jpg"><img class="aligncenter  wp-image-885" alt="IMG_2369" src="img_23691.jpg" width="356" height="267" /></a>
+  <a href="img_23691.jpg"><img class="aligncenter  wp-image-885" alt="IMG_2369" src="{{ resize_image(path="img_23691.jpg") }}"  width="356" height="267" /></a>
 </p>
 
 <p style="text-align:center;">
@@ -43,11 +43,11 @@ Like most people on the internet, I saw [this video](http://www.youtube.com/watc
 
 ### The Basic Design:
 
-[<img alt="SuitLayout" src="suitlayout.jpg" width="594" height="655"/>](suitlayout.jpg)
+[<img alt="SuitLayout" src="{{ resize_image(path="suitlayout.jpg") }}"  width="594" height="655"/>](suitlayout.jpg)
 
 The suit consists of five separate strands of EL wire of varying lengths all connected to the inverter and power source. The hood of the suit is held into a circular shape using an aluminium ring that was salvaged from an old tomato cage. The inverter and battery pack is crammed into a small reusable container that has been cut up and modified to house the components.
 
-[<img alt="ElectronicsBox" src="electronicsbox.jpg" width="594" height="356"/>](electronicsbox.jpg)
+[<img alt="ElectronicsBox" src="{{ resize_image(path="electronicsbox.jpg") }}"  width="594" height="356"/>](electronicsbox.jpg)
 
 <p style="text-align:center;">
   . . . . .
@@ -61,10 +61,10 @@ The strands of EL wire that I purchased both come with jumpers preinstalled, but
 
 <div class="row">
   <div class="col half-width">
-    <a href="img_2387.jpg"><img alt="IMG_2387" src="img_2387.jpg"/></a>
+    <a href="img_2387.jpg"><img alt="IMG_2387" src="{{ resize_image(path="img_2387.jpg") }}" /></a>
   </div>
   <div class="col half-width">
-    <a href="img_2390.jpg"><img alt="IMG_2390" src="img_2390.jpg"/></a>
+    <a href="img_2390.jpg"><img alt="IMG_2390" src="{{ resize_image(path="img_2390.jpg") }}" /></a>
   </div>
 </div>
 
@@ -73,7 +73,7 @@ The strands of EL wire that I purchased both come with jumpers preinstalled, but
 </p>
 
 <p>
-  <a href="img_2391.jpg"><img alt="IMG_2391" src="img_2391.jpg"/></a>
+  <a href="img_2391.jpg"><img alt="IMG_2391" src="{{ resize_image(path="img_2391.jpg") }}" /></a>
 </p>
 
 <p style="text-align:left;">
@@ -82,10 +82,10 @@ The strands of EL wire that I purchased both come with jumpers preinstalled, but
 
 <div class="row">
   <div class="col half-width">
-    <a href="img_23721.jpg"><img alt="IMG_2372" src="img_23721.jpg"/></a>
+    <a href="img_23721.jpg"><img alt="IMG_2372" src="{{ resize_image(path="img_23721.jpg") }}" /></a>
   </div>
   <div class="col half-width">
-     <a href="img_2373.jpg"><img alt="IMG_2373" src="img_2373.jpg"/></a>
+     <a href="img_2373.jpg"><img alt="IMG_2373" src="{{ resize_image(path="img_2373.jpg") }}" /></a>
   </div>
 </div>
 
@@ -94,7 +94,7 @@ The strands of EL wire that I purchased both come with jumpers preinstalled, but
 </p>
 
 <p>
-  <a href="img_2382.jpg"><img alt="IMG_2382" src="img_2382.jpg" /></a>
+  <a href="img_2382.jpg"><img alt="IMG_2382" src="{{ resize_image(path="img_2382.jpg") }}"  /></a>
 </p>
 
 <p style="text-align:left;">
@@ -103,10 +103,10 @@ The strands of EL wire that I purchased both come with jumpers preinstalled, but
 
 <div class="row">
   <div class="col half-width">
-    <a href="img_2375.jpg"><img alt="IMG_2375" src="img_2375.jpg"/></a>
+    <a href="img_2375.jpg"><img alt="IMG_2375" src="{{ resize_image(path="img_2375.jpg") }}" /></a>
   </div>
   <div class="col half-width">
-     <a href="img_2383.jpg"><img alt="IMG_2383" src="img_2383.jpg"/></a>
+     <a href="img_2383.jpg"><img alt="IMG_2383" src="{{ resize_image(path="img_2383.jpg") }}" /></a>
   </div>
 </div>
 
@@ -124,10 +124,10 @@ The strands of EL wire that I purchased both come with jumpers preinstalled, but
 
 <div class="row">
   <div class="col half-width">
-    <a href="img_2384.jpg"><img alt="IMG_2384" src="img_2384.jpg"/></a>
+    <a href="img_2384.jpg"><img alt="IMG_2384" src="{{ resize_image(path="img_2384.jpg") }}" /></a>
   </div>
   <div class="col half-width">
-     <a href="img_2385.jpg"><img alt="IMG_2385" src="img_2385.jpg"/></a>
+     <a href="img_2385.jpg"><img alt="IMG_2385" src="{{ resize_image(path="img_2385.jpg") }}" /></a>
   </div>
 </div>
 
@@ -140,7 +140,7 @@ The strands of EL wire that I purchased both come with jumpers preinstalled, but
 </p>
 
 <p>
-  <a href="img_2394.jpg"><img alt="IMG_2394" src="img_2394.jpg"/></a>
+  <a href="img_2394.jpg"><img alt="IMG_2394" src="{{ resize_image(path="img_2394.jpg") }}" /></a>
 </p>
 
 <p style="text-align:left;">
@@ -148,5 +148,5 @@ The strands of EL wire that I purchased both come with jumpers preinstalled, but
 </p>
 
 <p style="text-align:left;">
-  <a href="img_2395.jpg"><img alt="IMG_2395" src="img_2395.jpg"/></a>
+  <a href="img_2395.jpg"><img alt="IMG_2395" src="{{ resize_image(path="img_2395.jpg") }}" /></a>
 </p>

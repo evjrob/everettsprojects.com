@@ -23,7 +23,7 @@ feature_image = "dscf2871.jpg"
 </p>
 
 <div>
-  <a href="dscf2825.jpg"><img title="DSCF2825" src="dscf2825.jpg" alt="The components necessary to make it work"/></a>
+  <a href="dscf2825.jpg"><img title="DSCF2825" src="{{ resize_image(path="dscf2825.jpg") }}" alt="The components necessary to make it work"/></a>
 
   <p class="caption">
     The components necessary to make it work
@@ -35,7 +35,7 @@ feature_image = "dscf2871.jpg"
 </p>
 
 <div class="col half-width right">
-  <a href="dscf2833.jpg"><img loading="lazy" class="full-width" title="DSCF2833" src="dscf2833.jpg" alt="The PCB with components soldered in place" /></a>
+  <a href="dscf2833.jpg"><img loading="lazy" class="full-width" title="DSCF2833" src="{{ resize_image(path="dscf2833.jpg") }}" alt="The PCB with components soldered in place" /></a>
 
   <p class="caption">
     The PCB with components soldered in place
@@ -51,7 +51,7 @@ feature_image = "dscf2871.jpg"
 </p>
 
 <div class="row">
-  <a href="dscf2843.jpg"><img loading="lazy" class="col full-width" title="DSCF2843" src="dscf2843.jpg" alt="The guts of the clock mechanism" /></a>
+  <a href="dscf2843.jpg"><img loading="lazy" class="col full-width" title="DSCF2843" src="{{ resize_image(path="dscf2843.jpg") }}"  alt="The guts of the clock mechanism" /></a>
     <p class="caption">
       The guts of the clock mechanism
     </p>
@@ -59,13 +59,13 @@ feature_image = "dscf2871.jpg"
 
 <div class="row">
   <div class="col half-width">
-    <a href="dscf2857.jpg"><img loading="lazy" class="col full-width" title="DSCF2857" src="dscf2857.jpg" alt="The left copper pad has delaminated from the board" /></a>
+    <a href="dscf2857.jpg"><img loading="lazy" class="col full-width" title="DSCF2857" src="{{ resize_image(path="dscf2857.jpg") }}"  alt="The left copper pad has delaminated from the board" /></a>
     <p class="caption">
       The left copper pad has delaminated from the board
     </p>
   </div>
   <div class="col half-width">
-    <a href="dscf2858.jpg"><img loading="lazy" class="col full-width" title="DSCF2858" src="dscf2858.jpg" alt="Everything rewired to the battery contacts, and hot glued" /></a>
+    <a href="dscf2858.jpg"><img loading="lazy" class="col full-width" title="DSCF2858" src="{{ resize_image(path="dscf2858.jpg") }}"  alt="Everything rewired to the battery contacts, and hot glued" /></a>
     <p class="caption">
       Everything rewired to the battery contacts, and hot glued
     </p>
@@ -76,14 +76,14 @@ Not to be defeated, I simply rerouted the thin wires of the solenoid to the larg
 
 <div class="row">
   <div class="col half-width">
-    <a href="dscf2864.jpg"><img loading="lazy" class="col full-width" title="DSCF2864" src="dscf2864.jpg" alt="All of the clockwork put back in place." /></a>
+    <a href="dscf2864.jpg"><img loading="lazy" class="col full-width" title="DSCF2864" src="{{ resize_image(path="dscf2864.jpg") }}"  alt="All of the clockwork put back in place." /></a>
     <p class="caption">
       All of the clockwork put back in place.
     </p>
   </div>
 
   <div class="col half-width">
-    <a href="dscf2840.jpg"><img loading="lazy" class="col full-width" title="DSCF2840" src="dscf2840.jpg" alt="The original clock used with the arduino, now being run by the same circuit on a breadboard" /></a>
+    <a href="dscf2840.jpg"><img loading="lazy" class="col full-width" title="DSCF2840" src="{{ resize_image(path="dscf2840.jpg") }}"  alt="The original clock used with the arduino, now being run by the same circuit on a breadboard" /></a>
     <p class="caption">
       The original clock used with the arduino, now being run by the same circuit on a breadboard
     </p>
@@ -99,7 +99,7 @@ Not to be defeated, I simply rerouted the thin wires of the solenoid to the larg
 </p>
 
 <div class="col half-width right">
-  <a href="dscf2870.jpg"><img loading="lazy" class="col full-width" title="DSCF2870" src="dscf2870.jpg" alt="The functioning clock, with swapped clock mechanism"/></a>
+  <a href="dscf2870.jpg"><img loading="lazy" class="col full-width" title="DSCF2870" src="{{ resize_image(path="dscf2870.jpg") }}"  alt="The functioning clock, with swapped clock mechanism"/></a>
 
   <p class="caption">
     The functioning clock, with swapped clock mechanism
@@ -111,7 +111,7 @@ Not to be defeated, I simply rerouted the thin wires of the solenoid to the larg
 </p>
 
 <div class="col half-width right">
-  <a href="dscf2871.jpg"><img loading="lazy" class="col full-width" title="DSCF2871" src="dscf2871.jpg" alt="Re-branded and fully functioning!" /></a>
+  <a href="dscf2871.jpg"><img loading="lazy" class="col full-width" title="DSCF2871" src="{{ resize_image(path="dscf2871.jpg") }}"  alt="Re-branded and fully functioning!" /></a>
 
   <p class="caption">
     Re-branded and fully functioning!

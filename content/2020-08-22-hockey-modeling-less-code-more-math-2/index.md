@@ -82,4 +82,4 @@ Once again, the assumption of independence has a major role to play. To find the
 
 Everything above is what makes my regulation time score distribution plots work. For example, [in tonight's game between Colorado and Dallas](https://bayesbet.everettsprojects.com/game/2019030241/2020-08-22/), we have the following predictions:
 
-[![Regulation Time Score Distribution](scoredist.png)](https://bayesbet.everettsprojects.com/game/2019030241/2020-08-22/)
+[![Regulation Time Score Distribution]({{ resize_image(path="scoredist.png") }})](https://bayesbet.everettsprojects.com/game/2019030241/2020-08-22/)

@@ -12,7 +12,7 @@ tags = [ "CSS3", "HTTP", "MySQL", "PHP", "Programming", "Web Applications", "Web
 feature_image = "login.png"
 +++
 
-[<img alt="Login" src="login.png" width="594" height="300"/>](login.png)
+[<img alt="Login" src="{{ resize_image(path="login.png") }}"  width="594" height="300"/>](login.png)
 
 <p style="text-align:center;">
   <a href="/phplogin/phpLogin.zip">If you want the source code right away, click here.</a>
@@ -50,7 +50,7 @@ If you just want the source code, [I have them all zipped up and ready to go](/p
 
 Because it would take a lot of words to describe the interactions between all of the files, I&#8217;ve decided to condense that information into a flow chart. The index.php page is assumed to be the starting point and coloured blue to reflect this.
 
-[<img alt="flowchart" src="flowchart-coloured.png" width="594" height="459" />](flowchart-coloured.png)
+[<img alt="flowchart" src="{{ resize_image(path="flowchart-coloured.png") }}"  width="594" height="459" />](flowchart-coloured.png)
 
 I have left a few of the files out of the flow chart so it didn&#8217;t get too busy. These are the config.inc.php which stores the credentials necessary to access the database, the logout.php page, and the cron_purge.php file which removes time expired password reset tokens from the table that contains them. I have the cron job set up to run every hour.
 

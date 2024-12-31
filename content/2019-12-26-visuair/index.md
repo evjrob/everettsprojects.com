@@ -13,7 +13,7 @@ layout = "post"
 output = "html_document"
 +++
 
-[![visuair](visuair.png)](http://visuair2.s3-website-us-east-1.amazonaws.com/)
+[![visuair]({{ resize_image(path="visuair.png") }})](http://visuair2.s3-website-us-east-1.amazonaws.com/)
 
 [Visuair](http://visuair2.s3-website-us-east-1.amazonaws.com/) is a webapp with the goal of augmenting the OpenAQ data over the continental USA using the common IDW interpolation technique. It's a group project completed during the Fall 2019 semester for CSE 6242x in the Georgia Tech Masters of Science in Analytics with the help of my talented team mates Ben Kester, Dalton Fabian, Jacob Vander Ploeg, and Cameron Griser.
 
@@ -27,7 +27,7 @@ The front end is a simple html web page that uses jquery and D3 to plot pre-comp
 
 The back end uses Athena to directly query the [OpenAQ S3 Bucket](https://openaq-fetches.s3.amazonaws.com/index.html) and create the daily mean values for each sensor location. When executed initially, the interpolations need to be back computed for all existing parameters and measurement dates. To accomplish this a controller -> dispatcher -> interpolator lambda function architecture was created:
 
-![lambda_arch](Visuair_Backend.png)
+![lambda_arch]({{ resize_image(path="Visuair_Backend.png") }})
 
 The project also runs this pipeline daily on only the most recent week of data. This allows it to continuously update, and to capture any changes in the data for up to a week after the recording was actually captured.
 

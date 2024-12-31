@@ -12,7 +12,7 @@ tags = ["BeagleBone", "Electronics", "case", "DIY", "Recyling"]
 feature_image = "dscf3155.jpg"
 +++
 
-[<img class="col full-width" title="DSCF3155" src="dscf3155.jpg" alt="The Beaglebone and case"/>](dscf3155.jpg)
+[<img class="col full-width" title="DSCF3155" src="{{ resize_image(path="dscf3155.jpg") }}"  alt="The Beaglebone and case"/>](dscf3155.jpg)
 
 I recently purchased a [BeagleBone](http://beagleboard.org/bone) with the intent of using it to make a home server and media box that could run constantly without costing a small fortune when the power bill arrived. I originally intended to make this project using a raspberry pi, though they&#8217;re having serious issues satisfying the demand, and I have other projects a raspberry pi can be put to use on that would make better use of its video capabilities.
 
@@ -20,19 +20,19 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
 
 <div class="row">
   <div class="col one-third-width">
-    <a href="beaglebone-case-template-print-at-95.png"><img class="col full-width" style="height: revert" title="beaglebone case template print at 95%" src="beaglebone-case-template-print-at-95.png" alt="The template for the case"/></a>
+    <a href="beaglebone-case-template-print-at-95.png"><img class="col full-width" style="height: revert" title="beaglebone case template print at 95%" src="{{ resize_image(path="beaglebone-case-template-print-at-95.png") }}"  alt="The template for the case"/></a>
     <p class="caption">
       The Basic Template
     </p>
   </div>
   <div class="col one-third-width">
-    <a href="scan0081.jpg"><img class="col full-width" style="height: revert" title="SCAN0081" src="scan0081.jpg" alt="Rough guide of layers 1 to 4"/></a>
+    <a href="scan0081.jpg"><img class="col full-width" style="height: revert" title="SCAN0081" src="{{ resize_image(path="scan0081.jpg") }}"  alt="Rough guide of layers 1 to 4"/></a>
     <p class="caption">
       Rough guide for layers 1 &#8211; 4
     </p>
   </div>
   <div class="col one-third-width">
-    <a href="scan0082.jpg"><img class="col full-width" style="height: revert" title="SCAN0082" src="scan0082.jpg" alt="A rough guide for the layers"/></a>
+    <a href="scan0082.jpg"><img class="col full-width" style="height: revert" title="SCAN0082" src="{{ resize_image(path="scan0082.jpg") }}"  alt="A rough guide for the layers"/></a>
     <p class="caption">
       Rough guide for layers 5 &#8211; 7
     </p>
@@ -40,7 +40,7 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
 </div>
 
 <div class="row">
-  <a href="dscf3108.jpg"><img class="col full-width" title="DSCF3108" src="dscf3108.jpg" alt="The beginning of my template"/></a>
+  <a href="dscf3108.jpg"><img class="col full-width" title="DSCF3108" src="{{ resize_image(path="dscf3108.jpg") }}"  alt="The beginning of my template"/></a>
   <p class="caption">
     The beginning of my template
   </p>
@@ -56,13 +56,13 @@ The first thing I wanted to tackle when my BeagleBone arrived was creating some 
 
 <div class="row">
   <div class="col half-width">
-    <a href="dscf3115.jpg"><img class="col full-width" title="DSCF3115" src="dscf3115.jpg" alt="The two bottom most layers of the case" /></a>
+    <a href="dscf3115.jpg"><img class="col full-width" title="DSCF3115" src="{{ resize_image(path="dscf3115.jpg") }}"  alt="The two bottom most layers of the case" /></a>
     <p class="caption">
       The two bottom most layers of the case, along with a couple template stencils.
     </p>
   </div>
   <div class="col half-width">
-    <a href="dscf3125.jpg"><img class="col full-width" title="DSCF3125" src="dscf3125.jpg" alt="Letting the glue set"/></a>
+    <a href="dscf3125.jpg"><img class="col full-width" title="DSCF3125" src="{{ resize_image(path="dscf3125.jpg") }}"  alt="Letting the glue set"/></a>
     <p class="caption">
       Letting the glue set
     </p>
@@ -74,14 +74,14 @@ To make the upper layer, I used my base template to trace both the outlines onto
 Next, it was necessary to glue these two pieces together, which was accomplished with a judicious amount of white glue (the kind you&#8217;ve probably used in elementary school). Once the glue became tacky, I wrapped a few elastic bands around them to keep them firmly pressed together and left them to dry for about half an hour.
 <div class="row">
   <div class="col half-width">
-    <a href="dscf3126.jpg"><img class="col full-width" title="DSCF3126" src="dscf3126.jpg" alt="Cutting out the next set of layers"/></a>
+    <a href="dscf3126.jpg"><img class="col full-width" title="DSCF3126" src="{{ resize_image(path="dscf3126.jpg") }}"  alt="Cutting out the next set of layers"/></a>
     <p class="caption">
       Cutting out the next set of layers
     </p>
   </div>
 
   <div class="col half-width">
-    <a href="dscf3127.jpg"><img class="col full-width" title="DSCF3127" src="dscf3127.jpg" alt="Building the walls of the case"/></a>
+    <a href="dscf3127.jpg"><img class="col full-width" title="DSCF3127" src="{{ resize_image(path="dscf3127.jpg") }}"  alt="Building the walls of the case"/></a>
     <p class="caption">
       Building up the walls of the case
     </p>
@@ -100,14 +100,14 @@ Next, it was necessary to glue these two pieces together, which was accomplished
 
 <div class="row">
   <div class="col half-width">
-    <a href="dscf3140.jpg"><img class="col full-width" title="DSCF3140" src="dscf3140.jpg" alt="The case with the fifth layer added"/></a>
+    <a href="dscf3140.jpg"><img class="col full-width" title="DSCF3140" src="{{ resize_image(path="dscf3140.jpg") }}"  alt="The case with the fifth layer added"/></a>
     <p class="caption">
       The case with the fifth layer added
     </p>
   </div>
 
   <div class="col half-width">
-    <a href="dscf3163.jpg"><img class="col full-width" title="DSCF3163" src="dscf3163.jpg" alt="Some simple hardware holds the board in place"/></a>
+    <a href="dscf3163.jpg"><img class="col full-width" title="DSCF3163" src="{{ resize_image(path="dscf3163.jpg") }}"  alt="Some simple hardware holds the board in place"/></a>
     <p class="caption">
       Some basic hardware holds the board firmly in place.
     </p>
@@ -132,14 +132,14 @@ Next, it was necessary to glue these two pieces together, which was accomplished
 
 <div class="row">
   <div class="col half-width">
-    <a href="dscf3146.jpg"><img class="col full-width" title="DSCF3146" src="dscf3146.jpg" alt="A side profile of the case"/></a>
+    <a href="dscf3146.jpg"><img class="col full-width" title="DSCF3146" src="{{ resize_image(path="dscf3146.jpg") }}"  alt="A side profile of the case"/></a>
     <p class="caption">
       A side profile of the case
     </p>
   </div>
 
   <div class="col half-width">
-    <a href="dscf3157.jpg"><img class="col full-width" title="DSCF3157" src="dscf3157.jpg" alt="With the lid on"/></a>
+    <a href="dscf3157.jpg"><img class="col full-width" title="DSCF3157" src="{{ resize_image(path="dscf3157.jpg") }}"  alt="With the lid on"/></a>
     <p class="caption">
       With the lid on
     </p>
@@ -148,14 +148,14 @@ Next, it was necessary to glue these two pieces together, which was accomplished
 
 <div class="row">
   <div class="col half-width">
-    <a href="dscf3168.jpg"><img class="col full-width" title="DSCF3168" src="dscf3168.jpg" alt="The case and board in action"/></a>
+    <a href="dscf3168.jpg"><img class="col full-width" title="DSCF3168" src="{{ resize_image(path="dscf3168.jpg") }}"  alt="The case and board in action"/></a>
     <p class="caption">
       The case and board in action
     </p>
   </div>
 
   <div class="col half-width">
-    <a href="dscf3175.jpg"><img class="col full-width" title="DSCF3175" src="dscf3175.jpg" alt="Decorative elements added to the case"/></a>
+    <a href="dscf3175.jpg"><img class="col full-width" title="DSCF3175" src="{{ resize_image(path="dscf3175.jpg") }}"  alt="Decorative elements added to the case"/></a>
     <p class="caption">
       Decorative elements can be added too
     </p>

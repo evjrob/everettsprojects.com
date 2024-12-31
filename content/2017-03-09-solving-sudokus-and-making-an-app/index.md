@@ -23,33 +23,33 @@ At this point my obsession with Sudoku solving algorithms was starting to peak, 
 <section class="splide" aria-label="Splide Basic HTML Example">
   <div class="splide__track">
 		<ul class="splide__list">
-      <li class="splide__slide"><img src="0-Dancing-Links-Start.png"></li>
-      <li class="splide__slide"><img src="1-SearchA-CoverA.png"></li>
-      <li class="splide__slide"><img src="2-SearchA-CoverD.png"></li>
-      <li class="splide__slide"><img src="3-SearchA-CoverG.png"></li>
-      <li class="splide__slide"><img src="4-SearchB-CoverB.png"></li>
-      <li class="splide__slide"><img src="5-SearchB-CoverC.png"></li>
-      <li class="splide__slide"><img src="6-SearchB-CoverF.png"></li>
-      <li class="splide__slide"><img src="7-SearchE-CoverE.png"></li>
-      <li class="splide__slide"><img src="8-SearchB-UncoverF.png"></li>
-      <li class="splide__slide"><img src="9-SearchB-UncoverC.png"></li>
-      <li class="splide__slide"><img src="10-SearchB-UncoverB.png"></li>
-      <li class="splide__slide"><img src="11-SearchA-UncoverG.png"></li>
-      <li class="splide__slide"><img src="12-SearchA-UncoverD.png"></li>
-      <li class="splide__slide"><img src="13-SearchA-CoverD.png"></li>
-      <li class="splide__slide"><img src="14-SearchB-CoverB.png"></li>
-      <li class="splide__slide"><img src="15-SearchB-CoverC.png"></li>
-      <li class="splide__slide"><img src="16-SearchB-CoverF.png"></li>
-      <li class="splide__slide"><img src="17-SearchB-CoverG.png"></li>
-      <li class="splide__slide"><img src="18-SearchE-CoverE.png"></li>
-      <li class="splide__slide"><img src="19-SearchB-UncoverG.png"></li>
-      <li class="splide__slide"><img src="20-SearchB-UncoverF.png"></li>
-      <li class="splide__slide"><img src="21-SearchB-UncoverC.png"></li>
-      <li class="splide__slide"><img src="22-SearchB-CoverG.png"></li>
-      <li class="splide__slide"><img src="23-SearchC-CoverC.png"></li>
-      <li class="splide__slide"><img src="24-SearchC-CoverE.png"></li>
-      <li class="splide__slide"><img src="25-SearchC-CoverF.png"></li>
-      <li class="splide__slide"><img src="26-Searchh-Return.png"></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="0-Dancing-Links-Start.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="1-SearchA-CoverA.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="2-SearchA-CoverD.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="3-SearchA-CoverG.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="4-SearchB-CoverB.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="5-SearchB-CoverC.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="6-SearchB-CoverF.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="7-SearchE-CoverE.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="8-SearchB-UncoverF.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="9-SearchB-UncoverC.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="10-SearchB-UncoverB.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="11-SearchA-UncoverG.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="12-SearchA-UncoverD.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="13-SearchA-CoverD.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="14-SearchB-CoverB.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="15-SearchB-CoverC.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="16-SearchB-CoverF.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="17-SearchB-CoverG.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="18-SearchE-CoverE.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="19-SearchB-UncoverG.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="20-SearchB-UncoverF.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="21-SearchB-UncoverC.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="22-SearchB-CoverG.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="23-SearchC-CoverC.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="24-SearchC-CoverE.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="25-SearchC-CoverF.png") }}" ></li>
+      <li class="splide__slide"><img src="{{ resize_image(path="26-Searchh-Return.png") }}" ></li>
 		</ul>
   </div>
 </section>
@@ -61,9 +61,9 @@ Having finished the Dancing Links implementation, I put the whole business of so
 I set to work making my sudoku solving android app and after a couple dozen hours of development spread over evenings and weekends I finally have an app I feel is worth publishing. The code for this app is up on [GitHub](https://github.com/evjrob/SudokuBotSolver) and the app itself can be downloaded on the [Google Play store](https://play.google.com/store/apps/details?id=com.everettsprojects.sudokubotsolver&hl=en).
 
 <div class="row">
-  <img class="col half-width" style="height: revert" src="Screenshot_20170308-204149.png" alt="The unsolved sudoku"/>
+  <img class="col half-width" style="height: revert" src="{{ resize_image(path="Screenshot_20170308-204149.png") }}"  alt="The unsolved sudoku"/>
 
-  <img class="col half-width" style="height: revert" src="Screenshot_20170308-204203.png" alt="The solved sudoku" />
+  <img class="col half-width" style="height: revert" src="{{ resize_image(path="Screenshot_20170308-204203.png") }}"  alt="The solved sudoku" />
 </div>
 
 <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>

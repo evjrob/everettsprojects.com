@@ -13,7 +13,7 @@ feature_image = "dscf27821.jpg"
 +++
 
 <div class="row">
-  <a href="dscf2781.jpg"><img loading="lazy" class="col full-width" title="DSCF2781" src="dscf2781.jpg" alt="The finished photopopper photovore"/></a>
+  <a href="dscf2781.jpg"><img loading="lazy" class="col full-width" title="DSCF2781" src="{{ resize_image(path="dscf2781.jpg") }}"  alt="The finished photopopper photovore"/></a>
 
   <p class="caption">
     The finished product
@@ -21,7 +21,7 @@ feature_image = "dscf27821.jpg"
 </div>
 
 <div class="row col half-width">
-  <a href="dscf2751.jpg"><img loading="lazy" class="col full-width" title="DSCF2751" src="dscf2751.jpg" alt="My new Hakko FX-888 soldering station"/></a>
+  <a href="dscf2751.jpg"><img loading="lazy" class="col full-width" title="DSCF2751" src="{{ resize_image(path="dscf2751.jpg") }}"  alt="My new Hakko FX-888 soldering station"/></a>
 
   <p class="caption">
     My new Hakko FX-888 soldering station
@@ -33,7 +33,7 @@ feature_image = "dscf27821.jpg"
 </p>
 
 <div class="row">
-  <a href="photopoppercircuit.png"><img loading="lazy" class="col full-width" style="height: revert;" title="PhotopopperCircuit" src="photopoppercircuit.png" alt="The Photopopper Photovore circuit"/></a>
+  <a href="photopoppercircuit.png"><img loading="lazy" class="col full-width" style="height: revert;" title="PhotopopperCircuit" src="{{ resize_image(path="photopoppercircuit.png") }}"  alt="The Photopopper Photovore circuit"/></a>
 
   <p class="caption">
     The Photopopper Photovore circuit
@@ -45,7 +45,7 @@ Since I am only a hobbyist, my assessment may not be correct, but hopefully I&#8
 Before going further, I feel like it would be a good idea to make it clear that this project was very enjoyable even though I encountered several issues while working on it. I wouldn&#8217;t want to discourage anyone from taking it on simply because I like to complain about things.
 
 <div class="row col half-width">
-  <a href="dscf2749.jpg"><img loading="lazy" class="col full-width" title="DSCF2749" src="dscf2749.jpg" alt="The components all laid out" /></a>
+  <a href="dscf2749.jpg"><img loading="lazy" class="col full-width" title="DSCF2749" src="{{ resize_image(path="dscf2749.jpg") }}"  alt="The components all laid out" /></a>
 
   <p class="caption col full-width">
     The components all laid out (I apologize for the blurriness)
@@ -55,7 +55,7 @@ Before going further, I feel like it would be a good idea to make it clear that 
 The assembly instructions were good, and I really can&#8217;t complain too much in that regard. To start, you are shown a parts list, so you can be sure you have all the necessary components before proceeding. The most interesting part in this kit is probably the PCB, which is cut and formed to make this robot recognizable as an insect. In addition, there is  a large capacitor, trimpot, solar cell, and a pair each of diodes, voltage triggers, transistors, capacitors, motors, IR sensors, and the components to make each antenna (the tactile sensors).
 
 <div class="row col half-width right">
-  <a href="dscf2764.jpg"><img loading="lazy" class="col full-width" title="DSCF2764" src="dscf2764.jpg" alt="The underside of the PCB"/></a>
+  <a href="dscf2764.jpg"><img loading="lazy" class="col full-width" title="DSCF2764" src="{{ resize_image(path="dscf2764.jpg") }}"  alt="The underside of the PCB"/></a>
 
   <p class="caption">
     The underside with the voltage triggers, diodes, transistors, capacitors and trimpot installed
@@ -65,7 +65,7 @@ The assembly instructions were good, and I really can&#8217;t complain too much 
 The first components to be installed are the voltage triggers, trimpot, and diodes, followed by the transistors and small capacitors. After this, the IR sensors are added. The installation of all these components was fairly straight forward, and was easily accomplished with the new soldering iron.
 
 <div class="row col full-width">
-  <a href="dscf2771.jpg"><img loading="lazy" class="col full-width" title="DSCF2771" src="dscf2771.jpg" alt="The motor mounts with motors soldered on"/></a>
+  <a href="dscf2771.jpg"><img loading="lazy" class="col full-width" title="DSCF2771" src="{{ resize_image(path="dscf2771.jpg") }}"  alt="The motor mounts with motors soldered on"/></a>
 
   <p class="caption">
     The motor mounts with motors soldered on
@@ -75,7 +75,7 @@ The first components to be installed are the voltage triggers, trimpot, and diod
 The next component to go on was the large storage capacitor, which had to have its leads bent 90 degrees so that it could lie flat against the PCB. The motor mounts were also fairly easy to attach, using a combination of folding tabs and plenty of solder. Once attached, the motors themselves simply clipped into place.
 
 <div class="row col half-width right">
-  <a href="dscf2780.jpg"><img loading="lazy" class="col full-width" title="DSCF2780" src="dscf2780.jpg" alt="The support wire"/></a>
+  <a href="dscf2780.jpg"><img loading="lazy" class="col full-width" title="DSCF2780" src="{{ resize_image(path="dscf2780.jpg") }}"  alt="The support wire"/></a>
 
   <p class="caption">
     The support wire: Murphy&#8217;s Law finally shows up.
@@ -85,7 +85,7 @@ The next component to go on was the large storage capacitor, which had to have i
 Next, it was necessary to install the support wire to ensure the photopopper&#8217;s legs would reach the ground. Unfortunately this is where my problems began, since I failed to make sure the wire was short enough before I began soldering it on. While it is technically possible to fix this by twisting it to increase tension, I found the spring of the PCB itself was stronger than the wire and I had to constantly re-tighten it. Eventually metal fatigue occurred, and the poor wire broke. Luckily I had a paperclip of a similar gauge (seen in the picture to the left) which seemed to be much stronger, and was capable of withstanding the flex of the PCB. After this, some of the heat-shrink tubing was applied to the motor shafts to make the tires/feet, and the paperclip was given a small twist to make sure they reached the ground.
 
 <div class="row col half-width right">
-  <a href="dscf2777.jpg"><img loading="lazy" class="col full-width" title="DSCF2777" src="dscf2777.jpg" alt="The solar panel is now attached" /></a>
+  <a href="dscf2777.jpg"><img loading="lazy" class="col full-width" title="DSCF2777" src="{{ resize_image(path="dscf2777.jpg") }}"  alt="The solar panel is now attached" /></a>
 
   <p class="caption">
     The solar panel is now attached
@@ -95,7 +95,7 @@ Next, it was necessary to install the support wire to ensure the photopopper&#82
 Attaching the solar cell was fairly easy, though wire strippers were needed to prepare the twisted red and black wire before it could be soldered to the right places. A piece of double sided sticky tape was then used to hold it into place. This was the next source of problems, because I mounted the solar panel before making sure each of the motors was working, and ruined it when I removed the panel to resolder one of the wires to the board. Luckily I had a replacement available, and I tested the conductivity of the adhesive before use to make sure it would not short anything. To best way to test each motor is to place the robot in direct sunlight or under an incandescent lightbulb, and then use something to short the square and circle pads on each side of the robot&#8217;s head (where the antennae will later be installed). From experience I recommend this step is performed before the solar panel is mounted. It is now a good idea to tune to robot, before the antenna are installed. To achieve this, the robot should be put near a source of light, and then the trimpot should be adjusted to make sure it moves towards that source, and doesn&#8217;t veer to either side. after this is achieved it is best to not to fiddle with it, as troubleshooting antennae and IR sensor balance at the same time was unnecessarily difficult.
 
 <div class="row col full-width">
-  <a href="antennae.png"><img loading="lazy" class="col full-width" style="height: revert;" title="Antennae" src="antennae.png" alt="The structure of the tactile sensors" /></a>
+  <a href="antennae.png"><img loading="lazy" class="col full-width" style="height: revert;" title="Antennae" src="{{ resize_image(path="antennae.png") }}"  alt="The structure of the tactile sensors" /></a>
 
   <p class="caption">
     The structure of the tactile sensors
@@ -103,7 +103,7 @@ Attaching the solar cell was fairly easy, though wire strippers were needed to p
 </div>
 
 <div class="row col half-width right">
-  <a href="dscf27821.jpg"><img loading="lazy" class="col full-width" title="DSCF2782" src="dscf27821.jpg" alt="Antennae installed" /></a>
+  <a href="dscf27821.jpg"><img loading="lazy" class="col full-width" title="DSCF2782" src="{{ resize_image(path="dscf27821.jpg") }}"  alt="Antennae installed" /></a>
 
   <p class="caption">
     With the antennae installed
@@ -113,7 +113,7 @@ Attaching the solar cell was fairly easy, though wire strippers were needed to p
 The idea behind the tactile sensors is that when they collide with something it causes the spring to bend and connect with the central pin. This shorts the circuit and bypasses the IR sensor to make sure the robot moves away from obstacles. This step was especially troublesome, since the heat shrink tubing didn&#8217;t contract enough, and the spring would not fit without significant forcing. Through a combination of slightly untwisting the spring to increase its diameter, forcing the tubing through with a screwdriver, and applying excessive force (enough to bend the pin), the spring was eventually moved into place. The antennae were then ready to be soldered on, with the wire from the spring connecting with one pad, and the base of the pin onto the other pad. Because the pins were bent from the previous step, a fair amount of adjustment had to be performed to ensure the short only occurred when the sensors were triggered. The antennae alone took at least as long as the rest of the assembly combined.
 
 <div class="row col full-width">
-  <a href="dscf2801.jpg"><img loading="lazy" class="col full-width" style="height: 325px" title="DSCF2801" src="dscf2801.jpg" alt="The finished Photopopper with curled antennae"/></a>
+  <a href="dscf2801.jpg"><img loading="lazy" class="col full-width" style="height: 325px" title="DSCF2801" src="{{ resize_image(path="dscf2801.jpg") }}"  alt="The finished Photopopper with curled antennae"/></a>
 
   <p class="caption">
     The finished Photopopper with curled antennae

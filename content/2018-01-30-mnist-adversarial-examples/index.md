@@ -169,7 +169,7 @@ plt.show()
 ```
 
 
-![png](output_9_0.png)
+![png]({{ resize_image(path="output_9_0.png") }})
 
 
 
@@ -208,7 +208,7 @@ plt.show()
 ```
 
 
-![png](output_12_0.png)
+![png]({{ resize_image(path="output_12_0.png") }})
 
 
 
@@ -263,7 +263,7 @@ print("The adversarial classification accuracy is: {}".format(adv_acc))
 ```
 
 
-![png](output_15_0.png)
+![png]({{ resize_image(path="output_15_0.png") }})
 
 
     The adversarial classifications are: [9 2 8 8 8 3 8 8 3 8]
@@ -373,7 +373,7 @@ plt.show()
 ```
 
 
-![png](output_20_0.png)
+![png]({{ resize_image(path="output_20_0.png") }})
 
 
 The first column in the above image represents the input digit, and the next ten digits on each row are attempts to perturb it into the digits zero through nine. The bottom row represents the target digit of the perturbation. A green border around a digit indicates that my convnet correctly classified the adversarial example as the original input digit, a red border means the digit was misclassified as the target digit, and a yellow border means the digit was misclassified, but not as the target. The diagonals are all correctly classified since they represent attempts to perturb a digit towards itself. We will not consider these diagonal entries when determining the accuracy of the model.

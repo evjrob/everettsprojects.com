@@ -12,7 +12,7 @@ tags = [ "AER", "AJAX", "Alberta", "ERCB", "Environmental Science", "Google Maps
 feature_image = "spills.png"
 +++
 
-### [<img src="spills.png" alt="spills"/>](/spills/index.html)
+### [<img src="{{ resize_image(path="spills.png") }}"  alt="spills"/>](/spills/index.html)
 
 [**_There is an updated version of this project with a number of improvements._**](/2014/06/25/mapping-oil-and-gas-incidents-in-alberta-improvements/)
 
@@ -1056,7 +1056,7 @@ Another consideration, which is not one I have control over is that any spills o
 A final issue is that there are in fact 3 members of the database that do not possess a valid latitude or longitude; these fields are 0. The incident numbers are 19940377, 19850326, and 19871009 for reference. This means they are actually plotted in the south Atlantic, off the coast of Africa:
 
 <div>
-  <a href="spills-atlantic.png"><img src="spills-atlantic.png" alt="These incidents are plotted in the wrong location at Latitude: 0, Longitude: 0"/></a>
+  <a href="spills-atlantic.png"><img src="{{ resize_image(path="spills-atlantic.png") }}"  alt="These incidents are plotted in the wrong location at Latitude: 0, Longitude: 0"/></a>
 
   <p class="caption">
     These incidents are plotted in the wrong location at Latitude: 0, Longitude: 0

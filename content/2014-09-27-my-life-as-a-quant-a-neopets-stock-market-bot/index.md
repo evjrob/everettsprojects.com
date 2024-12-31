@@ -468,7 +468,7 @@ main()
 The script is broken down into a pretty logical sequence as it's very procedural. It starts with the main function which deals with logging in, collecting bank interest and withdrawing neopoints for the stock market purchase if necessary, and then finally playing the stock market. Finally, it goes to deposit the neopoints gained from the stock market if any sales were made, then logs out. Pretty simple on the face of it, but the real interesting parts are the actual interactions with the webpages. In order for our bot to be able to do anything meaningful we need to first extract the information we care about from the page, then have the script make the right decisions using that information, and finally put the calculated input values into the right fields and submit the data. For the login, and bank portions of this bot, that's fairly simple; it's just a matter of going to the correct url selecting the right forms, and submitting a static or otherwise easy to calculate value that is pulled out of the HTML by finding some substrings that encapsulate the data we're after.
 
 <div class="row">
-  <a href="Screenshot-from-2014-09-27-144658.png"><img class="col full-width" style="height: revert" src="Screenshot-from-2014-09-27-144658.png" alt="Screenshot from 2014-09-27 14:46:58"/></a>
+  <a href="Screenshot-from-2014-09-27-144658.png"><img class="col full-width" style="height: revert" src="{{ resize_image(path="Screenshot-from-2014-09-27-144658.png") }}"  alt="Screenshot from 2014-09-27 14:46:58"/></a>
   <p class="caption">
     The list of Neodaq stocks and their prices.
   </p>
@@ -477,7 +477,7 @@ The script is broken down into a pretty logical sequence as it's very procedural
 The stockManager() function is a little less straight forward. The Neopets stock market game is a simple html form based game, which makes most of this possible (building a bot to interact with flash content? No thank you!). This means that we use the same techniques as we did for the login and bank pages, we're just after information that is a presented in a slightly more complex way as an HTML table. We're interested in the structure of the table, and we need to maintain that, just without all of the HTML bits that don't mean anything to us. This is done through the extractStockPrices() and extractStockHoldings() functions. They both work in pretty much the same way, by taking the entire HTML page as a string, isolating the table of interest, stripping out some of the problematic HTML bits, then putting it all into a dictionary that maintains the data structure using XML.
 
 <div class="row">
-  <a href="Screenshot-from-2014-09-27-144728.png"><img class="col full-width" style="height: revert" src="Screenshot-from-2014-09-27-144728.png" alt="Screenshot from 2014-09-27 14:47:28"/></a>
+  <a href="Screenshot-from-2014-09-27-144728.png"><img class="col full-width" style="height: revert" src="{{ resize_image(path="Screenshot-from-2014-09-27-144728.png") }}"  alt="Screenshot from 2014-09-27 14:47:28"/></a>
   <p class="caption">
     My portfolio of Neodaq stocks.
   </p>
@@ -492,7 +492,7 @@ For those lucky enough to have a very large sum of neopoints in their bank accou
 Throughout this whole process the script also keeps detailed logs of what it is doing. This allows you to quickly check up on the progress of the bot without logging in to Neopets and then trying to figure out what has happened since you last looked.
 
 <div class="row">
-  <a href="Screenshot-from-2014-09-27-150659.png"><img class="col full-width" style="height: revert" src="Screenshot-from-2014-09-27-150659.png" alt="Screenshot from 2014-09-27 15:06:59"/></a>
+  <a href="Screenshot-from-2014-09-27-150659.png"><img class="col full-width" style="height: revert" src="{{ resize_image(path="Screenshot-from-2014-09-27-150659.png") }}"  alt="Screenshot from 2014-09-27 15:06:59"/></a>
   <p class="caption">
     The log file.
   </p>

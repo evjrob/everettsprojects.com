@@ -18,7 +18,7 @@ feature_image = "IMG_2494.jpg"
   4. [The results](#results)
 
 <div class="row">
-  <a href="IMG_2495.jpg"><img class="col full-width" src="IMG_2495.jpg" alt="The final board"/></a>
+  <a href="IMG_2495.jpg"><img class="col full-width" src="{{ resize_image(path="IMG_2495.jpg") }}"  alt="The final board"/></a>
 
   <p class="caption">
     A side shot of the final board.
@@ -80,7 +80,7 @@ feature_image = "IMG_2494.jpg"
 </div>
 
 <div class="row">
-  <a href="IMG_2460.jpg"><img class="col full-width" style="height: revert" src="IMG_2460.jpg" alt="IMG_2460"/></a>
+  <a href="IMG_2460.jpg"><img class="col full-width" style="height: revert" src="{{ resize_image(path="IMG_2460.jpg") }}"  alt="IMG_2460"/></a>
 
   <p class="caption">
     The longboard deck with trucks and wheels attached.
@@ -91,13 +91,13 @@ The first step of mounting the trucks is very straight forward. If you have ever
 
 <div class="row">
   <div class="col half-width">
-    <a href="IMG_2461.jpg"><img class="col full-width" src="IMG_2461.jpg" alt="IMG_2461"/></a>
+    <a href="IMG_2461.jpg"><img class="col full-width" src="{{ resize_image(path="IMG_2461.jpg") }}"  alt="IMG_2461"/></a>
     <p class="caption">
       The motor pulley. Note the two holes for set screws.
     </p>
   </div>
   <div class="col half-width">
-    <a href="IMG_2462.jpg"><img class="col full-width" src="IMG_2462.jpg" alt="IMG_2462"/></a>
+    <a href="IMG_2462.jpg"><img class="col full-width" src="{{ resize_image(path="IMG_2462.jpg") }}"  alt="IMG_2462"/></a>
     <p class="caption">
       The brushless DC motor shaft has been dremeled down to make flat spots for the set screws.
     </p>
@@ -112,19 +112,19 @@ I achieved this by using a Dremel tool with a carbide bit. I recommend that you 
 
 <div class="row">
   <div class="col one-third-width">
-    <a href="IMG_2464.jpg"><img class="col full-width" src="IMG_2464.jpg" alt="IMG_2464"/></a>
+    <a href="IMG_2464.jpg"><img class="col full-width" src="{{ resize_image(path="IMG_2464.jpg") }}"  alt="IMG_2464"/></a>
     <p class="caption">
       The BLDC motor has been attached to the mounting bracket. It's still loose enough to slide in the slots.
     </p>
   </div>
   <div class="col one-third-width">
-    <a href="IMG_2465.jpg"><img class="col full-width" src="IMG_2465.jpg" alt="IMG_2465"/></a>
+    <a href="IMG_2465.jpg"><img class="col full-width" src="{{ resize_image(path="IMG_2465.jpg") }}"  alt="IMG_2465"/></a>
     <p class="caption">
       The belt is now in place and ready for tensioning.
     </p>
   </div>
   <div class="col one-third-width">
-    <a href="IMG_2466.jpg"><img class="col full-width" src="IMG_2466.jpg" alt="IMG_2466"/></a>
+    <a href="IMG_2466.jpg"><img class="col full-width" src="{{ resize_image(path="IMG_2466.jpg") }}"  alt="IMG_2466"/></a>
     <p class="caption">
       The belt has been pulled taught and the motor has been tightened onto the mounting bracket.
     </p>
@@ -138,7 +138,7 @@ Finally, we need to tension the belt. This is achieved by pulling the motor alon
 And that's it for the Mechanical side of things. Next up is the electronics and the protective shield for the electronics.
 
 <div class="row">
-  <a href="IMG_2467.jpg"><img class="col full-width" src="IMG_2467.jpg" alt="IMG_2467"/></a>
+  <a href="IMG_2467.jpg"><img class="col full-width" src="{{ resize_image(path="IMG_2467.jpg") }}"  alt="IMG_2467"/></a>
   <p class="caption">
     The ESC has had the connectors soldered on and is plugged into the motor.
   </p>
@@ -149,7 +149,7 @@ The electronics are also pretty straight forward. For the most part it is all ju
 Now it's just a matter of plugging everything together and attaching it to the bottom of the board. I hooked everything together and made sure the motor worked first, then I set to work planning the layout of the components on the underside of the board. Once I was satisfied I used the industrial strength adhesive Velcro tape to hold everything in place. It has a 2 inch width which is exactly the right width for the ESC and batteries. At this point the board is technically ridable, but LiPo batteries have a reputation for being a little "explodey" if they are damaged, so I wanted to play it safe and put a shield of sorts over them.
 
 <div class="row">
-  <a href="DSCF0230.jpg"><img class="col full-width" style="height: revert;" src="DSCF0230.jpg" alt="DSCF0230"/></a>
+  <a href="DSCF0230.jpg"><img class="col full-width" style="height: revert;" src="{{ resize_image(path="DSCF0230.jpg") }}"  alt="DSCF0230"/></a>
   <p class="caption">
     The failed ABS plastic shield. ABS is a finicky material.
   </p>
@@ -161,13 +161,13 @@ After the failure of the ABS shield, I decided to try my hand at making a box ou
 
 <div class="row">
   <div class="col half-width">
-    <a href="SCAN0002a.jpg"><img class="col full-width" src="SCAN0002a.jpg" alt="SCAN0002a"/></a>
+    <a href="SCAN0002a.jpg"><img class="col full-width" src="{{ resize_image(path="SCAN0002a.jpg") }}"  alt="SCAN0002a"/></a>
     <p class="caption">
       The front panel that faces the direction of motion.
     </p>
   </div>
   <div class="col half-width">
-    <a href="SCAN0001a.jpg"><img class="col full-width" src="SCAN0001a.jpg" alt="SCAN0001a"/></a>
+    <a href="SCAN0001a.jpg"><img class="col full-width" src="{{ resize_image(path="SCAN0001a.jpg") }}"  alt="SCAN0001a"/></a>
     <p class="caption">
       The front panel that faces the direction of motion.
     </p>
@@ -178,13 +178,13 @@ I designed a pattern, and cut it out of the sheet using some straight snips. Unf
 
 <div class="row">
   <div class="col half-width">
-    <a href="IMG_2488.jpg"><img class="col full-width" src="IMG_2488.jpg" alt="IMG_2488"/></a>
+    <a href="IMG_2488.jpg"><img class="col full-width" src="{{ resize_image(path="IMG_2488.jpg") }}"  alt="IMG_2488"/></a>
     <p class="caption">
       The front panel cut out of the sheet metal.
     </p>
   </div>
   <div class="col half-width">
-    <a href="IMG_2485.jpg"><img class="col full-width" src="IMG_2485.jpg" alt="IMG_2485"/></a>
+    <a href="IMG_2485.jpg"><img class="col full-width" src="{{ resize_image(path="IMG_2485.jpg") }}"  alt="IMG_2485"/></a>
     <p class="caption">
       Bending the main body of the box into shape.
     </p>
@@ -194,7 +194,7 @@ I designed a pattern, and cut it out of the sheet using some straight snips. Unf
 For the most part it worked. The shield isn't beautiful, but it is sturdy. The front panel rattles a little on rough roads, but I can't see any circumstances in which it would fall off. In retrospect, a 22 gauge steel box is probably overkill as far as shielding goes, but there's also some risk of the metal causing a short if it didn't stand up to an impact, so over kill is probably good in this case.
 
 <div class="row">
-  <a href="IMG_2491.jpg"><img class="col full-width" src="IMG_2491.jpg" alt="IMG_2491"/></a>
+  <a href="IMG_2491.jpg"><img class="col full-width" src="{{ resize_image(path="IMG_2491.jpg") }}"  alt="IMG_2491"/></a>
   <p class="caption">
     The finished box. It's not going to win any competitions, but it will protect the batteries.
   </p>
@@ -204,19 +204,19 @@ With the box complete, I drilled some holes in the base flanges, and then drille
 
 <div class="row">
   <div class="col one-third-width">
-    <a href="IMG_2493.jpg"><img class="col full-width" src="IMG_2493.jpg" alt="IMG_2493"/></a>
+    <a href="IMG_2493.jpg"><img class="col full-width" src="{{ resize_image(path="IMG_2493.jpg") }}"  alt="IMG_2493"/></a>
     <p class="caption">
       The holes drilled in the flanges so the box can be attached to the longboard deck.
     </p>
   </div>
   <div class="col one-third-width">
-    <a href="DSCF0229.jpg"><img class="col full-width" src="DSCF0229.jpg" alt="DSCF0229"/></a>
+    <a href="DSCF0229.jpg"><img class="col full-width" src="{{ resize_image(path="DSCF0229.jpg") }}"  alt="DSCF0229"/></a>
     <p class="caption">
       The longboard deck has corresponding holes with bolts and wing nuts. Some foam has been added to the shield to cushion the batteries.
     </p>
   </div>
   <div class="col one-third-width">
-    <a href="DSCF0228.jpg"><img class="col full-width" src="DSCF0228.jpg" alt="DSCF0228"/></a>
+    <a href="DSCF0228.jpg"><img class="col full-width" src="{{ resize_image(path="DSCF0228.jpg") }}"  alt="DSCF0228"/></a>
     <p class="caption">
       The finished shield firmly bolted to the underside of the deck.
     </p>

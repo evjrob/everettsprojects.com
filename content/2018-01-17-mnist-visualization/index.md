@@ -167,7 +167,7 @@ plt.imshow(layer_image, cmap = 'gray')
 plt.show()
 ```
 
-![png](output_8_0.png)
+![png]({{ resize_image(path="output_8_0.png") }})
 
 ### The Second Convolutional Layer
 
@@ -189,7 +189,7 @@ layer_image = stitch_filters(layer_filters, 4, 8)
 plt.imshow(layer_image, cmap = 'gray')
 plt.show()
 ```
-![png](output_10_0.png)
+![png]({{ resize_image(path="output_10_0.png") }})
 
 ### The Third Convolutional Layer
 
@@ -212,7 +212,7 @@ plt.imshow(layer_image, cmap = 'gray')
 plt.show()
 ```
 
-![png](output_12_0.png)
+![png]({{ resize_image(path="output_12_0.png") }})
 
 ### The Fourth Convolutional Layer
 
@@ -235,7 +235,7 @@ plt.imshow(layer_image, cmap = 'gray')
 plt.show()
 ```
 
-![png](output_14_0.png)
+![png]({{ resize_image(path="output_14_0.png") }})
 
 ### The Output Layer
 
@@ -258,7 +258,7 @@ plt.imshow(output_image_raw, cmap = 'gray')
 plt.show()
 ```
 
-![png](output_16_0.png)
+![png]({{ resize_image(path="output_16_0.png") }})
 
 If you squint really hard, then the above images do sort of look like the digits they're meant to represent. The are very grey, however, which isn't at all like the original white on black MNIST digits provided. We can de-average the digits to restore them to a darker and less grey state:
 
@@ -277,7 +277,7 @@ plt.imshow(output_image_deaveraged, cmap = 'gray')
 plt.show()
 ```
 
-![png](output_18_0.png)
+![png]({{ resize_image(path="output_18_0.png") }})
 
 We can now make sure we computed things correctly by feeding these "perfect" digits back to the neural network for classification. If it doesn't return a correct classification for any of them, then we should probably suspect that something strange has happened.
 

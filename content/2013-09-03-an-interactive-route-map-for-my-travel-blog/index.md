@@ -12,7 +12,7 @@ tags = [ "Europe", "Google Maps", "HTML", "Map", "Programming", "Travel", "Web A
 feature_image = "travelmap.png"
 +++
 
-[<img class="aligncenter size-full wp-image-844" src="travelmap.png" alt="travelMap" width="594" height="408"/>](/maps/)
+[<img class="aligncenter size-full wp-image-844" src="{{ resize_image(path="travelmap.png") }}"  alt="travelMap" width="594" height="408"/>](/maps/)
 
 See the finished project at: [https://everettsprojects.com/maps/](/maps/)
 

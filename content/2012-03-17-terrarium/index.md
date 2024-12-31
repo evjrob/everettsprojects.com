@@ -12,7 +12,7 @@ tags = ["Plants & Stuff", "Terrarium"]
 feature_image = "march16a.jpg"
 +++
 
-<img loading="lazy" src='march16a.jpg' alt='The terrarium'/>
+<img loading="lazy" src='{{ resize_image(path="march16a.jpg") }}' alt='The terrarium'/>
 
 This post is different from all of my previous projects which are primarily electronics oriented, and it isn&#8217;t even a new project per say. I started this terrarium last year using a glass jar that originally contained some candy, and filled it with compost and moss. It worked well at first, but eventually the moss stopped growing and started to turn brown despite the fact that I kept it adequately watered. I left the jar in this state for a fairly long time until I noticed a small centipede living inside of it a few weeks ago. Upon closer inspection I noticed several other insects and invertebrates including small snails, a worm, and some small flies. Feeling bad about letting their tiny habitat descend into such a decrepit state, and realizing I couldn&#8217;t just release them outside at this time of year, I decided to try and revive my Terrarium.
 
